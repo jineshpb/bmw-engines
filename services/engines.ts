@@ -21,10 +21,19 @@ export interface EngineClass {
   model: string;
 }
 
+export interface EngineConfiguration {
+  id?: string;
+  engine_id: string;
+  displacement?: string;
+  power?: string;
+  torque?: string;
+  years?: string;
+}
+
 export const getEngines = async (): Promise<Engine[]> => {
   const { data, error } = await supabase.from("engines").select("*");
 
-  console.log("data", data);
+  // console.log("data", data);
 
   if (error) {
     console.error("Error fetching engines:", error);
@@ -32,6 +41,21 @@ export const getEngines = async (): Promise<Engine[]> => {
   }
 
   return data as Engine[];
+};
+
+export const getEngineConfigurations = async (): Promise<
+  EngineConfiguration[]
+> => {
+  const { data, error } = await supabase
+    .from("engine_configurations")
+    .select("*");
+
+  if (error) {
+    console.error("Error fetching engine configurations:", error);
+    return [];
+  }
+
+  return data as EngineConfiguration[];
 };
 
 export const upsertEngines = async (engines: Engine[]): Promise<void> => {

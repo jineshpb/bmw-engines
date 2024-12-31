@@ -1,0 +1,47 @@
+{
+  "i3": [
+    {
+      "series": "I01",
+      "type": "Plug-In Electric Vehicle",
+      "production_years": "2014-2021",
+      "versions": [
+        {
+          "year": "2014-2017",
+          "model": "i3",
+          "motor": "130 kW electric motor",
+          "capacity": "60 Ah"
+        },
+        {
+          "year": "2014-2017",
+          "model": "i3 REx",
+          "motor": "130 kW electric motor with 25kW gasoline range-extending engine",
+          "capacity": "60 Ah"
+        },
+        {
+          "year": "2018",
+          "model": "i3",
+          "motor": "130 kW electric motor",
+          "capacity": "94 Ah"
+        },
+        {
+          "year": "2018",
+          "model": "i3 REx",
+          "motor": "130 kW electric motor with 25kW gasoline range-extending engine",
+          "capacity": "94 Ah"
+        },
+        {
+          "year": "2019-2021",
+          "model": "i3 (LCI)",
+          "motor": "130 kW electric motor",
+          "capacity": "120 Ah"
+        },
+        {
+          "year": "2019-2021",
+          "model": "i3 REx (LCI)",
+          "motor": "130 kW electric motor with 25kW gasoline range-extending engine",
+          "capacity": "120 Ah"
+        }
+      ]
+    }
+  ]
+}
