@@ -17,17 +17,21 @@ export interface EnginePayload {
 }
 
 export interface EngineClass {
-  id?: string;
+  id: string;
   model: string;
 }
 
-export interface EngineConfiguration {
+export interface EngineConfigurations {
   id?: string;
   engine_id: string;
   displacement?: string;
   power?: string;
   torque?: string;
   years?: string;
+  engines?: {
+    engine_code: string;
+  };
+  is_derived?: boolean;
 }
 
 export const getEngines = async (): Promise<Engine[]> => {
@@ -44,18 +48,21 @@ export const getEngines = async (): Promise<Engine[]> => {
 };
 
 export const getEngineConfigurations = async (): Promise<
-  EngineConfiguration[]
+  EngineConfigurations[]
 > => {
-  const { data, error } = await supabase
-    .from("engine_configurations")
-    .select("*");
+  const { data, error } = await supabase.from("engine_configurations").select(`
+    *,
+    engines (
+      engine_code
+    )
+  `);
 
   if (error) {
     console.error("Error fetching engine configurations:", error);
     return [];
   }
 
-  return data as EngineConfiguration[];
+  return (data || []) as unknown as EngineConfigurations[];
 };
 
 export const upsertEngines = async (engines: Engine[]): Promise<void> => {
@@ -122,4 +129,18 @@ export const insertEnginesWithClass = async (
     console.error("insertEnginesWithClass failed:", error);
     throw error;
   }
+};
+
+export const getEngineClasses = async (): Promise<EngineClass[]> => {
+  const { data, error } = await supabase
+    .from("engine_classes")
+    .select("id, model")
+    .order("model", { ascending: true }); // Optional: sort alphabetically
+
+  if (error) {
+    console.error("Error fetching engine classes:", error);
+    return [];
+  }
+
+  return data as EngineClass[];
 };

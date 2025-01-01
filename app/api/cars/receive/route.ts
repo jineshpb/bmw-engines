@@ -1,7 +1,16 @@
 import { NextResponse } from "next/server";
-import { EnginePayload } from "@/services/engines";
 import fs from "fs/promises";
 import path from "path";
+
+interface CarPayload {
+  make: string;
+  model: string;
+  data: {
+    name: string;
+    year: string;
+    engine_configuration_id: string;
+  }[];
+}
 
 // For debugging
 const logRequest = async (request: Request) => {
@@ -19,13 +28,13 @@ export async function POST(request: Request) {
   await logRequest(request);
 
   try {
-    const payload = (await request.json()) as EnginePayload;
+    const payload = (await request.json()) as CarPayload;
 
     // Debug payload
     console.log("Received payload:", JSON.stringify(payload, null, 2));
 
     // Validate payload structure
-    if (!payload.model || !Array.isArray(payload.data)) {
+    if (!payload.make || !payload.model || !Array.isArray(payload.data)) {
       return NextResponse.json(
         { message: "Invalid payload format" },
         { status: 400 }
@@ -34,7 +43,12 @@ export async function POST(request: Request) {
 
     try {
       // Create directory if it doesn't exist
-      const dirPath = path.join(process.cwd(), "lib", "bmw", "engines");
+      const dirPath = path.join(
+        process.cwd(),
+        "lib",
+        payload.make.toLowerCase(),
+        "cars"
+      );
       await fs.mkdir(dirPath, { recursive: true });
 
       // Write to file
@@ -45,7 +59,7 @@ export async function POST(request: Request) {
       await fs.writeFile(filePath, JSON.stringify(payload, null, 2), "utf-8");
 
       return NextResponse.json({
-        message: "Engine data written successfully",
+        message: "Car data written successfully",
         count: payload.data.length,
         filePath: filePath,
       });

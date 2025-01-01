@@ -28,7 +28,9 @@ export async function POST() {
         const classId = classData.id;
 
         // 2. Process each unique engine code
-        const uniqueEngines = new Set(payload.data.map((e) => e.engine_code));
+        const uniqueEngines = new Set(
+          payload.data.map((e: Engine) => e.engine_code)
+        );
 
         for (const engineCode of uniqueEngines) {
           // Upsert engine

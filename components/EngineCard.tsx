@@ -1,10 +1,11 @@
 // components/EngineCard.js
 import Image from "next/image";
-import { Engine, EngineConfigurations } from "../services/engines";
+import { EngineConfigurations } from "../services/engines";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { decodeEngineCode } from "@/lib/utils";
 import { engineMapping } from "@/lib/utils";
 import { RedoIcon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const formatYearRange = (yearRange: string | null) => {
   if (!yearRange) return "N/A";
@@ -15,12 +16,11 @@ const formatYearRange = (yearRange: string | null) => {
 
 export default function EngineCard({
   engineConfigurations,
-  engines,
 }: {
   engineConfigurations: EngineConfigurations;
-  engines: Engine[];
 }) {
   // console.log(decodeEngineCode(engine.engine_code));
+  console.log("engineConfigurations", engineConfigurations);
 
   return (
     <Card className="font-geist">
@@ -28,11 +28,23 @@ export default function EngineCard({
         <div className="flex items-center gap-2">
           <Image
             src={`/icons/engine.svg`}
-            alt={engineConfigurations?.engine_id}
+            alt={engineConfigurations?.engines?.engine_code || "Engine"}
             width={20}
             height={20}
           />
-          <CardTitle className="text-lg">{engines[0]?.engine_code}</CardTitle>
+          <div className="flex items-center gap-2">
+            <CardTitle className="text-lg">
+              {engineConfigurations?.engines?.engine_code}
+            </CardTitle>
+            {engineConfigurations.is_derived && (
+              <Badge
+                variant="secondary"
+                className="text-xs bg-purple-100 text-purple-700 hover:bg-purple-200"
+              >
+                Derived
+              </Badge>
+            )}
+          </div>
         </div>
         <div className="flex items-center gap-2">
           <p className="text-sm text-gray-600">
@@ -40,10 +52,12 @@ export default function EngineCard({
           </p>
         </div>
       </CardHeader>
+
       <CardContent className="flex flex-col gap-2 px-4">
         <p className="text-sm text-gray-400 bg-gray-100 rounded-md p-2">
-          {decodeEngineCode(engines[0]?.engine_code)}
+          {decodeEngineCode(engineConfigurations?.engines?.engine_code || "")}
         </p>
+
         <div className="flex flex-col gap-2 min-w-6 flex-wrap mt-2 ">
           <div className="flex items-center gap-3 text-sm">
             <Image
