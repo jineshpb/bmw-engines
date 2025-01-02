@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import supabase from "@/lib/supabaseClient";
+import fetch from "node-fetch";
 
 interface CarGeneration {
   name: string;
@@ -16,7 +17,41 @@ interface CarPayload {
   model: string;
   model_year: string;
   summary: string;
+  image_path?: string; // Changed from image_url to image_path
   data: CarGeneration[];
+}
+
+// Function to download and upload image
+async function handleImage(imageUrl: string, make: string, model: string) {
+  try {
+    console.log("Attempting to download image:", imageUrl); // Debug URL
+
+    // Download image
+    const response = await fetch(imageUrl);
+    if (!response.ok)
+      throw new Error(`Failed to fetch image: ${response.statusText}`);
+    const buffer = await response.arrayBuffer();
+
+    console.log("Image downloaded, size:", buffer.byteLength); // Debug download
+
+    // Upload to Supabase storage
+    const fileName = `${make.toLowerCase()}-${model.toLowerCase()}.jpg`;
+    console.log("Uploading to storage as:", fileName); // Debug filename
+
+    const { data, error } = await supabase.storage
+      .from("car-images")
+      .upload(fileName, buffer, {
+        contentType: "image/jpeg",
+        upsert: true,
+      });
+
+    if (error) throw error;
+    console.log("Upload successful, path:", data.path); // Debug upload
+    return data.path;
+  } catch (error) {
+    console.error("Image processing failed:", error);
+    return null;
+  }
 }
 
 export async function POST() {
@@ -104,6 +139,31 @@ export async function POST() {
           model: payload.model,
           generationsProcessed: payload.data.length,
         });
+
+        // In your POST handler, add image handling
+        if (payload.image_path) {
+          console.log("Raw image path:", payload.image_path); // Debug input
+          const cleanImageUrl = payload.image_path
+            .replace(/[\[\]\n\s"]/g, "")
+            .replace(/^\/\//, "https://");
+          console.log("Cleaned URL:", cleanImageUrl); // Debug cleaning
+
+          const imagePath = await handleImage(
+            cleanImageUrl,
+            payload.make,
+            payload.model
+          );
+
+          if (imagePath) {
+            const { error: updateError } = await supabase
+              .from("car_models")
+              .update({ image_path: imagePath })
+              .eq("id", modelData.id);
+
+            if (updateError)
+              console.error("Failed to update model:", updateError);
+          }
+        }
       } catch (error) {
         results.push({
           file,

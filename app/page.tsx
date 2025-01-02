@@ -1,12 +1,32 @@
 // app/page.tsx
 
-export default async function HomePage() {
+import { getCarModels } from "@/services/cars";
+import CarCard from "@/components/CarCard";
+
+export default async function Page() {
+  const carModels = await getCarModels();
+
   return (
-    <div className="min-h-screen w-full flex justify-center">
-      <div className="w-full">
-        <h1 className="text-3xl font-bold mb-6">Car Models</h1>
-        {/* Car models grid will go here */}
-      </div>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {carModels.map((model) => (
+        <CarCard
+          key={model.id}
+          car={{
+            make: model.car_makes.name,
+            model: model.name,
+            model_year: model.model_year,
+            summary: model.summary,
+            image_path: model.image_path,
+            data: model.car_generations.map((gen) => ({
+              name: gen.name,
+              start_year: gen.start_year,
+              end_year: gen.end_year || "present",
+              chassis_code: gen.chassis_code,
+              engine_id: gen.engine_configuration_id || "N/A",
+            })),
+          }}
+        />
+      ))}
     </div>
   );
 }
