@@ -80,15 +80,22 @@ export async function POST() {
         let processedNotes = null;
         if (payload.notes && payload.notes !== "null") {
           try {
-            // If it's already a string, use it directly
-            if (typeof payload.notes === "string") {
-              processedNotes = payload.notes;
+            const notesData =
+              typeof payload.notes === "string"
+                ? JSON.parse(payload.notes)
+                : payload.notes;
+
+            // If it's a summary object, extract just the summary text
+            if (notesData && notesData.summary) {
+              processedNotes = notesData.summary;
             } else {
-              // If it's an object, stringify it
-              processedNotes = JSON.stringify(payload.notes);
+              // If it's any other format, stringify it
+              processedNotes = JSON.stringify(notesData);
             }
           } catch (e) {
             console.log("Notes processing error:", e);
+            // If parsing fails, use the original string
+            processedNotes = payload.notes;
           }
         }
 
@@ -98,7 +105,7 @@ export async function POST() {
           .upsert(
             {
               model: payload.model,
-              notes: processedNotes, // Use processed notes
+              notes: processedNotes,
             },
             { onConflict: "model" }
           )

@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "engine_code": "N55B30M0",
+      "displacement": "",
+      "power": "225 kW (302 bhp) at 5,700–5,800 rpm",
+      "torque": "400 N⋅m (295 lb⋅ft) at 1,200–5,000 rpm",
+      "years": "2009–2019"
+    },
+    {
+      "engine_code": "N55B30",
+      "displacement": "",
+      "power": "235 kW (315 bhp) at 4,505–6,000 rpm",
+      "torque": "450 N⋅m (332 lb⋅ft) at 1,300–4,500 rpm",
+      "years": "2011–present"
+    },
+    {
+      "engine_code": "N55B30O0",
+      "displacement": "",
+      "power": "240 kW (322 bhp) at 4,505–6,000 rpm",
+      "torque": "",
+      "years": "2014–2016"
+    },
+    {
+      "engine_code": "N55HP",
+      "displacement": "",
+      "power": "250 kW (335 bhp) at 4,505–6,000 rpm",
+      "torque": "",
+      "years": "2013–2015"
+    },
+    {
+      "engine_code": "N55B30T0",
+      "displacement": "",
+      "power": "265 kW (355 bhp) at 5,255–6,000 rpm",
+      "torque": "465 N⋅m (343 lb⋅ft) at 1,350–5,250 rpm",
+      "years": "2015–present"
+    },
+    {
+      "engine_code": "Alpina",
+      "displacement": "",
+      "power": "301 kW (404 bhp) at 5,500–6,250 rpm",
+      "torque": "600 N⋅m (443 lb⋅ft) at 3,000–4,000 rpm",
+      "years": "2013–2017"
+    },
+    {
+      "engine_code": "",
+      "displacement": "",
+      "power": "324 kW (434 bhp) at 5,500–6250 rpm",
+      "torque": "660 N⋅m (487 lb⋅ft) at 3,000–4,000 rpm",
+      "years": "2017–present"
+    },
+    {
+      "engine_code": "",
+      "displacement": "",
+      "power": "332 kW (445 bhp) at 5,500–6,250 rpm",
+      "torque": "680 N⋅m (502 lb⋅ft) at 3,000–4,500 rpm",
+      "years": "2018–present"
+    }
+  ],
+  "model": "N55",
+  "image_path": "{\n    \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/4/4b/BMW_N55_engine_2013.jpg\"\n}",
+  "notes": "[]"
+}

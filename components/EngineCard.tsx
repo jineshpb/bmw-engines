@@ -1,11 +1,12 @@
 // components/EngineCard.js
 import Image from "next/image";
-import { EngineConfiguration } from "@/types/engines";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { decodeEngineCode } from "@/lib/utils";
 import { engineMapping } from "@/lib/utils";
 import { RedoIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { EngineConfiguration } from "@/types/engines";
 
 const formatYearRange = (yearRange: string | null) => {
   if (!yearRange) return "N/A";

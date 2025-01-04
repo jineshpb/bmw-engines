@@ -1,6 +1,3 @@
-"use client";
-
-import { useRouter, useSearchParams } from "next/navigation";
 import {
   Select,
   SelectContent,
@@ -8,33 +5,38 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { EngineClass } from "@/services/engines";
+import { EngineClassSummary } from "@/types/engines";
 
-export default function EngineClassSelector({
-  engineClasses,
-  defaultValue = "all",
-}: {
-  engineClasses: EngineClass[];
-  defaultValue?: string;
-}) {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+interface EngineClassSelectorProps {
+  engineSummary: EngineClassSummary[] | undefined;
+  defaultValue: string;
+}
+
+export function EngineClassSelector({
+  engineSummary,
+  defaultValue,
+}: EngineClassSelectorProps) {
+  if (!engineSummary) return null;
 
   return (
-    <Select
-      defaultValue={searchParams.get("class") || defaultValue}
-      onValueChange={(value) => {
-        router.push(`?class=${value}`);
-      }}
-    >
+    <Select defaultValue={defaultValue}>
       <SelectTrigger className="w-[280px]">
         <SelectValue placeholder="Select engine class" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="all">All Classes</SelectItem>
-        {engineClasses.map((engineClass) => (
-          <SelectItem key={engineClass.id} value={engineClass.id}>
-            {engineClass.model}
+        {engineSummary.map((engineClass: EngineClassSummary) => (
+          <SelectItem
+            key={engineClass.id}
+            value={engineClass.id}
+            className="!pr-4"
+          >
+            <div className="flex w-full justify-between">
+              <span>{engineClass.model} </span>{" "}
+              <span className="text-muted-foreground">
+                - {engineClass.engineCount} engines
+              </span>
+            </div>
           </SelectItem>
         ))}
       </SelectContent>

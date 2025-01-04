@@ -41,4 +41,5 @@ export interface EngineConfiguration {
 export interface EngineClass {
   id: string;
   model: string;
+  notes?: string;
 }

@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "Engine Code": "N53B25",
+      "Displacement": "2,497 cc (152.4 cu in)",
+      "Power": "140 kW (188 bhp)  at 6,100 rpm",
+      "Torque": "235 N⋅m (173 lb⋅ft)  at 3,500-5,000 rpm",
+      "Years": "2006-2010"
+    },
+    {
+      "Engine Code": "N53B30",
+      "Displacement": "2,996 cc (182.8 cu in)",
+      "Power": "150 kW (201 bhp)  at 6,100 rpm",
+      "Torque": "270 N⋅m (199 lb⋅ft)  at 1,500-4,250 rpm",
+      "Years": "2009-2011"
+    },
+    {
+      "Engine Code": "N53B30",
+      "Displacement": "2,996 cc (182.8 cu in)",
+      "Power": "160 kW (215 bhp)  at 6,100 rpm",
+      "Torque": "270 N⋅m (199 lb⋅ft)  at 2,400-4,200 rpm",
+      "Years": "2007-2013"
+    },
+    {
+      "Engine Code": "N53B30",
+      "Displacement": "2,996 cc (182.8 cu in)",
+      "Power": "190 kW (255 bhp)  at 6,600 rpm",
+      "Torque": "310 N⋅m (229 lb⋅ft)  at 2,600-5,000 rpm",
+      "Years": "2009-2011"
+    },
+    {
+      "Engine Code": "N53B30",
+      "Displacement": "2,996 cc (182.8 cu in)",
+      "Power": "200 kW (268 bhp)  at 6,700 rpm",
+      "Torque": "320 N⋅m (236 lb⋅ft)  at 2,750-3,000 rpm",
+      "Years": "2007-2013"
+    }
+  ],
+  "model": "N53",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/530i_Touring_Msport_LCI_59.JPG/280px-530i_Touring_Msport_LCI_59.JPG\"\n}",
+  "notes": "[]"
+}
