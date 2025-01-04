@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "engine_code": "M20B20",
+      "displacement": "1,991 cc",
+      "power": "90 kW at 6,000 rpm",
+      "torque": "163 N⋅m at 4,000 rpm",
+      "years": "1977-1982"
+    },
+    {
+      "engine_code": "M20B20",
+      "displacement": "1,991 cc",
+      "power": "92 kW at 5,800 rpm",
+      "torque": "170 N⋅m at 4,000 rpm",
+      "years": "1982-1984"
+    },
+    {
+      "engine_code": "M20B20",
+      "displacement": "1,991 cc",
+      "power": "92 kW at 5,800 rpm",
+      "torque": "174 N⋅m (128 lb⋅ft) at 4,000 rpm",
+      "years": "1984-1987"
+    },
+
+    {
+      "engine_code": "M20B20",
+      "displacement": "1,991 cc",
+      "power": "95 kW at 6,000 rpm",
+      "torque": "164 N⋅m at 4,300 rpm",
+      "years": "1986-1992"
+    },
+    {
+      "engine_code": "M20B23",
+      "displacement": "2,316 cc",
+      "power": "105 kW at 5,300 rpm",
+      "torque": "190 N⋅m at 4,500 rpm",
+      "years": "1977-1982"
+    },
+    {
+      "engine_code": "M20B23",
+      "displacement": "2,316 cc",
+      "power": "102 kW at 5,300 rpm",
+      "torque": "205 N⋅m at 4,000 rpm",
+      "years": "1982-1983"
+    },
+    {
+      "engine_code": "M20B23",
+      "displacement": "2,316 cc",
+      "power": "110 kW at 6,000 rpm",
+      "torque": null,
+      "years": "1983-1987"
+    },
+    {
+      "engine_code": "M20B25",
+      "displacement": "2,494 cc",
+      "power": "126 kW at 5,800 rpm",
+      "torque": "226 N⋅m at 4,000 rpm",
+      "years": "1985-1990"
+    },
+    {
+      "engine_code": "M20B25",
+      "displacement": "2,494 cc",
+      "power": "125 kW at 5,800 rpm",
+      "torque": "226 N⋅m at 4,300 rpm",
+      "years": "1987-1992"
+    },
+    {
+      "engine_code": "M20B27",
+      "displacement": "2,693 cc",
+      "power": "92 kW at 4,250 rpm",
+      "torque": "240 N⋅m at 3,250 rpm",
+      "years": "1982-1985"
+    },
+    {
+      "engine_code": "M20B27",
+      "displacement": "2,693 cc",
+      "power": "90 kW at 4,250 rpm",
+      "torque": "230 N⋅m at 3,250 rpm",
+      "years": "1985-1987"
+    },
+    {
+      "engine_code": "M20B27",
+      "displacement": "2,693 cc",
+      "power": "95 kW at 4,250 rpm",
+      "torque": "240 N⋅m at 3,250 rpm",
+      "years": "1985-1988"
+    }
+  ],
+  "model": "M20",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/M20B25.jpg/280px-M20B25.jpg\"\n}"
+}

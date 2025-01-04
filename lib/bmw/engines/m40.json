@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "engine_code": "M40B16- E30 version",
+      "displacement": "1,596 cc (97.4 cu in)",
+      "power": "73 kW (98 hp) at 5,500 rpm",
+      "torque": "141 N⋅m (104 lb⋅ft) at 4,250 rpm",
+      "year": "1987"
+    },
+    {
+      "engine_code": "M40B16- E36 version",
+      "displacement": null,
+      "power": "75 kW (101 hp) at 5,500 rpm",
+      "torque": "143 N⋅m (105 lb⋅ft) at 4,250 rpm",
+      "year": "1991"
+    },
+    {
+      "engine_code": "M40B18- E30 version",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "83 kW (111 hp) at 5,500 rpm",
+      "torque": "162 N⋅m (119 lb⋅ft) at 4,250 rpm",
+      "year": "1987"
+    },
+    {
+      "engine_code": "M40B18- E36 version",
+      "displacement": null,
+      "power": "85 kW (114 hp) at 5,500 rpm",
+      "torque": "165 N⋅m (122 lb⋅ft) at 4,250 rpm",
+      "year": "1991"
+    }
+  ],
+  "model": "M40"
+}

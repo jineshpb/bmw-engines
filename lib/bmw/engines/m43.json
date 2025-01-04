@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "engine_code": "M43B16",
+      "displacement": "1,596 cc (97.4 cu in)",
+      "power": "75 kW (101 hp) at 5500 rpm",
+      "torque": "150 N⋅m (111 lb⋅ft) at 3900 rpm",
+      "year": "1991-1999"
+    },
+    {
+      "engine_code": "M43B16",
+      "displacement": "1,596 cc (97.4 cu in)",
+      "power": "60 kW (80 hp) at 5500 rpm",
+      "torque": "127 N⋅m (94 lb⋅ft) at 3900 rpm",
+      "year": "1995-2000"
+    },
+    {
+      "engine_code": "M43B18",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "85 kW (114 hp) at 5500 rpm",
+      "torque": "168 N⋅m (124 lb⋅ft) at 3900 rpm",
+      "year": "1993"
+    },
+    {
+      "engine_code": "M43B18",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "74 kW (99 hp) at 5500 rpm",
+      "torque": "142 N⋅m (105 lb⋅ft) at 3900 rpm",
+      "year": "1995-1996"
+    },
+    {
+      "engine_code": "M43B19",
+      "displacement": "1,895 cc (115.6 cu in)",
+      "power": "87 kW (117 hp) at 5500 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 3900 rpm",
+      "year": "1998"
+    },
+    {
+      "engine_code": "M43B19",
+      "displacement": "1,895 cc (115.6 cu in)",
+      "power": "77 kW (103 hp) at 5300 rpm",
+      "torque": "165 N⋅m (122 lb⋅ft) at 2500 rpm",
+      "year": "1999"
+    }
+  ],
+  "model": "M43",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BMW_M43_Engine_316i_Compact_1996.jpg/280px-BMW_M43_Engine_316i_Compact_1996.jpg\"\n}"
+}

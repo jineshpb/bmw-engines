@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "engine_code": "N45B16",
+      "displacement": "1,596 cc (97.4 cu in)",
+      "power": "85 kW (114 bhp) at 6,000 rpm",
+      "torque": "150 N⋅m (111 lb⋅ft) at 4,300 rpm",
+      "years": "2004-2011"
+    },
+    {
+      "engine_code": "N45B20S",
+      "displacement": "1,997 cc (121.9 cu in)",
+      "power": "130 kW (174 bhp) at 7,000 rpm",
+      "torque": "210 N⋅m (155 lb⋅ft) at 4,250 rpm",
+      "years": "2006"
+    }
+  ],
+  "model": "N45",
+  "image_path": "[]"
+}

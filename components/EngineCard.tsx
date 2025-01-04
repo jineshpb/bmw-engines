@@ -1,6 +1,6 @@
 // components/EngineCard.js
 import Image from "next/image";
-import { EngineConfigurations } from "../services/engines";
+import { EngineConfiguration } from "@/types/engines";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { decodeEngineCode } from "@/lib/utils";
 import { engineMapping } from "@/lib/utils";
@@ -17,7 +17,7 @@ const formatYearRange = (yearRange: string | null) => {
 export default function EngineCard({
   engineConfigurations,
 }: {
-  engineConfigurations: EngineConfigurations;
+  engineConfigurations: EngineConfiguration;
 }) {
   // console.log(decodeEngineCode(engine.engine_code));
   console.log("engineConfigurations", engineConfigurations);

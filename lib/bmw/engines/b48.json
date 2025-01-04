@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "engine_code": "B48B16",
+      "displacement": "1,597 cc (97 cu in)",
+      "power": "125 kW (168 hp) at 5,000–6,000 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 2,000–4,700 rpm",
+      "years": "2017–"
+    },
+    {
+      "engine_code": "B48B20",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "115 kW (154 hp) at 4,500–6,500 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 1,300–4,300 rpm",
+      "years": "2020–"
+    },
+    {
+      "engine_code": "B48A20U1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "131 kW (176 hp) at 5,000–5,500 rpm",
+      "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,200 rpm",
+      "years": null
+    },
+    {
+      "engine_code": "B48B20M0",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "135 kW (181 hp) at 5,000–6,500 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 1,350–4,600 rpm",
+      "years": "2016–"
+    },
+    {
+      "engine_code": "B48A20M1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "141 kW (189 hp) at 5,000–6,500 rpm",
+      "torque": "280 N⋅m (207 lb⋅ft) at 1,250–4,600 rpm",
+      "years": "2014–"
+    },
+    {
+      "engine_code": "B48B20M1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "145 kW (194 hp) at 4,500–6,600 rpm",
+      "torque": "320 N⋅m (236 lb⋅ft) at 1,450–4,200 rpm",
+      "years": "2019–"
+    },
+    {
+      "engine_code": "B48B20O1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "165 kW (221 hp) at 5,000–6,500 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 1,400–5,000 rpm",
+      "years": "2016–"
+    },
+    {
+      "engine_code": "B48A20O1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "170 kW (228 hp) at 5,000–6,000 rpm",
+      "torque": "350 N⋅m (258 lb⋅ft) at 1,250–4,500 rpm",
+      "years": "2015–"
+    },
+    {
+      "engine_code": "B48O1ZIK",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "180 kW (241 hp) at 4,500–6,500 rpm",
+      "torque": "400 N⋅m (295 lb⋅ft) at 1,600–4,000 rpm",
+      "years": null
+    },
+    {
+      "engine_code": "B48B20O0",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "185 kW (248 hp) at 5,200–6,500 rpm",
+      "torque": "350 N⋅m (258 lb⋅ft) at 1,450–4,800 rpm",
+      "years": "2015–"
+    },
+    {
+      "engine_code": "B48B20O1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "190 kW (255 hp) at 5,000–6,500 rpm",
+      "torque": "400 N⋅m (295 lb⋅ft) at 1,550–4,400 rpm",
+      "years": "2016–"
+    },
+    {
+      "engine_code": "B48A20T1",
+      "displacement": "1,998 cc (122 cu in)",
+      "power": "225 kW (302 hp) at 5,000–6,250 rpm",
+      "torque": "450 N⋅m (332 lb⋅ft) at 1,750–4,500 rpm",
+      "years": "2019–"
+    }
+  ],
+  "model": "B48",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/BMW_B48_im_BMW-Museum_2018-06.jpg/280px-BMW_B48_im_BMW-Museum_2018-06.jpg\"\n}"
+}

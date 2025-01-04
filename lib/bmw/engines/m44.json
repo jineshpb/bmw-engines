@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "engine_code": "M44B19",
+      "displacement": "1,895 cc (115.6 cu in)",
+      "power": "103 kW (138 bhp) at 6,000 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 4,300 rpm",
+      "years": "1996–2000"
+    }
+  ],
+  "model": "M44",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_1998_318ti_engine_bay.jpg\"\n}"
+}

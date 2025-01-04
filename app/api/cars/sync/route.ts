@@ -2,41 +2,46 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import supabase from "@/lib/supabaseClient";
+import { CarPayload } from "@/types/cars";
 import fetch from "node-fetch";
 
-interface CarGeneration {
-  name: string;
-  start_year: number;
-  end_year: string | number; // Can be "present" or a number
-  chassis_code: string;
-  engine_id: string;
-}
+// Helper function to clean image URLs
+function cleanImageUrl(rawUrl: string | null): string {
+  if (!rawUrl || rawUrl === "null") return ""; // Handle null or "null" string
 
-interface CarPayload {
-  make: string;
-  model: string;
-  model_year: string;
-  summary: string;
-  image_path?: string; // Changed from image_url to image_path
-  data: CarGeneration[];
+  let imageUrl = ""; // Initialize with empty string
+  try {
+    const imageData = JSON.parse(rawUrl);
+    if (imageData && imageData.image_link) {
+      imageUrl = imageData.image_link;
+    } else {
+      imageUrl = rawUrl;
+    }
+  } catch (e) {
+    imageUrl = rawUrl;
+    console.log("image path cleanup error", e);
+  }
+
+  // Only try to replace if imageUrl is a string
+  return typeof imageUrl === "string"
+    ? imageUrl.replace(/[\[\]\n\s"]/g, "").replace(/^\/\//, "https://")
+    : "";
 }
 
 // Function to download and upload image
 async function handleImage(imageUrl: string, make: string, model: string) {
   try {
-    console.log("Attempting to download image:", imageUrl); // Debug URL
+    console.log("Attempting to download car image:", imageUrl);
 
-    // Download image
     const response = await fetch(imageUrl);
     if (!response.ok)
       throw new Error(`Failed to fetch image: ${response.statusText}`);
     const buffer = await response.arrayBuffer();
 
-    console.log("Image downloaded, size:", buffer.byteLength); // Debug download
+    console.log("Image downloaded, size:", buffer.byteLength);
 
-    // Upload to Supabase storage
     const fileName = `${make.toLowerCase()}-${model.toLowerCase()}.jpg`;
-    console.log("Uploading to storage as:", fileName); // Debug filename
+    console.log("Uploading to storage as:", fileName);
 
     const { data, error } = await supabase.storage
       .from("car-images")
@@ -46,7 +51,7 @@ async function handleImage(imageUrl: string, make: string, model: string) {
       });
 
     if (error) throw error;
-    console.log("Upload successful, path:", data.path); // Debug upload
+    console.log("Upload successful, path:", data.path);
     return data.path;
   } catch (error) {
     console.error("Image processing failed:", error);
@@ -142,26 +147,23 @@ export async function POST() {
 
         // In your POST handler, add image handling
         if (payload.image_path) {
-          console.log("Raw image path:", payload.image_path); // Debug input
-          const cleanImageUrl = payload.image_path
-            .replace(/[\[\]\n\s"]/g, "")
-            .replace(/^\/\//, "https://");
-          console.log("Cleaned URL:", cleanImageUrl); // Debug cleaning
+          const cleanedUrl = cleanImageUrl(payload.image_path);
+          if (cleanedUrl) {
+            const imagePath = await handleImage(
+              cleanedUrl,
+              payload.make,
+              payload.model
+            );
 
-          const imagePath = await handleImage(
-            cleanImageUrl,
-            payload.make,
-            payload.model
-          );
+            if (imagePath) {
+              const { error: updateError } = await supabase
+                .from("car_models")
+                .update({ image_path: imagePath })
+                .eq("id", modelData.id);
 
-          if (imagePath) {
-            const { error: updateError } = await supabase
-              .from("car_models")
-              .update({ image_path: imagePath })
-              .eq("id", modelData.id);
-
-            if (updateError)
-              console.error("Failed to update model:", updateError);
+              if (updateError)
+                console.error("Failed to update model image:", updateError);
+            }
           }
         }
       } catch (error) {

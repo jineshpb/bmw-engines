@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "Model": "N13B16",
+      "Displacement": "1,598 cc (97.5 cu in)",
+      "Power": "136 PS (100 kW) at 4,350 rpm",
+      "Torque": "220 N⋅m (162 lb⋅ft) at 1,350 rpm",
+      "Years": "2011–2015"
+    },
+    {
+      "Model": "N13B16",
+      "Power": "170 PS (125 kW) at 4,800 rpm",
+      "Torque": "250 N⋅m (184 lb⋅ft) at 1,500 rpm",
+      "Years": "2012–2015"
+    }
+  ],
+  "model": "N13",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg/280px-Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg\"\n}"
+}

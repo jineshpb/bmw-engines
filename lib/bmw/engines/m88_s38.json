@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "engine_code": "M88",
+      "displacement": "3.5 L (3,453 cc)",
+      "power": "204 kW (277 PS; 273 hp) at 6,500 rpm",
+      "torque": "330 N⋅m (243 lb⋅ft) at 5,000 rpm",
+      "years": "1978-1981"
+    },
+    {
+      "engine_code": "M88/1",
+      "displacement": "3.5 L (3,453 cc)",
+      "power": "346 kW (470 PS; 464 hp) at 9,000 rpm",
+      "torque": "390 N⋅m (288 lb⋅ft) at 7,000 rpm",
+      "years": "1979-1980"
+    },
+    {
+      "engine_code": "M88/2",
+      "displacement": "3.5 L (3,453 cc)",
+      "power": "up to 625–735 kW (850–1,000 PS; 838–986 hp) at 9,000 rpm",
+      "torque": "847–1,017 N⋅m (625–750 lb⋅ft) at 7,000 rpm",
+      "years": "1979-1981"
+    },
+    {
+      "engine_code": "M88/3",
+      "displacement": "3.5 L (3,453 cc)",
+      "power": "210 kW (286 PS; 282 hp) at 6,500 rpm",
+      "torque": "340 N⋅m (251 lb⋅ft) at 4,500 rpm",
+      "years": "1983–1989"
+    },
+    {
+      "engine_code": "M30B35LE/M90",
+      "displacement": "3.5 L (3,453 cc)",
+      "power": "160 kW (218 PS; 215 hp) at 5,200 rpm",
+      "torque": "304 N⋅m (224 lb⋅ft) at 4,000 rpm",
+      "years": "1978–1982"
+    }
+  ],
+  "model": "M88/S38",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bmw_m88.jpg/280px-Bmw_m88.jpg\"\n}"
+}

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { EnginePayload } from "@/services/engines";
+import { EnginePayload } from "@/types/engines";
 import fs from "fs/promises";
 import path from "path";
 
@@ -38,11 +38,14 @@ export async function POST(request: Request) {
       const dirPath = path.join(process.cwd(), "lib", "bmw", "engines");
       await fs.mkdir(dirPath, { recursive: true });
 
-      // Write to file
+      // Sanitize the filename
+      const sanitizedModel = payload.model.replace(/[\/\\]/g, "_");
       const filePath = path.join(
         dirPath,
-        `${payload.model.toLowerCase()}.json`
+        `${sanitizedModel.toLowerCase()}.json`
       );
+
+      // Write to file
       await fs.writeFile(filePath, JSON.stringify(payload, null, 2), "utf-8");
 
       return NextResponse.json({

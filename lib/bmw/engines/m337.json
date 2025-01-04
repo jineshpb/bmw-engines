@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "Model": "M337/1",
+      "Displacement": "1,971 cc (120.3 cu in)",
+      "Power": "48 kW (65 PS; 64 hp) at 4,400 rpm",
+      "Torque": "129 N⋅m (95 lb⋅ft) at 2,000 rpm",
+      "Year": "1952-1954"
+    },
+    {
+      "Model": "M337/2",
+      "Displacement": "1,971 cc (120.3 cu in)",
+      "Power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
+      "Torque": "130 N⋅m (96 lb⋅ft) at 2,500 rpm",
+      "Year": "1954-1955"
+    },
+    {
+      "Model": "M337/3",
+      "Displacement": "2,077 cc (126.7 cu in)",
+      "Power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
+      "Torque": "135 N⋅m (100 lb⋅ft) at 2,500 rpm",
+      "Year": "1955-1958"
+    }
+  ],
+  "model": "M337",
+  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/5/54/BMW_501_%285444397631%29.jpg\""
+}

@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "engine_code": "N43B16",
+      "displacement": "1,599 cc (97.6 cu in)",
+      "power": "90 kW (121 bhp) at 6,000 rpm",
+      "torque": "160 N⋅m (118 lb⋅ft) at 4,250 rpm",
+      "year": "2008-2011"
+    },
+    {
+      "engine_code": "N43B20",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "90 kW (121 bhp) at 6,000 rpm",
+      "torque": "185 N⋅m (136 lb⋅ft) at 3,000 rpm",
+      "year": "2007-2011"
+    },
+    {
+      "engine_code": "N43B20",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "105 kW (141 bhp) at 6,000 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 4,500 rpm",
+      "year": "2007-2011"
+    },
+    {
+      "engine_code": "N43B20",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "125 kW (168 bhp) at 6,700 rpm",
+      "torque": "210 N⋅m (155 lb⋅ft) at 4,250 rpm",
+      "year": "2007-2011"
+    }
+  ],
+  "model": "N43",
+  "image_path": "[]"
+}

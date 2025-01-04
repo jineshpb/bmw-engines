@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "Engine": "M335",
+      "Displacement": "3,485 cc (212.7 cu in)",
+      "Power": "66 kW (89 bhp) at 3,000 rpm",
+      "Torque": "180 N⋅m (133 lb⋅ft) at 2,000 rpm",
+      "Years": "1939-1941"
+    }
+  ],
+  "model": "M335",
+  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/3/33/BMW_335_Cabriolet%2C_Bj._1939.jpg\""
+}

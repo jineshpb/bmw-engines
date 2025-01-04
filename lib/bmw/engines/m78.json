@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "Model": "303 version",
+      "Displacement": "1,182 cc (72.1 cu in)",
+      "Power": "22 kW (30 PS)",
+      "Year": "1933-1934"
+    },
+    {
+      "Model": "315 version",
+      "Displacement": "1,490 cc (90.9 cu in)",
+      "Power": "25 kW (34 PS)",
+      "Year": "1934-1937"
+    },
+    {
+      "Model": "315/1 version",
+      "Displacement": "1,490 cc (90.9 cu in)",
+      "Power": "29 kW (40 PS)",
+      "Year": null
+    },
+    {
+      "Model": "319 version",
+      "Displacement": "1,911 cc (116.6 cu in)",
+      "Power": "33 kW (45 PS)",
+      "Year": "1935-1937"
+    },
+    {
+      "Model": "319/1 version",
+      "Displacement": "1,911 cc (116.6 cu in)",
+      "Power": "40 kW (55 PS)",
+      "Year": null
+    },
+    {
+      "Model": "326 version",
+      "Displacement": "1,971 cc (120.3 cu in)",
+      "Power": "37 kW (50 PS)",
+      "Year": "1936-1950"
+    },
+    {
+      "Model": "320 version",
+      "Displacement": "1,971 cc (120.3 cu in)",
+      "Power": "33 kW (45 PS)",
+      "Year": "1937-1938"
+    },
+    {
+      "Model": "327 version",
+      "Displacement": "1,971 cc (120.3 cu in)",
+      "Power": "40 kW (55 PS)",
+      "Year": "1937-1953"
+    }
+  ],
+  "model": "M78",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/BMW_M78_engine_in_BMW-Museum_in_Munich%2C_Bayern.JPG/280px-BMW_M78_engine_in_BMW-Museum_in_Munich%2C_Bayern.JPG\"\n}"
+}

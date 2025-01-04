@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "engine_code": "S52B32",
+      "displacement": "3,152 cc (192 cu in)",
+      "power": "240 hp (179 kW; 243 PS) at 6,000 rpm",
+      "torque": "236 lb⋅ft (320 N⋅m) of torque at 3,800 rpm",
+      "years": "1996–2000"
+    }
+  ],
+  "model": "S52",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/0/02/S52B32_2000_Z3_M_Roadster.jpg/280px-S52B32_2000_Z3_M_Roadster.jpg\"\n}"
+}

@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "engine_code": "N42B18",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "85 kW (114 bhp)  at 5,500 rpm",
+      "torque": "175 N⋅m (129 lb⋅ft)  at 3,750 rpm",
+      "years": "2001-2004"
+    },
+    {
+      "engine_code": "N42B20",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "105 kW (141 bhp)  at 6,000 rpm",
+      "torque": "200 N⋅m (148 lb⋅ft)  at 3,750 rpm",
+      "years": "2001-2004"
+    }
+  ],
+  "model": "N42",
+  "image_path": "[]"
+}

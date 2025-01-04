@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "engine_code": "M30B25V",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": "110 kW (150 PS; 148 bhp) at 6,000 rpm",
+      "torque": "211 N⋅m (156 lb⋅ft) at 3,700 rpm",
+      "year": "1968"
+    },
+    {
+      "engine_code": "M30B25",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": null,
+      "torque": "215 N⋅m (159 lb⋅ft) at 3,700 rpm",
+      "year": "1981"
+    },
+    {
+      "engine_code": "M30B28V",
+      "displacement": "2,788 cc (170.1 cu in)",
+      "power": "125 kW (170 PS; 168 bhp) at 6,000 rpm",
+      "torque": "235 N⋅m (173 lb⋅ft) at 3,700",
+      "year": "1968"
+    },
+    {
+      "engine_code": "M30B28",
+      "displacement": "2,788 cc (170.1 cu in)",
+      "power": "135 kW (181 bhp) at 5,800 rpm",
+      "torque": "240 N⋅m (177 lb⋅ft) at 4,200 rpm",
+      "year": "1977"
+    },
+    {
+      "engine_code": "M30B30V",
+      "displacement": "2,986 cc (182.2 cu in)",
+      "power": "132 kW (180 PS; 178 bhp) at 6,000 rpm",
+      "torque": "255 N⋅m (188 lb⋅ft) at 3,700 rpm",
+      "year": "1971"
+    },
+    {
+      "engine_code": "M30B30",
+      "displacement": "2,986 cc (182.2 cu in)",
+      "power": "147 kW (200 PS; 197 bhp) at 5,500 rpm",
+      "torque": "272 N⋅m (201 lb⋅ft) at 4,300 rpm",
+      "year": "1971"
+    },
+    {
+      "engine_code": "M30B32",
+      "displacement": "3,210 cc (195.9 cu in)",
+      "power": "147 kW (200 PS; 197 bhp) at 5,500 rpm",
+      "torque": "285 N⋅m (210 lb⋅ft) at 4,300 rpm",
+      "year": "1976"
+    },
+    {
+      "engine_code": "M30B33V",
+      "displacement": "3,295 cc (201.1 cu in)",
+      "power": "139 kW (186 bhp) at 5,500 rpm",
+      "torque": "289 N⋅m (213 lb⋅ft) at 3,500 rpm",
+      "year": "1973"
+    },
+    {
+      "engine_code": "M30B34",
+      "displacement": "3,430 cc (209.3 cu in)",
+      "power": "160 kW (215 bhp) at 5,800 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 4,200 rpm",
+      "year": "1982"
+    },
+    {
+      "engine_code": "M30B35",
+      "displacement": "3,430 cc (209.3 cu in)",
+      "power": "155 kW (208 bhp) at 5,700 rpm",
+      "torque": "305 N⋅m (225 lb⋅ft) at 4,000 rpm",
+      "year": "1988"
+    }
+  ],
+  "model": "M30",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/5/52/BMW_E28_motor.jpg/280px-BMW_E28_motor.jpg\"\n}"
+}

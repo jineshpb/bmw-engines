@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "engine_code": "M328",
+      "displacement": "1,971 cc (120.3 cu in)",
+      "power": "59 kW (79 bhp)  @ 5000 rpm",
+      "torque": "126 N⋅m (93 lb⋅ft)  @ 4000 rpm",
+      "years": "1936-1940"
+    }
+  ],
+  "model": "M328",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/BMW_328_6-Zylinder-Motor.jpg/280px-BMW_328_6-Zylinder-Motor.jpg\"\n}"
+}

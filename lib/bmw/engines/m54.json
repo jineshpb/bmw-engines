@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "engine_code": "M54B22",
+      "displacement": "2.2 L (2,171 cc)",
+      "power": "125 kW (168 hp) at 6,100 rpm",
+      "torque": "210 N⋅m (155 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
+      "engine_code": "M54B25",
+      "displacement": "2.5 L (2,494 cc)",
+      "power": "141 kW (189 hp) at 6,000 rpm",
+      "torque": "245 N⋅m (181 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
+      "engine_code": "M54B30",
+      "displacement": "3.0 L (2,979 cc)",
+      "power": "170 kW (228 hp) at 5,900 rpm",
+      "torque": "300 N⋅m (221 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
+      "engine_code": "S54B32",
+      "displacement": "3.2 L (3,246 cc)",
+      "power": "252 kW (338 hp) at 7,900 rpm",
+      "torque": "365 N⋅m (269 lb⋅ft) at 4,900 rpm",
+      "years": "2000–2008"
+    }
+  ],
+  "model": "M54",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/BMW_M54B25_001.jpg/280px-BMW_M54B25_001.jpg\"\n}"
+}

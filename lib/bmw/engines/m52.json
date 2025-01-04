@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "engine_code": "M52B20",
+      "displacement": "1,991 cc (121 cu in)",
+      "power": "110 kW (150 PS; 148 hp) at 5900 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 4200 rpm",
+      "years": "1994–1998"
+    },
+    {
+      "engine_code": "M52TÜB20",
+      "displacement": "1,991 cc (121 cu in)",
+      "power": "110 kW (150 PS; 148 hp) at 5900 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 3500 rpm",
+      "years": "1998–2000"
+    },
+    {
+      "engine_code": "M52TÜB24",
+      "displacement": "2,394 cc (146 cu in)",
+      "power": "135 kW (184 PS; 181 hp) at 5800 rpm",
+      "torque": "240 N⋅m (177 lb⋅ft) at 3600 rpm",
+      "years": "1998–2000"
+    },
+    {
+      "engine_code": "M52B25",
+      "displacement": "2,494 cc (152 cu in)",
+      "power": "125 kW (170 PS; 168 hp) at 5500 rpm",
+      "torque": "245 N⋅m (181 lb⋅ft) at 3950 rpm",
+      "years": "1995–1998"
+    },
+    {
+      "engine_code": "M52TÜB25",
+      "displacement": "2,494 cc (152 cu in)",
+      "power": "125 kW (170 PS; 168 hp) at 5500 rpm",
+      "torque": "245 N⋅m (181 lb⋅ft) at 3500 rpm",
+      "years": "1998–2000"
+    },
+    {
+      "engine_code": "M52B28",
+      "displacement": "2,793 cc (170 cu in)",
+      "power": "142 kW (193 PS; 190 hp) at 5300 rpm",
+      "torque": "280 N⋅m (207 lb⋅ft) at 3950 rpm",
+      "years": "1995–1998"
+    },
+    {
+      "engine_code": "M52TÜB28",
+      "displacement": "2,793 cc (170 cu in)",
+      "power": "142 kW (193 PS; 190 hp) at 5500 rpm",
+      "torque": "280 N⋅m (207 lb⋅ft) at 3500 rpm",
+      "years": "1998–2000"
+    },
+    {
+      "engine_code": "S52B32",
+      "displacement": "3,152 cc (192 cu in)",
+      "power": "179 kW (243 PS; 240 hp) at 6000 rpm",
+      "torque": "325 N⋅m (240 lb⋅ft) at 3800 rpm",
+      "years": "1996–2000"
+    }
+  ],
+  "model": "M52",
+  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/1/1e/M52NonTUB28.jpg\""
+}

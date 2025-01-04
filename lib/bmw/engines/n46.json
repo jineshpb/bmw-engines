@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "engine_code": "N46B18",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "85 kW (114 bhp) at 5,500 rpm",
+      "torque": "175 N⋅m (129 lb⋅ft) at 3,750 rpm",
+      "year": "2004"
+    },
+    {
+      "engine_code": "N46B20U1",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "95 kW (127 bhp) at 5,750 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 3,250 rpm",
+      "year": "2005"
+    },
+    {
+      "engine_code": "N46B20U2",
+      "displacement": null,
+      "power": "100 kW (134 bhp) at 5,750 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 3,250 rpm",
+      "year": "2007"
+    },
+    {
+      "engine_code": "N46B20U0",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "105 kW (141 bhp) at 6,000 rpm",
+      "torque": "200 N⋅m (148 lb⋅ft) at 3,750 rpm",
+      "year": "2007"
+    },
+    {
+      "engine_code": "N46B20O1",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "110 kW (148 bhp) at 6,200 rpm",
+      "torque": "200 N⋅m (148 lb⋅ft) at 3,600 rpm",
+      "year": "2004"
+    },
+    {
+      "engine_code": "N46NB20",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "127 kW (170 bhp) at 6,400 rpm",
+      "torque": "210 N⋅m (155 lb⋅ft) at 4,100 rpm",
+      "year": "2007"
+    }
+  ],
+  "model": "N46",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/5/54/BMW_N46.JPG/280px-BMW_N46.JPG\"\n}"
+}

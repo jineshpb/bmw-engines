@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "Engine Code": "M42B18",
+      "Displacement": "1,796 cc (109.6 cu in)",
+      "Power": "100 kW (134 hp) at 6,000 rpm",
+      "Torque": "172 N⋅m (127 lb⋅ft) at 4,600 rpm",
+      "Year": "1989-1992 (E30)"
+    },
+    {
+      "Engine Code": "M42B18",
+      "Displacement": "1,796 cc (109.6 cu in)",
+      "Power": "103 kW (138 hp) at 6,000 rpm",
+      "Torque": "175 N⋅m (129 lb⋅ft) at 4,500 rpm",
+      "Year": "1992-1996 (E36)"
+    }
+  ],
+  "model": "M42",
+  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/3/35/BMW_M42B18_Motor.JPG/280px-BMW_M42B18_Motor.JPG\"\n}"
+}
