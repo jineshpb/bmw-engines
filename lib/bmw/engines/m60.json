@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "Engine": "M60B30",
+      "Displacement": "2,997 cc (182.9 cu in)",
+      "Power": "160 kW (218 PS; 215 bhp) at 5800 rpm",
+      "Torque": "290 N⋅m (214 lb⋅ft) at 4500 rpm",
+      "Years": "1992-1996"
+    },
+    {
+      "Engine": "M60B40",
+      "Displacement": "3,982 cc (243.0 cu in)",
+      "Power": "210 kW (286 PS; 282 bhp) at 5800 rpm",
+      "Torque": "400 N⋅m (295 lb⋅ft) at 4500 rpm",
+      "Years": "1992-1996"
+    }
+  ],
+  "model": "M60",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/7/71/BMW_Alpina_B8_4.6_Coup%C3%A9_E36_%287712800700%29.jpg/280px-BMW_Alpina_B8_4.6_Coup%C3%A9_E36_%287712800700%29.jpg",
+  "notes": "The M60 engine features double overhead camshafts and four valves per cylinder, driven by a dual-row timing chain with a self-adjusting tensioner. It includes hydraulic lash adjustment for valves to minimize maintenance. The ignition and fuel injection are managed by the Bosch Motronic 3.3 system, utilizing a coil-on-plug ignition design and knock sensors."
+}

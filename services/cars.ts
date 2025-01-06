@@ -12,8 +12,15 @@ export interface CarModel {
     name: string;
     start_year: number;
     end_year: string | null;
-    chassis_code: string;
-    engine_configuration_id: string | null;
+    chassis_code: string[];
+    car_generation_engine_classes: {
+      engine_classes: {
+        id: string;
+        model: string;
+        notes: string | null;
+        image_path: string | null;
+      };
+    }[];
   }[];
   car_makes: {
     name: string;
@@ -32,7 +39,14 @@ export const getCarModels = async (): Promise<CarModel[]> => {
         start_year,
         end_year,
         chassis_code,
-        engine_configuration_id
+        car_generation_engine_classes (
+          engine_classes (
+            id,
+            model,
+            notes,
+            image_path
+          )
+        )
       ),
       car_makes (
         name
@@ -62,7 +76,14 @@ export const getCarModelById = async (id: string): Promise<CarModel | null> => {
         start_year,
         end_year,
         chassis_code,
-        engine_configuration_id
+        car_generation_engine_classes (
+          engine_classes (
+            id,
+            model,
+            notes,
+            image_path
+          )
+        )
       ),
       car_makes (
         name

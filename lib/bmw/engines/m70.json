@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "engine_code": "M70B50",
+      "displacement": "4,988 cc (304.4 cu in)",
+      "power": "220 kW (295 hp) at 5,200 rpm",
+      "torque": "450 N⋅m (332 lb⋅ft) at 4,100 rpm",
+      "years": "1987–1994"
+    },
+    {
+      "engine_code": "S70B56",
+      "displacement": "5,576 cc (340.3 cu in)",
+      "power": "280 kW (375 hp) at 5,300 rpm",
+      "torque": "550 N⋅m (406 lb⋅ft) at 4,000 rpm",
+      "years": "1992–1996"
+    },
+    {
+      "engine_code": "S70/2",
+      "displacement": "6,064 cc (370.0 cu in)",
+      "power": "461 kW (618 hp) at 7,400 rpm",
+      "torque": "617 or 651 N⋅m (455 or 480 lb⋅ft) at 6,700 rpm",
+      "years": "1993–1998"
+    },
+    {
+      "engine_code": "S70/3",
+      "displacement": "5,990 cc (365.5 cu in)",
+      "power": "467 kW (626 hp) at 6,500 rpm",
+      "torque": "670 N⋅m (494 lb⋅ft) at 4,500 rpm",
+      "years": "1998–2000"
+    }
+  ],
+  "model": "M70",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/d/d4/BMW_850_V12.JPG",
+  "notes": "The BMW M70 engine, produced from 1987 to 1994, is a 5.0 L V12 engine with a 60° configuration. It features an aluminum cylinder block and head, a single overhead camshaft (SOHC) valvetrain, and operates on petrol. The engine delivers a power output of 220 kW (295 hp) and a torque output of 450 N⋅m (332 lb⋅ft). The M70 has no direct predecessor and was succeeded by the BMW M73 engine."
+}

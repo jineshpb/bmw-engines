@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "Engine": "M502/1",
+      "Displacement": "2,580 cc (157.4 cu in)",
+      "Power": "75 kW (100 bhp) at 4,800 rpm",
+      "Torque": "184 N⋅m (136 lb⋅ft) at 2,500 rpm",
+      "Years": "1954–1961"
+    },
+    {
+      "Engine": "M502/100",
+      "Displacement": "2,580 cc (157.4 cu in)",
+      "Power": "75 kW (100 bhp) at 4,800 rpm",
+      "Torque": "185 N⋅m (136 lb⋅ft) at 2,500 rpm",
+      "Years": "1961–1963"
+    },
+    {
+      "Engine": "M502/110, M533",
+      "Displacement": "2,580 cc (157.4 cu in)",
+      "Power": "82 kW (110 bhp) at 4,900 rpm",
+      "Torque": "186 N⋅m (137 lb⋅ft) at 3,000 rpm",
+      "Years": "1961-1963"
+    },
+    {
+      "Engine": "M506/1",
+      "Displacement": "3,168 cc (193.3 cu in)",
+      "Power": "89 kW (120 bhp) at 4,900 rpm",
+      "Torque": "214 N⋅m (158 lb⋅ft) at 2,500 rpm",
+      "Years": "1955-1961"
+    },
+    {
+      "Engine": "M506/140, M534",
+      "Displacement": "3,168 cc (193.3 cu in)",
+      "Power": "104 kW (140 bhp) at 5,400 rpm",
+      "Torque": "242 N⋅m (178 lb⋅ft) at 3,000 rpm",
+      "Years": "1961-1963"
+    },
+    {
+      "Engine": "M503/1",
+      "Displacement": "3,168 cc (193.3 cu in)",
+      "Power": "104 kW (140 bhp) at 4,800 rpm",
+      "Torque": "220 N⋅m (162 lb⋅ft) at 3,800 rpm",
+      "Years": "1956-1961"
+    },
+    {
+      "Engine": "M507/1",
+      "Displacement": "3,168 cc (193.3 cu in)",
+      "Power": "112 kW (150 bhp) at 5,000 rpm",
+      "Torque": "240 N⋅m (177 lb⋅ft) at 4,000 rpm",
+      "Years": "1956-1959"
+    },
+    {
+      "Engine": "M503/160, M532",
+      "Displacement": "3,168 cc (193.3 cu in)",
+      "Power": "119 kW (160 bhp) at 5,600 rpm",
+      "Torque": "245 N⋅m (181 lb⋅ft) at 3,600 rpm",
+      "Years": "1961-1963"
+    }
+  ],
+  "model": "OHV V8",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/BMW_503_2012-09-01_13-54-42.JPG/280px-BMW_503_2012-09-01_13-54-42.JPG",
+  "notes": "The BMW 501, launched in 1952 as BMW's first car post-World War II, featured a 2.0 L straight-six engine derived from the pre-war BMW M78. Weighing 1,285 kg, the 501 struggled with performance, especially compared to the competing Mercedes-Benz W187, which had a more powerful 2.2 L engine."
+}

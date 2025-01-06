@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "engine_code": "S68",
+      "displacement": "4.4 L (4,395 cc)",
+      "power": "Engine: 406 kW; 552 PS (544 hp) @ 5,500 rpm Motor: 13 kW; 18 PS (18 hp)",
+      "torque": "200 N⋅m (150 lbf⋅ft)",
+      "year": "current production"
+    }
+  ],
+  "model": "S68",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/a/a6/S68_XM.jpg",
+  "notes": "The S68 engine features a stroke of 88.3 mm and maintains the same displacement as its predecessor, with a compression ratio of 10.5:1. It utilizes a hot-vee design with one turbocharger per cylinder bank, enhancing turbocharger pressure through a unique cross-pattern exhaust manifold. This design alters the engine sound to resemble that of a 180-degree V8 configuration. The engine is cooled by an external oil cooler and incorporates a newly developed oil pump. It operates as a 48-volt mild hybrid system, equipped with a 9 kW electric motor that provides 200 N⋅m of torque, aiding in hot starts while a standard 12-volt starter manages cold starts. The engine meets the Euro 6d emissions standard and is expected to comply with the upcoming Euro 7 standard. The variable camshaft control (VANOS) has transitioned to an electrical system. The combustion engine can reach a maximum speed of 7200 rpm."
+}

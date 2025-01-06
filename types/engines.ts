@@ -43,3 +43,13 @@ export interface EngineClass {
   model: string;
   notes?: string;
 }
+
+export interface EngineClassSummary extends EngineClass {
+  image_path: string;
+  engineCount: number;
+  configurations: {
+    total: number;
+    derived: number;
+    original: number;
+  };
+}

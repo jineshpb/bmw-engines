@@ -82,7 +82,24 @@ export async function POST() {
         if (makeError) throw makeError;
         const makeId = makeData.id;
 
-        // 2. Upsert car model with make_id and name unique constraint
+        // Handle car model image
+        let modelImagePath = null;
+        if (payload.image_path) {
+          console.log("Processing image for:", payload.model);
+          const cleanedUrl = cleanImageUrl(payload.image_path);
+          console.log("Cleaned URL:", cleanedUrl);
+
+          if (cleanedUrl) {
+            modelImagePath = await handleImage(
+              cleanedUrl,
+              payload.make,
+              payload.model
+            );
+            console.log("Received image path:", modelImagePath);
+          }
+        }
+
+        // 2. Upsert car model with image_path
         const { data: modelData, error: modelError } = await supabase
           .from("car_models")
           .upsert(
@@ -91,36 +108,27 @@ export async function POST() {
               make_id: makeId,
               model_year: payload.model_year,
               summary: payload.summary,
+              image_path: modelImagePath, // Verify this is not null
             },
-            { onConflict: "make_id,name" }
+            {
+              onConflict: "make_id,name",
+              ignoreDuplicates: false, // Set to false to update existing records
+            }
           )
           .select()
           .single();
 
-        if (modelError) throw modelError;
+        if (modelError) {
+          console.error("Model upsert error:", modelError);
+          throw modelError;
+        }
+
+        console.log("Updated model data:", modelData);
 
         // 3. Upsert car generations with model_id and chassis_code unique constraint
         for (const gen of payload.data) {
-          // Look up engine configuration if engine_id exists
-          let engineConfigId = null;
-          if (gen.engine_id && gen.engine_id !== "N/A") {
-            const { data: engineData, error: engineError } = await supabase
-              .from("engines")
-              .select("id, engine_configurations!inner(id)")
-              .eq("engine_code", gen.engine_id)
-              .single();
-
-            if (engineError) {
-              console.log(
-                `Engine lookup error for ${gen.engine_id}:`,
-                engineError
-              );
-            } else if (engineData) {
-              engineConfigId = engineData.engine_configurations[0].id;
-            }
-          }
-
-          const { error: genError } = await supabase
+          // First create/update the generation
+          const { data: genData, error: genError } = await supabase
             .from("car_generations")
             .upsert(
               {
@@ -129,12 +137,64 @@ export async function POST() {
                 start_year: gen.start_year,
                 end_year: gen.end_year === "present" ? null : gen.end_year,
                 chassis_code: gen.chassis_code,
-                engine_configuration_id: engineConfigId,
               },
-              { onConflict: "model_id,chassis_code" }
-            );
+              {
+                onConflict: "model_id,name,start_year",
+                ignoreDuplicates: true,
+              }
+            )
+            .select()
+            .single();
 
-          if (genError) throw genError;
+          if (genError) {
+            console.warn(`Generation upsert error for ${gen.name}:`, genError);
+            continue;
+          }
+          if (!genData) {
+            console.warn(
+              "No generation data returned, skipping engine mappings"
+            );
+            continue;
+          }
+
+          // Handle engine class mappings
+          if (Array.isArray(gen.engine_id)) {
+            console.log("Processing engine models:", gen.engine_id);
+
+            await supabase
+              .from("car_generation_engine_classes")
+              .delete()
+              .eq("generation_id", genData.id);
+
+            for (const engineModel of gen.engine_id) {
+              console.log("Looking up engine class for model:", engineModel);
+
+              const { data: engineClass, error: engineError } = await supabase
+                .from("engine_classes")
+                .select("id")
+                .eq("model", engineModel)
+                .single();
+
+              if (engineError) {
+                console.log(
+                  `No engine class found for model ${engineModel}:`,
+                  engineError
+                );
+                continue;
+              }
+
+              if (engineClass) {
+                console.log(
+                  `Found engine class for model ${engineModel}:`,
+                  engineClass
+                );
+                await supabase.from("car_generation_engine_classes").insert({
+                  generation_id: genData.id,
+                  engine_class_id: engineClass.id,
+                });
+              }
+            }
+          }
         }
 
         results.push({

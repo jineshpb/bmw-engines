@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "engine_code": "N73B60",
+      "year": "2003-2008",
+      "displacement": "5,972 cc (364.4 cu in)",
+      "power": "327 kW (445 PS; 439 hp) at 6,000 rpm",
+      "torque": "600 N⋅m (443 lb⋅ft) at 3,950 rpm"
+    },
+    {
+      "engine_code": "N73B68",
+      "year": "2003-2016",
+      "displacement": "6,749 cc (411.8 cu in)",
+      "power": "338 kW (460 PS; 453 hp) at 5,350 rpm",
+      "torque": "720 N⋅m (531 lb⋅ft) at 3,500 rpm"
+    }
+  ],
+  "model": "N73",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MoteurBMWV12.JPG/280px-MoteurBMWV12.JPG",
+  "notes": "The variable valve timing (VANOS) system in the car features a continuously variable design on both the intake and exhaust camshafts, with adjustment ranges of 63 degrees for the intake and 60 degrees for the exhaust. The engine has a redline of 6,500 rpm."
+}

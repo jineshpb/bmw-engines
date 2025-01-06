@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "engine_code": "S68",
+      "displacement": "Not specified",
+      "power": "12 hp (9 kW) electric motor",
+      "fuel_type": "48-volt mild hybrid",
+      "torque": "200 N⋅m (150 lbf⋅ft)",
+      "year": "Current production"
+    }
+  ],
+  "model": "S63",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/S68_XM.jpg/280px-S68_XM.jpg",
+  "notes": "The S68 engine features an 88.3 mm stroke and maintains the same displacement as its predecessor, with a compression ratio of 10.5:1. It utilizes a hot-vee design with one turbocharger per cylinder bank, enhancing turbocharger pressure through a unique cross-pattern exhaust manifold that alters the exhaust sound to resemble a 180-degree V8 configuration. The engine includes an external oil cooler and a newly developed oil pump. It operates as a 48-volt mild hybrid, incorporating a 9 kW electric motor with 200 N⋅m of torque, installed within the transmission for improved performance. The 48-volt battery has a capacity of 20 Ah, while the system requires a larger 90 Ah battery. The variable camshaft control (VANOS) is now electrically operated. The S68 meets the Euro 6d emissions standard and is expected to comply with the stricter Euro 7 standard set for 2025. The engine can reach a maximum speed of 7200 rpm."
+}

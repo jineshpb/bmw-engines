@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "Engine": "N74B60",
+      "Displacement": "5,972 cc (364.4 cu in)",
+      "Power": "400 kW (536 hp) at 5,250 rpm",
+      "Torque": "750 N⋅m (553 lb⋅ft) at 1,500–5,000 rpm",
+      "Year": "2008–2015"
+    },
+    {
+      "Engine": "N74B66",
+      "Displacement": "6,592 cc (402.3 cu in)",
+      "Power": "420 kW (563 hp) at 5,250 rpm",
+      "Torque": "780 N⋅m (575 lb⋅ft) at 1,500–5,000 rpm",
+      "Year": "2009–2020"
+    },
+    {
+      "Engine": "N74B66",
+      "Displacement": "6,592 cc (402.3 cu in)",
+      "Power": "465 kW (624 hp) at 5,600 rpm",
+      "Torque": "800 N⋅m (590 lb⋅ft) at 1,500–5,500 rpm",
+      "Year": "2013–2022"
+    },
+    {
+      "Engine": "N74B66",
+      "Displacement": "6,592 cc (402.3 cu in)",
+      "Power": "442 kW (593 hp) at 5,250 rpm",
+      "Torque": "840 N⋅m (620 lb⋅ft) at 1,500 rpm",
+      "Year": "2016–2020"
+    },
+    {
+      "Engine": "N74B66TU",
+      "Displacement": "6,592 cc (402.3 cu in)",
+      "Power": "449 kW (602 hp) at 5,500 rpm",
+      "Torque": "800 N⋅m (590 lb⋅ft) at 1,500 rpm",
+      "Year": "2016–2019"
+    },
+    {
+      "Engine": "N74B66TU",
+      "Displacement": "6,592 cc (402.3 cu in)",
+      "Power": "447.5 kW (600 hp) at 5,500 rpm",
+      "Torque": "850 N⋅m (627 lb⋅ft) at 1,550 rpm",
+      "Year": "2020–2022"
+    },
+    {
+      "Engine": "N74B68",
+      "Displacement": "6,750 cc (411.9 cu in)",
+      "Power": "420 kW (563 hp) at 5,250 rpm",
+      "Torque": "900 N⋅m (664 lb⋅ft) at 1,500 rpm",
+      "Year": "2017–present"
+    }
+  ],
+  "model": "N74",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/c/c8/2017-09-12_IAA_2017_BMW_by_Olaf_Kosinsky-59.jpg",
+  "notes": "The N74 engine features twin turbochargers, unlike its predecessor, the naturally aspirated BMW N73. The turbochargers are positioned externally and operate with a boost pressure of 11.6 psi (0.8 bar). The engine has a compression ratio of 10:1 and a specific fuel consumption of 245 g·kW−1·h−1 in its base configuration."
+}

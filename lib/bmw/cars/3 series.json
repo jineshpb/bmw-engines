@@ -1,0 +1,87 @@
+{
+  "make": "BMW",
+  "model_year": "1975 - present",
+  "summary": "The BMW 3 Series is a line of compact executive cars manufactured by BMW since May 1975. It has been produced in seven generations and is known for its performance and luxury features.",
+  "data": [
+    {
+      "name": "E21",
+      "start_year": 1975,
+      "end_year": 1982,
+      "generation": "First Generation",
+      "chassis_code": [
+        "E21"
+      ],
+      "engine_id": "M10"
+    },
+    {
+      "name": "E30",
+      "start_year": 1982,
+      "end_year": 1994,
+      "generation": "Second Generation",
+      "chassis_code": [
+        "E30"
+      ],
+      "engine_id": "M20"
+    },
+    {
+      "name": "E36",
+      "start_year": 1990,
+      "end_year": 1999,
+      "generation": "Third Generation",
+      "chassis_code": [
+        "E36"
+      ],
+      "engine_id": "M50"
+    },
+    {
+      "name": "E46",
+      "start_year": 1997,
+      "end_year": 2006,
+      "generation": "Fourth Generation",
+      "chassis_code": [
+        "E46"
+      ],
+      "engine_id": "M54"
+    },
+    {
+      "name": "E90/E91/E92/E93",
+      "start_year": 2004,
+      "end_year": 2012,
+      "generation": "Fifth Generation",
+      "chassis_code": [
+        "E90",
+        "E91",
+        "E92",
+        "E93"
+      ],
+      "engine_id": "N52"
+    },
+    {
+      "name": "F30/F31/F34/F35",
+      "start_year": 2011,
+      "end_year": 2019,
+      "generation": "Sixth Generation",
+      "chassis_code": [
+        "F30",
+        "F31",
+        "F34",
+        "F35"
+      ],
+      "engine_id": "N20"
+    },
+    {
+      "name": "G20/G21/G28",
+      "start_year": 2018,
+      "end_year": "present",
+      "generation": "Seventh Generation",
+      "chassis_code": [
+        "G20",
+        "G21",
+        "G28"
+      ],
+      "engine_id": "B58"
+    }
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/9/91/BMW_G20_%282022%29_IMG_7316_%282%29.jpg/280px-BMW_G20_%282022%29_IMG_7316_%282%29.jpg",
+  "model": "3 Series"
+}

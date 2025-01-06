@@ -59,6 +59,8 @@ export const getEngineClassSummary = async (): Promise<
       `
       id,
       model,
+      notes,
+      image_path,
       engines (
         id,
         engine_code,
@@ -84,6 +86,8 @@ export const getEngineClassSummary = async (): Promise<
     return {
       id: engineClass.id,
       model: engineClass.model,
+      notes: engineClass.notes,
+      image_path: engineClass.image_path,
       engineCount: engineClass.engines?.length || 0,
       configurations: {
         total:
@@ -96,4 +100,50 @@ export const getEngineClassSummary = async (): Promise<
       },
     };
   }) as EngineClassSummary[];
+};
+
+export const getEnginesByClass = async (
+  classId?: string
+): Promise<EngineConfiguration[]> => {
+  let query = supabase.from("engine_classes").select(`
+      engines (
+        id,
+        engine_code,
+        image_path,
+        engine_configurations (
+          id,
+          engine_id,
+          displacement,
+          power,
+          torque,
+          years,
+          is_derived
+        )
+      )
+    `);
+
+  if (classId && classId !== "all") {
+    query = query.eq("id", classId);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error("Error fetching engines by class:", error);
+    return [];
+  }
+
+  // Flatten the nested structure to get all configurations
+  const configurations =
+    data?.flatMap(
+      (engineClass) =>
+        engineClass.engines?.flatMap((engine) =>
+          engine.engine_configurations.map((config) => ({
+            ...config,
+            engines: { engine_code: engine.engine_code },
+          }))
+        ) || []
+    ) || [];
+
+  return configurations;
 };

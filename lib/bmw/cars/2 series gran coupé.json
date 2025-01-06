@@ -1,0 +1,42 @@
+{
+  "make": "BMW",
+  "model_year": "2020–present",
+  "summary": "The BMW 2 Series Gran Coupé is a subcompact executive sedan produced by BMW since 2020. It is the smallest four-door sedan offered by BMW in most markets, featuring a front-wheel drive-based architecture.",
+  "data": [
+    {
+      "name": "2 Series Gran Coupé",
+      "start_year": 2020,
+      "end_year": 2024,
+      "generation": "First Generation",
+      "chassis_code": [
+        "F44"
+      ],
+      "engine_id": [
+        "B38",
+        "B46",
+        "B48",
+        "B37",
+        "B47"
+      ]
+    },
+    {
+      "name": "2 Series Gran Coupé L",
+      "start_year": 2024,
+      "end_year": null,
+      "generation": "Second Generation",
+      "chassis_code": [
+        "F74",
+        "F78"
+      ],
+      "engine_id": [
+        "B38",
+        "B46",
+        "B48",
+        "B37",
+        "B47"
+      ]
+    }
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/6/61/BMW_F44_1X7A6109.jpg",
+  "model": "2 Series Gran Coupé"
+}

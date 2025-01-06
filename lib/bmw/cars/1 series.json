@@ -1,43 +1,74 @@
 {
   "make": "BMW",
-  "model_year": "2004 to present",
-  "model": "1 Series",
+  "model_year": "2004 - present",
   "summary": "The BMW 1 Series is a range of subcompact executive cars manufactured by BMW since 2004. It is the successor to the BMW 3 Series Compact and is currently in its fourth generation.",
   "data": [
     {
       "name": "E81/E82/E87/E88",
       "start_year": 2004,
       "end_year": 2013,
-      "chassis_code": "E8x",
-      "engine_id": "N54"
+      "generation": "First Generation",
+      "chassis_code": [
+        "E81",
+        "E82",
+        "E87",
+        "E88"
+      ],
+      "engine_id": [
+        "N54",
+        "N52",
+        "N43"
+      ]
     },
     {
       "name": "F20/F21",
       "start_year": 2011,
       "end_year": 2019,
-      "chassis_code": "F20",
-      "engine_id": "N/A"
+      "generation": "Second Generation",
+      "chassis_code": [
+        "F20",
+        "F21"
+      ],
+      "engine_id": [
+        "N20",
+        "N47",
+        "B38"
+      ]
     },
     {
       "name": "F40",
       "start_year": 2019,
-      "end_year": "present",
-      "chassis_code": "F40",
-      "engine_id": "N/A"
+      "end_year": null,
+      "generation": "Third Generation",
+      "chassis_code": [
+        "F40"
+      ],
+      "engine_id": [
+        "B38",
+        "B48"
+      ]
+    },
+    {
+      "name": "F70",
+      "start_year": 2024,
+      "end_year": null,
+      "generation": "Fourth Generation",
+      "chassis_code": [
+        "F70"
+      ],
+      "engine_id": []
     },
     {
       "name": "F52",
       "start_year": 2017,
       "end_year": 2023,
-      "chassis_code": "F52",
-      "engine_id": "N/A"
-    },
-    {
-      "name": "F70",
-      "start_year": 2024,
-      "end_year": "present",
-      "chassis_code": "F70",
-      "engine_id": "N/A"
+      "generation": "China-market Sedan",
+      "chassis_code": [
+        "F52"
+      ],
+      "engine_id": []
     }
-  ]
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_120_%28F70%29_IMG_1166_%28cropped%29.jpg",
+  "model": "1 Series"
 }

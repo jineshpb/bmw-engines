@@ -99,6 +99,19 @@ export async function POST() {
           }
         }
 
+        // Handle image for engine class
+        let processedClassImagePath = null;
+        if (payload.image_path && payload.image_path !== "null") {
+          const cleanedUrl = cleanImageUrl(payload.image_path);
+          if (cleanedUrl) {
+            processedClassImagePath = await handleImage(
+              cleanedUrl,
+              payload.model,
+              "class" // Using 'class' instead of engine code for class images
+            );
+          }
+        }
+
         // First create/update the engine class
         const { data: classData, error: classError } = await supabase
           .from("engine_classes")
@@ -106,6 +119,7 @@ export async function POST() {
             {
               model: payload.model,
               notes: processedNotes,
+              image_path: processedClassImagePath, // Added image_path
             },
             { onConflict: "model" }
           )

@@ -1,51 +1,37 @@
 {
   "make": "BMW",
-  "model_year": "from 2014 to present",
-  "model": "2 Series",
-  "summary": "The BMW 2 Series is a range of subcompact executive cars manufactured by BMW since 2014. It includes coupé, convertible, Active Tourer, Gran Tourer, and Gran Coupé variants.",
+  "model_year": "2014 - present",
+  "summary": "The BMW 2 Series is a range of subcompact executive cars manufactured by BMW since 2014. It includes various body styles such as coupé, convertible, Active Tourer, Gran Tourer, and Gran Coupé.",
   "data": [
     {
-      "name": "F22/F23",
+      "name": "2 Series",
       "start_year": 2014,
-      "end_year": 2021,
-      "chassis_code": "F22/F23",
-      "engine_id": "N55"
+      "end_year": null,
+      "generation": "First Generation",
+      "chassis_code": [
+        "F22",
+        "F23",
+        "F45",
+        "F46",
+        "F44"
+      ],
+      "engine_id": [
+        "N55",
+        "B58"
+      ]
     },
     {
-      "name": "G42",
+      "name": "2 Series",
       "start_year": 2021,
-      "end_year": "present",
-      "chassis_code": "G42",
-      "engine_id": "B58"
-    },
-    {
-      "name": "F45",
-      "start_year": 2014,
-      "end_year": 2021,
-      "chassis_code": "F45",
-      "engine_id": "N/A"
-    },
-    {
-      "name": "F46",
-      "start_year": 2015,
-      "end_year": 2021,
-      "chassis_code": "F46",
-      "engine_id": "N/A"
-    },
-    {
-      "name": "F44",
-      "start_year": 2019,
-      "end_year": "present",
-      "chassis_code": "F44",
-      "engine_id": "N/A"
-    },
-    {
-      "name": "U06",
-      "start_year": 2021,
-      "end_year": "present",
-      "chassis_code": "U06",
-      "engine_id": "N/A"
+      "end_year": null,
+      "generation": "Second Generation",
+      "chassis_code": [
+        "G42",
+        "U06"
+      ],
+      "engine_id": []
     }
   ],
-  "image_path": "[\n    \"//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/BMW_G42_1X7A5766.jpg/280px-BMW_G42_1X7A5766.jpg\"\n]"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/b2/BMW_G42_1X7A5766.jpg",
+  "model": "2 Series"
 }

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "engine_code": "M73B54",
+      "displacement": "5,379 cc (328.2 cu in)",
+      "power": "240 kW (322 hp) at 5,000 rpm",
+      "torque": "490 N⋅m (361 lb⋅ft) at 3,900 rpm",
+      "year": "1994"
+    },
+    {
+      "engine_code": "M73TUB54",
+      "displacement": "5,379 cc (328.2 cu in)",
+      "power": "240 kW (322 hp) at 5,000 rpm",
+      "torque": "490 N⋅m (361 lb⋅ft) at 3,900 rpm",
+      "year": "1998"
+    },
+    {
+      "engine_code": "M73 (Hydrogen)",
+      "displacement": "5,379 cc (328.2 cu in)",
+      "power": "150 kW (201 hp) at 5,800 rpm",
+      "torque": "300 N⋅m (221 lb⋅ft) at 3000/min",
+      "year": "2001"
+    }
+  ],
+  "model": "M73",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/a/af/BMW_750iL_Individual_-_Flickr_-_The_Car_Spy_%2821%29.jpg/280px-BMW_750iL_Individual_-_Flickr_-_The_Car_Spy_%2821%29.jpg",
+  "notes": "The M73 engine, an upgrade from the M70, features an updated roller-rocker valve train with increased displacement, achieving an 85mm bore and a 79mm stroke. Unlike other BMW engines that transitioned to dual overhead camshafts and four valves per cylinder, the M73 retains a single overhead camshaft with two valves per cylinder. BMW also developed a prototype four-valve V12 engine, the M72, which produced 265 kW and 530 N⋅m of torque, but it did not meet the comfort standards required for large sedans and was not produced."
+}

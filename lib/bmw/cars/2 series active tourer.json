@@ -1,0 +1,38 @@
+{
+  "make": "BMW",
+  "model_year": "2014 - present",
+  "summary": "The BMW 2 Series Active Tourer is a subcompact executive MPV produced by BMW AG since 2014. It is based on the front-wheel-drive UKL2 platform and is designed to compete with the Mercedes-Benz B-Class.",
+  "data": [
+    {
+      "name": "2 Series Active Tourer",
+      "start_year": 2014,
+      "end_year": null,
+      "generation": "First Generation",
+      "chassis_code": [
+        "F45",
+        "U06"
+      ],
+      "engine_id": [
+        "B38",
+        "B48",
+        "B47"
+      ]
+    },
+    {
+      "name": "2 Series Gran Tourer",
+      "start_year": 2015,
+      "end_year": 2021,
+      "generation": "First Generation",
+      "chassis_code": [
+        "F46"
+      ],
+      "engine_id": [
+        "B38",
+        "B48",
+        "B47"
+      ]
+    }
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/1/18/2016_BMW_216d_SE_1.5_Front.jpg/280px-2016_BMW_216d_SE_1.5_Front.jpg",
+  "model": "2 Series Active Tourer"
+}
