@@ -1,0 +1,49 @@
+{
+  "make": "BMW",
+  "model_year": "2009 - present",
+  "summary": "The BMW X1 is a line of subcompact luxury crossovers produced by BMW since 2009. It has evolved through three generations, with the first generation being based on the E90 3 Series and the current generation featuring a battery electric version called the iX1.",
+  "data": [
+    {
+      "name": "X1",
+      "start_year": 2009,
+      "end_year": null,
+      "generation": "First Generation",
+      "chassis_code": [
+        "E84"
+      ],
+      "engine_id": []
+    },
+    {
+      "name": "X1",
+      "start_year": 2016,
+      "end_year": null,
+      "generation": "Second Generation",
+      "chassis_code": [
+        "F48",
+        "F49"
+      ],
+      "engine_id": [
+        "3-cylinder",
+        "4-cylinder"
+      ]
+    },
+    {
+      "name": "X1",
+      "start_year": 2022,
+      "end_year": null,
+      "generation": "Third Generation",
+      "chassis_code": [
+        "U11",
+        "U12"
+      ],
+      "engine_id": [
+        "petrol",
+        "diesel",
+        "PHEV",
+        "iX1"
+      ]
+    }
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bc/BMW_U11_1X7A6826.jpg",
+  "model": "X1"
+}

@@ -44,8 +44,11 @@ export interface EngineClass {
   notes?: string;
 }
 
-export interface EngineClassSummary extends EngineClass {
-  image_path: string;
+export interface EngineClassSummary {
+  id: string;
+  model: string;
+  notes: string | null;
+  image_path: string | null;
   engineCount: number;
   configurations: {
     total: number;

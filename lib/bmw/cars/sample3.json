@@ -1,0 +1,130 @@
+{
+  "make": "BMW",
+  "model": "3 Series",
+  "summary": "The BMW 3 Series is a compact executive car that has been produced in various generations, known for its performance, luxury, and a range of body styles including sedan, coupe, convertible, and wagon.",
+  "data": {
+    "model": "BMW 3 Series (E30)",
+    "engine_details": [
+      {
+        "model": "316s",
+        "years": "1982-1987",
+        "engine": "1.6 L M10B16 straight-4",
+        "power": "55 kW (75 PS) at 5,800 rpm",
+        "torque": "110 N⋅m (81 lb⋅ft) at 3,200 rpm"
+      },
+      {
+        "model": "316",
+        "years": "1982-1988",
+        "engine": "1.8 L M10B18 I4",
+        "power": "66 kW (90 PS) at 5,500 rpm",
+        "torque": "140 N⋅m (103 lb⋅ft) at 4,000 rpm"
+      },
+      {
+        "model": "316i",
+        "years": "1987-1994",
+        "engine": "1.6 L M40B16 straight-4",
+        "power": "73 kW (100 PS) at 5,500 rpm",
+        "torque": "145 N⋅m (107 lb⋅ft) at 4,500 rpm"
+      },
+      {
+        "model": "318i",
+        "years": "1983-1987",
+        "engine": "1.8 L M10B18 straight-4",
+        "power": "77 kW (105 PS) at 5,800 rpm",
+        "torque": "145 N⋅m (107 lb⋅ft) at 4,500 rpm"
+      },
+      {
+        "model": "318i",
+        "years": "1987-1994",
+        "engine": "1.8 L M40B18 straight-4",
+        "power": "83 kW (113 PS) at 5,500 rpm",
+        "torque": "162 N⋅m (119 lb⋅ft) at 4,250 rpm"
+      },
+      {
+        "model": "318is",
+        "years": "1989-1991",
+        "engine": "1.8 L M42B18 straight-4",
+        "power": "100 kW (136 PS) at 6,000 rpm",
+        "torque": "172 N⋅m (127 lb⋅ft) at 4,600 rpm"
+      },
+      {
+        "model": "320i",
+        "years": "1982-1985",
+        "engine": "2.0 L M20B20 straight-6",
+        "power": "92 kW (125 PS) at 5,800 rpm",
+        "torque": "170 N⋅m (125 lb⋅ft) at 4,000 rpm"
+      },
+      {
+        "model": "320i",
+        "years": "1985-1992",
+        "engine": "2.0 L M20B20 straight-6",
+        "power": "95 kW (129 PS) at 6,000 rpm",
+        "torque": "164 N⋅m (121 lb⋅ft) at 4,300 rpm"
+      },
+      {
+        "model": "320is",
+        "years": "1987-1990",
+        "engine": "2.0 L S14B20 straight-4",
+        "power": "143 kW (195 PS) at 6,750 rpm",
+        "torque": "210 N⋅m (155 lb⋅ft) at 4,750 rpm"
+      },
+      {
+        "model": "323i",
+        "years": "1982-1984",
+        "engine": "2.3 L M20 straight-6",
+        "power": "102 kW (139 PS) at 5,300 rpm",
+        "torque": "205 N⋅m (151 lb⋅ft) at 4,000 rpm"
+      },
+      {
+        "model": "323i",
+        "years": "1984-1985",
+        "engine": "2.3 L M20 straight-6",
+        "power": "110 kW (150 PS) at 6,000 rpm",
+        "torque": "205 N⋅m (151 lb⋅ft) at 4,000 rpm"
+      },
+      {
+        "model": "325, 325e, 325es",
+        "years": "1985-1987",
+        "engine": "2.7 L M20B27 straight-6",
+        "power": "90 kW (122 PS) at 4,250 rpm",
+        "torque": "230 N⋅m (170 lb⋅ft) at 3,250 rpm"
+      },
+      {
+        "model": "325, 325e, 325es",
+        "years": "1988",
+        "engine": "2.7 L M20B27 straight-6",
+        "power": "95 kW (129 PS; 127 hp) at 4,800 rpm",
+        "torque": "231 N⋅m (170 lb⋅ft) at 3,200 rpm"
+      },
+      {
+        "model": "325i, 325is, 325ix",
+        "years": "1985-1993",
+        "engine": "2.5 L M20B25 straight-6",
+        "power": "125 kW (170 PS) at 5,800 rpm",
+        "torque": "222 N⋅m (164 lb⋅ft) at 4,300 rpm"
+      },
+      {
+        "model": "M3, M3 Evo 1",
+        "years": "1986-1987",
+        "engine": "2.3 L S14B23 straight-4",
+        "power": "143 kW (195 PS) at 6,750 rpm",
+        "torque": "230 N⋅m (170 lb⋅ft) at 4,750 rpm"
+      },
+      {
+        "model": "M3 Evo 2",
+        "years": "1988",
+        "engine": "2.3 L S14B23 straight-4",
+        "power": "162 kW (220 PS) at 6,750 rpm",
+        "torque": "245 N⋅m (181 lb⋅ft) at 4,750 rpm"
+      },
+      {
+        "model": "M3 Sport Evo",
+        "years": "1989-1990",
+        "engine": "2.5 L S14B25 straight-4",
+        "power": "175 kW (238 PS) at 7,000 rpm",
+        "torque": "240 N⋅m (177 lb⋅ft) at 4,750 rpm"
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/9/91/BMW_G20_%282022%29_IMG_7316_%282%29.jpg/280px-BMW_G20_%282022%29_IMG_7316_%282%29.jpg"
+}

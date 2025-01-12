@@ -17,12 +17,16 @@ export default async function Page() {
             model_year: model.model_year,
             summary: model.summary,
             image_path: model.image_path,
-            data: model.car_generations.map((gen) => ({
+            car_generations: model.car_generations.map((gen) => ({
+              id: gen.id,
               name: gen.name,
               start_year: gen.start_year,
               end_year: gen.end_year || "present",
               chassis_code: gen.chassis_code,
-              engine_id: gen.engine_configuration_id || "N/A",
+              car_generation_engine_classes:
+                gen.car_generation_engine_classes.map((engineClass) => ({
+                  engine_classes: engineClass.engine_classes,
+                })),
             })),
           }}
         />

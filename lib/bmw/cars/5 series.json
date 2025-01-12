@@ -1,0 +1,131 @@
+{
+  "make": "BMW",
+  "model_year": "1972 - present",
+  "summary": "The BMW 5 Series is an executive car manufactured and marketed by BMW since 1972. It is the successor to the BMW New Class sedans and is currently in its eighth generation.",
+  "data": [
+    {
+      "name": "E12",
+      "start_year": 1972,
+      "end_year": 1981,
+      "generation": "First Generation",
+      "chassis_code": [
+        "E12"
+      ],
+      "engine_id": [
+        "M10",
+        "M30"
+      ]
+    },
+    {
+      "name": "E28",
+      "start_year": 1981,
+      "end_year": 1988,
+      "generation": "Second Generation",
+      "chassis_code": [
+        "E28"
+      ],
+      "engine_id": [
+        "M20",
+        "M30",
+        "M51"
+      ]
+    },
+    {
+      "name": "E34",
+      "start_year": 1988,
+      "end_year": 1996,
+      "generation": "Third Generation",
+      "chassis_code": [
+        "E34"
+      ],
+      "engine_id": [
+        "M20",
+        "M30",
+        "M60",
+        "M51"
+      ]
+    },
+    {
+      "name": "E39",
+      "start_year": 1995,
+      "end_year": 2004,
+      "generation": "Fourth Generation",
+      "chassis_code": [
+        "E39"
+      ],
+      "engine_id": [
+        "M52",
+        "M54",
+        "M62",
+        "M57"
+      ]
+    },
+    {
+      "name": "E60/E61",
+      "start_year": 2003,
+      "end_year": 2010,
+      "generation": "Fifth Generation",
+      "chassis_code": [
+        "E60",
+        "E61"
+      ],
+      "engine_id": [
+        "N52",
+        "N54",
+        "N63",
+        "M57"
+      ]
+    },
+    {
+      "name": "F10/F11/F07/F18",
+      "start_year": 2010,
+      "end_year": 2017,
+      "generation": "Sixth Generation",
+      "chassis_code": [
+        "F10",
+        "F11",
+        "F07",
+        "F18"
+      ],
+      "engine_id": [
+        "N20",
+        "N55",
+        "S63"
+      ]
+    },
+    {
+      "name": "G30/G31/G38",
+      "start_year": 2017,
+      "end_year": "present",
+      "generation": "Seventh Generation",
+      "chassis_code": [
+        "G30",
+        "G31",
+        "G38"
+      ],
+      "engine_id": [
+        "B46",
+        "B58",
+        "S63"
+      ]
+    },
+    {
+      "name": "G60/G61/G68",
+      "start_year": 2024,
+      "end_year": "present",
+      "generation": "Eighth Generation",
+      "chassis_code": [
+        "G60",
+        "G61",
+        "G68"
+      ],
+      "engine_id": [
+        "B48",
+        "B58",
+        "B66"
+      ]
+    }
+  ],
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+  "model": "5 Series"
+}
