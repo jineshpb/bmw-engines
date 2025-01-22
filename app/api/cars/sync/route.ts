@@ -2,85 +2,54 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import supabase from "@/lib/supabaseClient";
-import { CarPayload } from "@/types/cars";
-import fetch from "node-fetch";
+import { CarPayload, CarGeneration, GenerationSyncResult } from "@/types/cars";
 
-// Helper function to clean image URLs
-function cleanImageUrl(rawUrl: string | null): string {
-  if (!rawUrl || rawUrl === "null") return ""; // Handle null or "null" string
+import { cleanImageUrl } from "@/lib/utils/cars/imageUtils";
+import { handleImage } from "@/lib/utils/cars/imageUtils";
+import { parseModelYear } from "@/lib/utils/cars/parser";
+import { extractChassisCode } from "@/lib/utils/cars/parser";
+import { extractEngineCode } from "@/lib/utils/cars/engineUtils";
 
-  let imageUrl = ""; // Initialize with empty string
-  try {
-    const imageData = JSON.parse(rawUrl);
-    if (imageData && imageData.image_link) {
-      imageUrl = imageData.image_link;
-    } else {
-      imageUrl = rawUrl;
-    }
-  } catch (e) {
-    imageUrl = rawUrl;
-    console.log("image path cleanup error", e);
-  }
-
-  // Only try to replace if imageUrl is a string
-  return typeof imageUrl === "string"
-    ? imageUrl.replace(/[\[\]\n\s"]/g, "").replace(/^\/\//, "https://")
-    : "";
-}
-
-// Function to download and upload image
-async function handleImage(imageUrl: string, make: string, model: string) {
-  try {
-    console.log("Attempting to download car image:", imageUrl);
-
-    const response = await fetch(imageUrl);
-    if (!response.ok)
-      throw new Error(`Failed to fetch image: ${response.statusText}`);
-    const buffer = await response.arrayBuffer();
-
-    console.log("Image downloaded, size:", buffer.byteLength);
-
-    const fileName = `${make.toLowerCase()}-${model.toLowerCase()}.jpg`;
-    console.log("Uploading to storage as:", fileName);
-
-    const { data, error } = await supabase.storage
-      .from("car-images")
-      .upload(fileName, buffer, {
-        contentType: "image/jpeg",
-        upsert: true,
-      });
-
-    if (error) throw error;
-    console.log("Upload successful, path:", data.path);
-    return data.path;
-  } catch (error) {
-    console.error("Image processing failed:", error);
-    return null;
-  }
+interface SyncResult {
+  file: string;
+  status: "success" | "error";
+  model?: string;
+  generations?: {
+    name: string;
+    chassis_code: string;
+    status: "success" | "error";
+    engines_processed?: number;
+    error?: string;
+  }[];
+  error?: string;
 }
 
 export async function POST() {
   try {
     const carsDir = path.join(process.cwd(), "lib", "bmw", "cars");
     const files = await fs.readdir(carsDir);
-    const results = [];
+    const results: SyncResult[] = [];
+
+    // Get BMW make_id
+    const { data: makeData, error: makeError } = await supabase
+      .from("car_makes")
+      .select("id")
+      .eq("name", "BMW")
+      .single();
+
+    if (makeError) {
+      return NextResponse.json(
+        { message: "Make BMW not found", error: makeError.message },
+        { status: 404 }
+      );
+    }
 
     for (const file of files) {
       if (!file.endsWith(".json")) continue;
 
-      const content = await fs.readFile(path.join(carsDir, file), "utf-8");
-      const payload = JSON.parse(content) as CarPayload;
-
       try {
-        // 1. Upsert car make with name unique constraint
-        const { data: makeData, error: makeError } = await supabase
-          .from("car_makes")
-          .upsert({ name: payload.make }, { onConflict: "name" })
-          .select()
-          .single();
-
-        if (makeError) throw makeError;
-        const makeId = makeData.id;
+        const content = await fs.readFile(path.join(carsDir, file), "utf-8");
+        const payload: CarPayload = JSON.parse(content);
 
         // Handle car model image
         let modelImagePath = null;
@@ -99,133 +68,151 @@ export async function POST() {
           }
         }
 
-        // 2. Upsert car model with image_path
+        // Create/Update car model
         const { data: modelData, error: modelError } = await supabase
           .from("car_models")
           .upsert(
             {
               name: payload.model,
-              make_id: makeId,
+              make_id: makeData.id,
               model_year: payload.model_year,
               summary: payload.summary,
-              image_path: modelImagePath, // Verify this is not null
+              image_path: modelImagePath,
             },
             {
               onConflict: "make_id,name",
-              ignoreDuplicates: false, // Set to false to update existing records
             }
           )
           .select()
           .single();
 
-        if (modelError) {
-          console.error("Model upsert error:", modelError);
-          throw modelError;
-        }
+        if (modelError) throw modelError;
 
-        console.log("Updated model data:", modelData);
+        // Process generations
+        const generationResults: GenerationSyncResult[] = [];
+        for (const gen of payload.data.models) {
+          const processedEngines = new Set<string>();
+          let chassisCode: string | null = null;
 
-        // 3. Upsert car generations with model_id and chassis_code unique constraint
-        for (const gen of payload.data) {
-          // First create/update the generation
-          const { data: genData, error: genError } = await supabase
-            .from("car_generations")
-            .upsert(
-              {
-                name: gen.name,
-                model_id: modelData.id,
-                start_year: gen.start_year,
-                end_year: gen.end_year === "present" ? null : gen.end_year,
-                chassis_code: gen.chassis_code,
-              },
-              {
-                onConflict: "model_id,name,start_year",
-                ignoreDuplicates: true,
-              }
-            )
-            .select()
-            .single();
+          try {
+            chassisCode = extractChassisCode(gen.model);
+            if (!chassisCode) {
+              console.warn(
+                `Warning: No chassis code found for generation: ${gen.model}`
+              );
+              continue;
+            }
 
-          if (genError) {
-            console.warn(`Generation upsert error for ${gen.name}:`, genError);
-            continue;
-          }
-          if (!genData) {
-            console.warn(
-              "No generation data returned, skipping engine mappings"
-            );
-            continue;
-          }
+            // Create/update generation
+            const { data: genData, error: genError } = await supabase
+              .from("car_generations")
+              .upsert(
+                {
+                  name: gen.model,
+                  model_id: modelData.id,
+                  chassis_code: [chassisCode],
+                  ...parseModelYear(gen.model_year),
+                  image_path: gen.image_path,
+                } as CarGeneration,
+                {
+                  onConflict: "model_id,name,start_year",
+                }
+              )
+              .select()
+              .single();
 
-          // Handle engine class mappings
-          if (Array.isArray(gen.engine_id)) {
-            console.log("Processing engine models:", gen.engine_id);
+            if (genError) {
+              console.error("Generation creation error:", {
+                error: genError,
+                data: {
+                  name: gen.model,
+                  model_id: modelData.id,
+                  chassis_code: chassisCode,
+                  ...parseModelYear(gen.model_year),
+                },
+              });
+              continue;
+            }
 
-            await supabase
-              .from("car_generation_engine_classes")
-              .delete()
-              .eq("generation_id", genData.id);
+            console.log("Generation created:", genData);
 
-            for (const engineModel of gen.engine_id) {
-              console.log("Looking up engine class for model:", engineModel);
+            // Process each engine in engine_details array
+            for (const engineDetail of gen.engine_details) {
+              try {
+                const engineCode = extractEngineCode(engineDetail.engine);
+                if (!engineCode) {
+                  console.warn(
+                    `No engine code found for engine: ${engineDetail.engine}`
+                  );
+                  continue;
+                }
 
-              const { data: engineClass, error: engineError } = await supabase
-                .from("engine_classes")
-                .select("id")
-                .eq("model", engineModel)
-                .single();
+                // Look up the specific engine by engine_code
+                const { data: engine, error: engineError } = await supabase
+                  .from("engines")
+                  .select("id, engine_code, class_id")
+                  .eq("engine_code", engineCode)
+                  .single();
 
-              if (engineError) {
-                console.log(
-                  `No engine class found for model ${engineModel}:`,
-                  engineError
-                );
-                continue;
-              }
+                if (engineError || !engine) {
+                  console.warn(`Engine not found for code: ${engineCode}`);
+                  continue;
+                }
 
-              if (engineClass) {
-                console.log(
-                  `Found engine class for model ${engineModel}:`,
-                  engineClass
-                );
-                await supabase.from("car_generation_engine_classes").insert({
-                  generation_id: genData.id,
-                  engine_class_id: engineClass.id,
-                });
+                console.log(`Found engine for ${engineCode}:`, engine);
+
+                // Create the junction record using the engine's class_id
+                const { error: junctionError } = await supabase
+                  .from("car_generation_engine_classes")
+                  .upsert(
+                    {
+                      generation_id: genData.id,
+                      engine_class_id: engine.class_id,
+                    },
+                    {
+                      onConflict: "generation_id,engine_class_id",
+                    }
+                  );
+
+                if (junctionError) {
+                  console.warn(
+                    "Failed to create engine mapping:",
+                    junctionError
+                  );
+                } else {
+                  processedEngines.add(engineCode);
+                }
+              } catch (engineError) {
+                console.warn("Engine processing failed:", engineError);
               }
             }
+
+            generationResults.push({
+              name: gen.model,
+              chassis_code: chassisCode,
+              status: "success",
+              engines_processed: processedEngines.size,
+            });
+          } catch (error) {
+            console.warn("Warning: Generation processing failed:", {
+              generation: gen.model,
+              error: error,
+            });
+            generationResults.push({
+              name: gen.model,
+              chassis_code: chassisCode || "",
+              status: "error",
+              error: (error as Error).message,
+            });
           }
         }
 
         results.push({
           file,
           status: "success",
-          make: payload.make,
           model: payload.model,
-          generationsProcessed: payload.data.length,
+          generations: generationResults,
         });
-
-        // In your POST handler, add image handling
-        if (payload.image_path) {
-          const cleanedUrl = cleanImageUrl(payload.image_path);
-          if (cleanedUrl) {
-            const imagePath = await handleImage(
-              cleanedUrl,
-              payload.make,
-              payload.model
-            );
-
-            if (imagePath) {
-              const { error: updateError } = await supabase
-                .from("car_models")
-                .update({ image_path: imagePath })
-                .eq("id", modelData.id);
-
-              if (updateError)
-                console.error("Failed to update model image:", updateError);
-            }
-          }
-        }
       } catch (error) {
         results.push({
           file,

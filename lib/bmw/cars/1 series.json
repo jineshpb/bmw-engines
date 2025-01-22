@@ -1,74 +1,158 @@
 {
   "make": "BMW",
-  "model_year": "2004 - present",
-  "summary": "The BMW 1 Series is a range of subcompact executive cars manufactured by BMW since 2004. It is the successor to the BMW 3 Series Compact and is currently in its fourth generation.",
-  "data": [
-    {
-      "name": "E81/E82/E87/E88",
-      "start_year": 2004,
-      "end_year": 2013,
-      "generation": "First Generation",
-      "chassis_code": [
-        "E81",
-        "E82",
-        "E87",
-        "E88"
-      ],
-      "engine_id": [
-        "N54",
-        "N52",
-        "N43"
-      ]
-    },
-    {
-      "name": "F20/F21",
-      "start_year": 2011,
-      "end_year": 2019,
-      "generation": "Second Generation",
-      "chassis_code": [
-        "F20",
-        "F21"
-      ],
-      "engine_id": [
-        "N20",
-        "N47",
-        "B38"
-      ]
-    },
-    {
-      "name": "F40",
-      "start_year": 2019,
-      "end_year": null,
-      "generation": "Third Generation",
-      "chassis_code": [
-        "F40"
-      ],
-      "engine_id": [
-        "B38",
-        "B48"
-      ]
-    },
-    {
-      "name": "F70",
-      "start_year": 2024,
-      "end_year": null,
-      "generation": "Fourth Generation",
-      "chassis_code": [
-        "F70"
-      ],
-      "engine_id": []
-    },
-    {
-      "name": "F52",
-      "start_year": 2017,
-      "end_year": 2023,
-      "generation": "China-market Sedan",
-      "chassis_code": [
-        "F52"
-      ],
-      "engine_id": []
-    }
+  "model": "1 Series",
+  "model_year": "2014-present",
+  "summary": "The BMW 1 Series is a subcompact executive car that has evolved through multiple generations, transitioning from rear-wheel drive to front-wheel drive in its latest iteration, while offering all-wheel drive options.",
+  "chassis_codes": [
+    "E87",
+    "F20",
+    "F40",
+    "F52"
   ],
-  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_120_%28F70%29_IMG_1166_%28cropped%29.jpg",
-  "model": "1 Series"
+  "engine_id": "N54",
+  "data": {
+    "models": [
+      {
+        "model": "BMW 1 Series (F52)",
+        "model_year": "2017-2022",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "116i",
+            "years": "2020–2024",
+            "engine": "B38A15 1.5 L I3 turbo",
+            "power": "80 kW (107 hp) at 4,600–6,500 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 1,380–3,800 rpm"
+          },
+          {
+            "model": "118i",
+            "years": "2019–2024",
+            "engine": "B38A15 1.5 L I3 turbo",
+            "power": "103 kW (138 hp) at 4,600–6,500 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,480–4,200 rpm"
+          },
+          {
+            "model": "120i",
+            "years": "2020–2024",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "131 kW (176 hp) at 5,000–6,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,200 rpm"
+          },
+          {
+            "model": "128ti",
+            "years": "2020–2024",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "195 kW (261 hp) at 4,750–6,500 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–4,500 rpm"
+          },
+          {
+            "model": "M135i xDrive",
+            "years": "2019–2024",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "225 kW (302 hp) at 5,000–6,500 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,750–4,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "BMW 1 Series (F40)",
+        "model_year": "2019-2024",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "116d",
+            "years": "2019–2024",
+            "engine": "B37C15U0 1.5 L I3 turbo",
+            "power": "85 kW (114 hp) at 4,000 rpm",
+            "torque": "270 N⋅m (199 lb⋅ft) at 1,750–2,250 rpm"
+          },
+          {
+            "model": "118d",
+            "years": "2019–2024",
+            "engine": "B47D20 2.0 L I4 turbo",
+            "power": "110 kW (148 hp) at 4,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,750–2,500 rpm"
+          },
+          {
+            "model": "120d",
+            "years": "2019–2024",
+            "engine": "B47D20 2.0 L I4 turbo",
+            "power": "140 kW (188 hp) at 4,000 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–2,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "BMW 1 Series (E87)",
+        "model_year": "2004-2013",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "116i",
+            "years": "2004–2011",
+            "engine": "N45 1.6 L inline-4",
+            "power": "85 kW (114 hp; 116 PS)",
+            "torque": "150 N⋅m (111 lb⋅ft)"
+          },
+          {
+            "model": "116i",
+            "years": "2007-2011",
+            "engine": "N43 1.6 L inline-4",
+            "power": "90 kW (121 hp; 122 PS)",
+            "torque": "160 N⋅m (118 lb⋅ft)"
+          },
+          {
+            "model": "116i",
+            "years": "2009-2011",
+            "engine": "N43 2.0 L inline-4",
+            "power": "95 kW (127 hp; 129 PS)",
+            "torque": "185 N⋅m (136 lb⋅ft)"
+          },
+          {
+            "model": "118i",
+            "years": "2005–2007",
+            "engine": "N46 2.0 L inline-4",
+            "power": "95 kW (127 hp; 129 PS)",
+            "torque": "180 N⋅m (133 lb⋅ft)"
+          },
+          {
+            "model": "118i",
+            "years": "2007–2009",
+            "engine": "N43 2.0 L inline-4",
+            "power": "105 kW (141 hp; 143 PS)",
+            "torque": "190 N⋅m (140 lb⋅ft)"
+          },
+          {
+            "model": "120i",
+            "years": "2004–2007",
+            "engine": "N46 2.0 L inline-4",
+            "power": "110 kW (148 hp; 150 PS)",
+            "torque": "200 N⋅m (148 lb⋅ft)"
+          },
+          {
+            "model": "120i",
+            "years": "2007–2013",
+            "engine": "N43 2.0 L inline-4",
+            "power": "125 kW (168 hp; 170 PS)",
+            "torque": "210 N⋅m (155 lb⋅ft)"
+          },
+          {
+            "model": "125i",
+            "years": "2007–2013",
+            "engine": "N52 3.0 L inline-6",
+            "power": "160 kW (215 hp; 218 PS)",
+            "torque": "270 N⋅m (199 lb⋅ft)"
+          },
+          {
+            "model": "135i",
+            "years": "2007–2010",
+            "engine": "N54 3.0 L inline-6 turbo",
+            "power": "225 kW (302 hp; 306 PS)",
+            "torque": "400 N⋅m (295 lb⋅ft)"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_120_%28F70%29_IMG_1166_%28cropped%29.jpg"
 }

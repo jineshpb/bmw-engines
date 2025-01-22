@@ -21,7 +21,7 @@ interface EngineClass {
 interface Generation {
   id: string;
   name: string;
-  start_year: number;
+  start_year: string;
   end_year: string | null;
   chassis_code: string[];
   car_generation_engine_classes: {
@@ -41,8 +41,6 @@ interface CarCardProps {
 }
 
 export default function CarCard({ car }: CarCardProps) {
-  console.log("car", car.car_generations[0].car_generation_engine_classes);
-
   const {
     data: { publicUrl },
   } = supabase.storage.from("car-images").getPublicUrl(car.image_path || "");
@@ -80,43 +78,38 @@ export default function CarCard({ car }: CarCardProps) {
                   <div>
                     <h4 className="font-medium text-gray-800">{gen.name}</h4>
                     <p className="text-sm text-gray-600">
-                      {gen.start_year} - {gen.end_year}
+                      {gen.start_year} - {gen.end_year || "Present"}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Chassis: {gen.chassis_code.join(", ")}
                     </p>
                   </div>
-                  <div className="text-right w-auto">
-                    {gen.car_generation_engine_classes?.[0]?.engine_classes ? (
+                  <div className="text-right">
+                    {gen.car_generation_engine_classes?.length > 0 ? (
                       <Sheet>
                         <SheetTrigger className="text-sm text-gray-600 hover:text-gray-900">
-                          Engine:{" "}
-                          {gen.car_generation_engine_classes?.[0]
-                            ?.engine_classes?.model || "N/A"}
+                          View Engines (
+                          {gen.car_generation_engine_classes.length})
                         </SheetTrigger>
                         <SheetContent className="w-fit max-w-[500px] sm:max-w-[600px]">
                           <SheetHeader>
                             <SheetTitle>Engine Details</SheetTitle>
                           </SheetHeader>
                           <div className="mt-4 space-y-4">
-                            <EngineClassCard
-                              key={
-                                gen.car_generation_engine_classes?.[0]
-                                  ?.engine_classes?.id
-                              }
-                              engineClass={{
-                                ...gen.car_generation_engine_classes?.[0]
-                                  ?.engine_classes,
-                                engineCount: 0,
-                                configurations: {
-                                  total: 0,
-                                  derived: 0,
-                                  original: 0,
-                                },
-                              }}
-                            />
+                            {gen.car_generation_engine_classes.map(
+                              ({ engine_classes }) => (
+                                <div key={engine_classes.id}>
+                                  {engine_classes.model}
+                                </div>
+                              )
+                            )}
                           </div>
                         </SheetContent>
                       </Sheet>
                     ) : (
-                      <p className="text-sm text-gray-600">N/A</p>
+                      <p className="text-sm text-gray-600">
+                        No engines available
+                      </p>
                     )}
                   </div>
                 </div>

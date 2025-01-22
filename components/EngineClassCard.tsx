@@ -4,11 +4,16 @@ import { EngineClassSummary } from "@/types/engines";
 import Image from "next/image";
 import KeyValuePair from "./KeyValuePair";
 
-interface EngineClassCardProps {
-  engineClass: EngineClassSummary;
+interface EngineClassProps {
+  engineClass: {
+    id: string;
+    model: string;
+    notes: string | null;
+    image_path: string | null;
+  };
 }
 
-export default function EngineClassCard({ engineClass }: EngineClassCardProps) {
+export default function EngineClassCard({ engineClass }: EngineClassProps) {
   console.log("engineClass", engineClass);
   console.log("engineClass type:", typeof engineClass);
   console.log(

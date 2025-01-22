@@ -1,0 +1,299 @@
+{
+  "make": "BMW",
+  "model": "2 Series",
+  "model_year": "2014-present",
+  "summary": "The BMW 2 Series is a range of subcompact executive cars manufactured by BMW since 2014, created by spinning off the 2-door models of the BMW 1 Series.",
+  "chassis_codes": [
+    "F22",
+    "G42"
+  ],
+  "engine_id": "N55",
+  "data": {
+    "models": [
+      {
+        "model": "BMW 2 Series (F22)",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "218i",
+            "years": "2015–2020",
+            "engine": "B38A15M0 1.5 L I3 turbo",
+            "power": "100 kW (134 hp) at 4,500–6,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,250 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2014–2016",
+            "engine": "N20B20 2.0 L I4 turbo",
+            "power": "135 kW (181 hp) at 5,000–6,250 rpm",
+            "torque": "270 N⋅m (199 lb⋅ft) at 1,250–4,500 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2016–2021",
+            "engine": "B48B20 2.0 L I4 turbo",
+            "power": "135 kW (181 hp) at 5,000–6,250 rpm",
+            "torque": "290 N⋅m (214 lb⋅ft) at 1,250–4,500 rpm"
+          },
+          {
+            "model": "228i",
+            "years": "2014–2016",
+            "engine": "N20B20 2.0 L I4 turbo",
+            "power": "180 kW (241 hp) at 5,000–6,500 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,250–4,800 rpm"
+          },
+          {
+            "model": "230i",
+            "years": "2016–2021",
+            "engine": "B48B20 2.0 L I4 turbo",
+            "power": "185 kW (248 hp) at 5,200 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,450–4,800 rpm"
+          },
+          {
+            "model": "M235i/M235i xDrive",
+            "years": "2014–2016",
+            "engine": "N55B30O0 3.0 L I6 turbo",
+            "power": "240 kW (322 hp) at 5,800–6,000 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,300–4,500 rpm"
+          },
+          {
+            "model": "M240i/M240i xDrive",
+            "years": "2016–2021",
+            "engine": "B58B30O0 3.0 L I6 turbo",
+            "power": "250 kW (335 hp) at 5,500 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 1,520–4,500 rpm"
+          },
+          {
+            "model": "M2",
+            "years": "2015–2018",
+            "engine": "N55B30T0 3.0 L I6 turbo",
+            "power": "272 kW (365 hp) at 6,500 rpm",
+            "torque": "465 N⋅m (343 lb⋅ft) at 1,450–4,750 rpm"
+          },
+          {
+            "model": "M2 Competition",
+            "years": "2018–2021",
+            "engine": "S55 3.0 L I6 twin turbo",
+            "power": "302 kW (405 hp) at 5,370–7,200 rpm",
+            "torque": "550 N⋅m (406 lb⋅ft) at 2,350–5,230 rpm"
+          },
+          {
+            "model": "M2 CS",
+            "years": "2020",
+            "engine": "S55 3.0 L I6 twin turbo",
+            "power": "331 kW (444 hp) at 6250 rpm",
+            "torque": "550 N⋅m (406 lb⋅ft) at 2,350–5,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "BMW 2 Series (G42)",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "218i",
+            "years": "2022",
+            "engine": "BMW B48 2.0 L I4 turbo",
+            "power": "115 kW (154 hp) at 4,500–6,500 rpm",
+            "torque": "250 N⋅m (184 lb⋅ft) at 1,300–4,300 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2021",
+            "engine": "B48B20M0 2.0 L I4 turbo",
+            "power": "135 kW (181 hp) at 5,000–6,500 rpm",
+            "torque": "300 N⋅m (221 lb⋅ft) at 1,350–4,000 rpm"
+          },
+          {
+            "model": "230i",
+            "years": "2022",
+            "engine": "B48O1ZIK 2.0 L I4 turbo",
+            "power": "180 kW (241 hp) at 4,500–6,500 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,600–4,000 rpm"
+          },
+          {
+            "model": "M240i",
+            "years": "2022",
+            "engine": "B58B30O1 3.0 L I6 turbo",
+            "power": "285 kW (382 hp) at 5,800–6,500 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 1,800–5,000 rpm"
+          },
+          {
+            "model": "M240i xDrive",
+            "years": "2021",
+            "engine": "B58B30O1 3.0 L I6 turbo",
+            "power": "275 kW (369 hp) at 5,800–6,500 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 1,800–5,000 rpm"
+          }
+        ]
+      },
+      {
+        "model": "BMW 2 Series Active Tourer",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "216i",
+            "years": "2016–2018",
+            "engine": "B38A15U0 1.5 L I3 single-scroll turbo",
+            "power": "75 kW (101 hp) at 4,100–6,000 rpm",
+            "torque": "180 N⋅m (133 lb⋅ft) at 1,200–3,800 rpm"
+          },
+          {
+            "model": "216i",
+            "years": "2018–2021",
+            "engine": "B38A15U1 1.5 L I3 single-scroll turbo",
+            "power": "80 kW (107 hp) at 4,300–6,500 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 1,380–3,800 rpm"
+          },
+          {
+            "model": "218i",
+            "years": "2014–2018",
+            "engine": "B38A15M0 1.5 L I3 single-scroll turbo",
+            "power": "100 kW (134 hp) at 4,400–6,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,250–4,300 rpm"
+          },
+          {
+            "model": "218i",
+            "years": "2018-2020",
+            "engine": "B38A15M1 1.5 L I3 single-scroll turbo",
+            "power": "103 kW (138 hp) at 4,500–6,500 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,480–4,200 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2014–2018",
+            "engine": "B48A20M0 2.0 L I4 twin-scroll turbo",
+            "power": "141 kW (189 hp) at 5,000–6,000 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,250–4,600 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2018–2020",
+            "engine": "B48A20M1 2.0 L I4 twin-scroll turbo",
+            "power": "141 kW (189 hp) at 5,000–6,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,600 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2020–2021",
+            "engine": "B48A20M1 2.0 L I4 twin-scroll turbo",
+            "power": "131 kW (176 hp) at 5,000–5,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,200 rpm"
+          },
+          {
+            "model": "225i",
+            "years": "2014–2021",
+            "engine": "B48A20O0 2.0 L I4 twin-scroll turbo",
+            "power": "170 kW (228 hp) at 4,750–6,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,350–4,500 rpm"
+          },
+          {
+            "model": "225xe PHEV",
+            "years": "2016–2018",
+            "engine": "B38A15M0 Hybrid 1.5 L I3 twin-scroll turbo + electric motor",
+            "power": "100 kW (134 hp) at 4,400–6,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,250–4,300 rpm (Engine)"
+          },
+          {
+            "model": "225xe PHEV",
+            "years": "2018–2020",
+            "engine": "B38A15M0 Hybrid 1.5 L I3 twin-scroll turbo + electric motor",
+            "power": "100 kW (134 hp) at 4,400–6,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,300–4,300 rpm (Engine)"
+          },
+          {
+            "model": "225xe PHEV",
+            "years": "2020–2021",
+            "engine": "B38A15M0 Hybrid 1.5 L I3 twin-scroll turbo + electric motor",
+            "power": "92 kW (123 hp) at 5,000–5,500 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,500–3,800 rpm (Engine)"
+          },
+          {
+            "model": "214d",
+            "years": "2014–2018",
+            "engine": "B37C15 1.5 L I3 turbo",
+            "power": "70 kW (94 hp) at 4,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,750–2,250 rpm"
+          },
+          {
+            "model": "216d",
+            "years": "2014–2021",
+            "engine": "B37C15 1.5 L I3 turbo",
+            "power": "85 kW (114 hp) at 4,000 rpm",
+            "torque": "270 N⋅m (199 lb⋅ft) at 1,750–2,250 rpm"
+          },
+          {
+            "model": "218d",
+            "years": "2014–2018",
+            "engine": "B47C20 2.0 L I4 turbo",
+            "power": "110 kW (148 hp) at 4,000 rpm",
+            "torque": "330 N⋅m (243 lb⋅ft) at 1,750–2,250 rpm"
+          },
+          {
+            "model": "218d",
+            "years": "2018–2021",
+            "engine": "B47C20 2.0 L I4 turbo",
+            "power": "110 kW (148 hp) at 4,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,750–2,500 rpm"
+          },
+          {
+            "model": "220d",
+            "years": "2014–2021",
+            "engine": "B47C20 2.0 L I4 turbo",
+            "power": "140 kW (188 hp) at 4,000 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–2,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "BMW 2 Series Gran Coupé",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "216i",
+            "years": "2022–",
+            "engine": "B38A15 1.5 L I3 turbo",
+            "power": "81 kW (109 hp) at 4,600–6,500 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 1,380–3,800 rpm"
+          },
+          {
+            "model": "218i",
+            "years": "2019–",
+            "engine": "B38A15 1.5 L I3 turbo",
+            "power": "103 kW (138 hp) at 4,500–6,500 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) at 1,500–4,100 rpm"
+          },
+          {
+            "model": "220i",
+            "years": "2020–",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "131 kW (176 hp) at 5,000–5,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,200 rpm"
+          },
+          {
+            "model": "220i xDrive",
+            "years": "2021–",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "131 kW (176 hp) at 5,000–5,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 1,350–4,200 rpm"
+          },
+          {
+            "model": "228i",
+            "years": "2019–",
+            "engine": "B48A20 2.0 L I4 turbo",
+            "power": "170 kW (228 hp) at 5,000–6,500 rpm",
+            "torque": "300 N⋅m (221 lb⋅ft) at 1,250–4,800 rpm"
+          },
+          {
+            "model": "M235i xDrive",
+            "years": "2020–",
+            "engine": "B58B30 3.0 L I6 turbo",
+            "power": "225 kW (302 hp) at 5,000–6,250 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,800–4,500 rpm"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/b2/BMW_G42_1X7A5766.jpg"
+}

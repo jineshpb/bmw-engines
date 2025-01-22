@@ -2,14 +2,31 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
+interface EngineDetail {
+  model: string;
+  years: string;
+  engine: string;
+  power: string;
+  torque: string;
+}
+
+interface ModelData {
+  model: string;
+  image_path?: string;
+  engine_details: EngineDetail[];
+}
+
 interface CarPayload {
   make: string;
   model: string;
+  model_year: string;
+  summary: string;
+  chassis_codes: string[];
+  engine_id: string;
   data: {
-    name: string;
-    year: string;
-    engine_configuration_id: string;
-  }[];
+    models: ModelData[];
+  };
+  image_path: string;
 }
 
 // For debugging
@@ -30,13 +47,84 @@ export async function POST(request: Request) {
   try {
     const payload = (await request.json()) as CarPayload;
 
-    // Debug payload
-    console.log("Received payload:", JSON.stringify(payload, null, 2));
+    // Add detailed debug logging
+    console.log("Validation check details:");
+    console.log({
+      make: payload.make,
+      model: payload.model,
+      model_year: payload.model_year,
+      summary: payload.summary,
+      chassis_codes: Array.isArray(payload.chassis_codes),
+      engine_id: payload.engine_id,
+      hasModels: payload.data?.models,
+      isModelsArray: Array.isArray(payload.data?.models),
+      image_path: payload.image_path,
+    });
 
-    // Validate payload structure
-    if (!payload.make || !payload.model || !Array.isArray(payload.data)) {
+    // Enhanced payload validation
+    if (
+      !payload.make ||
+      !payload.model ||
+      !payload.model_year ||
+      !payload.summary ||
+      !Array.isArray(payload.chassis_codes) ||
+      !payload.engine_id ||
+      !payload.data?.models ||
+      !Array.isArray(payload.data.models) ||
+      !payload.image_path
+    ) {
       return NextResponse.json(
-        { message: "Invalid payload format" },
+        {
+          message: "Invalid payload format",
+          required: [
+            "make",
+            "model",
+            "model_year",
+            "summary",
+            "chassis_codes",
+            "engine_id",
+            "data.models",
+            "image_path",
+          ],
+        },
+        { status: 400 }
+      );
+    }
+
+    // Validate models array structure
+    const isValidModels = payload.data.models.every(
+      (modelData) =>
+        modelData.model &&
+        Array.isArray(modelData.engine_details) &&
+        modelData.engine_details.every(
+          (detail) =>
+            detail.model &&
+            detail.years &&
+            detail.engine &&
+            detail.power &&
+            detail.torque !== undefined
+        )
+    );
+
+    if (!isValidModels) {
+      return NextResponse.json(
+        {
+          message: "Invalid models structure",
+          required: {
+            models: {
+              model: "string",
+              engine_details: [
+                {
+                  model: "string",
+                  years: "string",
+                  engine: "string",
+                  power: "string",
+                  torque: "string",
+                },
+              ],
+            },
+          },
+        },
         { status: 400 }
       );
     }
@@ -60,7 +148,7 @@ export async function POST(request: Request) {
 
       return NextResponse.json({
         message: "Car data written successfully",
-        count: payload.data.length,
+        modelCount: payload.data.models.length,
         filePath: filePath,
       });
     } catch (fileError) {
