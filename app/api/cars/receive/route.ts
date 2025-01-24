@@ -1,33 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
-
-interface EngineDetail {
-  model: string;
-  years: string;
-  engine: string;
-  power: string;
-  torque: string;
-}
-
-interface ModelData {
-  model: string;
-  image_path?: string;
-  engine_details: EngineDetail[];
-}
-
-interface CarPayload {
-  make: string;
-  model: string;
-  model_year: string;
-  summary: string;
-  chassis_codes: string[];
-  engine_id: string;
-  data: {
-    models: ModelData[];
-  };
-  image_path: string;
-}
+import { CarPayload } from "@/types/cars";
 
 // For debugging
 const logRequest = async (request: Request) => {

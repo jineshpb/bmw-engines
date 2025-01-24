@@ -4,16 +4,26 @@ import { EngineClassSummary } from "@/types/engines";
 import Image from "next/image";
 import KeyValuePair from "./KeyValuePair";
 
-interface EngineClassProps {
-  engineClass: {
-    id: string;
-    model: string;
-    notes: string | null;
-    image_path: string | null;
-  };
+interface EngineClassCardProps {
+  engineClass:
+    | EngineClassSummary
+    | {
+        model: string;
+        notes: string | null;
+        image_path: string | null;
+        engineCount: number;
+        configurations: {
+          total: number;
+          derived: number;
+          original: number;
+        };
+        power?: string | null;
+        torque?: string | null;
+        displacement?: number | null;
+      };
 }
 
-export default function EngineClassCard({ engineClass }: EngineClassProps) {
+export default function EngineClassCard({ engineClass }: EngineClassCardProps) {
   console.log("engineClass", engineClass);
   console.log("engineClass type:", typeof engineClass);
   console.log(

@@ -1,0 +1,475 @@
+{
+  "make": "BMW",
+  "model": "3 Series",
+  "model_year": "1975-present",
+  "summary": "The BMW 3 Series is a line of compact executive cars manufactured by BMW since May 1975. It has been produced in seven generations, evolving from a 2-door saloon to include various body styles such as 4-door saloon, convertible, coupé, estate, and hatchback.",
+  "chassis_codes": [
+    "E21",
+    "E30",
+    "E36",
+    "E46",
+    "E90",
+    "F30",
+    "G20"
+  ],
+  "engine_id": "S14",
+  "data": {
+    "models": [
+      {
+        "model": "E21",
+        "summary": "The first generation of the BMW 3 Series.",
+        "model_year": "1981-1983",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "315",
+            "years": "1981–1983",
+            "engine": "M10 (M98)",
+            "power": "55 kW (75 PS) at 5,800 rpm",
+            "torque": "110 N⋅m (81 lb⋅ft) at 3,200 rpm"
+          },
+          {
+            "model": "316",
+            "years": "1975–1980",
+            "engine": "M10 (M41)",
+            "power": "66 kW (90 PS) at 6,000 rpm",
+            "torque": "123 N⋅m (91 lb⋅ft) at 3,000 rpm"
+          },
+          {
+            "model": "316",
+            "years": "1980–1982",
+            "engine": "M10B18",
+            "power": "66 kW (90 PS) at 5,500 rpm",
+            "torque": "140 N⋅m (103 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "318",
+            "years": "1975–1980",
+            "engine": "M10B18",
+            "power": "72 kW (98 PS) at 5800 rpm",
+            "torque": "143 N⋅m (105 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "318i",
+            "years": "1980–1982",
+            "engine": "M10B18",
+            "power": "77 kW (105 PS) at 5,800 rpm",
+            "torque": "145 N⋅m (107 lb⋅ft) at 4,500 rpm"
+          },
+          {
+            "model": "320",
+            "years": "1975–1977",
+            "engine": "M10 (M43)",
+            "power": "80 kW (109 PS) at 5,800 rpm",
+            "torque": "157 N⋅m (116 lb⋅ft) at 3,700 rpm"
+          },
+          {
+            "model": "320/6",
+            "years": "1977–1982",
+            "engine": "M20B20",
+            "power": "90 kW (122 PS) at 6,000 rpm",
+            "torque": "160 N⋅m (118 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "1975–1977",
+            "engine": "M10 (M64)",
+            "power": "92 kW (125 PS) at 5,700 rpm",
+            "torque": "172 N⋅m (127 lb⋅ft) at 4,350 rpm"
+          },
+          {
+            "model": "320i (US)",
+            "years": "1977–1979",
+            "engine": "M10B20",
+            "power": "82 kW (112 PS; 110 bhp) at 5,700 rpm",
+            "torque": "152 N⋅m (112 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "323i",
+            "years": "1978–1982",
+            "engine": "M20B23",
+            "power": "105 kW (143 PS) at 5,800 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 4,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "E30",
+        "summary": "The second generation of the BMW 3 Series.",
+        "model_year": "1982-1994",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "316i",
+            "years": "1990–1994",
+            "engine": "M40B16",
+            "power": "73 kW (100 hp) at 5,500 rpm",
+            "torque": "141 N⋅m (104 lb⋅ft) at 4,250 rpm"
+          },
+          {
+            "model": "316i",
+            "years": "1993–1999",
+            "engine": "M43B16",
+            "power": "75 kW (102 hp) at 5,500 rpm",
+            "torque": "150 N⋅m (111 lb⋅ft) at 3,900 rpm"
+          },
+          {
+            "model": "318i",
+            "years": "1990–1993*",
+            "engine": "M40B18",
+            "power": "83 kW (113 hp) at 5,500 rpm",
+            "torque": "162 N⋅m (119 lb⋅ft) at 4,250 rpm"
+          },
+          {
+            "model": "318i",
+            "years": "1993–1998",
+            "engine": "M43B18",
+            "power": "85 kW (115 hp) at 5,500 rpm",
+            "torque": "168 N⋅m (124 lb⋅ft) at 3,900 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "1991–1993",
+            "engine": "M50B20",
+            "power": "110 kW (150 hp) at 5,900 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 4,700 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "1993–1998",
+            "engine": "M52B20",
+            "power": "110 kW (150 hp) at 5,900 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 4,200 rpm"
+          },
+          {
+            "model": "323i",
+            "years": "1995–1998",
+            "engine": "M52B25",
+            "power": "125 kW (170 hp) at 5,500 rpm",
+            "torque": "245 N⋅m (181 lb⋅ft) at 3,950 rpm"
+          },
+          {
+            "model": "325i",
+            "years": "1991–1992",
+            "engine": "M50B25",
+            "power": "141 kW (192 hp) at 5,900 rpm",
+            "torque": "245 N⋅m (181 lb⋅ft) at 4,700 rpm"
+          },
+          {
+            "model": "325i",
+            "years": "1993–1995",
+            "engine": "M50B25TU",
+            "power": "141 kW (192 hp) at 5,900 rpm",
+            "torque": "245 N⋅m (181 lb⋅ft) at 4,200 rpm"
+          },
+          {
+            "model": "328i",
+            "years": "1995–1998",
+            "engine": "M52B28",
+            "power": "142 kW (193 hp) at 5,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 3,950 rpm"
+          },
+          {
+            "model": "M3",
+            "years": "1992–1995",
+            "engine": "S50B30",
+            "power": "210 kW (286 hp) at 7,000 rpm",
+            "torque": "320 N⋅m (236 lb⋅ft) at 3,600 rpm"
+          },
+          {
+            "model": "M3",
+            "years": "1995–1998",
+            "engine": "S50B32",
+            "power": "236 kW (321 hp) at 7,400 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 3,250 rpm"
+          }
+        ]
+      },
+      {
+        "model": "E46",
+        "summary": "The third generation of the BMW 3 Series.",
+        "model_year": "1997-2006",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "316i",
+            "years": "1998–2001",
+            "engine": "M43B19",
+            "power": "87 kW (117 hp)",
+            "torque": "180 N⋅m (133 lb⋅ft)"
+          },
+          {
+            "model": "318i",
+            "years": "1998–2001",
+            "engine": "M43B19",
+            "power": "87 kW (117 hp)",
+            "torque": "180 N⋅m (133 lb⋅ft)"
+          },
+          {
+            "model": "320i",
+            "years": "1998–2000",
+            "engine": "M52TUB20",
+            "power": "110 kW (148 hp)",
+            "torque": "190 N⋅m (140 lb⋅ft)"
+          },
+          {
+            "model": "323i",
+            "years": "1998–2000",
+            "engine": "M52TUB25",
+            "power": "126 kW (169 hp)",
+            "torque": "245 N⋅m (181 lb⋅ft)"
+          },
+          {
+            "model": "325i",
+            "years": "2001–2006",
+            "engine": "M54B25",
+            "power": "141 kW (189 hp)",
+            "torque": "245 N⋅m (181 lb⋅ft)"
+          },
+          {
+            "model": "328i",
+            "years": "1998–2000",
+            "engine": "M52TUB28",
+            "power": "142 kW (190 hp)",
+            "torque": "280 N⋅m (207 lb⋅ft)"
+          },
+          {
+            "model": "330i",
+            "years": "2000–2006",
+            "engine": "M54B30",
+            "power": "170 kW (228 hp)",
+            "torque": "300 N⋅m (221 lb⋅ft)"
+          },
+          {
+            "model": "M3",
+            "years": "2000–2006",
+            "engine": "S54B32",
+            "power": "252 kW (338 hp)",
+            "torque": "365 N⋅m (269 lb⋅ft)"
+          }
+        ]
+      },
+      {
+        "model": "E90",
+        "summary": "The fourth generation of the BMW 3 Series.",
+        "model_year": "2007-2013",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "316i",
+            "years": "09/2007–10/2011",
+            "engine": "N43B16",
+            "power": "90 kW (121 hp) at 6,000 rpm",
+            "torque": "160 N⋅m (120 lb⋅ft) at 4,250 rpm"
+          },
+          {
+            "model": "318i",
+            "years": "09/2005–03/2007",
+            "engine": "N46B20U1",
+            "power": "95 kW (127 hp) at 5,750 rpm",
+            "torque": "180 N⋅m (130 lb⋅ft) at 3,250 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "01/2005–03/2007",
+            "engine": "N46B20",
+            "power": "110 kW (148 hp) at 6,200 rpm",
+            "torque": "200 N⋅m (150 lb⋅ft) at 3,600 rpm"
+          },
+          {
+            "model": "323i",
+            "years": "01/2005–03/2007",
+            "engine": "N52B25",
+            "power": "130 kW (174 hp) at 5,800 rpm",
+            "torque": "230 N⋅m (170 lb⋅ft) at 3,500–5,000 rpm"
+          },
+          {
+            "model": "325i",
+            "years": "01/2005–08/2007",
+            "engine": "N52B25",
+            "power": "160 kW (215 hp) at 6,500 rpm",
+            "torque": "250 N⋅m (180 lb⋅ft) at 2,750–4,250 rpm"
+          },
+          {
+            "model": "328i",
+            "years": "09/2007–10/2011",
+            "engine": "N52B30",
+            "power": "172 kW (231 hp) at 6,500 rpm",
+            "torque": "271 N⋅m (200 lb⋅ft) at 2,750 rpm"
+          },
+          {
+            "model": "330i",
+            "years": "02/2004–03/2007",
+            "engine": "N52B30",
+            "power": "190 kW (255 hp) at 6,600 rpm",
+            "torque": "300 N⋅m (220 lb⋅ft) at 2,500–4,000 rpm"
+          },
+          {
+            "model": "335i",
+            "years": "09/2006–02/2010",
+            "engine": "N54B30",
+            "power": "228 kW (306 hp) at 5,800 rpm",
+            "torque": "400 N⋅m (300 lb⋅ft) at 1,300–5,000 rpm"
+          },
+          {
+            "model": "M3",
+            "years": "09/2007–07/2013",
+            "engine": "S65B40",
+            "power": "309 kW (414 hp) at 8,300 rpm",
+            "torque": "400 N⋅m (300 lb⋅ft) at 3,900 rpm"
+          }
+        ]
+      },
+      {
+        "model": "F30",
+        "summary": "The sixth generation of the BMW 3 Series.",
+        "model_year": "2012-2019",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "316i",
+            "years": "2012–2015",
+            "engine": "N13B16",
+            "power": "100 kW (134 hp) at 4,400–6,450 rpm",
+            "torque": "220 N⋅m (160 lb⋅ft) at 1,350–4,300 rpm"
+          },
+          {
+            "model": "318i",
+            "years": "2015–2019",
+            "engine": "B38B15",
+            "power": "100 kW (134 hp) at 4,400–6,000 rpm",
+            "torque": "220 N⋅m (160 lb⋅ft) at 1,250–4,300 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "2012–2015",
+            "engine": "N20B20",
+            "power": "135 kW (181 hp) at 5,000 rpm",
+            "torque": "270 N⋅m (200 lb⋅ft) at 1,250–4,500 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "2015–2019",
+            "engine": "B48B20",
+            "power": "135 kW (181 hp) at 5,000–6,500 rpm",
+            "torque": "270 N⋅m (200 lb⋅ft) at 1,350–4,600 rpm"
+          },
+          {
+            "model": "328i",
+            "years": "2012–2015",
+            "engine": "N20B20",
+            "power": "180 kW (241 hp) at 5,000–6,500 rpm",
+            "torque": "350 N⋅m (260 lb⋅ft) at 1,250–4,800 rpm"
+          },
+          {
+            "model": "330i",
+            "years": "2015–2019",
+            "engine": "B48B20",
+            "power": "185 kW (248 hp) at 5,200–6,500 rpm",
+            "torque": "350 N⋅m (260 lb⋅ft) at 1,450–4,800 rpm"
+          },
+          {
+            "model": "335i",
+            "years": "2012–2015",
+            "engine": "N55B30M0",
+            "power": "225 kW (302 hp) at 5,800–6,400 rpm",
+            "torque": "400 N⋅m (300 lb⋅ft) at 1,200–5,000 rpm"
+          },
+          {
+            "model": "340i",
+            "years": "2015–2019",
+            "engine": "B58B30M0",
+            "power": "240 kW (322 hp) at 5,500–6,500 rpm",
+            "torque": "450 N⋅m (330 lb⋅ft) at 1,380–5,000 rpm"
+          },
+          {
+            "model": "M3 (F80)",
+            "years": "2014–2020",
+            "engine": "S55B30",
+            "power": "317 kW (425 hp) at 5,500–7,300 rpm",
+            "torque": "550 N⋅m (410 lb⋅ft) at 1,850–5,500 rpm"
+          },
+          {
+            "model": "M3 Competition (F80)",
+            "years": "2016–2020",
+            "engine": "S55B30",
+            "power": "331 kW (444 hp) at 7,000 rpm",
+            "torque": "600 N⋅m (440 lb⋅ft) at 4,000–5,380 rpm"
+          },
+          {
+            "model": "M3 CS (F80)",
+            "years": "2018–2020",
+            "engine": "S55B30",
+            "power": "338 kW (453 hp) at 6,250 rpm",
+            "torque": "600 N⋅m (440 lb⋅ft) at 4,000–5,380 rpm"
+          }
+        ]
+      },
+      {
+        "model": "G20",
+        "summary": "The seventh generation of the BMW 3 Series.",
+        "model_year": "2019-present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "318i / 320Li",
+            "years": "2020–",
+            "engine": "B48",
+            "power": "115 kW (156 PS; 154 hp) at 4,500–6,500 rpm",
+            "torque": "250 N⋅m (184 lb⋅ft) at 1,300–4,300 rpm"
+          },
+          {
+            "model": "320i / 325Li",
+            "years": "2019–",
+            "engine": "B48",
+            "power": "135 kW (184 PS; 181 hp) at 5,000–6,500 rpm",
+            "torque": "300 N⋅m (221 lb⋅ft) at 1,350–4,000 rpm"
+          },
+          {
+            "model": "320i",
+            "years": "2019–",
+            "engine": "B48",
+            "power": "125 kW (170 PS; 168 hp) at 5,000–6,000 rpm",
+            "torque": "250 N⋅m (184 lb⋅ft) at 2,000–4,700 rpm"
+          },
+          {
+            "model": "320e",
+            "years": "2021–",
+            "engine": "B48 + electric motor",
+            "power": "150 kW (204 PS; 201 hp) at 5,000–6,500 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,450–3,700 rpm"
+          },
+          {
+            "model": "330e",
+            "years": "2019–",
+            "engine": "B48 + electric motor",
+            "power": "215 kW (292 PS; 288 hp) at 5,000–6,500 rpm",
+            "torque": "420 N⋅m (310 lb⋅ft) at 1,750–3,000 rpm"
+          },
+          {
+            "model": "330i / 330Li",
+            "years": "2019–",
+            "engine": "B48",
+            "power": "190 kW (258 PS; 255 hp) at 5,000–6,500 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,550–4,400 rpm"
+          },
+          {
+            "model": "M340i",
+            "years": "2019–",
+            "engine": "B58",
+            "power": "285 kW (387 PS; 382 hp) at 5,800–6,500 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 1,800–5,000 rpm"
+          },
+          {
+            "model": "Alpina B3",
+            "years": "2019–",
+            "engine": "B58",
+            "power": "344 kW (468 PS; 461 hp) at 5,500–7,000 rpm",
+            "torque": "700 N⋅m (516 lb⋅ft) at 2,500–4,500 rpm"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/9/91/BMW_G20_%282022%29_IMG_7316_%282%29.jpg"
+}

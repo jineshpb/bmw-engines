@@ -2,13 +2,18 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import supabase from "@/lib/supabaseClient";
-import { CarPayload, CarGeneration, GenerationSyncResult } from "@/types/cars";
+import {
+  CarPayload,
+  CarGeneration,
+  GenerationSyncResult,
+  EngineDetail,
+} from "@/types/cars";
 
 import { cleanImageUrl } from "@/lib/utils/cars/imageUtils";
 import { handleImage } from "@/lib/utils/cars/imageUtils";
 import { parseModelYear } from "@/lib/utils/cars/parser";
 import { extractChassisCode } from "@/lib/utils/cars/parser";
-import { extractEngineCode } from "@/lib/utils/cars/engineUtils";
+import { extractEngineCode } from "@/lib/utils/cars/parser";
 
 interface SyncResult {
   file: string;
@@ -22,6 +27,115 @@ interface SyncResult {
     error?: string;
   }[];
   error?: string;
+}
+
+async function processEngineDetails(
+  engineDetail: EngineDetail,
+  genData: { id: string }
+) {
+  try {
+    const engineCodes = extractEngineCode(engineDetail.engine);
+    const { fullCode, shortCode } = engineCodes;
+    const engineData = {
+      power: engineDetail.power,
+      torque: engineDetail.torque,
+      displacement: extractDisplacement(engineDetail.engine),
+      years: engineDetail.years,
+    };
+
+    // Try to find exact engine match
+    const { data: engine } = await supabase
+      .from("engines")
+      .select(
+        `
+        id,
+        engine_code,
+        class_id
+      `
+      )
+      .or(`engine_code.eq.${fullCode},engine_code.eq.${shortCode}`)
+      .single();
+
+    if (engine) {
+      console.log(`Found engine match: ${engine.engine_code}`);
+
+      // Always store car-specific data in junction table
+      const { error: junctionError } = await supabase
+        .from("car_generation_engines")
+        .upsert(
+          {
+            generation_id: genData.id,
+            engine_id: engine.id,
+            ...engineData,
+          },
+          {
+            onConflict: "generation_id,engine_id",
+          }
+        );
+
+      if (junctionError) {
+        console.warn("Failed to create engine mapping:", junctionError);
+      }
+
+      // Also try to store in engine class junction for completeness
+      if (engine.class_id) {
+        await supabase.from("car_generation_engine_classes").upsert(
+          {
+            generation_id: genData.id,
+            engine_class_id: engine.class_id,
+            ...engineData,
+          },
+          {
+            onConflict: "generation_id,engine_class_id",
+          }
+        );
+      }
+    } else {
+      // If no exact engine match, try engine class
+      const { data: engineClass } = await supabase
+        .from("engine_classes")
+        .select("id")
+        .eq("model", shortCode)
+        .single();
+
+      if (engineClass) {
+        console.log(`Found engine class match: ${shortCode}`);
+
+        // Store in engine class junction
+        const { error: classJunctionError } = await supabase
+          .from("car_generation_engine_classes")
+          .upsert(
+            {
+              generation_id: genData.id,
+              engine_class_id: engineClass.id,
+              ...engineData,
+            },
+            {
+              onConflict: "generation_id,engine_class_id",
+            }
+          );
+
+        if (classJunctionError) {
+          console.warn(
+            "Failed to create engine class mapping:",
+            classJunctionError
+          );
+        }
+      } else {
+        console.warn(
+          `No engine or class match found for: ${engineDetail.engine}`
+        );
+      }
+    }
+  } catch (error) {
+    console.error("Engine processing failed:", error);
+    throw error; // Re-throw to handle in the main sync process
+  }
+}
+
+function extractDisplacement(engineString: string): number | null {
+  const match = engineString.match(/(\d+\.?\d*)\s*L/i);
+  return match ? parseFloat(match[1]) : null;
 }
 
 export async function POST() {
@@ -92,30 +206,40 @@ export async function POST() {
         const generationResults: GenerationSyncResult[] = [];
         for (const gen of payload.data.models) {
           const processedEngines = new Set<string>();
-          let chassisCode: string | null = null;
+          const chassisCode: string | null = null;
 
           try {
-            chassisCode = extractChassisCode(gen.model);
-            if (!chassisCode) {
+            const chassisCodes = extractChassisCode(gen.model);
+            if (chassisCodes.length === 0) {
               console.warn(
                 `Warning: No chassis code found for generation: ${gen.model}`
               );
               continue;
             }
+            const chassisCode = chassisCodes; // Use the whole array
 
             // Create/update generation
+            const yearData = gen.model_year
+              ? parseModelYear(gen.model_year)
+              : parseModelYear(gen.engine_details?.[0]?.years || "");
+
             const { data: genData, error: genError } = await supabase
               .from("car_generations")
               .upsert(
                 {
                   name: gen.model,
                   model_id: modelData.id,
-                  chassis_code: [chassisCode],
-                  ...parseModelYear(gen.model_year),
-                  image_path: gen.image_path,
-                } as CarGeneration,
+                  chassis_code: chassisCode,
+                  summary: gen.summary,
+                  ...yearData,
+                  image_path: gen.image_path || null,
+                } satisfies Omit<
+                  CarGeneration,
+                  "id" | "car_generation_engines"
+                >,
                 {
                   onConflict: "model_id,name,start_year",
+                  ignoreDuplicates: false,
                 }
               )
               .select()
@@ -128,68 +252,30 @@ export async function POST() {
                   name: gen.model,
                   model_id: modelData.id,
                   chassis_code: chassisCode,
-                  ...parseModelYear(gen.model_year),
+                  model_year: gen.model_year,
                 },
               });
-              continue;
+              throw genError;
             }
 
             console.log("Generation created:", genData);
 
-            // Process each engine in engine_details array
+            // Process engines
             for (const engineDetail of gen.engine_details) {
               try {
-                const engineCode = extractEngineCode(engineDetail.engine);
-                if (!engineCode) {
-                  console.warn(
-                    `No engine code found for engine: ${engineDetail.engine}`
-                  );
-                  continue;
-                }
-
-                // Look up the specific engine by engine_code
-                const { data: engine, error: engineError } = await supabase
-                  .from("engines")
-                  .select("id, engine_code, class_id")
-                  .eq("engine_code", engineCode)
-                  .single();
-
-                if (engineError || !engine) {
-                  console.warn(`Engine not found for code: ${engineCode}`);
-                  continue;
-                }
-
-                console.log(`Found engine for ${engineCode}:`, engine);
-
-                // Create the junction record using the engine's class_id
-                const { error: junctionError } = await supabase
-                  .from("car_generation_engine_classes")
-                  .upsert(
-                    {
-                      generation_id: genData.id,
-                      engine_class_id: engine.class_id,
-                    },
-                    {
-                      onConflict: "generation_id,engine_class_id",
-                    }
-                  );
-
-                if (junctionError) {
-                  console.warn(
-                    "Failed to create engine mapping:",
-                    junctionError
-                  );
-                } else {
-                  processedEngines.add(engineCode);
-                }
+                await processEngineDetails(engineDetail, genData);
+                processedEngines.add(engineDetail.engine);
               } catch (engineError) {
-                console.warn("Engine processing failed:", engineError);
+                console.warn("Engine processing failed:", {
+                  engine: engineDetail.engine,
+                  error: engineError,
+                });
               }
             }
 
             generationResults.push({
               name: gen.model,
-              chassis_code: chassisCode,
+              chassis_code: chassisCode.join("/"),
               status: "success",
               engines_processed: processedEngines.size,
             });

@@ -1,3 +1,4 @@
+// Raw data from JSON files
 export interface EngineDetail {
   model: string;
   years: string;
@@ -8,8 +9,9 @@ export interface EngineDetail {
 
 export interface GenerationModel {
   model: string;
-  image_path: string;
-  model_year: string;
+  image_path?: string; // Optional in JSON
+  summary: string;
+  model_year?: string; // Optional in some generations
   engine_details: EngineDetail[];
 }
 
@@ -26,24 +28,44 @@ export interface CarPayload {
   image_path?: string;
 }
 
-// For database operations
+// Database types
 export interface CarGeneration {
   id?: string;
   name: string;
   model_id: string;
-  start_year: string;
-  end_year?: string | null;
+  start_year: number | null;
+  end_year: string | null;
   chassis_code: string[];
-  image_path?: string;
+  summary: string | null;
+  image_path: string | null;
+  car_generation_engines?: {
+    engines: {
+      engine_code: string;
+    };
+    years: string | null;
+  }[];
+  car_generation_engine_classes?: {
+    engine_classes: {
+      model: string;
+    };
+    power: string | null;
+    torque: string | null;
+    displacement: number | null;
+    years: string | null;
+  }[];
 }
 
 export interface CarModel {
-  id?: string;
+  id: string;
   name: string;
-  make_id: string;
   model_year: string;
-  summary?: string;
-  image_path?: string;
+  summary: string;
+  make_id: string;
+  image_path: string | null;
+  car_generations: CarGeneration[]; // Use CarGeneration interface
+  car_makes: {
+    name: string;
+  };
 }
 
 // Type for sync results tracking

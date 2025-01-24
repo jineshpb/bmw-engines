@@ -2,19 +2,19 @@
   "make": "BMW",
   "model": "4 Series",
   "model_year": "2013-present",
-  "summary": "The BMW 4 Series is a range of compact executive cars manufactured by BMW since 2013, created by spinning off the 2-door models of the 3 Series into a separate series, available in coupé, convertible, and Gran Coupé body styles.",
+  "summary": "The BMW 4 Series is a range of compact executive cars manufactured by BMW since 2013, created by spinning off the 2-door models of the 3 Series into a separate series. It is available in coupé, convertible, and 5-door liftback (Gran Coupé) body styles, with turbocharged inline-3, inline-4, inline-6 engines, and a plug-in hybrid powertrain in the second generation.",
   "chassis_codes": [
     "F32",
-    "F33",
-    "F36",
     "G22"
   ],
   "engine_id": "S55",
   "data": {
     "models": [
       {
-        "model": "BMW 4 Series (F32)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "F32/F33/F36",
+        "summary": "The second generation of the BMW 4 Series consists of the BMW F32 (coupe), BMW F33 (convertible), and BMW F36 (gran coupe).",
+        "model_year": "2013–2020",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/8e/BMW_4_Series_F32.jpg",
         "engine_details": [
           {
             "model": "418i",
@@ -152,12 +152,14 @@
         ]
       },
       {
-        "model": "BMW 4 Series (G22)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "G22/G23/G26",
+        "summary": "The third generation of the BMW 4 Series consists of the BMW G22 (coupe), BMW G23 (convertible), and BMW G26 (gran coupe).",
+        "model_year": "2020–present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/8e/BMW_4_Series_G22.jpg",
         "engine_details": [
           {
             "model": "420i",
-            "years": "2021–present",
+            "years": "2021-present",
             "engine": "2.0 L turbo I4 B48B20M0",
             "power": "135 kW (184 PS; 181 hp) at 4,400–6,000 rpm",
             "torque": "300 N⋅m (221 ft⋅lb) at 1,250–4,300 rpm"
@@ -173,27 +175,27 @@
             "model": "M440i",
             "years": "2021-present",
             "engine": "3.0 L turbo I6 B58B30TÜ1",
-            "power": "EU: 275 kW (374 PS; 369 hp) at 5,500-6,500 rpm; US: 285 kW (387 PS; 382 hp) at 5,800-6,500 rpm",
+            "power": "EU: 275 kW (374 PS; 369 hp) at 5,500-6,500 rpm, US: 285 kW (387 PS; 382 hp) at 5,800-6,500 rpm",
             "torque": "500 N⋅m (369 ft⋅lb) at 1,800-5,000 rpm"
           },
           {
             "model": "420d",
             "years": "2021-present",
-            "engine": "2.0 L B47 turbo I4",
+            "engine": "2.0 L turbo I4 B47",
             "power": "140 kW (190 PS) at 4,000 rpm",
             "torque": "400 N⋅m (295 ft⋅lb) at 1,750-2,500 rpm"
           },
           {
             "model": "430d",
             "years": "2021-present",
-            "engine": "3.0 L B57 turbo I6",
+            "engine": "3.0 L turbo I6 B57",
             "power": "210 kW (286 PS) at 4,000 rpm",
             "torque": "650 N⋅m (479 ft⋅lb) at 1,750-2,500 rpm"
           },
           {
             "model": "M440d",
             "years": "2021-present",
-            "engine": "3.0 L B57 twin-turbo I6",
+            "engine": "3.0 L twin-turbo I6 B57",
             "power": "250 kW (340 PS) at 4,400 rpm",
             "torque": "700 N⋅m (516 ft⋅lb) at 1,750-2,250 rpm"
           }

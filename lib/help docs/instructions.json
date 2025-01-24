@@ -1,0 +1,60 @@
+You are presented with data from a table of BMW car models and their generations and engine details of each of the generations. 
+extract model_name, image_path(clean wikipedia image link), model_year, summary, generation, 
+engine[model, years, engine_id, displacement, power, torque](this is an array of objects, look at the engines table) from the data, return json only flat hierarchy
+
+return only JSON no outer quotes flat hierarchy
+
+{
+  "bmw_model_urls": [
+    {
+      "model": "BMW i3",
+      "url": "https://en.wikipedia.org/wiki/BMW_i3"
+    },
+    {
+      "model": "BMW 3 Series E21",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E21)" 
+    },
+    {
+      "model": "BMW 3 Series E30",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E30)"
+    },
+    {
+      "model": "BMW 3 Series E36", 
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E36)"
+    },
+    {
+      "model": "BMW 3 Series E46",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E46)"
+    },
+    {
+      "model": "BMW 3 Series E90",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(E90)"
+    },
+    {
+      "model": "BMW 3 Series F30",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(F30)"
+    },
+    {
+      "model": "BMW 3 Series G20",
+      "url": "https://en.wikipedia.org/wiki/BMW_3_Series_(G20)"
+    },
+    {
+      "model": "BMW M3",
+      "url": "https://en.wikipedia.org/wiki/BMW_M3"
+    }
+  ]
+}
+
+
+[
+  "model": "BMW 3 Series (F30)"
+  "engine_details": [
+    {
+      "model": "318i",
+      "years": "1990-1993",
+      "engine": "1.8 L M40B18 straight-4",
+      "power": "83 kW (113 PS) at 5,500 rpm",
+      "torque": "162 N⋅m (119 lb⋅ft) at 4,250 rpm"
+    }
+  ]
+]

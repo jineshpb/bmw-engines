@@ -22,18 +22,31 @@ export const getEngineConfigurations = async (): Promise<
   EngineConfiguration[]
 > => {
   const { data, error } = await supabase.from("engine_configurations").select(`
-    *,
-    engines (
-      engine_code
-    )
-  `);
+      id,
+      engine_id,
+      displacement,
+      power,
+      torque,
+      years,
+      is_derived,
+      engines (
+        id,
+        engine_code,
+        class_id
+      )
+    `);
 
   if (error) {
     console.error("Error fetching engine configurations:", error);
     return [];
   }
 
-  return (data || []) as EngineConfiguration[];
+  return (data || []).map((config) => ({
+    ...config,
+    engines: {
+      engine_code: config.engines?.engine_code || "",
+    },
+  })) as EngineConfiguration[];
 };
 
 export const getEngineClasses = async (): Promise<EngineClass[]> => {
