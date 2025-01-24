@@ -2,19 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import supabase from "@/lib/supabaseClient";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 import { CarGeneration } from "@/types/cars";
 import EngineCard from "@/components/EngineCard";
 import { getEngineConfigurations } from "@/services/engines";
 import { EngineConfiguration } from "@/types/engines";
-import EngineClassCard from "../EngineClassCard";
+
+import GenerationCard from "./GenerationCard";
 
 interface CarCardProps {
   car: {
@@ -106,92 +100,11 @@ export default function CarCard({ car }: CarCardProps) {
         <p className="text-gray-700 mb-6">{car.summary}</p>
 
         {/* Generations List */}
-        <div className="space-y-4">
+        <div className="">
           <h3 className="text-lg font-semibold text-gray-800">Generations</h3>
           <div className="divide-y divide-gray-200">
-            {car.car_generations.map((gen) => (
-              <div key={gen.id} className="py-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h4 className="font-medium text-gray-800">{gen.name}</h4>
-                    <p className="text-sm text-gray-600">
-                      {gen.start_year} - {gen.end_year || "Present"}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Chassis: {gen.chassis_code.join(", ")}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    {gen.car_generation_engines?.length > 0 ||
-                    gen.car_generation_engine_classes?.length > 0 ? (
-                      <Sheet>
-                        <SheetTrigger className="text-sm text-gray-600 hover:text-gray-900">
-                          View Engines (
-                          {gen.car_generation_engines?.length || 0} +{" "}
-                          {gen.car_generation_engine_classes?.length || 0}{" "}
-                          classes)
-                        </SheetTrigger>
-                        <SheetContent className="w-fit max-w-[500px] sm:max-w-[600px] flex flex-col">
-                          <SheetHeader className="flex-none">
-                            <SheetTitle>Engine Details</SheetTitle>
-                          </SheetHeader>
-                          <div className="mt-4 space-y-4 overflow-y-auto flex-1">
-                            {gen.car_generation_engines &&
-                              gen.car_generation_engines.length > 0 && (
-                                <>
-                                  <h3 className="font-medium">
-                                    Specific Engines
-                                  </h3>
-                                  <EngineList
-                                    engines={gen.car_generation_engines}
-                                  />
-                                </>
-                              )}
-
-                            {gen.car_generation_engine_classes &&
-                              gen.car_generation_engine_classes.length > 0 && (
-                                <>
-                                  <h3 className="font-medium mt-6">
-                                    Engine Classes
-                                  </h3>
-                                  <div className="space-y-4">
-                                    {gen.car_generation_engine_classes.map(
-                                      (engineClass, index) => (
-                                        <EngineClassCard
-                                          key={index}
-                                          engineClass={{
-                                            model:
-                                              engineClass.engine_classes.model,
-                                            notes: null,
-                                            image_path: null,
-                                            engineCount: 0,
-                                            configurations: {
-                                              total: 0,
-                                              derived: 0,
-                                              original: 0,
-                                            },
-                                            power: engineClass.power,
-                                            torque: engineClass.torque,
-                                            displacement:
-                                              engineClass.displacement,
-                                          }}
-                                        />
-                                      )
-                                    )}
-                                  </div>
-                                </>
-                              )}
-                          </div>
-                        </SheetContent>
-                      </Sheet>
-                    ) : (
-                      <p className="text-sm text-gray-600">
-                        No engines available
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
+            {car.car_generations.map((generation) => (
+              <GenerationCard key={generation.id} generation={generation} />
             ))}
           </div>
         </div>

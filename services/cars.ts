@@ -14,10 +14,23 @@ export const getCarModels = async (): Promise<CarModel[]> => {
         end_year,
         chassis_code,
         image_path,
+        summary,
         car_generation_engines (
           years,
+          power,
+          torque,
+          displacement,
           engines (
             engine_code
+          )
+        ),
+        car_generation_engine_classes (
+          years,
+          power,
+          torque,
+          displacement,
+          engine_classes (
+            model
           )
         )
       ),

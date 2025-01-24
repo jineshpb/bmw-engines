@@ -76,3 +76,39 @@ export interface GenerationSyncResult {
   engines_processed?: number;
   error?: string;
 }
+
+//Generation Card Types
+
+export interface GenerationCardEngine {
+  engines: {
+    engine_code: string;
+  };
+  years: string | null;
+  power: string | null;
+  torque: string | null;
+  displacement: number | null;
+}
+
+export interface GenerationCardEngineClass {
+  engine_classes: {
+    model: string;
+  };
+  years: string | null;
+  power: string | null;
+  torque: string | null;
+  displacement: number | null;
+}
+
+export interface GenerationCardProps {
+  generation: {
+    id?: string;
+    name: string;
+    start_year: number | null;
+    end_year: string | null;
+    chassis_code: string[];
+    summary: string | null;
+    image_path: string | null;
+    car_generation_engines?: GenerationCardEngine[];
+    car_generation_engine_classes?: GenerationCardEngineClass[];
+  };
+}
