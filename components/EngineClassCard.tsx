@@ -5,34 +5,10 @@ import Image from "next/image";
 import KeyValuePair from "./KeyValuePair";
 
 interface EngineClassCardProps {
-  engineClass:
-    | EngineClassSummary
-    | {
-        model: string;
-        notes: string | null;
-        image_path: string | null;
-        engineCount: number;
-        configurations: {
-          total: number;
-          derived: number;
-          original: number;
-        };
-        power?: string | null;
-        torque?: string | null;
-        displacement?: number | null;
-      };
+  engineClass: EngineClassSummary;
 }
 
 export default function EngineClassCard({ engineClass }: EngineClassCardProps) {
-  console.log("engineClass", engineClass);
-  console.log("engineClass type:", typeof engineClass);
-  console.log(
-    "engineClass keys:",
-    engineClass ? Object.keys(engineClass) : "no keys"
-  );
-  console.log("model:", engineClass?.model);
-  console.log("image_path:", engineClass?.image_path);
-
   const publicUrl = engineClass.image_path
     ? supabase.storage
         .from("engine-images")
@@ -40,8 +16,8 @@ export default function EngineClassCard({ engineClass }: EngineClassCardProps) {
     : null;
 
   return (
-    <Card className=" w-[450px]">
-      <CardHeader className="flex flex-col  w-full p-4">
+    <Card className="w-[450px]">
+      <CardHeader className="flex flex-col w-full p-4">
         <CardTitle className="text-lg">{engineClass.model}</CardTitle>
       </CardHeader>
 
@@ -63,7 +39,7 @@ export default function EngineClassCard({ engineClass }: EngineClassCardProps) {
                 <p className="text-sm">{engineClass.notes}</p>
               )}
             </div>
-            <div className="grid grid-cols-3 mt-2 gap-4 w-full ">
+            <div className="grid grid-cols-3 mt-2 gap-4 w-full">
               <KeyValuePair
                 label="Engines"
                 value={engineClass.engineCount.toString()}

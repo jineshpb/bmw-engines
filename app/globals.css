@@ -93,3 +93,7 @@
     font-family: "Inter", sans-serif;
   }
 }
+
+.mask-bottom {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}

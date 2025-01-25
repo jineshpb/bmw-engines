@@ -44,6 +44,8 @@ export interface EngineClass {
   notes?: string;
 }
 
+//Engine Class Card Types
+
 export interface EngineClassSummary {
   id: string;
   model: string;
@@ -55,4 +57,13 @@ export interface EngineClassSummary {
     derived: number;
     original: number;
   };
+}
+
+export interface EngineClassCardProps {
+  id: string;
+  model: string;
+  notes: string | null;
+  image_path: string | null;
+  engines: { count: number }[];
+  engine_configurations: { count: number }[];
 }

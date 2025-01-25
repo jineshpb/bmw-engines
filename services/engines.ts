@@ -5,7 +5,16 @@ import {
   EngineConfiguration,
   EngineClass,
   EngineClassSummary,
+  EngineClassCardProps,
 } from "@/types/engines";
+import { PostgrestError } from "@supabase/supabase-js";
+
+interface EngineConfigResponse {
+  engines: {
+    engine_code: string;
+  };
+  // ... other fields
+}
 
 export const getEngines = async (): Promise<EngineRecord[]> => {
   const { data, error } = await supabase.from("engines").select("*");
@@ -21,20 +30,23 @@ export const getEngines = async (): Promise<EngineRecord[]> => {
 export const getEngineConfigurations = async (): Promise<
   EngineConfiguration[]
 > => {
-  const { data, error } = await supabase.from("engine_configurations").select(`
-      id,
-      engine_id,
-      displacement,
-      power,
-      torque,
-      years,
-      is_derived,
-      engines (
+  const { data, error } = (await supabase.from("engine_configurations").select(`
         id,
-        engine_code,
-        class_id
-      )
-    `);
+        engine_id,
+        displacement,
+        power,
+        torque,
+        years,
+        is_derived,
+        engines (
+          id,
+          engine_code,
+          class_id
+        )
+      `)) as {
+    data: EngineConfigResponse[] | null;
+    error: PostgrestError | null;
+  };
 
   if (error) {
     console.error("Error fetching engine configurations:", error);
@@ -160,3 +172,34 @@ export const getEnginesByClass = async (
 
   return configurations;
 };
+
+export async function getEngineClassById(
+  id: string
+): Promise<EngineClassSummary> {
+  const { data: engineClass } = (await supabase
+    .from("engine_classes")
+    .select(
+      `
+      *,
+      engines (count),
+      engine_configurations (count)
+    `
+    )
+    .eq("id", id)
+    .single()) as { data: EngineClassCardProps };
+
+  if (!engineClass) throw new Error("Engine class not found");
+
+  return {
+    id: engineClass.id,
+    model: engineClass.model,
+    notes: engineClass.notes,
+    image_path: engineClass.image_path,
+    engineCount: engineClass.engines[0]?.count || 0,
+    configurations: {
+      total: engineClass.engine_configurations[0]?.count || 0,
+      derived: 0,
+      original: 0,
+    },
+  };
+}

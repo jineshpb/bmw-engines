@@ -30,6 +30,7 @@ export const getCarModels = async (): Promise<CarModel[]> => {
           torque,
           displacement,
           engine_classes (
+            id,
             model
           )
         )

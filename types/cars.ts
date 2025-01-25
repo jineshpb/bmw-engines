@@ -43,15 +43,19 @@ export interface CarGeneration {
       engine_code: string;
     };
     years: string | null;
-  }[];
-  car_generation_engine_classes?: {
-    engine_classes: {
-      model: string;
-    };
     power: string | null;
     torque: string | null;
     displacement: number | null;
+  }[];
+  car_generation_engine_classes?: {
+    engine_classes: {
+      id: string;
+      model: string;
+    };
     years: string | null;
+    power: string | null;
+    torque: string | null;
+    displacement: number | null;
   }[];
 }
 
@@ -91,6 +95,7 @@ export interface GenerationCardEngine {
 
 export interface GenerationCardEngineClass {
   engine_classes: {
+    id: string;
     model: string;
   };
   years: string | null;
