@@ -1,21 +1,23 @@
 {
   "data": [
     {
-      "Engine": "S65B40",
-      "Displacement": "3,999 cc (244.0 cu in)",
-      "Power": "309 kW (420 PS; 414 hp) at 8,300 rpm",
-      "Torque": "400 N⋅m (295 lb⋅ft) at 3,900 rpm",
-      "Year": "2007"
+      "engine_code": "S65B40",
+      "displacement": "3,999 cc (244.0 cu in)",
+      "power": "309 kW (420 PS; 414 hp) at 8,300 rpm",
+      "torque": "400 N⋅m (295 lb⋅ft) at 3,900 rpm",
+      "years": "2007"
     },
     {
-      "Engine": "S65B44",
-      "Displacement": "4,361 cc (266.1 cu in)",
-      "Power": "331 kW (450 PS; 444 hp) at 8,300 rpm",
-      "Torque": "440 N⋅m (325 lb⋅ft) at 3,750 rpm",
-      "Year": "2010"
+      "engine_code": "S65B44",
+      "displacement": "4,361 cc (266.1 cu in)",
+      "power": "331 kW (450 PS; 444 hp) at 8,300 rpm",
+      "torque": "440 N⋅m (325 lb⋅ft) at 3,750 rpm",
+      "years": "2010"
     }
   ],
   "model": "S65",
   "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/7/73/2009_BMW_M3_Cabriolet_-_Flickr_-_The_Car_Spy_%2816%29.jpg/280px-2009_BMW_M3_Cabriolet_-_Flickr_-_The_Car_Spy_%2816%29.jpg",
-  "notes": "The BMW S65 is a naturally aspirated V8 petrol engine produced from 2007 to 2013, primarily used in the BMW M3, replacing the S54 straight-six engine. There is no direct successor to the S65, as the subsequent M3 transitioned to the turbocharged straight-six S55 engine."
+  "summary": "The BMW S65 engine, derived from the S85 V10 engine used in the E60 M5, features a 90° V8 configuration with an aluminum construction. It has a displacement of 4.0 L and won the International Engine of the Year award for the 3.0 to 4.0 L category from 2008 to 2012. The engine includes a DOHC valvetrain with variable valve timing, an electronic multi-point fuel injection system, and operates on petrol with a wet sump oil system. Production of the S65 spanned from 2007 to 2013, succeeding the S62 and leading to the S63.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_S65",
+  "fuel_type": "gasoline"
 }

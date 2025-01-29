@@ -1,56 +1,51 @@
 {
   "data": [
     {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "252 kW (343 PS; 338 hp) at 7,900 rpm",
-      "torque": "365 N⋅m (269 lb⋅ft) at 4,900 rpm",
-      "year": "2000–2006"
+      "engine_code": "S54",
+      "displacement": "3,246 cc (198.1 cu in)",
+      "power": "252 kW (343 PS; 338 hp) @ 7,900 rpm",
+      "torque": "365 N⋅m (269 lb⋅ft) @ 4,900 rpm",
+      "years": "2000–2006"
     },
     {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "248 kW (333 hp)",
-      "torque": "355 N⋅m (262 lb⋅ft)",
-      "year": "Models for the United States and Canada"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
+      "engine_code": "S54",
+      "displacement": "3,246 cc (198.1 cu in)",
       "power": "239 kW (325 PS; 321 hp)",
       "torque": "354 N⋅m (261 lb⋅ft)",
-      "year": "2000–2002"
+      "years": "2000–2002"
     },
     {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "235 kW (315 hp)",
-      "torque": "341 N⋅m (252 lb⋅ft)",
-      "year": "Models for the United States and Canada"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
+      "engine_code": "S54",
+      "displacement": "3,246 cc (198.1 cu in)",
       "power": "252 kW (343 PS; 338 hp)",
       "torque": "365 N⋅m (269 lb⋅ft)",
-      "year": "2002–2011"
+      "years": "2002–2011"
     },
     {
-      "engine_code": "S54B32",
-      "displacement": null,
+      "engine_code": "S54",
+      "displacement": "3,246 cc (198.1 cu in)",
       "power": "252 kW (343 PS; 338 hp)",
       "torque": "365 N⋅m (269 lb⋅ft)",
-      "year": "2006–2008"
+      "years": "2006–2008"
     },
     {
       "engine_code": "S54B32HP",
-      "displacement": null,
-      "power": null,
-      "torque": null,
-      "year": null
+      "displacement": "3,246 cc (198.1 cu in)",
+      "power": "265 kW (360 hp)",
+      "torque": "370 N⋅m (273 lb⋅ft)",
+      "years": "2003"
+    },
+    {
+      "engine_code": "S54B32HP",
+      "displacement": "3,246 cc (198.1 cu in)",
+      "power": "265 kW (360 hp)",
+      "torque": "370 N⋅m (273 lb⋅ft)",
+      "years": "2009"
     }
   ],
   "model": "S54",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/a/af/BMW_S54B32_Engine.JPG/280px-BMW_S54B32_Engine.JPG\"\n}",
-  "notes": "{\n  \"engine\": {\n    \"model\": \"S54\",\n    \"equivalent_to\": \"M54\",\n    \"evolution_of\": \"BMW S50\",\n    \"engine_block_material\": \"cast iron\",\n    \"redline_rpm\": 8000,\n    \"features\": {\n      \"bore\": \"87 mm (3.43 in)\",\n      \"displacement\": \"3,246 cc (198.1 cu in)\",\n      \"camshafts\": \"revised\",\n      \"valve_actuation\": \"finger follower\",\n      \"compression_ratio\": \"11.5:1\",\n      \"engine_control_unit\": \"Siemens MSS54\",\n      \"throttle_control\": \"electronic\",\n      \"scavenging_oil_pump\": true\n    },\n    \"successor\": \"none\",\n    \"next_generation\": \"BMW S65\"\n  }\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/a/af/BMW_S54B32_Engine.JPG/280px-BMW_S54B32_Engine.JPG",
+  "summary": "The S54 engine is a high-performance variant, primarily seen as an evolution of the BMW S50 rather than a direct counterpart to the M54. It features a cast iron engine block, contrasting with the aluminum block of the M54, and has a redline of 8,000 rpm. Unlike the S50, the S54 does not have a direct successor, as the next generation M3 models utilized the V8 S65 engine. Variations in the S54's power and torque outputs are often influenced by regional emissions regulations and chassis design constraints. An enhanced version of the S54, known as the S54B32HP, was implemented in the E46 M3 CSL, featuring upgrades such as a carbon fiber intake, revised camshafts, a MAP sensor, and a more efficient exhaust and intake manifold.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M54#S54",
+  "fuel_type": "gasoline"
 }

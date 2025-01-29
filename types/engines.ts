@@ -12,13 +12,28 @@ export interface RawEngineData {
 export interface EnginePayload {
   data: RawEngineData[];
   model: string;
+  fuel_type: string;
   image_path?: string;
   notes?: string;
+  wikipedia_url?: string;
+  summary?: string;
 }
 
 // Database records
-export interface EngineRecord {
+export interface EngineClass {
   id: string;
+  created_at: string;
+  model: string;
+  summary?: string;
+  image_path?: string;
+  wikipedia_url?: string;
+  fuel_type: string;
+}
+
+export interface Engine {
+  id: string;
+  created_at: string;
+  updated_at: string;
   engine_code: string;
   class_id?: string;
   notes?: string;
@@ -26,26 +41,21 @@ export interface EngineRecord {
 }
 
 export interface EngineConfiguration {
-  id?: string;
+  id: string;
+  created_at: string;
   engine_id: string;
-  displacement?: string;
   power?: string;
   torque?: string;
   years?: string;
+  displacement?: string;
+  is_derived: boolean;
+  fuel_type?: string;
   engines?: {
     engine_code: string;
   };
-  is_derived?: boolean;
 }
 
-export interface EngineClass {
-  id: string;
-  model: string;
-  notes?: string;
-}
-
-//Engine Class Card Types
-
+// Summary types for UI
 export interface EngineClassSummary {
   id: string;
   model: string;
@@ -57,6 +67,7 @@ export interface EngineClassSummary {
     derived: number;
     original: number;
   };
+  fuel_type: string;
 }
 
 export interface EngineClassCardProps {
@@ -64,6 +75,7 @@ export interface EngineClassCardProps {
   model: string;
   notes: string | null;
   image_path: string | null;
+  fuel_type: string;
   engines: { count: number }[];
   engine_configurations: { count: number }[];
 }

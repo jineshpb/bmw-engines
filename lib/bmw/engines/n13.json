@@ -1,19 +1,23 @@
 {
   "data": [
     {
-      "Model": "N13B16",
-      "Displacement": "1,598 cc (97.5 cu in)",
-      "Power": "136 PS (100 kW) at 4,350 rpm",
-      "Torque": "220 N⋅m (162 lb⋅ft) at 1,350 rpm",
-      "Years": "2011–2015"
+      "engine_code": "N13B16",
+      "displacement": "1,598 cc (97.5 cu in)",
+      "power": "136 PS (100 kW) at 4,350 rpm",
+      "torque": "220 N⋅m (162 lb⋅ft) at 1,350 rpm",
+      "years": "2011–2015"
     },
     {
-      "Model": "N13B16",
-      "Power": "170 PS (125 kW) at 4,800 rpm",
-      "Torque": "250 N⋅m (184 lb⋅ft) at 1,500 rpm",
-      "Years": "2012–2015"
+      "engine_code": "N13B16",
+      "displacement": "1,598 cc (97.5 cu in)",
+      "power": "170 PS (125 kW) at 4,800 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 1,500 rpm",
+      "years": "2012–2015"
     }
   ],
   "model": "N13",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg/280px-Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg/280px-Engine_-_2012_Mini_Cooper_Countryman_%288025574280%29.jpg",
+  "summary": "The Prince engine is a family of straight-four, 16-valve all-aluminium gasoline engines developed by BMW and PSA Peugeot Citroën, featuring variable valve lift and timing. Ranging from 1.4 to 1.6 liters in displacement, these engines incorporate modern technologies like gasoline direct injection and turbocharging. The BMW versions include the N12, N13, N14, N16, and N18, with power outputs varying from 118 hp to 208 hp, used in various Mini and BMW models from 2006 onward. The Prince engine replaced the Tritec engine family and introduced the first longitudinal engine mount option for Mini and BMW vehicles. The engine is characterized by its aluminium construction, DOHC valvetrain, and turbocharging capabilities.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Prince_engine",
+  "fuel_type": "gasoline"
 }

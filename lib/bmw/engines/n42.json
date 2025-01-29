@@ -2,19 +2,22 @@
   "data": [
     {
       "engine_code": "N42B18",
-      "displacement": "1,796 cc (109.6 cu in)",
-      "power": "85 kW (114 bhp)  at 5,500 rpm",
-      "torque": "175 N⋅m (129 lb⋅ft)  at 3,750 rpm",
+      "displacement": "1,796 cc (109.6 cu in)",
+      "power": "85 kW (114 bhp) at 5,500 rpm",
+      "torque": "175 N⋅m (129 lb⋅ft) at 3,750 rpm",
       "years": "2001-2004"
     },
     {
       "engine_code": "N42B20",
-      "displacement": "1,995 cc (121.7 cu in)",
-      "power": "105 kW (141 bhp)  at 6,000 rpm",
-      "torque": "200 N⋅m (148 lb⋅ft)  at 3,750 rpm",
+      "displacement": "1,995 cc (121.7 cu in)",
+      "power": "105 kW (141 bhp) at 6,000 rpm",
+      "torque": "200 N⋅m (148 lb⋅ft) at 3,750 rpm",
       "years": "2001-2004"
     }
   ],
   "model": "N42",
-  "image_path": "[]"
+  "image_path": "[]",
+  "summary": "The BMW N42 engine, produced from 2001 to 2004, is an inline-4 engine with a displacement of 1.8 L and 2.0 L options. It features a DOHC valvetrain with variable valve timing (VVT) and was notable for winning the 1.4-1.8 L category at the International Engine of the Year awards in 2001. The N42 was succeeded by the BMW N46 engine. A related engine, the smaller N40, also produced during this period, has a displacement of 1.6 L and lacks Valvetronic. Both engines are made of aluminum and use petrol as fuel.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N42",
+  "fuel_type": "gasoline"
 }

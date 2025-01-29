@@ -1,33 +1,37 @@
 {
   "data": [
     {
-      "engine_code": "M40B16- E30 version",
+      "engine_code": "M40B16-E30",
       "displacement": "1,596 cc (97.4 cu in)",
       "power": "73 kW (98 hp) at 5,500 rpm",
       "torque": "141 N⋅m (104 lb⋅ft) at 4,250 rpm",
       "year": "1987"
     },
     {
-      "engine_code": "M40B16- E36 version",
-      "displacement": null,
+      "engine_code": "M40B16-E36",
+      "displacement": "1,596 cc (97.4 cu in)",
       "power": "75 kW (101 hp) at 5,500 rpm",
       "torque": "143 N⋅m (105 lb⋅ft) at 4,250 rpm",
       "year": "1991"
     },
     {
-      "engine_code": "M40B18- E30 version",
+      "engine_code": "M40B18-E30",
       "displacement": "1,796 cc (109.6 cu in)",
       "power": "83 kW (111 hp) at 5,500 rpm",
       "torque": "162 N⋅m (119 lb⋅ft) at 4,250 rpm",
       "year": "1987"
     },
     {
-      "engine_code": "M40B18- E36 version",
-      "displacement": null,
+      "engine_code": "M40B18-E36",
+      "displacement": "1,796 cc (109.6 cu in)",
       "power": "85 kW (114 hp) at 5,500 rpm",
       "torque": "165 N⋅m (122 lb⋅ft) at 4,250 rpm",
       "year": "1991"
     }
   ],
-  "model": "M40"
+  "model": "M40",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/0/03/M40B16.JPG/280px-M40B16.JPG",
+  "summary": "The BMW M40 engine, produced from 1987 to 1994, features a naturally aspirated straight-4 configuration with displacements of 1.6 L and 1.8 L. It utilizes a belt-driven camshaft and hydraulic tappets, maintaining an iron block and aluminum head like its predecessor, the M10. The fuel injection systems for its E30 and E36 versions are Bosch Motronic 1.3 and 1.7, respectively. The M40 was phased out following the introduction of the BMW M43 engine in 1991.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M40",
+  "fuel_type": "gasoline"
 }

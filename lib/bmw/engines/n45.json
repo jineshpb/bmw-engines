@@ -16,5 +16,8 @@
     }
   ],
   "model": "N45",
-  "image_path": "[]"
+  "image_path": "There is no image link provided in the text.",
+  "summary": "The BMW N45 is an inline-4 engine introduced in 2004, derived from the N46 but lacking balance shafts and Valvetronic. It features double-VANOS for variable valve timing. An updated version, the N45N, was released in 2007. The N45 was eventually phased out in favor of the turbocharged N13 engine, as the N43, its successor, was introduced in 2007 but not sold in high-sulfur fuel regions. The N45 was produced until 2011 and is available in 1.6 L and 2.0 L displacements.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N45",
+  "fuel_type": "gasoline"
 }

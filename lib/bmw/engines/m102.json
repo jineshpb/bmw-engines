@@ -2,12 +2,22 @@
   "data": [
     {
       "engine_code": "M102",
-      "displacement": "3,210 cc",
+      "displacement": "3,210 cc (195.9 cu in)",
       "power": "188 kW (256 PS; 252 bhp)",
       "torque": null,
-      "years": "1980 to 1982"
+      "years": "1980-1982"
+    },
+    {
+      "engine_code": "M106",
+      "displacement": "3,430 cc (209.3 cu in)",
+      "power": "185 kW (252 PS; 248 bhp)",
+      "torque": null,
+      "years": "1982-1986"
     }
   ],
   "model": "M102",
-  "image_path": "null"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/5/52/BMW_E28_motor.jpg/280px-BMW_E28_motor.jpg",
+  "summary": "The Alpina B10 Biturbo features a modified M30 engine equipped with two turbochargers and forged pistons, delivering an impressive 265 kW (360 PS; 355 bhp) at 6000 rpm and 520 N⋅m (384 lb⋅ft) at 4000 rpm, making it the fastest sedan in the world. The final 50 M30 blocks were specifically allocated for the last 50 B10 Biturbos. \n\nThe M102, produced from 1980 to 1982, was BMW's first turbocharged six-cylinder engine, with a displacement of 3,210 cc. It utilized a KKK K27 turbocharger that provided 9 psi of boost and featured an air-to-air intercooler, achieving 188 kW (256 PS; 252 bhp). The M102 was used in the E23 7 Series, designated as \"745i,\" but was not available in right-hand drive configurations, which led to the use of the M88 engine in South Africa's 745i.\n\nThe M106, which replaced the M102 from 1982 to 1986, incorporated several upgrades, including Bosch Motronic engine management and an increased displacement of 3,430 cc. While it maintained the same power output of 185 kW (252 PS; 248 bhp) as the M102, it achieved this at lower RPMs, and peak boost was reduced to 6 psi. There was no direct successor to the M106 until BMW introduced the N54 turbocharged petrol engine in 2006.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M30#M102",
+  "fuel_type": "gasoline"
 }

@@ -1,6 +1,51 @@
 {
-  "data": [],
+  "data": [
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "205 kW (275 bhp)",
+      "torque": "N/A",
+      "years": "2020–present"
+    },
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "302 kW (405 bhp)",
+      "torque": "550 N⋅m (410 lb⋅ft)",
+      "years": "2019–2021"
+    },
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "317 kW (425 bhp)",
+      "torque": "N/A",
+      "years": "2014–2018"
+    },
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "331 kW (444 bhp)",
+      "torque": "N/A",
+      "years": "2016–2018"
+    },
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "338 kW (453 bhp)",
+      "torque": "N/A",
+      "years": "2018"
+    },
+    {
+      "engine_code": "S55",
+      "displacement": "2,979 cc (182 cu in)",
+      "power": "368 kW (493 hp)",
+      "torque": "600 N⋅m (443 lb⋅ft)",
+      "years": "2015–2016"
+    }
+  ],
   "model": "S55",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2014_Washington_Auto_Show_%2812140974934%29.jpg/280px-2014_Washington_Auto_Show_%2812140974934%29.jpg\"\n}",
-  "notes": "[]"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2014_Washington_Auto_Show_%2812140974934%29.jpg/280px-2014_Washington_Auto_Show_%2812140974934%29.jpg",
+  "summary": "The Biturbo engine by Alpina is based on the N55B30M0 and features a uniquely designed crankcase that is specially cast by BMW for Alpina. The initial version, known as the N55R20A, produces 301 kW (404 bhp) and utilizes a twin turbocharger system derived from the N54B30, replacing the original twin-scroll charging system. This engine combines innovative design with enhanced performance capabilities.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_S55",
+  "fuel_type": "gasoline"
 }

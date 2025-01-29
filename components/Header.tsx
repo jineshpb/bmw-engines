@@ -9,9 +9,7 @@ const Header = () => {
       </div>
       <div className="flex flex-col">
         <h1 className="text-4xl font-bold">BMW catalog</h1>
-        <h2 className="text-xl font-normal text-gray-400">
-          Know your BMW engine code
-        </h2>
+        <h2 className="text-xl font-normal text-gray-400">Know your Bimmer</h2>
       </div>
     </div>
   );

@@ -1,69 +1,72 @@
 {
   "data": [
     {
-      "Engine": "M50B20",
-      "Displacement": "1,991 cc (121.5 cu in)",
-      "Power": "110 kW (150 PS; 148 hp) at 6,000 rpm",
-      "Torque": "190 N⋅m (140 lb⋅ft) at 4,700 rpm",
-      "Years": "1990-1992"
+      "engine_code": "M50B20",
+      "displacement": "1,991 cc (121.5 cu in)",
+      "power": "110 kW (150 PS; 148 hp) at 6,000 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 4,700 rpm",
+      "years": "1990-1992"
     },
     {
-      "Engine": "M50B20TÜ",
-      "Displacement": "",
-      "Power": "110 kW (150 PS; 148 hp) at 5,900 rpm",
-      "Torque": "190 N⋅m (140 lb⋅ft) at 4,200 rpm",
-      "Years": "1992-1996"
+      "engine_code": "M50B20TÜ",
+      "displacement": "1,991 cc (121.5 cu in)",
+      "power": "110 kW (150 PS; 148 hp) at 5,900 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 4,200 rpm",
+      "years": "1992-1996"
     },
     {
-      "Engine": "M50B24TÜ",
-      "Displacement": "2,394 cc (146.1 cu in)",
-      "Power": "138 kW (188 PS; 185 hp) at 5,900 rpm",
-      "Torque": "240 N⋅m (180 lb⋅ft) at 4,200 rpm",
-      "Years": "1992-1996"
+      "engine_code": "M50B24TÜ",
+      "displacement": "2,394 cc (146.1 cu in)",
+      "power": "138 kW (188 PS; 185 hp) at 5,900 rpm",
+      "torque": "240 N⋅m (180 lb⋅ft) at 4,200 rpm",
+      "years": ""
     },
     {
-      "Engine": "M50B25",
-      "Displacement": "2,494 cc (152.2 cu in)",
-      "Power": "141 kW (192 PS; 189 hp) at 6,000 rpm",
-      "Torque": "245 N⋅m (181 lb⋅ft) at 4,700 rpm",
-      "Years": "1990-1992"
+      "engine_code": "M50B25",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": "141 kW (192 PS; 189 hp) at 6,000 rpm",
+      "torque": "245 N⋅m (181 lb⋅ft) at 4,700 rpm",
+      "years": "1990-1992"
     },
     {
-      "Engine": "M50B25TÜ",
-      "Displacement": "2,494 cc (152.2 cu in)",
-      "Power": "141 kW (192 PS; 189 hp) at 5,900 rpm",
-      "Torque": "250 N⋅m (180 lb⋅ft) at 4,200 rpm",
-      "Years": "1992-1996"
+      "engine_code": "M50B25TÜ",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": "141 kW (192 PS; 189 hp) at 5,900 rpm",
+      "torque": "250 N⋅m (180 lb⋅ft) at 4,200 rpm",
+      "years": "1992-1996"
     },
     {
-      "Engine": "S50B30 (EU)",
-      "Displacement": "2,990 cc (182.5 cu in)",
-      "Power": "210 kW (286 PS; 282 hp) at 7,000 rpm",
-      "Torque": "329 N⋅m (243 lb⋅ft) at 3,500 rpm",
-      "Years": "1992-1995"
+      "engine_code": "S50B30 (EU)",
+      "displacement": "2,990 cc (182.5 cu in)",
+      "power": "210 kW (286 PS; 282 hp) at 7,000 rpm",
+      "torque": "329 N⋅m (243 lb⋅ft) at 3,500 rpm",
+      "years": "1992-1995"
     },
     {
-      "Engine": "S50B30 (US)",
-      "Displacement": "2,990 cc (182.5 cu in)",
-      "Power": "240 hp (180 kW; 240 PS) at 6,000 rpm",
-      "Torque": "225 lb⋅ft (305 N⋅m) at 4,250 rpm",
-      "Years": "1994-1995"
+      "engine_code": "S50B30 (US)",
+      "displacement": "2,990 cc (182.5 cu in)",
+      "power": "240 hp (180 kW; 240 PS) at 6,000 rpm",
+      "torque": "225 lb⋅ft (305 N⋅m) at 4,250 rpm",
+      "years": "1994-1995"
     },
     {
-      "Engine": "S50B30GT",
-      "Displacement": "2,990 cc (182.5 cu in)",
-      "Power": "217 kW (295 PS; 291 hp) at 7,100 rpm",
-      "Torque": "323 N⋅m (238 lb⋅ft) at 3,900 rpm",
-      "Years": "1994-1995"
+      "engine_code": "S50B30GT",
+      "displacement": "2,990 cc (182.5 cu in)",
+      "power": "217 kW (295 PS; 291 hp) at 7,100 rpm",
+      "torque": "323 N⋅m (238 lb⋅ft) at 3,900 rpm",
+      "years": "1994-1995"
     },
     {
-      "Engine": "S50B32",
-      "Displacement": "3,201 cc (195.3 cu in)",
-      "Power": "236 kW (321 PS; 316 hp) at 7,400 rpm",
-      "Torque": "350 N⋅m (260 lb⋅ft) at 3,250 rpm",
-      "Years": "1995-2000"
+      "engine_code": "S50B32",
+      "displacement": "3,201 cc (195.3 cu in)",
+      "power": "236 kW (321 PS; 316 hp) at 7,400 rpm",
+      "torque": "350 N⋅m (260 lb⋅ft) at 3,250 rpm",
+      "years": "1995-2000"
     }
   ],
   "model": "M50",
-  "image_path": "{\n    \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/d/d0/1993_bmw_325is_engine.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/d/d0/1993_bmw_325is_engine.jpg",
+  "summary": "The BMW M50 engine, produced from 1990 to 1996, featured a straight-six configuration with displacements ranging from 1,991 cc to 2,494 cc. It was notable for being BMW's first engine to utilize variable valve timing (single VANOS), specifically in its upgraded M50TÜ version. The M50 engine began to be phased out in favor of the M52 engine introduced in 1994. The E36 M3 utilized the high-output S50 engine series, which was developed from the M50. The S50 engine was produced from 1992 to 2000 and also featured a straight-six layout, with displacements of 2,990 cc and 3,201 cc. Both engines used a combination of cast iron for the block and aluminum for the cylinder head, and they operated on petrol fuel.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M50",
+  "fuel_type": "gasoline"
 }

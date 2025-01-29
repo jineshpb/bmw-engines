@@ -1,42 +1,44 @@
 {
   "data": [
     {
-      "Engine Code": "N53B25",
-      "Displacement": "2,497 cc (152.4 cu in)",
-      "Power": "140 kW (188 bhp)  at 6,100 rpm",
-      "Torque": "235 N⋅m (173 lb⋅ft)  at 3,500-5,000 rpm",
-      "Years": "2006-2010"
+      "engine_code": "N53B25",
+      "displacement": "2,497 cc (152.4 cu in)",
+      "power": "140 kW (188 bhp) at 6,100 rpm",
+      "torque": "235 N⋅m (173 lb⋅ft) at 3,500-5,000 rpm",
+      "years": "2006-2010"
     },
     {
-      "Engine Code": "N53B30",
-      "Displacement": "2,996 cc (182.8 cu in)",
-      "Power": "150 kW (201 bhp)  at 6,100 rpm",
-      "Torque": "270 N⋅m (199 lb⋅ft)  at 1,500-4,250 rpm",
-      "Years": "2009-2011"
+      "engine_code": "N53B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "150 kW (201 bhp) at 6,100 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 1,500-4,250 rpm",
+      "years": "2009-2011"
     },
     {
-      "Engine Code": "N53B30",
-      "Displacement": "2,996 cc (182.8 cu in)",
-      "Power": "160 kW (215 bhp)  at 6,100 rpm",
-      "Torque": "270 N⋅m (199 lb⋅ft)  at 2,400-4,200 rpm",
-      "Years": "2007-2013"
+      "engine_code": "N53B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "160 kW (215 bhp) at 6,100 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 2,400-4,200 rpm",
+      "years": "2007-2013"
     },
     {
-      "Engine Code": "N53B30",
-      "Displacement": "2,996 cc (182.8 cu in)",
-      "Power": "190 kW (255 bhp)  at 6,600 rpm",
-      "Torque": "310 N⋅m (229 lb⋅ft)  at 2,600-5,000 rpm",
-      "Years": "2009-2011"
+      "engine_code": "N53B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "190 kW (255 bhp) at 6,600 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 2,600-5,000 rpm",
+      "years": "2009-2011"
     },
     {
-      "Engine Code": "N53B30",
-      "Displacement": "2,996 cc (182.8 cu in)",
-      "Power": "200 kW (268 bhp)  at 6,700 rpm",
-      "Torque": "320 N⋅m (236 lb⋅ft)  at 2,750-3,000 rpm",
-      "Years": "2007-2013"
+      "engine_code": "N53B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "200 kW (268 bhp) at 6,700 rpm",
+      "torque": "320 N⋅m (236 lb⋅ft) at 2,750-3,000 rpm",
+      "years": "2007-2013"
     }
   ],
   "model": "N53",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/530i_Touring_Msport_LCI_59.JPG/280px-530i_Touring_Msport_LCI_59.JPG\"\n}",
-  "notes": "[]"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/530i_Touring_Msport_LCI_59.JPG/280px-530i_Touring_Msport_LCI_59.JPG",
+  "summary": "The BMW N53 engine replaced the N52 in European markets starting in 2007, while the N52 continued in regions like the US, Canada, Australia, and Malaysia due to fuel compatibility issues. Both the N52 and N53 are the final naturally aspirated straight-six engines from BMW, marking the end of a production lineage dating back to the M30 engine in 1968. The N52 was phased out in 2011 in favor of the turbocharged N20 engine, with N53 production ending in 2013. The N53 has no M version, and it was produced alongside the turbocharged N54 straight-six engine. Key specifications of the N53 include a straight-six layout with displacements of 2,497 cc and 2,996 cc, and it features a magnesium-aluminium block and aluminium cylinder head.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N53",
+  "fuel_type": "gasoline"
 }

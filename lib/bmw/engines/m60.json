@@ -1,21 +1,23 @@
 {
   "data": [
     {
-      "Engine": "M60B30",
-      "Displacement": "2,997 cc (182.9 cu in)",
-      "Power": "160 kW (218 PS; 215 bhp) at 5800 rpm",
-      "Torque": "290 N⋅m (214 lb⋅ft) at 4500 rpm",
-      "Years": "1992-1996"
+      "engine_code": "M60B30",
+      "displacement": "2,997 cc (182.9 cu in)",
+      "power": "160 kW (218 PS; 215 bhp) at 5800 rpm",
+      "torque": "290 N⋅m (214 lb⋅ft) at 4500 rpm",
+      "years": "1992-1996"
     },
     {
-      "Engine": "M60B40",
-      "Displacement": "3,982 cc (243.0 cu in)",
-      "Power": "210 kW (286 PS; 282 bhp) at 5800 rpm",
-      "Torque": "400 N⋅m (295 lb⋅ft) at 4500 rpm",
-      "Years": "1992-1996"
+      "engine_code": "M60B40",
+      "displacement": "3,982 cc (243.0 cu in)",
+      "power": "210 kW (286 PS; 282 bhp) at 5800 rpm",
+      "torque": "400 N⋅m (295 lb⋅ft) at 4500 rpm",
+      "years": "1992-1996"
     }
   ],
   "model": "M60",
   "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/7/71/BMW_Alpina_B8_4.6_Coup%C3%A9_E36_%287712800700%29.jpg/280px-BMW_Alpina_B8_4.6_Coup%C3%A9_E36_%287712800700%29.jpg",
-  "notes": "The M60 engine features double overhead camshafts and four valves per cylinder, driven by a dual-row timing chain with a self-adjusting tensioner. It includes hydraulic lash adjustment for valves to minimize maintenance. The ignition and fuel injection are managed by the Bosch Motronic 3.3 system, utilizing a coil-on-plug ignition design and knock sensors."
+  "summary": "The BMW M60 is a naturally aspirated V8 petrol engine produced from 1992 to 1996, marking BMW's return to V8 engines after over 25 years. It features a 90° V8 configuration with two displacement options: 3.0 L and 4.0 L, constructed from aluminum for both the cylinder block and head. The M60 utilizes a DOHC valvetrain driven by a chain and runs on petrol. It was succeeded by the BMW M62 engine. An Alpina version of the M60 engine was also produced, offering larger displacements of 4.0 L and 4.6 L.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M60",
+  "fuel_type": "gasoline"
 }

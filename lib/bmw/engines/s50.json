@@ -2,34 +2,29 @@
   "data": [
     {
       "engine_code": "S50B30",
-      "displacement": "3.0 L",
-      "power": "286 hp",
-      "years": "1992-1995"
+      "displacement": "2,990 cc (182.5 cu in)",
+      "power": "179 kW (243 PS; 240 hp)",
+      "torque": null,
+      "years": "1994-1995"
     },
     {
       "engine_code": "S50B30US",
-      "displacement": "2.990 L",
-      "power": "240 hp",
+      "displacement": "2,990 cc (182.5 cu in)",
+      "power": "179 kW (243 PS; 240 hp)",
+      "torque": null,
       "years": "1994-1995"
     },
     {
       "engine_code": "S50B32",
-      "displacement": "3.2 L",
-      "power": "316 hp",
-      "years": "1995-1999"
-    },
-    {
-      "engine_code": "S50B32",
-      "displacement": "3.2 L",
-      "power": "316 hp",
-      "years": "1996-2000"
-    },
-    {
-      "engine_code": "S50B32",
-      "displacement": "3.2 L",
-      "power": "316 hp",
-      "years": "1996-2000"
+      "displacement": "3,201 cc (195.3 cu in)",
+      "power": "236 kW (321 PS; 316 hp)",
+      "torque": null,
+      "years": "1995 onwards"
     }
   ],
-  "model": "S50"
+  "model": "S50",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/7/77/BMW_M3_Evo_Coupe_E36_-_Flickr_-_The_Car_Spy_%285%29.jpg/280px-BMW_M3_Evo_Coupe_E36_-_Flickr_-_The_Car_Spy_%285%29.jpg",
+  "summary": "The S50 engine is a high-performance variant of the M50, utilized in the BMW E36 M3, and it succeeded the four-cylinder S14 engine from the E30 M3. Featuring an iron block and aluminum head, the S50 includes four valves per cylinder. The S50B30 version, used in the U.S., produces 240 hp and is closely related to the M50, with differences in camshafts, crankshaft, and other components. It has a displacement of 2,990 cc, a compression ratio of 10.8:1, and a redline of 7,000 rpm. In contrast, the S50B30 used in other countries generates 282 hp, boasting a higher output and advanced features like a single-VANOS system and individual throttle bodies. \n\nIn 1995, the limited edition M3 GT variant increased power to 295 hp with modified camshafts and an improved oil system. The S50B32, introduced in 1995 in global markets, further enhanced performance with a displacement of 3,201 cc, 316 hp, double-VANOS technology, and a higher redline of 7,600 rpm. Overall, the S50 engine represents a significant evolution in BMW's performance engine lineup.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M50#S50B30",
+  "fuel_type": "gasoline"
 }

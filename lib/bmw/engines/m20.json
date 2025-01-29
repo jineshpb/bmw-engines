@@ -2,90 +2,85 @@
   "data": [
     {
       "engine_code": "M20B20",
-      "displacement": "1,991 cc",
-      "power": "90 kW at 6,000 rpm",
-      "torque": "163 N⋅m at 4,000 rpm",
+      "displacement": "1,991 cc (121.5 cu in)",
+      "power": "90 kW (122 PS; 121 bhp) at 6,000 rpm",
+      "torque": "163 N⋅m (120 lb⋅ft) at 4,000 rpm",
       "years": "1977-1982"
     },
     {
       "engine_code": "M20B20",
-      "displacement": "1,991 cc",
-      "power": "92 kW at 5,800 rpm",
-      "torque": "170 N⋅m at 4,000 rpm",
+      "displacement": "1,991 cc (121.5 cu in)",
+      "power": "92 kW (125 PS; 123 bhp) at 5,800 rpm",
+      "torque": "170 N⋅m (125 lb⋅ft) at 4,000 rpm",
       "years": "1982-1984"
     },
     {
       "engine_code": "M20B20",
-      "displacement": "1,991 cc",
-      "power": "92 kW at 5,800 rpm",
-      "torque": "174 N⋅m (128 lb⋅ft) at 4,000 rpm",
-      "years": "1984-1987"
-    },
-
-    {
-      "engine_code": "M20B20",
-      "displacement": "1,991 cc",
-      "power": "95 kW at 6,000 rpm",
-      "torque": "164 N⋅m at 4,300 rpm",
+      "displacement": "1,991 cc (121.5 cu in)",
+      "power": "95 kW (129 PS; 127 bhp) at 6,000 rpm",
+      "torque": "164 N⋅m (121 lb⋅ft) at 4,300 rpm",
       "years": "1986-1992"
     },
     {
       "engine_code": "M20B23",
-      "displacement": "2,316 cc",
-      "power": "105 kW at 5,300 rpm",
-      "torque": "190 N⋅m at 4,500 rpm",
+      "displacement": "2,316 cc (141.3 cu in)",
+      "power": "105 kW (143 PS; 141 bhp) at 5,300 rpm",
+      "torque": "190 N⋅m (140 lb⋅ft) at 4,500 rpm",
       "years": "1977-1982"
     },
     {
       "engine_code": "M20B23",
-      "displacement": "2,316 cc",
-      "power": "102 kW at 5,300 rpm",
-      "torque": "205 N⋅m at 4,000 rpm",
+      "displacement": "2,316 cc (141.3 cu in)",
+      "power": "102 kW (139 PS; 137 bhp) at 5,300 rpm",
+      "torque": "205 N⋅m (151 lb⋅ft) at 4,000 rpm",
       "years": "1982-1983"
     },
     {
       "engine_code": "M20B23",
-      "displacement": "2,316 cc",
-      "power": "110 kW at 6,000 rpm",
-      "torque": null,
+      "displacement": "2,316 cc (141.3 cu in)",
+      "power": "110 kW (150 PS; 148 bhp) at 6,000 rpm",
+      "torque": "205 N⋅m (151 lb⋅ft) at 4,000 rpm",
       "years": "1983-1987"
     },
     {
       "engine_code": "M20B25",
-      "displacement": "2,494 cc",
-      "power": "126 kW at 5,800 rpm",
-      "torque": "226 N⋅m at 4,000 rpm",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": "126 kW (171 PS; 169 bhp) at 5,800 rpm",
+      "torque": "226 N⋅m (167 lb⋅ft) at 4,000 rpm",
       "years": "1985-1990"
     },
     {
       "engine_code": "M20B25",
-      "displacement": "2,494 cc",
-      "power": "125 kW at 5,800 rpm",
-      "torque": "226 N⋅m at 4,300 rpm",
+      "displacement": "2,494 cc (152.2 cu in)",
+      "power": "125 kW (170 PS; 168 bhp) at 5,800 rpm",
+      "torque": "226 N⋅m (167 lb⋅ft) at 4,300 rpm",
       "years": "1987-1992"
     },
     {
       "engine_code": "M20B27",
-      "displacement": "2,693 cc",
-      "power": "92 kW at 4,250 rpm",
-      "torque": "240 N⋅m at 3,250 rpm",
+      "displacement": "2,693 cc (164.3 cu in)",
+      "power": "92 kW (125 PS; 123 bhp) at 4,250 rpm",
+      "torque": "240 N⋅m (177 lb⋅ft) at 3,250 rpm",
       "years": "1982-1985"
     },
     {
       "engine_code": "M20B27",
-      "displacement": "2,693 cc",
-      "power": "90 kW at 4,250 rpm",
-      "torque": "230 N⋅m at 3,250 rpm",
+      "displacement": "2,693 cc (164.3 cu in)",
+      "power": "90 kW (122 PS; 121 bhp) at 4,250 rpm",
+      "torque": "230 N⋅m (170 lb⋅ft) at 3,250 rpm",
       "years": "1985-1987"
     },
     {
       "engine_code": "M20B27",
-      "displacement": "2,693 cc",
-      "power": "95 kW at 4,250 rpm",
-      "torque": "240 N⋅m at 3,250 rpm",
+      "displacement": "2,693 cc (164.3 cu in)",
+      "power": "95 kW (129 PS; 127 bhp) at 4,250 rpm",
+      "torque": "240 N⋅m (177 lb⋅ft) at 3,250 rpm",
       "years": "1985-1988"
     }
   ],
   "model": "M20",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/M20B25.jpg/280px-M20B25.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/M20B25.jpg/280px-M20B25.jpg",
+  "summary": "The BMW M20 engine, produced from 1977 to 1993, was a straight-six engine with initial displacements of 2.0 L, later expanding to 2.7 L. It was first used in the E12 5 Series and E21 3 Series. The M20 was phased out after the introduction of the M50 engine in 1990, with the last models installed in the E30 3 Series wagon and convertible in April 1993. The M20 served as the basis for the BMW M21 diesel engine and is related to the M70 V12 petrol engine. Key specifications include a cast iron block, aluminum head, and a single overhead cam (SOHC) valvetrain.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M20",
+  "fuel_type": "gasoline"
 }

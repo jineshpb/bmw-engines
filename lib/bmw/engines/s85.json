@@ -2,13 +2,15 @@
   "data": [
     {
       "engine_code": "S85B50",
-      "year": "2005–2010",
       "displacement": "4,999 cc (305.1 cu in)",
       "power": "373 kW (507 PS; 500 hp) at 7,750 rpm",
-      "torque": "520 N⋅m (384 lb⋅ft) at 6,100 rpm"
+      "torque": "520 N⋅m (384 lb⋅ft) at 6,100 rpm",
+      "years": "2005–2010"
     }
   ],
   "model": "S85",
   "image_path": "//upload.wikimedia.org/wikipedia/commons/6/62/BMW_S85.jpg",
-  "notes": "The BMW S85B50 engine is a 5.0 L V10 engine used in the E60 M5, produced from 2005 to 2010. It features a 90° configuration with an aluminum cylinder block and head, DOHC valvetrain with variable valve timing, and runs on petrol. The engine delivers a power output of 507 hp and a torque output of 520 N⋅m. There is no direct predecessor to this engine, and it was succeeded by the BMW S63."
+  "summary": "The BMW S85B50 engine, introduced in the E60 M5 from 2005 to 2010, is a 5.0 L (4999 cc) 90° V10 engine inspired by BMW's Formula One experience. It features an aluminium cylinder block and head, with a DOHC valvetrain and variable valve timing. The engine produces 507 hp and 520 Nm of torque. The S85B50 is unique as it is not based on any regular production BMW engine, although the S65 V8 engine used in the E92 M3 is derived from it. The S85B50 has no predecessor and was succeeded by the BMW S63.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_S85",
+  "fuel_type": "gasoline"
 }

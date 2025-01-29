@@ -64,5 +64,15 @@ export function decodeEngineCode(engineCode: string): string {
   const tune = engineCode[6] as keyof typeof engineMapping.engineTuningState;
   const revision = engineCode[7];
 
-  return `${engineMapping.engineType[type]} ${engineMapping.cylinderCount[cylinders]} with ${engineMapping.derivation[tech]}, ${engineMapping.engineMounting[mount]}, ${engineMapping.engineDisplacement[disp]}, ${engineMapping.engineTuningState[tune]} (revision ${revision})`;
+  const parts = [
+    engineMapping.engineType[type],
+    engineMapping.cylinderCount[cylinders],
+    engineMapping.derivation[tech] && `with ${engineMapping.derivation[tech]}`,
+    engineMapping.engineMounting[mount],
+    engineMapping.engineDisplacement[disp],
+    engineMapping.engineTuningState[tune],
+    revision && `(revision ${revision})`,
+  ].filter(Boolean);
+
+  return parts.join(", ");
 }

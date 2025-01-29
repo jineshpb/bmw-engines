@@ -3,11 +3,14 @@
     {
       "engine_code": "M328",
       "displacement": "1,971 cc (120.3 cu in)",
-      "power": "59 kW (79 bhp)  @ 5000 rpm",
-      "torque": "126 N⋅m (93 lb⋅ft)  @ 4000 rpm",
+      "power": "59 kW (79 bhp) @ 5000 rpm",
+      "torque": "126 N⋅m (93 lb⋅ft) @ 4000 rpm",
       "years": "1936-1940"
     }
   ],
   "model": "M328",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/6/63/BMW_328_6-Zylinder-Motor.jpg/280px-BMW_328_6-Zylinder-Motor.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/6/63/BMW_328_6-Zylinder-Motor.jpg/280px-BMW_328_6-Zylinder-Motor.jpg",
+  "summary": "The BMW M328 engine, produced from 1936 to 1940, features an aluminium cross-flow cylinder head with hemispherical combustion chambers and is a straight-six configuration with a displacement of 2.0 L (1,971 cc). It has a cylinder bore of 66 mm and a piston stroke of 96 mm. The engine was used in the BMW 328 and BMW 327/28 coupes and was later licensed to Bristol Cars in the UK. It succeeded the BMW M78 engine and was followed by the BMW M335.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M328",
+  "fuel_type": "gasoline"
 }

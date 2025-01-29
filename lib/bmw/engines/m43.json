@@ -44,5 +44,8 @@
     }
   ],
   "model": "M43",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BMW_M43_Engine_316i_Compact_1996.jpg/280px-BMW_M43_Engine_316i_Compact_1996.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BMW_M43_Engine_316i_Compact_1996.jpg/280px-BMW_M43_Engine_316i_Compact_1996.jpg",
+  "summary": "The BMW M43 engine was produced from 1991 to 2002 and is an inline-4 engine available in three displacements: 1.6 L, 1.8 L, and 1.9 L. It features a cast iron cylinder block and an aluminum cylinder head, with a single overhead camshaft (SOHC) valvetrain. The M43 engine supports petrol and compressed natural gas (CNG) fuel types. It was succeeded by the BMW N42 engine following its introduction in 2001, marking the phasing out of the M43.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M43",
+  "fuel_type": "gasoline"
 }

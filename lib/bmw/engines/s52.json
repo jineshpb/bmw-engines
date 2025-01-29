@@ -1,13 +1,16 @@
 {
   "data": [
     {
-      "engine_code": "S52B32",
-      "displacement": "3,152 cc (192 cu in)",
-      "power": "240 hp (179 kW; 243 PS) at 6,000 rpm",
-      "torque": "236 lb⋅ft (320 N⋅m) of torque at 3,800 rpm",
-      "years": "1996–2000"
+      "engine_code": "S52",
+      "displacement": "3,152 cc",
+      "power": "240 hp (179 kW; 243 PS) @ 6,000 rpm",
+      "torque": "236 lb⋅ft (320 N⋅m) @ 3,800 rpm",
+      "years": "1996-1999"
     }
   ],
   "model": "S52",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/0/02/S52B32_2000_Z3_M_Roadster.jpg/280px-S52B32_2000_Z3_M_Roadster.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/0/02/S52B32_2000_Z3_M_Roadster.jpg/280px-S52B32_2000_Z3_M_Roadster.jpg",
+  "summary": "The S52 is a performance-oriented engine variant of the M52, introduced in the North American E36 M3 from 1996 to 1999, replacing the S50B30US. While it is less powerful than the European S50, the S52 shares more similarities with the standard M52 engine, utilizing a cast iron engine block and cylinder head. It features a unique bore of 86.4 mm and a stroke of 89.6 mm, resulting in a total displacement of 3,152 cc and a compression ratio of 10.5:1. Notable enhancements over the M52 include lighter camshafts with improved lift and duration, upgraded valve springs, and an optimized exhaust system. The S52 generates 240 horsepower at 6,000 rpm and 236 lb-ft of torque at 3,800 rpm, with a redline of 7,000 rpm, compared to the M52's 6,500 rpm.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M52#S52",
+  "fuel_type": "gasoline"
 }

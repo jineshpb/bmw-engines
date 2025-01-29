@@ -1,13 +1,16 @@
 {
   "data": [
     {
-      "Engine": "M335",
-      "Displacement": "3,485 cc (212.7 cu in)",
-      "Power": "66 kW (89 bhp) at 3,000 rpm",
-      "Torque": "180 N⋅m (133 lb⋅ft) at 2,000 rpm",
-      "Years": "1939-1941"
+      "engine_code": "M335",
+      "displacement": "3,485 cc (212.7 cu in)",
+      "power": "66 kW (89 bhp) at 3,000 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 2,000 rpm",
+      "years": "1939-1941"
     }
   ],
   "model": "M335",
-  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/3/33/BMW_335_Cabriolet%2C_Bj._1939.jpg\""
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/3/33/BMW_335_Cabriolet%2C_Bj._1939.jpg/280px-BMW_335_Cabriolet%2C_Bj._1939.jpg",
+  "summary": "The BMW M335 engine, produced from 1939 to 1941, features a straight-six configuration with a 3.5 liter displacement, which is a 77% increase over its predecessor, the M328. It has an iron block and an aluminum cylinder head, utilizing an OHV valvetrain and running on petrol. Production was halted due to World War II, and although it does not have a direct successor, it was replaced in high-performance applications by the BMW OHV V8 in 1954.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M335",
+  "fuel_type": "gasoline"
 }

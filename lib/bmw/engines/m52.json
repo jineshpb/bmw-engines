@@ -58,5 +58,8 @@
     }
   ],
   "model": "M52",
-  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/1/1e/M52NonTUB28.jpg\""
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1e/M52NonTUB28.jpg/280px-M52NonTUB28.jpg",
+  "summary": "The BMW M52 engine, produced from 1994 to 2000, featured a straight-6 configuration with displacements ranging from 2.0 to 2.8 liters. It included variable valve timing (VVT) on the exhaust camshaft starting in 1998 with the M52TU update. The M52, along with the S52 variant, received recognition on Ward's 10 Best Engines list from 1997 to 2000. The M52 was succeeded by the M54 engine in 2000. The S52 engine, produced between 1996 and 2000, had a displacement of 3.152 liters and also utilized DOHC with VVT.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M52",
+  "fuel_type": "gasoline"
 }

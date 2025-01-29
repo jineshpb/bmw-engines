@@ -1,41 +1,44 @@
 {
   "data": [
     {
-      "Engine Code": "N20B16",
-      "Displacement": "1,592 cc (97.1 cu in)",
-      "Power": "125 kW (168 bhp)  at 5,000 rpm",
-      "Torque": "250 N⋅m (184 lb⋅ft)  at 1,500-4,700 rpm",
-      "Year": "2013–2016"
+      "engine_code": "N20B16",
+      "displacement": "1,592 cc (97.1 cu in)",
+      "power": "125 kW (168 bhp) at 5,000 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 1,500-4,700 rpm",
+      "years": "2013–2016"
     },
     {
-      "Engine Code": "N20B20",
-      "Displacement": "1,997 cc (121.9 cu in)",
-      "Power": "115 kW (154 bhp)  at 5,000 rpm",
-      "Torque": "240 N⋅m (177 lb⋅ft)  at 1,250-4,500 rpm",
-      "Year": "2013–2017"
+      "engine_code": "N20B20",
+      "displacement": "1,997 cc (121.9 cu in)",
+      "power": "115 kW (154 bhp) at 5,000 rpm",
+      "torque": "240 N⋅m (177 lb⋅ft) at 1,250-4,500 rpm",
+      "years": "2013–2017"
     },
     {
-      "Engine Code": "N20B20",
-      "Displacement": "1,997 cc (121.9 cu in)",
-      "Power": "135 kW (181 bhp)  at 5,000 rpm",
-      "Torque": "270 N⋅m (199 lb⋅ft)  at 1,250-4,500 rpm",
-      "Year": "2011–2017"
+      "engine_code": "N20B20",
+      "displacement": "1,997 cc (121.9 cu in)",
+      "power": "135 kW (181 bhp) at 5,000 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 1,250-4,500 rpm",
+      "years": "2011–2017"
     },
     {
-      "Engine Code": "N20B20",
-      "Displacement": "1,997 cc (121.9 cu in)",
-      "Power": "160 kW (215 bhp)  at 5,500 rpm",
-      "Torque": "310 N⋅m (229 lb⋅ft)  at 1,350-4,800 rpm",
-      "Year": "2012–2017"
+      "engine_code": "N20B20",
+      "displacement": "1,997 cc (121.9 cu in)",
+      "power": "160 kW (215 bhp) at 5,500 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 1,350-4,800 rpm",
+      "years": "2012–2017"
     },
     {
-      "Engine Code": "N20B20",
-      "Displacement": "1,997 cc (121.9 cu in)",
-      "Power": "180 kW (241 bhp)  at 5,000 rpm",
-      "Torque": "350 N⋅m (258 lb⋅ft)  at 1,250-4,800 rpm",
-      "Year": "2011–2017"
+      "engine_code": "N20B20",
+      "displacement": "1,997 cc (121.9 cu in)",
+      "power": "180 kW (241 bhp) at 5,000 rpm",
+      "torque": "350 N⋅m (258 lb⋅ft) at 1,250-4,800 rpm",
+      "years": "2011–2017"
     }
   ],
   "model": "N20",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BMW_N20_Engine.JPG/280px-BMW_N20_Engine.JPG\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/BMW_N20_Engine.JPG/280px-BMW_N20_Engine.JPG",
+  "summary": "The BMW N20 engine is a turbocharged inline-4 engine produced from 2011 to 2018, featuring advanced technologies such as a twin-scroll turbocharger, double-VANOS, Valvetronic, direct injection, automatic stop-start, and an electric water pump. It has a displacement of either 1,592 cc or 1,997 cc, with an aluminum cylinder block and head. The N20 engine was recognized in Wards' Top 10 Engines in 2012 and was eventually succeeded by the BMW B48 in 2014, following its predecessor, the BMW N52/N53.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N20",
+  "fuel_type": "gasoline"
 }

@@ -5,134 +5,138 @@
       "displacement": "1,499 cc (91.5 cu in)",
       "power": "55 kW (75 PS; 74 hp) at 5800 rpm",
       "torque": "118 N⋅m (87 lb⋅ft) at 3700 rpm",
-      "years": "1974–1977"
+      "year": "1974–1977"
     },
     {
       "engine_code": "M115",
       "displacement": "1,499 cc (91.5 cu in)",
       "power": "59 kW (80 PS; 79 hp) at 5700 rpm",
       "torque": "118 N⋅m (87 lb⋅ft) at 3000 rpm",
-      "years": "1962-1964"
+      "year": "1962-1964"
     },
     {
       "engine_code": "M116",
       "displacement": "1,573 cc (96.0 cu in)",
       "power": "63 kW (85 PS; 84 hp) at 5800 rpm",
       "torque": "130 N⋅m (96 lb⋅ft) at 3500 rpm",
-      "years": "1964–1975"
+      "year": "1964–1975"
     },
     {
       "engine_code": "M116",
-      "displacement": "",
+      "displacement": "1,573 cc (96.0 cu in)",
       "power": "77 kW (105 PS; 103 hp) at 6000 rpm",
       "torque": "141 N⋅m (104 lb⋅ft) at 4500 rpm",
-      "years": "1967–1968"
+      "year": "1967–1968"
     },
     {
       "engine_code": "M41",
-      "displacement": "",
+      "displacement": "1,573 cc (96.0 cu in)",
       "power": "66 kW (90 PS; 89 hp) at 6000 rpm",
       "torque": "167 N⋅m (123 lb⋅ft) at 4000 rpm",
-      "years": "1975-1980"
+      "year": "1975-1980"
     },
     {
       "engine_code": "M98",
-      "displacement": "",
+      "displacement": "1,573 cc (96.0 cu in)",
       "power": "55 kW (75 PS; 74 hp) at 5800 rpm",
       "torque": "110 N⋅m (81 lb⋅ft) at 3200 rpm",
-      "years": "1981-1983"
+      "year": "1981-1983"
     },
     {
       "engine_code": "M10B18",
       "displacement": "1,766 cc (107.8 cu in)",
       "power": "74 kW (100 PS; 99 hp) at 5800 rpm",
       "torque": "135 N⋅m (100 lb⋅ft) at 3500 rpm",
-      "years": "1980-1983"
+      "year": "1980-1983"
     },
     {
       "engine_code": "M10B18",
-      "displacement": "",
+      "displacement": "1,766 cc (107.8 cu in)",
       "power": "77 kW (105 PS; 103 hp) at 5800 rpm",
       "torque": "145 N⋅m (107 lb⋅ft) at 4500 rpm",
-      "years": "1980–1988S/CH[6]"
+      "year": "1980–1988S/CH[6]"
     },
     {
       "engine_code": "M118",
       "displacement": "1,773 cc (108.2 cu in)",
       "power": "66 kW (90 PS; 89 hp) at 5,250 rpm",
       "torque": "144 N⋅m (106 lb⋅ft) at 3000 rpm",
-      "years": "1963–1974"
+      "year": "1963–1974"
     },
     {
       "engine_code": "M118",
-      "displacement": "",
+      "displacement": "1,773 cc (108.2 cu in)",
       "power": "81 kW (110 PS; 108 hp) at 5800 rpm",
       "torque": "148 N⋅m (109 lb⋅ft) at 4000 rpm",
-      "years": "1964–1976"
+      "year": "1964–1976"
     },
     {
       "engine_code": "M118",
-      "displacement": "",
+      "displacement": "1,773 cc (108.2 cu in)",
       "power": "96 kW (130 PS; 128 hp) at 6100 rpm",
       "torque": "157 N⋅m (116 lb⋅ft) at 5100 rpm",
-      "years": "1964-1965"
+      "year": "1964-1965"
     },
     {
       "engine_code": "M05",
       "displacement": "1,990 cc (121.4 cu in)",
       "power": "74 kW (100 PS; 99 hp) at 5500 rpm",
       "torque": "157 N⋅m (116 lb⋅ft) at 3000 rpm",
-      "years": "1968–1976"
+      "year": "1968–1976"
     },
     {
       "engine_code": "M05",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "88 kW (120 PS; 118 hp) at 5600 rpm",
       "torque": "167 N⋅m (123 lb⋅ft) at 3500 rpm",
-      "years": "1965–1971"
+      "year": "1965–1971"
     },
     {
       "engine_code": "M17",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "85 kW (115 PS; 113 hp) at 5800 rpm",
       "torque": "165 N⋅m (122 lb⋅ft) at 3700 rpm",
-      "years": "1972-1977"
+      "year": "1972-1977"
     },
     {
       "engine_code": "M15",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "96 kW (130 PS; 128 hp) at 5800 rpm",
       "torque": "177 N⋅m (131 lb⋅ft) at 4500 rpm",
-      "years": "1970–1974"
+      "year": "1970–1974"
     },
     {
       "engine_code": "M43",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "80 kW (109 PS; 107 hp) at 5800 rpm",
       "torque": "160 N⋅m (118 lb⋅ft) at 3700 rpm",
-      "years": "1975-1983"
+      "year": "1975-1983"
     },
     {
       "engine_code": "M64",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "92 kW (125 PS; 123 hp) at 5700 rpm",
       "torque": "175 N⋅m (129 lb⋅ft) at 4350 rpm",
-      "years": "1975-1979"
+      "year": "1975-1979"
     },
     {
       "engine_code": "M10B20",
-      "displacement": "",
+      "displacement": "1,990 cc (121.4 cu in)",
       "power": "81 kW (110 PS; 109 hp) at 5700 rpm",
       "torque": "152 N⋅m (112 lb⋅ft) at 4350 rpm",
-      "years": "1977-1979"
+      "year": "1977-1979"
     },
     {
       "engine_code": "M31",
-      "displacement": "1,990 cc (121.4 cu in)turbo",
+      "displacement": "1,990 cc (121.4 cu in) turbo",
       "power": "125 kW (170 PS; 168 hp) at 5800 rpm",
       "torque": "245 N⋅m (181 lb⋅ft) at 4000 rpm",
-      "years": "1973-1975"
+      "year": "1973-1975"
     }
   ],
-  "model": "M10"
+  "model": "M10",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/BMW_Engine_M10.JPG/280px-BMW_Engine_M10.JPG",
+  "summary": "The BMW M10 engine, produced from 1962 to 1988, was an inline-4 engine with various displacements ranging from 1.5 to 2.0 liters. Over 3.5 million units were produced during its 26-year run. It served as the basis for the turbocharged BMW M12 engine used in Formula One, which could produce up to 1,400 PS in qualifying mode. The M10 was phased out following the introduction of the BMW M40 engine in 1987. It featured a cast iron block, aluminum head, SOHC valvetrain, and utilized various fuel systems including carburetors and fuel injection.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M10",
+  "fuel_type": "gasoline"
 }

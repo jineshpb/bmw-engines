@@ -1,70 +1,72 @@
 {
   "data": [
     {
-      "Engine": "N62B36",
-      "Displacement": "3,600 cc (219.7 cu in)",
-      "Power": "200 kW (268 hp) at 6,200 rpm",
-      "Torque": "360 N⋅m (266 lb⋅ft) at 3,700 rpm",
-      "Year": "2001"
+      "engine_code": "N62B36",
+      "displacement": "3,600 cc (219.7 cu in)",
+      "power": "200 kW (268 hp) at 6,200 rpm",
+      "torque": "360 N⋅m (266 lb⋅ft) at 3,700 rpm",
+      "years": "2001"
     },
     {
-      "Engine": "N62B40",
-      "Displacement": "4,000 cc (244.1 cu in)",
-      "Power": "225 kW (302 hp) at 6,300 rpm",
-      "Torque": "390 N⋅m (288 lb⋅ft) at 3,500 rpm",
-      "Year": "2005"
+      "engine_code": "N62B40",
+      "displacement": "4,000 cc (244.1 cu in)",
+      "power": "225 kW (302 hp) at 6,300 rpm",
+      "torque": "390 N⋅m (288 lb⋅ft) at 3,500 rpm",
+      "years": "2005"
     },
     {
-      "Engine": "N62B44",
-      "Displacement": "4,398 cc (268.4 cu in)",
-      "Power": "235 kW (315 hp) at 6,100 rpm",
-      "Torque": "440 N⋅m (325 lb⋅ft) at 3,700 rpm",
-      "Year": "2003"
+      "engine_code": "N62B44",
+      "displacement": "4,398 cc (268.4 cu in)",
+      "power": "235 kW (315 hp) at 6,100 rpm",
+      "torque": "440 N⋅m (325 lb⋅ft) at 3,700 rpm",
+      "years": "2003"
     },
     {
-      "Engine": "N62B44",
-      "Displacement": "4,398 cc (268.4 cu in)",
-      "Power": "245 kW (329 hp) at 6,100 rpm",
-      "Torque": "450 N⋅m (332 lb⋅ft) at 3,600 rpm",
-      "Year": "2001"
+      "engine_code": "N62B44",
+      "displacement": "4,398 cc (268.4 cu in)",
+      "power": "245 kW (329 hp) at 6,100 rpm",
+      "torque": "450 N⋅m (332 lb⋅ft) at 3,600 rpm",
+      "years": "2001"
     },
     {
-      "Engine": "N62B48",
-      "Displacement": "4,799 cc (292.9 cu in)",
-      "Power": "265 kW (355 hp) at 6,200 rpm",
-      "Torque": "500 N⋅m (369 lb⋅ft) at 3,500 rpm",
-      "Year": "2004"
+      "engine_code": "N62B48",
+      "displacement": "4,799 cc (292.9 cu in)",
+      "power": "265 kW (355 hp) at 6,200 rpm",
+      "torque": "500 N⋅m (369 lb⋅ft) at 3,500 rpm",
+      "years": "2004"
     },
     {
-      "Engine": "N62B48",
-      "Displacement": "4,799 cc (292.9 cu in)",
-      "Power": "261 kW (350 hp) at 6,300 rpm",
-      "Torque": "475 N⋅m (350 lb⋅ft) at 3,400 rpm",
-      "Year": "2005"
+      "engine_code": "N62B48",
+      "displacement": "4,799 cc (292.9 cu in)",
+      "power": "261 kW (350 hp) at 6,300 rpm",
+      "torque": "475 N⋅m (350 lb⋅ft) at 3,400 rpm",
+      "years": "2005"
     },
     {
-      "Engine": "N62B48",
-      "Displacement": "4,799 cc (292.9 cu in)",
-      "Power": "270 kW (362 hp) at 6,300 rpm",
-      "Torque": "490 N⋅m (361 lb⋅ft) at 3,400 rpm",
-      "Year": "2005"
+      "engine_code": "N62B48",
+      "displacement": "4,799 cc (292.9 cu in)",
+      "power": "270 kW (362 hp) at 6,300 rpm",
+      "torque": "490 N⋅m (361 lb⋅ft) at 3,400 rpm",
+      "years": "2005"
     },
     {
-      "Engine": "H1",
-      "Displacement": "4,398 cc (268.4 cu in)",
-      "Power": "368 kW (493 hp) at 5,500 rpm",
-      "Torque": "700 N⋅m (516 lb⋅ft) at 3,500 rpm",
-      "Year": "2007"
+      "engine_code": "H1",
+      "displacement": "4,398 cc (268.4 cu in)",
+      "power": "368 kW (493 hp) at 5,500 rpm",
+      "torque": "700 N⋅m (516 lb⋅ft) at 3,500 rpm",
+      "years": "2007"
     },
     {
-      "Engine": "H1",
-      "Displacement": "4,398 cc (268.4 cu in)",
-      "Power": "390 kW (523 hp) at 5,500 rpm",
-      "Torque": "725 N⋅m (535 lb⋅ft) at 4,750 rpm",
-      "Year": "2007"
+      "engine_code": "H1",
+      "displacement": "4,398 cc (268.4 cu in)",
+      "power": "390 kW (523 hp) at 5,500 rpm",
+      "torque": "725 N⋅m (535 lb⋅ft) at 4,750 rpm",
+      "years": "2007"
     }
   ],
   "model": "N62",
   "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bb/BMW_N62B48B_Engine.JPG",
-  "notes": "The N62 engine is a completely new design, distinct from the M60 and M62 engines. It has a 4.4L displacement, featuring a bore of 92 mm and a stroke of 82.7 mm. Key features include double-VANOS variable valve timing for both intake and exhaust camshafts, double overhead camshafts (DOHC) with four valves per cylinder, and an aluminum engine block and cylinder head. The N62 is notable for being the first BMW V8 to incorporate Valvetronic technology, which allows for variable valve lift ranging from 0.03mm to 9.85mm, improving efficiency by adjusting lift instead of relying on the throttle body during regular operation. The engine has a redline of 6500 rpm and includes a throttle body for emergency situations and specific conditions like cold starts. Additionally, it uses a vacuum pump for the brake booster and certain auxiliary systems, linking it to proper engine functioning and emissions control."
+  "summary": "The BMW N62 is a naturally aspirated 90° V8 engine produced from 2001 to 2010, available in various displacements of 3.6L, 4.0L, 4.4L, and 4.8L. It features an aluminum cylinder block and head, a DOHC valvetrain with variable valve timing, and uses port fuel injection. Unlike its predecessor (M62) and successor (N63), there was no M version of the N62. The engine received notable recognition in 2002, winning the \"International Engine of the Year,\" \"Best New Engine,\" and \"Above 4-litre\" categories.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N62",
+  "fuel_type": "gasoline"
 }

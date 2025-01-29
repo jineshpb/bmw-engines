@@ -1,11 +1,11 @@
 // services/engines.ts
 import supabase from "../lib/supabaseClient";
 import {
-  EngineRecord,
   EngineConfiguration,
   EngineClass,
   EngineClassSummary,
   EngineClassCardProps,
+  Engine,
 } from "@/types/engines";
 import { PostgrestError } from "@supabase/supabase-js";
 
@@ -16,7 +16,7 @@ interface EngineConfigResponse {
   // ... other fields
 }
 
-export const getEngines = async (): Promise<EngineRecord[]> => {
+export const getEngines = async (): Promise<Engine[]> => {
   const { data, error } = await supabase.from("engines").select("*");
 
   if (error) {
@@ -24,7 +24,7 @@ export const getEngines = async (): Promise<EngineRecord[]> => {
     return [];
   }
 
-  return data as EngineRecord[];
+  return data as Engine[];
 };
 
 export const getEngineConfigurations = async (): Promise<
@@ -78,58 +78,54 @@ export const getEngineClasses = async (): Promise<EngineClass[]> => {
 export const getEngineClassSummary = async (): Promise<
   EngineClassSummary[]
 > => {
-  const { data, error } = await supabase
-    .from("engine_classes")
-    .select(
-      `
-      id,
-      model,
-      notes,
-      image_path,
-      engines (
+  try {
+    const { data, error } = await supabase.from("engine_classes").select(`
         id,
-        engine_code,
-        engine_configurations (
+        model,
+        summary,
+        image_path,
+        fuel_type,
+        wikipedia_url,
+        engines (
           id,
-          is_derived
+          engine_configurations (count)
         )
-      )
-    `
-    )
-    .order("model", { ascending: true });
+      `);
 
-  // console.log("join data ", data);
+    if (error) {
+      console.error("Error details:", error);
+      throw error;
+    }
 
-  if (error) {
-    console.error("Error fetching engine summary:", error);
-    return [];
-  }
+    if (!data) return [];
 
-  return (data || []).map((engineClass) => {
-    // console.log("engineClass", engineClass);
-
-    return {
+    return data.map((engineClass) => ({
       id: engineClass.id,
       model: engineClass.model,
-      notes: engineClass.notes,
+      notes: engineClass.summary,
       image_path: engineClass.image_path,
+      fuel_type: engineClass.fuel_type || "gasoline",
       engineCount: engineClass.engines?.length || 0,
       configurations: {
         total:
           engineClass.engines?.reduce(
-            (sum, engine) => sum + (engine.engine_configurations?.length || 0),
+            (acc, engine) =>
+              acc + (engine.engine_configurations[0]?.count || 0),
             0
           ) || 0,
         derived: 0,
         original: 0,
       },
-    };
-  }) as EngineClassSummary[];
+    }));
+  } catch (error) {
+    console.error("Error fetching engine class summary:", error);
+    throw error;
+  }
 };
 
 export const getEnginesByClass = async (
   classId?: string
-): Promise<EngineConfiguration[]> => {
+): Promise<Partial<EngineConfiguration>[]> => {
   let query = supabase.from("engine_classes").select(`
       engines (
         id,
@@ -195,6 +191,7 @@ export async function getEngineClassById(
     model: engineClass.model,
     notes: engineClass.notes,
     image_path: engineClass.image_path,
+    fuel_type: engineClass.fuel_type,
     engineCount: engineClass.engines[0]?.count || 0,
     configurations: {
       total: engineClass.engine_configurations[0]?.count || 0,

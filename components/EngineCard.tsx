@@ -21,7 +21,7 @@ export default function EngineCard({
   engineConfigurations: EngineConfiguration;
 }) {
   // console.log(decodeEngineCode(engine.engine_code));
-  // console.log("engineConfigurations", engineConfigurations);
+  console.log("engineConfigurations", engineConfigurations);
 
   return (
     <Card className="font-geist">
@@ -68,14 +68,15 @@ export default function EngineCard({
               height={16}
             />
             <span className="">
-              {
+              {(engineConfigurations.engines &&
                 engineMapping.cylinderCount[
-                  engineConfigurations
-                    .engine_id[1] as keyof typeof engineMapping.cylinderCount
-                ]
-              }
+                  engineConfigurations.engines
+                    .engine_code[1] as keyof typeof engineMapping.cylinderCount
+                ]) ||
+                "N/A"}
             </span>
           </div>
+
           <div className="flex items-center gap-3 text-sm">
             <Image
               src={`/icons/displacement.svg`}

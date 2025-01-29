@@ -16,7 +16,7 @@
     },
     {
       "engine_code": "N46B20U2",
-      "displacement": null,
+      "displacement": "1,995 cc (121.7 cu in)",
       "power": "100 kW (134 bhp) at 5,750 rpm",
       "torque": "180 N⋅m (133 lb⋅ft) at 3,250 rpm",
       "year": "2007"
@@ -44,5 +44,8 @@
     }
   ],
   "model": "N46",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/5/54/BMW_N46.JPG/280px-BMW_N46.JPG\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/BMW_N46.JPG/280px-BMW_N46.JPG",
+  "summary": "The BMW N46 engine, produced from 2004 to 2015, is an inline-4 engine available in 1.8 L and 2.0 L displacements. It features a DOHC valvetrain with variable valve timing and lift. The N46 served as the foundation for the smaller N45 engine but was eventually succeeded by the N43 in 2007. However, due to the N43's incompatibility with high-sulfur fuel, the N46 remained in production until 2015, when it was replaced by the turbocharged BMW N13 engine.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N46",
+  "fuel_type": "gasoline"
 }

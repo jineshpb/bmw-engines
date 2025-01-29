@@ -1,0 +1,287 @@
+{
+  "message": "Database sync completed",
+  "results": [
+    {
+      "file": "b38.json",
+      "status": "success",
+      "model": "B38",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "b48.json",
+      "status": "success",
+      "model": "B48",
+      "enginesProcessed": 11
+    },
+    {
+      "file": "b58.json",
+      "status": "success",
+      "model": "B58",
+      "enginesProcessed": 6
+    },
+    {
+      "file": "m10.json",
+      "status": "success",
+      "model": "M10",
+      "enginesProcessed": 13
+    },
+    {
+      "file": "m102.json",
+      "status": "success",
+      "model": "M102",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "m20.json",
+      "status": "success",
+      "model": "M20",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "m30.json",
+      "status": "success",
+      "model": "M30",
+      "enginesProcessed": 10
+    },
+    {
+      "file": "m328.json",
+      "status": "success",
+      "model": "M328",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "m335.json",
+      "status": "success",
+      "model": "M335",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "m337.json",
+      "status": "success",
+      "model": "M337",
+      "enginesProcessed": 3
+    },
+    {
+      "file": "m40.json",
+      "status": "success",
+      "model": "M40",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "m42.json",
+      "status": "success",
+      "model": "M42",
+      "enginesProcessed": 0
+    },
+    {
+      "file": "m43.json",
+      "status": "success",
+      "model": "M43",
+      "enginesProcessed": 3
+    },
+    {
+      "file": "m44.json",
+      "status": "success",
+      "model": "M44",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "m50.json",
+      "status": "success",
+      "model": "M50",
+      "enginesProcessed": 9
+    },
+    {
+      "file": "m52.json",
+      "status": "success",
+      "model": "M52",
+      "enginesProcessed": 8
+    },
+    {
+      "file": "m54.json",
+      "status": "success",
+      "model": "M54",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "m60.json",
+      "status": "success",
+      "model": "M60",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "m62.json",
+      "status": "success",
+      "model": "M62",
+      "enginesProcessed": 10
+    },
+    {
+      "file": "m70.json",
+      "status": "success",
+      "model": "M70",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "m73.json",
+      "status": "success",
+      "model": "M73",
+      "enginesProcessed": 3
+    },
+    {
+      "file": "m78.json",
+      "status": "success",
+      "model": "M78",
+      "enginesProcessed": 9
+    },
+    {
+      "file": "m88_s38.json",
+      "status": "success",
+      "model": "M88/S38",
+      "enginesProcessed": 5
+    },
+    {
+      "file": "n13.json",
+      "status": "success",
+      "model": "N13",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "n20.json",
+      "status": "success",
+      "model": "N20",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n40.json",
+      "status": "success",
+      "model": "N40",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "n42.json",
+      "status": "success",
+      "model": "N42",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n43.json",
+      "status": "success",
+      "model": "N43",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n45.json",
+      "status": "success",
+      "model": "N45",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n46.json",
+      "status": "success",
+      "model": "N46",
+      "enginesProcessed": 6
+    },
+    {
+      "file": "n52.json",
+      "status": "success",
+      "model": "N52",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n53.json",
+      "status": "success",
+      "model": "N53",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n54.json",
+      "status": "success",
+      "model": "N54",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n55.json",
+      "status": "success",
+      "model": "N55",
+      "enginesProcessed": 6
+    },
+    {
+      "file": "n62.json",
+      "status": "success",
+      "model": "N62",
+      "enginesProcessed": 5
+    },
+    {
+      "file": "n63.json",
+      "status": "success",
+      "model": "N63",
+      "enginesProcessed": 16
+    },
+    {
+      "file": "n73.json",
+      "status": "success",
+      "model": "N73",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "n74.json",
+      "status": "success",
+      "model": "N74",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "ohv v8.json",
+      "status": "success",
+      "model": "OHV V8",
+      "enginesProcessed": 8
+    },
+    {
+      "file": "s14.json",
+      "status": "success",
+      "model": "S14",
+      "enginesProcessed": 4
+    },
+    {
+      "file": "s50.json",
+      "status": "success",
+      "model": "S50",
+      "enginesProcessed": 3
+    },
+    {
+      "file": "s52.json",
+      "status": "success",
+      "model": "S52",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "s54.json",
+      "status": "success",
+      "model": "S54",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "s55.json",
+      "status": "success",
+      "model": "S55",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "s65.json",
+      "status": "success",
+      "model": "S65",
+      "enginesProcessed": 2
+    },
+    {
+      "file": "s68.json",
+      "status": "success",
+      "model": "S68",
+      "enginesProcessed": 1
+    },
+    {
+      "file": "s85.json",
+      "status": "success",
+      "model": "S85",
+      "enginesProcessed": 1
+    }
+  ]
+}

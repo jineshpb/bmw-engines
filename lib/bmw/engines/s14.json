@@ -15,22 +15,22 @@
       "year": "1986–1989"
     },
     {
-      "engine_code": "N/A",
-      "displacement": "N/A",
+      "engine_code": "S14B23",
+      "displacement": "2,302 cc (140.5 cu in)",
       "power": "147 kW (197 bhp) at 6,750 rpm",
       "torque": "240 N⋅m (177 lb⋅ft) at 4,750 rpm",
       "year": "1986–1989"
     },
     {
-      "engine_code": "N/A",
-      "displacement": "N/A",
+      "engine_code": "S14B23",
+      "displacement": "2,302 cc (140.5 cu in)",
       "power": "158 kW (212 bhp) at 6,750 rpm",
       "torque": "230 N⋅m (170 lb⋅ft) at 4,600 rpm",
       "year": "1989–1991"
     },
     {
       "engine_code": "S14B23 EVO2",
-      "displacement": "N/A",
+      "displacement": "2,302 cc (140.5 cu in)",
       "power": "162 kW (217 bhp) at 6,750 rpm",
       "torque": "245 N⋅m (181 lb⋅ft) at 4,750 rpm",
       "year": "1988-1990"
@@ -44,5 +44,8 @@
     }
   ],
   "model": "S14",
-  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/thumb/9/93/BMW_S14_Engine.jpg/280px-BMW_S14_Engine.jpg\""
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/9/93/BMW_S14_Engine.jpg/280px-BMW_S14_Engine.jpg",
+  "summary": "The BMW S14 engine, produced from 1986 to 1991, features an inline-4 configuration with options for displacements of 2.0 L, 2.3 L, and 2.5 L. It has a cast iron cylinder block and an aluminum cylinder head. The engine uses a DOHC valvetrain and operates on petrol. Notably, it utilizes two separate throttle bodies, each with two throttle butterfly plates.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_S14",
+  "fuel_type": "gasoline"
 }

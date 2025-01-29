@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "engine_code": "M62B35",
+      "displacement": "3,498 cc",
+      "power": "173 kW (232 hp) at 5,700 rpm",
+      "torque": "320 N⋅m (236 lb⋅ft) at 3,300 rpm",
+      "years": "1996"
+    },
+    {
+      "engine_code": "M62TUB35",
+      "displacement": "3,498 cc",
+      "power": "180 kW (241 hp) at 5,800 rpm",
+      "torque": "345 N⋅m (254 lb⋅ft) at 3,800 rpm",
+      "years": "1998"
+    },
+    {
+      "engine_code": "M62B44",
+      "displacement": "4,398 cc",
+      "power": "210 kW (282 hp) at 5,700 rpm",
+      "torque": "420 N⋅m (310 lb⋅ft) at 3,900 rpm",
+      "years": "1996"
+    },
+    {
+      "engine_code": "M62TUB44",
+      "displacement": "4,398 cc",
+      "power": "210 kW (280 hp) at 5,400 rpm",
+      "torque": "440 N⋅m (325 lb⋅ft) at 3,600 rpm",
+      "years": "1998"
+    },
+    {
+      "engine_code": "M62TUB46",
+      "displacement": "4,619 cc",
+      "power": "255 kW (342 hp) at 5,700 rpm",
+      "torque": "480 N⋅m (354 lb⋅ft) at 3,700 rpm",
+      "years": "2001"
+    },
+    {
+      "engine_code": "Alpina F3",
+      "displacement": "3,498 cc",
+      "power": "250 kW (335 hp) at 6,000 rpm",
+      "torque": "470 N⋅m (347 lb⋅ft) at 3,700 rpm",
+      "years": "1996"
+    },
+    {
+      "engine_code": "Alpina F4",
+      "displacement": "3,498 cc",
+      "power": "255 kW (342 hp) at 6,000 rpm",
+      "torque": "480 N⋅m (354 lb⋅ft) at 3,700 rpm",
+      "years": "2000"
+    },
+    {
+      "engine_code": "Alpina F5",
+      "displacement": "4,837 cc",
+      "power": "276 kW (370 hp) at 6,000 rpm",
+      "torque": "510 N⋅m (376 lb⋅ft) at 3,700 rpm",
+      "years": "2002"
+    },
+    {
+      "engine_code": "S62B50",
+      "displacement": "4,941 cc",
+      "power": "294 kW (394 hp) at 6,600 rpm",
+      "torque": "500 N⋅m (369 lb⋅ft) at 3,800 rpm",
+      "years": "1998"
+    },
+    {
+      "engine_code": "Racing Dynamics R52",
+      "displacement": "5,161 cc",
+      "power": "306 kW (410 hp) at 6,400 rpm",
+      "torque": "514 N⋅m (379 lb⋅ft) at 3,900 rpm",
+      "years": "2001"
+    }
+  ],
+  "model": "M62",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/BMW_M62B44.jpg/280px-BMW_M62B44.jpg",
+  "summary": "The BMW M62 engine, produced from 1995 to 2005, is a 90° V8 available in various displacements ranging from 3.5 L to 4.8 L. It features an aluminum cylinder block and head, DOHC valvetrain with variable valve timing (VVT) in M62TU versions, and is driven by a chain. The successor to the M62 is the BMW N62.\n\nIn 1998, the high-performance S62 engine was introduced, specifically for the E39 M5 and other models. This 90° V8 engine has a displacement of 4.9 L, with an aluminum construction and a DOHC valvetrain that includes VVT. It produces power outputs ranging from 394 to 625 hp and torque between 369 to 443 lb-ft. The S62 engine was produced until 2003 and is succeeded by the BMW S65.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M62",
+  "fuel_type": "gasoline"
+}

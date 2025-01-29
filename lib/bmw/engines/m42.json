@@ -1,14 +1,14 @@
 {
   "data": [
     {
-      "Engine Code": "M42B18",
+      "Engine": "M42B18",
       "Displacement": "1,796 cc (109.6 cu in)",
       "Power": "100 kW (134 hp) at 6,000 rpm",
       "Torque": "172 N⋅m (127 lb⋅ft) at 4,600 rpm",
       "Year": "1989-1992 (E30)"
     },
     {
-      "Engine Code": "M42B18",
+      "Engine": "M42B18",
       "Displacement": "1,796 cc (109.6 cu in)",
       "Power": "103 kW (138 hp) at 6,000 rpm",
       "Torque": "175 N⋅m (129 lb⋅ft) at 4,500 rpm",
@@ -16,5 +16,8 @@
     }
   ],
   "model": "M42",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/3/35/BMW_M42B18_Motor.JPG/280px-BMW_M42B18_Motor.JPG\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/3/35/BMW_M42B18_Motor.JPG/280px-BMW_M42B18_Motor.JPG",
+  "summary": "The BMW M42 engine, produced from 1989 to 1996, was a naturally aspirated straight-4 with a displacement of 1.8 L. It featured a DOHC valvetrain, hydraulic valve lifters, a timing chain, and a compression ratio of 10.0:1. Later versions included a dual length intake manifold (DISA). The M42 served as the foundation for the S42 racing engine, used in the BMW 320i for the German Super Tourenwagen Cup. It succeeded the M40 engine and was later replaced by the BMW M44.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M42",
+  "fuel_type": "gasoline"
 }

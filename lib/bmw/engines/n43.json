@@ -5,30 +5,33 @@
       "displacement": "1,599 cc (97.6 cu in)",
       "power": "90 kW (121 bhp) at 6,000 rpm",
       "torque": "160 N⋅m (118 lb⋅ft) at 4,250 rpm",
-      "year": "2008-2011"
+      "years": "2008-2011"
     },
     {
       "engine_code": "N43B20",
       "displacement": "1,995 cc (121.7 cu in)",
       "power": "90 kW (121 bhp) at 6,000 rpm",
       "torque": "185 N⋅m (136 lb⋅ft) at 3,000 rpm",
-      "year": "2007-2011"
+      "years": "2007-2011"
     },
     {
       "engine_code": "N43B20",
       "displacement": "1,995 cc (121.7 cu in)",
       "power": "105 kW (141 bhp) at 6,000 rpm",
       "torque": "190 N⋅m (140 lb⋅ft) at 4,500 rpm",
-      "year": "2007-2011"
+      "years": "2007-2011"
     },
     {
       "engine_code": "N43B20",
       "displacement": "1,995 cc (121.7 cu in)",
       "power": "125 kW (168 bhp) at 6,700 rpm",
       "torque": "210 N⋅m (155 lb⋅ft) at 4,250 rpm",
-      "year": "2007-2011"
+      "years": "2007-2011"
     }
   ],
   "model": "N43",
-  "image_path": "[]"
+  "image_path": "The provided text does not contain any image links.",
+  "summary": "The BMW N43 engine, produced from 2007 to 2011, is an inline-4 engine available in 1.6 L and 2.0 L configurations. It features direct injection and was a part of BMW's transition to turbocharging, ultimately being replaced by the N13 engine in 2011. The N43 had several issues, including cam chain plastic guide breakage that led to oil starvation, and problems with injectors, coil packs, and the NOx sensor. It succeeded the N46/N45 engines.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N43",
+  "fuel_type": "gasoline"
 }

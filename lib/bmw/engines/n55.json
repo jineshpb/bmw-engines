@@ -18,14 +18,14 @@
       "engine_code": "N55B30O0",
       "displacement": "",
       "power": "240 kW (322 bhp) at 4,505–6,000 rpm",
-      "torque": "",
+      "torque": "450 N⋅m (332 lb⋅ft) at 1,300–4,500 rpm",
       "years": "2014–2016"
     },
     {
       "engine_code": "N55HP",
       "displacement": "",
       "power": "250 kW (335 bhp) at 4,505–6,000 rpm",
-      "torque": "",
+      "torque": "450 N⋅m (332 lb⋅ft) at 1,300–4,500 rpm",
       "years": "2013–2015"
     },
     {
@@ -43,14 +43,14 @@
       "years": "2013–2017"
     },
     {
-      "engine_code": "",
+      "engine_code": "Alpina",
       "displacement": "",
       "power": "324 kW (434 bhp) at 5,500–6250 rpm",
       "torque": "660 N⋅m (487 lb⋅ft) at 3,000–4,000 rpm",
       "years": "2017–present"
     },
     {
-      "engine_code": "",
+      "engine_code": "Alpina",
       "displacement": "",
       "power": "332 kW (445 bhp) at 5,500–6,250 rpm",
       "torque": "680 N⋅m (502 lb⋅ft) at 3,000–4,500 rpm",
@@ -58,6 +58,8 @@
     }
   ],
   "model": "N55",
-  "image_path": "{\n    \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/4/4b/BMW_N55_engine_2013.jpg\"\n}",
-  "notes": "[]"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4b/BMW_N55_engine_2013.jpg",
+  "summary": "The BMW N55 is a turbocharged straight-six petrol engine produced from 2009 to 2021, replacing the N54 engine. It was the first BMW straight-six to feature a twin-scroll turbocharger and won three consecutive Ward's 10 Best Engines awards from 2011 to 2013. The engine has a displacement of 3.0 liters, with an aluminum cylinder block and head, and a compression ratio of 10.2:1. It produces a maximum engine speed of 7,000 RPM. The N55 was eventually phased out following the introduction of the BMW B58 engine in 2015.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N55",
+  "fuel_type": "gasoline"
 }

@@ -2,20 +2,22 @@
   "data": [
     {
       "engine_code": "N73B60",
-      "year": "2003-2008",
       "displacement": "5,972 cc (364.4 cu in)",
       "power": "327 kW (445 PS; 439 hp) at 6,000 rpm",
-      "torque": "600 N⋅m (443 lb⋅ft) at 3,950 rpm"
+      "torque": "600 N⋅m (443 lb⋅ft) at 3,950 rpm",
+      "years": "2003-2008"
     },
     {
       "engine_code": "N73B68",
-      "year": "2003-2016",
       "displacement": "6,749 cc (411.8 cu in)",
       "power": "338 kW (460 PS; 453 hp) at 5,350 rpm",
-      "torque": "720 N⋅m (531 lb⋅ft) at 3,500 rpm"
+      "torque": "720 N⋅m (531 lb⋅ft) at 3,500 rpm",
+      "years": "2003-2016"
     }
   ],
   "model": "N73",
   "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8e/MoteurBMWV12.JPG/280px-MoteurBMWV12.JPG",
-  "notes": "The variable valve timing (VANOS) system in the car features a continuously variable design on both the intake and exhaust camshafts, with adjustment ranges of 63 degrees for the intake and 60 degrees for the exhaust. The engine has a redline of 6,500 rpm."
+  "summary": "The BMW N73 engine, produced from 2003 to 2016, was the world's first production V12 engine to feature gasoline direct injection. It improved upon its predecessor, the M73, by incorporating dual overhead camshafts, double-VANOS variable valve timing, and Valvetronic variable valve lift. The N73 has a 60° V12 configuration with displacements of 6.0 L and 6.7 L, featuring a bore of 89 mm and 92 mm, and a stroke of 80 mm and 84.6 mm. It runs on petrol and succeeded by the BMW N74 engine.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N73",
+  "fuel_type": "gasoline"
 }

@@ -77,49 +77,67 @@ export async function POST() {
         const payload = JSON.parse(content) as EnginePayload;
 
         // Parse notes if they exist
-        let processedNotes = null;
-        if (payload.notes && payload.notes !== "null") {
-          try {
-            const notesData =
-              typeof payload.notes === "string"
-                ? JSON.parse(payload.notes)
-                : payload.notes;
+        // let processedNotes = null;
+        // if (payload.notes && payload.notes !== "null") {
+        //   try {
+        //     const notesData =
+        //       typeof payload.notes === "string"
+        //         ? JSON.parse(payload.notes)
+        //         : payload.notes;
 
-            // If it's a summary object, extract just the summary text
-            if (notesData && notesData.summary) {
-              processedNotes = notesData.summary;
-            } else {
-              // If it's any other format, stringify it
-              processedNotes = JSON.stringify(notesData);
-            }
-          } catch (e) {
-            console.log("Notes processing error:", e);
-            // If parsing fails, use the original string
-            processedNotes = payload.notes;
-          }
-        }
+        //     // If it's a summary object, extract just the summary text
+        //     if (notesData && notesData.summary) {
+        //       processedNotes = notesData.summary;
+        //     } else {
+        //       // If it's any other format, stringify it
+        //       processedNotes = JSON.stringify(notesData);
+        //     }
+        //   } catch (e) {
+        //     console.log("Notes processing error:", e);
+        //     // If parsing fails, use the original string
+        //     processedNotes = payload.summary || null;
+        //   }
+        // }
 
         // Handle image for engine class
         let processedClassImagePath = null;
-        if (payload.image_path && payload.image_path !== "null") {
+        if (payload.image_path) {
           const cleanedUrl = cleanImageUrl(payload.image_path);
           if (cleanedUrl) {
-            processedClassImagePath = await handleImage(
-              cleanedUrl,
-              payload.model,
-              "class" // Using 'class' instead of engine code for class images
-            );
+            try {
+              const response = await fetch(cleanedUrl);
+              if (!response.ok)
+                throw new Error(
+                  `Failed to fetch image: ${response.statusText}`
+                );
+              const buffer = await response.arrayBuffer();
+
+              const fileName = `${payload.model.toLowerCase()}.jpg`;
+              const { data, error } = await supabase.storage
+                .from("engine-images")
+                .upload(fileName, buffer, {
+                  contentType: "image/jpeg",
+                  upsert: true,
+                });
+
+              if (error) throw error;
+              processedClassImagePath = data.path;
+            } catch (error) {
+              console.error("Image processing failed:", error);
+            }
           }
         }
 
-        // First create/update the engine class
+        // Create/update the engine class with processed image path
         const { data: classData, error: classError } = await supabase
           .from("engine_classes")
           .upsert(
             {
               model: payload.model,
-              notes: processedNotes,
-              image_path: processedClassImagePath, // Added image_path
+              summary: payload.summary || null,
+              image_path: processedClassImagePath,
+              fuel_type: payload.fuel_type || "gasoline",
+              wikipedia_url: payload.wikipedia_url || null,
             },
             { onConflict: "model" }
           )

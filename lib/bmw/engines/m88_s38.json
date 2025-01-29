@@ -2,40 +2,43 @@
   "data": [
     {
       "engine_code": "M88",
-      "displacement": "3.5 L (3,453 cc)",
+      "displacement": "",
       "power": "204 kW (277 PS; 273 hp) at 6,500 rpm",
       "torque": "330 N⋅m (243 lb⋅ft) at 5,000 rpm",
       "years": "1978-1981"
     },
     {
       "engine_code": "M88/1",
-      "displacement": "3.5 L (3,453 cc)",
+      "displacement": "",
       "power": "346 kW (470 PS; 464 hp) at 9,000 rpm",
       "torque": "390 N⋅m (288 lb⋅ft) at 7,000 rpm",
       "years": "1979-1980"
     },
     {
       "engine_code": "M88/2",
-      "displacement": "3.5 L (3,453 cc)",
+      "displacement": "",
       "power": "up to 625–735 kW (850–1,000 PS; 838–986 hp) at 9,000 rpm",
       "torque": "847–1,017 N⋅m (625–750 lb⋅ft) at 7,000 rpm",
       "years": "1979-1981"
     },
     {
       "engine_code": "M88/3",
-      "displacement": "3.5 L (3,453 cc)",
+      "displacement": "",
       "power": "210 kW (286 PS; 282 hp) at 6,500 rpm",
       "torque": "340 N⋅m (251 lb⋅ft) at 4,500 rpm",
       "years": "1983–1989"
     },
     {
       "engine_code": "M30B35LE/M90",
-      "displacement": "3.5 L (3,453 cc)",
+      "displacement": "",
       "power": "160 kW (218 PS; 215 hp) at 5,200 rpm",
       "torque": "304 N⋅m (224 lb⋅ft) at 4,000 rpm",
       "years": "1978–1982"
     }
   ],
   "model": "M88/S38",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bmw_m88.jpg/280px-Bmw_m88.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/3/30/Bmw_m88.jpg",
+  "summary": "The BMW M88 is a straight-6 DOHC petrol engine produced between 1978 and 1989, derived from the M49 engine used in BMW 3.0CSi racing cars. It was designed for higher performance compared to the BMW M30 engine. In North America, the M88 was replaced by the S38 engine until 1989, when the updated S38 became the global successor to the M88. The engine has a displacement of 3.5 L, with a cast iron block and aluminum head. The M30B35LE, a SOHC engine based on the M88/1, is also referred to as the M90.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M88",
+  "fuel_type": "gasoline"
 }

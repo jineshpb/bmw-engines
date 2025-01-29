@@ -1,40 +1,44 @@
 {
   "data": [
     {
-      "Engine Code": "B38A12U0",
-      "Displacement": "1,198 cc",
-      "Power": "55 kW (74 bhp) at 4,000 rpm",
-      "Torque": "150 N⋅m (111 lb⋅ft) at 1,400–4,000 rpm",
-      "Years": "2014–"
+      "engine_code": "B38A12U0",
+      "displacement": "1,198 cc (73 cu in)",
+      "power": "55 kW (74 bhp) at 4,000 rpm",
+      "torque": "150 N⋅m (111 lb⋅ft) at 1,400–4,000 rpm",
+      "years": "2014–"
     },
     {
-      "Engine Code": "B38A12U0",
-      "Displacement": "1,198 cc",
-      "Power": "75 kW (101 bhp) at 4,250 rpm",
-      "Torque": "180 N⋅m (133 lb⋅ft) at 1,400–4,000 rpm",
-      "Years": "2014–"
+      "engine_code": "B38A12U0",
+      "displacement": "1,198 cc (73 cu in)",
+      "power": "75 kW (101 bhp) at 4,250 rpm",
+      "torque": "180 N⋅m (133 lb⋅ft) at 1,400–4,000 rpm",
+      "years": "2014–"
     },
     {
-      "Engine Code": "B38A15M0 / B38B15M0",
-      "Displacement": "1,499 cc",
-      "Power": "100 kW (134 bhp)–116 kW (156 bhp) at 4,400–6,000 rpm",
-      "Torque": "220 N⋅m (162 lb⋅ft)–230 N⋅m (170 lb⋅ft) at 1,250–4,300 rpm",
-      "Years": "2014–2018"
+      "engine_code": "B38A15M0 / B38B15M0",
+      "displacement": "1,499 cc (91 cu in)",
+      "power": "100 kW (134 bhp)–116 kW (156 bhp) at 4,400–6,000 rpm",
+      "torque": "220 N⋅m (162 lb⋅ft)–230 N⋅m (170 lb⋅ft) at 1,250–4,300 rpm",
+      "years": "2014–2018"
     },
     {
-      "Engine Code": "B38K15T0",
-      "Displacement": "",
-      "Power": "170 kW (228 bhp) at 5,800 rpm",
-      "Torque": "320 N⋅m (236 lb⋅ft) at 3,700 rpm",
-      "Years": "2013–"
+      "engine_code": "B38K15T0",
+      "displacement": "N/A",
+      "power": "170 kW (228 bhp) at 5,800 rpm",
+      "torque": "320 N⋅m (236 lb⋅ft) at 3,700 rpm",
+      "years": "2013–"
     },
     {
-      "Engine Code": "B38A15M1 / B38B15M1",
-      "Displacement": "1,499 cc",
-      "Power": "104 kW (139 bhp) at 4,400–6,000 rpm",
-      "Torque": "220 N⋅m (162 lb⋅ft) at 1,250–4,300 rpm",
-      "Years": "2018–"
+      "engine_code": "B38A15M1 / B38B15M1",
+      "displacement": "1,499 cc (91 cu in)",
+      "power": "104 kW (139 bhp) at 4,400–6,000 rpm",
+      "torque": "220 N⋅m (162 lb⋅ft) at 1,250–4,300 rpm",
+      "years": "2018–"
     }
   ],
-  "model": "B38"
+  "model": "B38",
+  "fuel_type": "gasoline",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Mini_Cooper_engine_-_Tokyo_Motor_Show_2013.jpg/280px-Mini_Cooper_engine_-_Tokyo_Motor_Show_2013.jpg",
+  "summary": "The BMW B38 is a turbocharged straight-three petrol engine available in 1.2 L and 1.5 L variants, introduced in 2013 as a replacement for the BMW N13. It is part of a modular engine family that includes straight-four and straight-six configurations. The B38 features a displacement of 400 cc per cylinder for the 1.2 L version and 500 cc for the 1.5 L version, sharing many components with the BMW B37 engine. This engine is utilized in both front-wheel and rear-wheel drive applications, including the Mini Hatch and BMW 2 Series Active Tourer, and was first used in the BMW i8 hybrid sports coupé as a transverse mid-mounted engine. Key specifications include a DOHC valvetrain, a compression ratio of 11:1, and direct fuel injection.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_B38_engine"
 }

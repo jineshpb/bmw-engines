@@ -1,63 +1,37 @@
 {
   "data": [
     {
+      "engine_code": "M54B22",
+      "displacement": "2.2 L (2,171 cc)",
+      "power": "125 kW (168 hp) at 6,100 rpm",
+      "torque": "210 N⋅m (155 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
+      "engine_code": "M54B25",
+      "displacement": "2.5 L (2,494 cc)",
+      "power": "141 kW (189 hp) at 6,000 rpm",
+      "torque": "245 N⋅m (181 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
+      "engine_code": "M54B30",
+      "displacement": "3.0 L (2,979 cc)",
+      "power": "170 kW (228 hp) at 5,900 rpm",
+      "torque": "300 N⋅m (221 lb⋅ft) at 3,500 rpm",
+      "years": "2000–2006"
+    },
+    {
       "engine_code": "S54B32",
-      "displacement": null,
-      "power": "252 kW (343 PS; 338 hp) at 7,900 rpm",
+      "displacement": "3.2 L (3,246 cc)",
+      "power": "252 kW (338 hp) at 7,900 rpm",
       "torque": "365 N⋅m (269 lb⋅ft) at 4,900 rpm",
-      "year": "2000–2006"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "248 kW (333 hp)",
-      "torque": "355 N⋅m (262 lb⋅ft)",
-      "year": "2000–2006"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "239 kW (325 PS; 321 hp)",
-      "torque": "354 N⋅m (261 lb⋅ft)",
-      "year": "2000–2002"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "235 kW (315 hp)",
-      "torque": "341 N⋅m (252 lb⋅ft)",
-      "year": "2000–2002"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "252 kW (343 PS; 338 hp)",
-      "torque": "365 N⋅m (269 lb⋅ft)",
-      "year": "2002–2011"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "252 kW (343 PS; 338 hp)",
-      "torque": "365 N⋅m (269 lb⋅ft)",
-      "year": "2006–2008"
-    },
-    {
-      "engine_code": "S54B32",
-      "displacement": null,
-      "power": "246 kW (330 hp)",
-      "torque": "355 N⋅m (262 lb⋅ft)",
-      "year": "2006–2008"
-    },
-    {
-      "engine_code": "S54B32HP",
-      "displacement": null,
-      "power": null,
-      "torque": null,
-      "year": null
+      "years": "2000–2008"
     }
   ],
   "model": "M54",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/thumb/a/af/BMW_S54B32_Engine.JPG/280px-BMW_S54B32_Engine.JPG\"\n}",
-  "notes": "[]"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/c/c2/BMW_M54B25_001.jpg",
+  "summary": "The BMW M54 engine was produced from 2000 to 2006 and was phased out in 2004 with the introduction of the BMW N52. It features a straight-six configuration with displacements of 2.5L, 2.5L, and 3.0L, and was recognized on Ward's 10 Best Engines list from 2001 to 2003. The M54's predecessor was the BMW M52, and its successor is the BMW N52. \n\nThe BMW S54 engine, produced from 2000 to 2008, is also a straight-six engine with a displacement of 3.2L. It has a cast iron block and an aluminum head, and it succeeded the BMW S50 while paving the way for the BMW S55.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M54",
+  "fuel_type": "gasoline"
 }

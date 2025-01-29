@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "engine_code": "N52B25",
+      "displacement": "2,497 cc (152.4 cu in)",
+      "power": "130 kW (174 bhp) at 5,800 rpm",
+      "torque": "230 N⋅m (170 lb⋅ft) at 3,500-5,000 rpm",
+      "years": "2005-2008"
+    },
+    {
+      "engine_code": "N52B25",
+      "displacement": "2,497 cc (152.4 cu in)",
+      "power": "150 kW (201 bhp) at 6,400 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 2,750 rpm",
+      "years": "2007-2011"
+    },
+    {
+      "engine_code": "N52B25",
+      "displacement": "2,497 cc (152.4 cu in)",
+      "power": "160 kW (215 bhp) at 6,500 rpm",
+      "torque": "250 N⋅m (184 lb⋅ft) at 2,750-4,250 rpm",
+      "years": "2004-2013"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "160 kW (215 bhp) at 6,100 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 2,500-4,250 rpm",
+      "years": "2006-2010"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "280 N⋅m (207 lb⋅ft) at 2,500-3,500 rpm",
+      "years": "2010-2011"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "170 kW (228 bhp) at 6,500 rpm",
+      "torque": "270 N⋅m (199 lb⋅ft) at 2,750 rpm",
+      "years": "2007-2013"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "180 kW (241 bhp) at 6,500 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 2,750 rpm",
+      "years": "2008-2011"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "190 kW (255 bhp) at 6,600 rpm",
+      "torque": "300 N⋅m (221 lb⋅ft) at 2,500-4,000 rpm",
+      "years": "2010-2011"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "190 kW (255 bhp) at 6,600 rpm",
+      "torque": "310 N⋅m (229 lb⋅ft) at 2,600 rpm",
+      "years": "2009-2015"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "195 kW (261 bhp) at 6,600 rpm",
+      "torque": "315 N⋅m (232 lb⋅ft) at 2,750-4,250 rpm",
+      "years": "2005-2009"
+    },
+    {
+      "engine_code": "N52B30",
+      "displacement": "2,996 cc (182.8 cu in)",
+      "power": "200 kW (268 bhp) at 6,650 rpm",
+      "torque": "315 N⋅m (232 lb⋅ft) at 2,750 rpm",
+      "years": "2006-2010"
+    }
+  ],
+  "model": "N52",
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/4/43/BMW-N52.jpg/280px-BMW-N52.jpg",
+  "summary": "The BMW N52 is a naturally aspirated straight-6 petrol engine produced from 2004 to 2015, succeeding the BMW M54. It debuted in the E90 3 Series and E63 6 Series and was notable for being the first water-cooled engine with a magnesium/aluminium composite block. The N52 received accolades as one of Ward's 10 Best Engines in 2006 and 2007. It began to be phased out in Europe in favor of the direct-injected BMW N53 in 2007, but continued to be used in markets like the US, Canada, Australia, and Malaysia due to fuel compatibility issues. The engine has displacements of 2,497 cc and 2,996 cc, with a DOHC valvetrain featuring variable valve timing and lift.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N52",
+  "fuel_type": "gasoline"
+}

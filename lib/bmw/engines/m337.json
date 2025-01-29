@@ -1,27 +1,30 @@
 {
   "data": [
     {
-      "Model": "M337/1",
-      "Displacement": "1,971 cc (120.3 cu in)",
-      "Power": "48 kW (65 PS; 64 hp) at 4,400 rpm",
-      "Torque": "129 N⋅m (95 lb⋅ft) at 2,000 rpm",
-      "Year": "1952-1954"
+      "engine_code": "M337/1",
+      "displacement": "1,971 cc (120.3 cu in)",
+      "power": "48 kW (65 PS; 64 hp) at 4,400 rpm",
+      "torque": "129 N⋅m (95 lb⋅ft) at 2,000 rpm",
+      "years": "1952-1954"
     },
     {
-      "Model": "M337/2",
-      "Displacement": "1,971 cc (120.3 cu in)",
-      "Power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
-      "Torque": "130 N⋅m (96 lb⋅ft) at 2,500 rpm",
-      "Year": "1954-1955"
+      "engine_code": "M337/2",
+      "displacement": "1,971 cc (120.3 cu in)",
+      "power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
+      "torque": "130 N⋅m (96 lb⋅ft) at 2,500 rpm",
+      "years": "1954-1955"
     },
     {
-      "Model": "M337/3",
-      "Displacement": "2,077 cc (126.7 cu in)",
-      "Power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
-      "Torque": "135 N⋅m (100 lb⋅ft) at 2,500 rpm",
-      "Year": "1955-1958"
+      "engine_code": "M337/3",
+      "displacement": "2,077 cc (126.7 cu in)",
+      "power": "54 kW (73 PS; 72 hp) at 4,400 rpm",
+      "torque": "135 N⋅m (100 lb⋅ft) at 2,500 rpm",
+      "years": "1955-1958"
     }
   ],
   "model": "M337",
-  "image_path": "\"//upload.wikimedia.org/wikipedia/commons/5/54/BMW_501_%285444397631%29.jpg\""
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/BMW_501_%285444397631%29.jpg/280px-BMW_501_%285444397631%29.jpg",
+  "summary": "The BMW M337 engine, produced from 1952 to 1958, is an evolution of its predecessor, the M78. It features a revised cylinder head, a new inlet manifold, and a reinforced crankshaft with larger bearings. Like the M78, the M337 has a cast iron engine block and cylinder head, and utilizes an overhead valve (OHV) design with two valves per cylinder. The engine has a displacement range of 2.0 to 2.1 liters and runs on petrol.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M337",
+  "fuel_type": "gasoline"
 }

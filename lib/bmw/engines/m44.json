@@ -9,5 +9,8 @@
     }
   ],
   "model": "M44",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_1998_318ti_engine_bay.jpg\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_1998_318ti_engine_bay.jpg",
+  "summary": "The BMW M44 engine, produced from 1996 to 2000, features several upgrades over its predecessor, the M42. Key enhancements include roller rocker arms, a hot-wire mass air flow sensor, and an increased displacement from 1.8 L to 1.9 L. It also has a grey cast iron crankshaft, a dual length intake manifold for improved performance, and a significant reduction in valve train friction, leading to quieter operation and better fuel efficiency. While peak power remains the same as the M42, mid-range power and peak torque are notably improved.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_M44",
+  "fuel_type": "gasoline"
 }

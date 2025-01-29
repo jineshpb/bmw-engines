@@ -5,45 +5,47 @@
       "displacement": "2,979 cc (181.8 cu in)",
       "power": "225 kW (302 bhp) at 5,800 rpm",
       "torque": "400 N⋅m (295 lb⋅ft) at 1,400-5,000 rpm",
-      "year": "2006-2010"
+      "years": "2006-2010"
     },
     {
       "engine_code": "N54B30",
       "displacement": "2,979 cc (181.8 cu in)",
       "power": "240 kW (322 bhp) at 5,800 rpm",
       "torque": "450 N⋅m (332 lb⋅ft) at 1,500-4,500 rpm",
-      "year": "2008-2013"
+      "years": "2008-2013"
     },
     {
       "engine_code": "N54B30",
       "displacement": "2,979 cc (181.8 cu in)",
       "power": "250 kW (335 bhp) at 5,900 rpm",
-      "torque": "",
-      "year": "2011-2016"
+      "torque": "450 N⋅m (332 lb⋅ft) at 1,500-4,500 rpm",
+      "years": "2011-2016"
     },
     {
       "engine_code": "Alpina",
-      "displacement": "",
+      "displacement": "2,979 cc (181.8 cu in)",
       "power": "265 kW (355 bhp) at 5,500-6,000 rpm",
       "torque": "500 N⋅m (369 lb⋅ft) at 3,800-5,000 rpm",
-      "year": "2007-2010"
+      "years": "2007-2010"
     },
     {
       "engine_code": "Alpina",
-      "displacement": "",
+      "displacement": "2,979 cc (181.8 cu in)",
       "power": "294 kW (394 bhp) at 6,000 rpm",
       "torque": "540 N⋅m (398 lb⋅ft) at 4,500 rpm",
-      "year": "2010-2013"
+      "years": "2010-2013"
     },
     {
       "engine_code": "Alpina",
-      "displacement": "",
+      "displacement": "2,979 cc (181.8 cu in)",
       "power": "300 kW (402 bhp) at 6,000 rpm",
-      "torque": "",
-      "year": "2012-2013"
+      "torque": "540 N⋅m (398 lb⋅ft) at 4,500 rpm",
+      "years": "2012-2013"
     }
   ],
   "model": "N54",
-  "image_path": "{\n  \"image_link\": \"//upload.wikimedia.org/wikipedia/commons/f/f6/JK_N54B30.jpg\"\n}",
-  "notes": "{\n  \"summary\": \"The BMW N54 is a twin-turbocharged straight-six petrol engine produced from 2006 to 2016. It marked BMW's first mass-produced turbocharged petrol engine and debuted at the 2006 Geneva Motor Show, being launched in the 335i model of the 3 Series range.\"\n}"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/f/f6/JK_N54B30.jpg",
+  "summary": "The BMW N54 engine, produced from 2006 to 2016, is a straight-six, 3.0 L (2,979 cc) twin-turbo petrol engine. It has received six consecutive International Engine of the Year awards and three Ward's 10 Best Engines awards. The N54 was phased out with the introduction of its successor, the N55, in 2009, and the last model using the N54 was the E89 Z4 roadster. A high-output version of the N54 is featured in the 1 Series M Coupe, Z4 35iS, and 335iS, but there is no M version of the N54.",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/BMW_N54",
+  "fuel_type": "gasoline"
 }
