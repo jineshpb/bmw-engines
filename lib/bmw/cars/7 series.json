@@ -1,0 +1,222 @@
+{
+  "make": "BMW",
+  "model": "7 Series",
+  "model_year": "1977-present",
+  "summary": "The BMW 7 Series is the flagship luxury sedan from BMW, known for introducing advanced technologies and design themes. It has been produced since 1977 and is available in various engine configurations, including inline-4, straight-6, V8, and V12 engines, with both natural aspiration and turbocharging. Diesel engines have been optional since 1995.",
+  "chassis_codes": [
+    "E23",
+    "E32",
+    "E38",
+    "E65",
+    "F01",
+    "G11",
+    "G70"
+  ],
+  "engine_id": "S14",
+  "data": {
+    "models": [
+      {
+        "model": "E32",
+        "summary": "The second generation of the BMW 7 Series.",
+        "model_year": "1986-1994",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_7_Series_E32.jpg",
+        "engine_details": [
+          {
+            "model": "730i",
+            "years": "1986–1992",
+            "engine": "M30B30",
+            "power": "145 kW (197 PS; 194 hp) at 5,800 rpm",
+            "torque": "275 N⋅m (203 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "730i",
+            "years": "1992–1994",
+            "engine": "M60B30",
+            "power": "160 kW (218 PS; 215 hp) at 5,800 rpm",
+            "torque": "290 N⋅m (214 lb⋅ft) at 4,500 rpm"
+          },
+          {
+            "model": "735i",
+            "years": "1986–1992",
+            "engine": "M30B35",
+            "power": "155 kW (211 PS; 208 hp) at 5,700 rpm",
+            "torque": "305 N⋅m (225 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "740i",
+            "years": "1992–1994",
+            "engine": "M60B40",
+            "power": "210 kW (286 PS; 282 hp) at 5,800 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 4,500 rpm"
+          },
+          {
+            "model": "750i",
+            "years": "1987–1994",
+            "engine": "M70B50",
+            "power": "220 kW (300 PS; 296 hp) at 5,200 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 4,100 rpm"
+          }
+        ]
+      },
+      {
+        "model": "E23",
+        "summary": "The first generation of the BMW 7 Series.",
+        "model_year": "1977-1986",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/3/3e/BMW_7_Series_E23.jpg",
+        "engine_details": [
+          {
+            "model": "725",
+            "years": "1977–1979",
+            "engine": "M30B25V",
+            "power": "110 kW (150 PS) at 6,000 rpm",
+            "torque": "211 N⋅m (156 lb⋅ft) at 3,700 rpm"
+          },
+          {
+            "model": "725i",
+            "years": "1981–1986",
+            "engine": "M30B25",
+            "power": "110 kW (150 PS) at 5,800 rpm",
+            "torque": "215 N⋅m (159 lb⋅ft) at 4,000 rpm"
+          },
+          {
+            "model": "728i",
+            "years": "1979–1986",
+            "engine": "M30B28",
+            "power": "135 kW (184 PS) at 5,800 rpm",
+            "torque": "240 N⋅m (177 lb⋅ft) at 4,200 rpm"
+          },
+          {
+            "model": "730",
+            "years": "1977–1979",
+            "engine": "M30B30V",
+            "power": "135 kW (184 PS) at 5,800 rpm",
+            "torque": "255 N⋅m (188 lb⋅ft) at 3,500 rpm"
+          },
+          {
+            "model": "735i",
+            "years": "1979–1986",
+            "engine": "M30B34",
+            "power": "160 kW (218 PS) at 5,200 rpm",
+            "torque": "310 N⋅m (229 lb⋅ft) at 4,000 rpm"
+          }
+        ]
+      },
+      {
+        "model": "E38",
+        "summary": "The third generation of the BMW 7 Series.",
+        "model_year": "1994-2001",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/5/5e/BMW_7_Series_E38.jpg",
+        "engine_details": [
+          {
+            "model": "728i",
+            "years": "1995–1998",
+            "engine": "M52B28",
+            "power": "142 kW (193 hp)",
+            "torque": "280 N⋅m (207 lb⋅ft)"
+          },
+          {
+            "model": "730i",
+            "years": "1994–1996",
+            "engine": "M60B30",
+            "power": "160 kW (218 hp)",
+            "torque": "290 N⋅m (214 lb⋅ft)"
+          },
+          {
+            "model": "735i",
+            "years": "1996–1998",
+            "engine": "M62B35",
+            "power": "173 kW (235 hp)",
+            "torque": "320 N⋅m (236 lb⋅ft)"
+          },
+          {
+            "model": "740i",
+            "years": "1994–1996",
+            "engine": "M60B40",
+            "power": "210 kW (286 hp)",
+            "torque": "400 N⋅m (295 lb⋅ft)"
+          },
+          {
+            "model": "750i",
+            "years": "1995–1998",
+            "engine": "M73B54",
+            "power": "240 kW (326 hp)",
+            "torque": "490 N⋅m (361 lb⋅ft)"
+          }
+        ]
+      },
+      {
+        "model": "F01",
+        "summary": "The fifth generation of the BMW 7 Series.",
+        "model_year": "2008-2015",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_7_Series_F01.jpg",
+        "engine_details": [
+          {
+            "model": "730i",
+            "years": "2009–2015",
+            "engine": "N52",
+            "power": "190 kW (255 hp) at 6,600 rpm",
+            "torque": "310 N⋅m (229 lb⋅ft) at 2,600 rpm"
+          },
+          {
+            "model": "740i",
+            "years": "2008–2012",
+            "engine": "N54",
+            "power": "240 kW (322 hp) at 5,800 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,500–4,500 rpm"
+          },
+          {
+            "model": "750i",
+            "years": "2008–2012",
+            "engine": "N63",
+            "power": "300 kW (402 hp) at 6,400 rpm",
+            "torque": "600 N⋅m (443 lb⋅ft) at 1,750–4,500 rpm"
+          }
+        ]
+      },
+      {
+        "model": "G11",
+        "summary": "The sixth generation of the BMW 7 Series.",
+        "model_year": "2015-present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_7_Series_G11.jpg",
+        "engine_details": [
+          {
+            "model": "730i",
+            "years": "2016–2022",
+            "engine": "B48",
+            "power": "192 kW (258 hp)",
+            "torque": "400 N⋅m (295 lb⋅ft)"
+          },
+          {
+            "model": "740i",
+            "years": "2016–2019",
+            "engine": "B58",
+            "power": "242 kW (325 hp)",
+            "torque": "450 N⋅m (332 lb⋅ft)"
+          },
+          {
+            "model": "750i",
+            "years": "2016–2019",
+            "engine": "N63",
+            "power": "335 kW (450 hp)",
+            "torque": "650 N⋅m (479 lb⋅ft)"
+          },
+          {
+            "model": "740d",
+            "years": "2016–2022",
+            "engine": "B57",
+            "power": "195 kW (261 hp)",
+            "torque": "620 N⋅m (457 lb⋅ft)"
+          },
+          {
+            "model": "750d",
+            "years": "2017–2020",
+            "engine": "B57",
+            "power": "294 kW (394 hp)",
+            "torque": "760 N⋅m (561 lb⋅ft)"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/9/93/2019_BMW_740Li_Automatic_facelift_3.0.jpg/280px-2019_BMW_740Li_Automatic_facelift_3.0.jpg"
+}

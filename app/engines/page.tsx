@@ -4,6 +4,7 @@ import { EngineClassSelector } from "@/components/EngineClassSelector";
 import { getEngineClassSummary, getEnginesByClass } from "@/services/engines";
 import EngineClassCard from "@/components/EngineClassCard";
 import { Separator } from "@/components/ui/separator";
+import { EngineConfiguration } from "@/types/engines";
 
 export default async function EnginesPage({
   searchParams,
@@ -54,9 +55,11 @@ export default async function EnginesPage({
           </div>
         ) : (
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {engineConfigurations?.map((engine, index) => (
-              <EngineCard key={index} engineConfigurations={engine} />
-            ))}
+            {engineConfigurations
+              ?.filter((e): e is EngineConfiguration => !!e.id)
+              .map((engine, index) => (
+                <EngineCard key={index} engineConfigurations={engine} />
+              ))}
           </div>
         )}
       </div>

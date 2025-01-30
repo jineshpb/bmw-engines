@@ -21,11 +21,20 @@ export async function POST(request: Request) {
     const payload = (await request.json()) as EnginePayload;
     let classId: string;
 
-    // Debug payload
-    console.log("Received payload:", JSON.stringify(payload, null, 2));
+    // Debug payload structure
+    console.log("=== Payload Analysis ===");
+    console.log("Model:", payload.model);
+    console.log("Number of engines:", payload.data?.length || 0);
+    console.log("First engine sample:", payload.data?.[0]);
+    console.log("=====================");
 
     // Validate payload structure
     if (!payload.model || !Array.isArray(payload.data)) {
+      console.error("Validation failed:", {
+        hasModel: Boolean(payload.model),
+        dataType: typeof payload.data,
+        isArray: Array.isArray(payload.data),
+      });
       return NextResponse.json(
         { message: "Invalid payload format" },
         { status: 400 }
@@ -33,14 +42,33 @@ export async function POST(request: Request) {
     }
 
     try {
-      // 1. Create engine class first
-      classId = await createEngineClass(payload.model);
-      console.log("Created class with ID:", classId);
+      // Clean and validate engine data
+      const cleanedEngines = payload.data.map((engine) => ({
+        engine_code: engine.engine_code?.trim() || "",
+        displacement: engine.displacement?.trim() || "",
+        power: engine.power?.trim() || "",
+        torque: engine.torque?.trim() || "",
+        years: engine.years?.trim() || "",
+      }));
 
-      // 2. Insert engines with reference to class
-      await insertEnginesWithClass(payload.data, classId);
+      console.log("=== Cleaned Engines ===");
+      cleanedEngines.forEach((engine, index) => {
+        console.log(`Engine ${index + 1}:`, engine);
+      });
+      console.log("=====================");
+
+      // Create engine class
+      classId = await createEngineClass(payload.model);
+      console.log("Created engine class:", { model: payload.model, classId });
+
+      // Insert engines
+      await insertEnginesWithClass(cleanedEngines, classId);
+      console.log(`Successfully inserted ${cleanedEngines.length} engines`);
     } catch (dbError) {
-      console.error("Database operation failed:", dbError);
+      console.error("Database operation failed:", {
+        error: dbError,
+        stack: (dbError as Error).stack,
+      });
       return NextResponse.json(
         {
           message: "Database operation failed",
@@ -56,7 +84,10 @@ export async function POST(request: Request) {
       class_id: classId,
     });
   } catch (error) {
-    console.error("Webhook processing error:", error);
+    console.error("Webhook processing error:", {
+      error,
+      stack: (error as Error).stack,
+    });
     return NextResponse.json(
       { message: "Error processing webhook", error: (error as Error).message },
       { status: 500 }

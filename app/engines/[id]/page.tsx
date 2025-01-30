@@ -3,6 +3,7 @@ import { getEngineClassSummary, getEnginesByClass } from "@/services/engines";
 import EngineClassCard from "@/components/EngineClassCard";
 import { Separator } from "@/components/ui/separator";
 import { notFound } from "next/navigation";
+import { EngineConfiguration } from "@/types/engines";
 
 export default async function EngineClassPage({
   params,
@@ -45,7 +46,10 @@ export default async function EngineClassPage({
         ) : (
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {engineConfigurations?.map((engine, index) => (
-              <EngineCard key={index} engineConfigurations={engine} />
+              <EngineCard
+                key={index}
+                engineConfigurations={engine as EngineConfiguration}
+              />
             ))}
           </div>
         )}

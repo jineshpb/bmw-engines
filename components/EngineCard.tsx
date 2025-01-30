@@ -21,7 +21,7 @@ export default function EngineCard({
   engineConfigurations: EngineConfiguration;
 }) {
   // console.log(decodeEngineCode(engine.engine_code));
-  console.log("engineConfigurations", engineConfigurations);
+  // console.log("engineConfigurations", engineConfigurations);
 
   return (
     <Card className="font-geist">

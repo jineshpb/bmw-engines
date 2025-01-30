@@ -1,8 +1,8 @@
 {
   "make": "BMW",
   "model": "5 Series",
-  "model_year": "present",
-  "summary": "The 5 Series is BMW's second-best-selling model after the 3 Series, known for its luxury, performance, and advanced technology. It debuted the three-digit model naming convention and has included an 'M' model, the BMW M5, in all generations since the E28.",
+  "model_year": "1972-present",
+  "summary": "The BMW 5 Series is an executive car and BMW's second-best-selling model after the 3 Series. It is BMW’s oldest nameplate still in production and the first model line to use 'Series' in the name, debuting the three-digit model naming convention still used today. Since the E28, all generations of 5 Series have included an 'M' model, called the BMW M5.",
   "chassis_codes": [
     "E12",
     "E28",
@@ -13,12 +13,14 @@
     "G30",
     "G60"
   ],
-  "engine_id": "S63",
+  "engine_id": "S38",
   "data": {
     "models": [
       {
-        "model": "BMW 5 Series (E12)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "E12",
+        "summary": "The first generation of the BMW 5 Series.",
+        "model_year": "1972–1981",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/5/5e/BMW_5_Series_E12.jpg",
         "engine_details": [
           {
             "model": "518",
@@ -85,52 +87,24 @@
           },
           {
             "model": "528i",
-            "years": "1977–1981 (Sweden)",
+            "years": "1977–1981",
             "engine": "2.8 L M30 straight-6",
             "power": "130 kW (177 PS) at 5,800 rpm",
             "torque": "246 N⋅m (181 lb⋅ft) at 4,500 rpm"
           },
           {
-            "model": "528i",
-            "years": "1977–1978 (US only)",
-            "engine": "2.8 L M30 straight-6",
-            "power": "129 kW (175 PS) at 5,800 rpm",
-            "torque": "235 N⋅m (173 lb⋅ft) at 4,300 rpm"
-          },
-          {
-            "model": "528i",
-            "years": "1979–1981 (US only)",
-            "engine": "2.8 L M30 straight-6",
-            "power": "126 kW (171 PS) at 5,600 rpm",
-            "torque": "230 N⋅m (170 lb⋅ft) at 4,500 rpm"
-          },
-          {
-            "model": "528i",
-            "years": "1978–1981",
-            "engine": "2.8 L M30 straight-6",
-            "power": "135 kW (184 PS) at 5,800 rpm",
-            "torque": "235 N⋅m (173 lb⋅ft) at 4,200 rpm"
-          },
-          {
             "model": "530",
-            "years": "1975–1978 (South Africa only)",
+            "years": "1975–1978",
             "engine": "3.0 L M30 straight-6",
             "power": "130 kW (177 PS) at 5,800 rpm",
             "torque": "250 N⋅m (184 lb⋅ft) at 3,500 rpm"
           },
           {
             "model": "530i",
-            "years": "1975–1978 (US only)",
+            "years": "1975–1978",
             "engine": "3.0 L M30 straight-6",
             "power": "131 kW (178 PS) at 5,500 rpm",
             "torque": "251 N⋅m (185 lb⋅ft) at 4,500 rpm"
-          },
-          {
-            "model": "530 MLE",
-            "years": "1976 (South Africa only)",
-            "engine": "3.0 L M30 straight-6",
-            "power": "147 kW (200 PS) at 5,800 rpm",
-            "torque": "251 N⋅m (185 lb⋅ft) at 3,500 rpm"
           },
           {
             "model": "533i",
@@ -149,8 +123,10 @@
         ]
       },
       {
-        "model": "BMW 5 Series (E28)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "E28",
+        "summary": "The second generation of the BMW 5 Series.",
+        "model_year": "1981–1988",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_E28_520i.jpg",
         "engine_details": [
           {
             "model": "518",
@@ -179,20 +155,6 @@
             "engine": "2.0 L M20B20 I6",
             "power": "92 kW (125 PS) at 5800 rpm",
             "torque": "170 N⋅m (125 lb⋅ft) at 4000 rpm"
-          },
-          {
-            "model": "520i",
-            "years": "1985-1988",
-            "engine": "2.0 L M20B20 I6",
-            "power": "95 kW (129 PS) at 6000 rpm",
-            "torque": "174 N⋅m (128 lb⋅ft) at 4000 rpm"
-          },
-          {
-            "model": "520i",
-            "years": "1986-1988",
-            "engine": "2.0 L M20B20 I6",
-            "power": "95 kW (129 PS) at 6000 rpm",
-            "torque": "164 N⋅m (121 lb⋅ft) at 4300 rpm"
           },
           {
             "model": "525i",
@@ -233,55 +195,16 @@
             "model": "M535i",
             "years": "1985–1988",
             "engine": "3.4 L M30B34 I6",
-            "power": "160 kW (218 PS) at 5500 rpm",
-            "torque": "310 N⋅m (229 lb⋅ft) at 4000 rpm"
+            "power": "210 kW (286 PS) at 6500 rpm",
+            "torque": "340 N⋅m (251 lb⋅ft) at 4500 rpm"
           }
         ]
       },
       {
-        "model": "BMW 5 Series (E34)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
-        "engine_details": [
-          {
-            "model": "524d",
-            "years": "1985–1987",
-            "engine": "2.4 L M21 straight-6",
-            "power": "63 kW (86 PS) at 4600 rpm",
-            "torque": "152 N⋅m (112 lb⋅ft) at 2500 rpm"
-          },
-          {
-            "model": "524td",
-            "years": "1983–1988",
-            "engine": "2.4 L M21 straight-6",
-            "power": "85 kW (115 PS) at 4800 rpm",
-            "torque": "210 N⋅m (155 lb⋅ft) at 2400 rpm"
-          },
-          {
-            "model": "525i",
-            "years": "1988–1991",
-            "engine": "2.5 L M30B25 I6",
-            "power": "125 kW (170 PS) at 5800 rpm",
-            "torque": "222 N⋅m (164 lb⋅ft) at 4300 rpm"
-          },
-          {
-            "model": "525td",
-            "years": "1993–1996",
-            "engine": "2.5 L M51D25 I6",
-            "power": "85 kW (115 PS) at 4800 rpm",
-            "torque": "222 N⋅m (164 lb⋅ft) at 1900 rpm"
-          },
-          {
-            "model": "525tds",
-            "years": "1991–1996",
-            "engine": "2.5 L M51D25 I6",
-            "power": "105 kW (143 PS) at 4800 rpm",
-            "torque": "260 N⋅m (192 lb⋅ft) at 2200 rpm"
-          }
-        ]
-      },
-      {
-        "model": "BMW 5 Series (E39)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "E39",
+        "summary": "The fourth generation of the BMW 5 Series.",
+        "model_year": "1995–2003",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/3/3e/BMW_E39_530i.jpg",
         "engine_details": [
           {
             "model": "520i",
@@ -291,11 +214,32 @@
             "torque": "190 N⋅m (140 lb⋅ft) at 4,200 rpm"
           },
           {
+            "model": "520i",
+            "years": "1998–2000",
+            "engine": "1991 cc M52TÜB20 straight-6",
+            "power": "110 kW (150 PS; 148 hp) at 5,900 rpm",
+            "torque": "190 N⋅m (140 lb⋅ft) at 3,500 rpm"
+          },
+          {
+            "model": "520i",
+            "years": "2000–2003",
+            "engine": "2171 cc M54B22 straight-6",
+            "power": "125 kW (170 PS; 168 hp) at 6,100 rpm",
+            "torque": "210 N⋅m (155 lb⋅ft) at 3,500 rpm"
+          },
+          {
             "model": "523i",
             "years": "1995–1998",
             "engine": "2494 cc M52B25 straight-6",
             "power": "125 kW (170 PS; 168 hp) at 5,500 rpm",
             "torque": "245 N⋅m (181 lb⋅ft) at 3,950 rpm"
+          },
+          {
+            "model": "523i",
+            "years": "1998–2000",
+            "engine": "2494 cc M52TÜB25 straight-6",
+            "power": "125 kW (170 PS; 168 hp) at 5,500 rpm",
+            "torque": "245 N⋅m (181 lb⋅ft) at 3,500 rpm"
           },
           {
             "model": "525i",
@@ -312,6 +256,13 @@
             "torque": "280 N⋅m (207 lb⋅ft) at 3,950 rpm"
           },
           {
+            "model": "528i",
+            "years": "1998–2001",
+            "engine": "2793 cc M52TÜB28 straight-6",
+            "power": "142 kW (193 PS; 190 hp) at 5,500 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) at 3,500 rpm"
+          },
+          {
             "model": "530i",
             "years": "2000–2003",
             "engine": "2979 cc M54B30 straight-6",
@@ -320,37 +271,60 @@
           },
           {
             "model": "535i",
-            "years": "1996–1998",
+            "years": "1996–2003",
             "engine": "3498 cc M62B35 V8",
             "power": "173 kW (235 PS; 232 hp) at 5,700 rpm",
             "torque": "320 N⋅m (236 lb⋅ft) at 3,300 rpm"
+          },
+          {
+            "model": "535i",
+            "years": "1998–2003",
+            "engine": "3498 cc M62TÜB35 V8",
+            "power": "180 kW (245 PS; 241 hp) at 5,800 rpm",
+            "torque": "345 N⋅m (254 lb⋅ft) at 3,800 rpm"
+          },
+          {
+            "model": "M5",
+            "years": "1998–2003",
+            "engine": "4941 cc S62B50 V8",
+            "power": "294 kW (400 PS; 394 hp) at 6,600 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 3,800 rpm"
           }
         ]
       },
       {
-        "model": "BMW 5 Series (E60)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "E60",
+        "summary": "The fifth generation of the BMW 5 Series.",
+        "model_year": "2005–2010",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_E60_530i.jpg",
         "engine_details": [
           {
             "model": "520i",
-            "years": "2003–2005",
+            "years": "2005–2007",
             "engine": "2.2 L M54B22 straight-6",
             "power": "125 kW (170 PS; 168 hp) at 6,250 rpm",
             "torque": "210 N⋅m (155 lb⋅ft) at 3,500 rpm"
           },
           {
+            "model": "523i",
+            "years": "2005–2007",
+            "engine": "2.5 L N52B25 straight-6",
+            "power": "130 kW (177 PS; 174 hp) at 5,800 rpm",
+            "torque": "230 N⋅m (170 lb⋅ft) at 3,500 rpm"
+          },
+          {
             "model": "525i",
-            "years": "2003–2005",
-            "engine": "2.5 L M54B25 straight-6",
-            "power": "141 kW (192 PS; 189 hp) at 6,000 rpm",
-            "torque": "237 N⋅m (175 lb⋅ft) at 3,500 rpm"
+            "years": "2005–2007",
+            "engine": "2.5 L N52B25 straight-6",
+            "power": "160 kW (218 PS; 215 hp) at 6,500 rpm",
+            "torque": "250 N⋅m (184 lb⋅ft) at 2,750 rpm"
           },
           {
             "model": "530i",
-            "years": "2003–2005",
-            "engine": "3.0 L M54B30 straight-6",
-            "power": "170 kW (231 PS; 228 hp) at 5,900 rpm",
-            "torque": "300 N⋅m (221 lb⋅ft) at 3,500 rpm"
+            "years": "2005–2007",
+            "engine": "3.0 L N52B30 straight-6",
+            "power": "190 kW (258 PS; 255 hp) at 6,600 rpm",
+            "torque": "270 N⋅m (199 lb⋅ft) at 2,400 rpm"
           },
           {
             "model": "535i",
@@ -358,102 +332,134 @@
             "engine": "3.0 L N54B30 turbo straight-6",
             "power": "225 kW (306 PS; 302 hp) at 5,800 rpm",
             "torque": "400 N⋅m (295 lb⋅ft) at 1,300–5,000 rpm"
+          },
+          {
+            "model": "550i",
+            "years": "2005–2010",
+            "engine": "4.8 L N62B48 V8",
+            "power": "270 kW (367 PS; 362 hp) at 6,300 rpm",
+            "torque": "490 N⋅m (361 lb⋅ft) at 3,400 rpm"
+          },
+          {
+            "model": "M5",
+            "years": "2005–2010",
+            "engine": "5.0 L S85B50 V10",
+            "power": "373 kW (507 PS; 500 hp) at 7,750 rpm",
+            "torque": "520 N⋅m (384 lb⋅ft) at 6,100 rpm"
           }
         ]
       },
       {
-        "model": "BMW 5 Series (F10)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "F10",
+        "summary": "The sixth generation of the BMW 5 Series.",
+        "model_year": "2010–2017",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_F10_520d.jpg",
         "engine_details": [
           {
             "model": "520i",
             "years": "2011–2016",
-            "engine": "N20B20 turbo I4",
+            "engine": "2.2 L N20B20 turbo I4",
             "power": "135 kW (184 PS; 181 hp) at 5,200–6,250 rpm",
             "torque": "270 N⋅m (199 lb⋅ft) at 1,250–4,500 rpm"
           },
           {
             "model": "523i",
             "years": "2010–2011",
-            "engine": "N52B25 straight-6",
+            "engine": "2.5 L N52B25 straight-6",
             "power": "150 kW (204 PS; 201 hp) at 6,400 rpm",
             "torque": "250 N⋅m (184 lb⋅ft) at 2,750 rpm"
           },
           {
             "model": "528i",
             "years": "2010–2011",
-            "engine": "N53B30 straight-6",
+            "engine": "3.0 L N53B30 straight-6",
             "power": "190 kW (258 PS; 255 hp) at 6,600 rpm",
             "torque": "310 N⋅m (229 lb⋅ft) at 2,600–5,000 rpm"
           },
           {
             "model": "530i",
             "years": "2011–2013",
-            "engine": "N53B30 straight-6",
+            "engine": "3.0 L N53B30 straight-6",
             "power": "200 kW (272 PS; 268 hp) at 6,100 rpm",
             "torque": "320 N⋅m (236 lb⋅ft) at 1,600–4,250 rpm"
           },
           {
             "model": "535i",
             "years": "2009–2017",
-            "engine": "N55B30 turbo straight-6",
+            "engine": "3.0 L N55B30 turbo straight-6",
             "power": "225 kW (306 PS; 302 hp) at 5,800 rpm",
             "torque": "400 N⋅m (295 lb⋅ft) at 1,200–5,000 rpm"
           },
           {
             "model": "550i",
             "years": "2009–2013",
-            "engine": "N63B44 turbo V8",
+            "engine": "4.4 L N63B44 turbo V8",
             "power": "300 kW (408 PS; 402 hp) at 5,500–6,400 rpm",
             "torque": "600 N⋅m (443 lb⋅ft) at 1,750–4,500 rpm"
           },
           {
             "model": "M5",
             "years": "2012–2016",
-            "engine": "S63B44 turbo V8",
+            "engine": "4.4 L S63B44 turbo V8",
             "power": "412 kW (560 PS; 553 hp) at 6,000–7,000 rpm",
             "torque": "680 N⋅m (502 lb⋅ft) at 1,500–5,700 rpm"
           }
         ]
       },
       {
-        "model": "BMW 5 Series (G30)",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "G30",
+        "summary": "The seventh generation of the BMW 5 Series.",
+        "model_year": "2017–2023",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_G30_530i.jpg",
         "engine_details": [
           {
-            "model": "520i",
-            "years": "2017–2024",
-            "engine": "B48 turbo I4",
-            "power": "135 kW (181 hp) at 5,000–6,500 rpm",
-            "torque": "290 N⋅m (214 lb⋅ft) at 1,350–4,250 rpm"
+            "model": "518d",
+            "years": "2017–2020",
+            "engine": "2.0 L B47D20 I4 turbo",
+            "power": "110 kW (148 hp) at 4,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) at 1,750–2,250 rpm"
           },
           {
-            "model": "530i",
-            "years": "2017–2024",
-            "engine": "B58 turbo I6",
-            "power": "250 kW (335 hp) at 5,500–6,500 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,380–5,200 rpm"
+            "model": "520d",
+            "years": "2010–2014",
+            "engine": "2.0 L N47D20 I4 turbo",
+            "power": "135 kW (184 hp) at 4,000 rpm",
+            "torque": "380 N⋅m (280 lb⋅ft) at 1,750–2,750 rpm"
           },
           {
-            "model": "540i",
-            "years": "2017–2024",
-            "engine": "B58 turbo I6",
-            "power": "250 kW (335 hp) at 5,500–6,500 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,380–5,200 rpm"
+            "model": "520d",
+            "years": "2014–2017",
+            "engine": "2.0 L B47D20 I4 turbo",
+            "power": "140 kW (190 hp) at 4,000 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–2,750 rpm"
           },
           {
-            "model": "M550i",
-            "years": "2018–2020",
-            "engine": "N63 twin-turbo V8",
-            "power": "340 kW (456 hp) at 5,500–6,000 rpm",
-            "torque": "650 N⋅m (479 lb⋅ft) at 1,800–4,750 rpm"
+            "model": "530d",
+            "years": "2009–2011",
+            "engine": "3.0 L B57D30 I6 turbo",
+            "power": "195 kW (261 hp) at 4,000 rpm",
+            "torque": "620 N⋅m (457 lb⋅ft) at 2,000–2,500 rpm"
           },
           {
-            "model": "M5",
-            "years": "2018–2024",
-            "engine": "S63 twin-turbo V8",
-            "power": "441 kW (591 hp) at 6,000 rpm",
-            "torque": "750 N⋅m (553 lb⋅ft) at 1,850–5,860 rpm"
+            "model": "530d",
+            "years": "2011–2017",
+            "engine": "3.0 L B57D30 I6 turbo",
+            "power": "210 kW (282 hp) at 4,000 rpm",
+            "torque": "650 N⋅m (479 lb⋅ft) at 1,500 rpm"
+          },
+          {
+            "model": "540d xDrive",
+            "years": "2017–2020",
+            "engine": "3.0 L B57D30 I6 twin-turbo",
+            "power": "235 kW (315 hp) at 4,400 rpm",
+            "torque": "680 N⋅m (502 lb⋅ft) at 1,750–2,250 rpm"
+          },
+          {
+            "model": "M550d xDrive",
+            "years": "2017–2020",
+            "engine": "3.0 L B57D30 I6 quad-turbo",
+            "power": "294 kW (394 hp) at 4,400 rpm",
+            "torque": "760 N⋅m (561 lb⋅ft) at 2,000–3,000 rpm"
           }
         ]
       }

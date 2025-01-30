@@ -54,19 +54,27 @@ export function extractEngineCode(engineString: string): EngineCodeResult {
   }
 
   // Clean the input string
-  const cleanEngine = engineString.replace(/\s+/g, " ").trim().toUpperCase();
+  const cleanEngine = engineString.toUpperCase();
 
-  // Match patterns:
-  // Full codes: B48A20M0, N55B30T0, etc.
-  // Short codes: B48, N55, etc.
-  const fullPattern = /([BNSM][0-9]{2}[A-Z][0-9]{2}[A-Z][0-9])/;
-  const shortPattern = /([BNSM][0-9]{2})/;
+  // 1. Most specific: Full codes with variant and revision
+  // Examples: B48A20M1, N55B30M0, S55B30T0, B37C15U0
+  const fullVariantPattern = /\b([BNSM][0-9]{2}[A-Z][0-9]{2}[A-Z][0-9])\b/;
 
-  const fullMatch = cleanEngine.match(fullPattern);
-  const shortMatch = cleanEngine.match(shortPattern);
+  // 2. Full codes with displacement
+  // Examples: B48A20, N55B30, B37C15
+  const fullDisplacementPattern = /\b([BNSM][0-9]{2}[A-Z][0-9]{2})\b/;
+
+  // 3. Base engine family - handles both standalone and embedded in text
+  // Examples: "B48", "N55", or "2.0 L N47 inline-4"
+  const shortPattern = /\b([BNSM][0-9]{2})\b/;
+
+  const fullVariantMatch = cleanEngine.match(fullVariantPattern) || null;
+  const fullDisplacementMatch =
+    cleanEngine.match(fullDisplacementPattern) || null;
+  const shortMatches = cleanEngine.match(shortPattern) || null;
 
   return {
-    fullCode: fullMatch ? fullMatch[1] : null,
-    shortCode: shortMatch ? shortMatch[1] : null,
+    fullCode: fullVariantMatch?.at(1) || fullDisplacementMatch?.at(1) || null,
+    shortCode: shortMatches?.at(1) || null,
   };
 }

@@ -200,3 +200,39 @@ export async function getEngineClassById(
     },
   };
 }
+
+export interface EnginePayload {
+  model: string;
+  data?: {
+    engine_code?: string;
+    displacement?: string;
+    power?: string;
+    torque?: string;
+    years?: string;
+  }[];
+}
+
+export async function createEngineClass(model: string): Promise<string> {
+  // Implementation for creating an engine class
+  // This would interact with your database
+  const classId = `class_${Date.now()}`; // Temporary ID generation
+  console.log(`Creating engine class for model ${model}`);
+  return classId;
+}
+
+export async function insertEnginesWithClass(
+  engines: EngineData[],
+  classId: string
+) {
+  // Implementation for inserting engines with a class ID
+  // This would interact with your database
+  console.log(`Inserting ${engines.length} engines for class ${classId}`);
+}
+
+interface EngineData {
+  engine_code: string;
+  displacement: string;
+  power: string;
+  torque: string;
+  years: string;
+}
