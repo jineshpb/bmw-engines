@@ -85,3 +85,51 @@ export const getCarModelById = async (id: string): Promise<CarModel | null> => {
 
   return data as CarModel;
 };
+
+export const getCarByMakeAndModel = async (
+  make: string,
+  model: string
+): Promise<CarModel | null> => {
+  try {
+    const cleanMake = decodeURIComponent(make).toLowerCase();
+    const cleanModel = decodeURIComponent(model);
+
+    const { data, error } = await supabase
+      .from("car_models")
+      .select(
+        `
+        *,
+        car_generations (
+          id,
+          name,
+          start_year,
+          end_year,
+          chassis_code,
+          image_path,
+          summary,
+          car_generation_engines (
+            years,
+            power,
+            torque,
+            displacement,
+            engines (
+              engine_code
+            )
+          )
+        ),
+        car_makes!inner (
+          id,
+          name
+        )
+      `
+      )
+      .ilike("car_makes.name", cleanMake)
+      .ilike("name", cleanModel)
+      .single();
+
+    if (error) return null;
+    return data as CarModel;
+  } catch (error) {
+    return null;
+  }
+};

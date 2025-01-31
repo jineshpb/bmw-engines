@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Sheet,
@@ -6,7 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { GenerationCardProps } from "@/types/cars";
+import { CarGeneration, GenerationCardProps } from "@/types/cars";
 import EngineCard from "@/components/EngineCard";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
@@ -20,15 +22,27 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible";
 
-export default function GenerationCard({ generation }: GenerationCardProps) {
+interface GenerationCardProps {
+  generation: CarGeneration;
+  expanded?: boolean;
+}
+
+export default function GenerationCard({
+  generation,
+  expanded = false,
+}: GenerationCardProps) {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(expanded);
 
   return (
     <div className="py-1">
-      <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <Collapsible
+        open={isOpen}
+        onOpenChange={setIsOpen}
+        defaultOpen={expanded}
+      >
         <CollapsibleTrigger className="w-full">
-          <div className="flex flex-col text-gray-600 bg-gray-100 p-2 rounded-md hover:bg-gray-200 transition-colors">
+          <div className="flex flex-col text-gray-600 bg-gray-100 p-2 rounded-md">
             <div className="flex justify-between items-start w-full">
               <div className="flex flex-col">
                 <h4 className="font-medium text-gray-800 flex  items-center">
@@ -50,7 +64,16 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
                 <ChevronDown className="h-5 w-5" />
               )}
             </div>
-            <p className="text-xs mt-2 text-left">{generation.summary}</p>
+            <div className="relative">
+              <p
+                className={`text-xs mt-2 text-left relative ${
+                  isOpen ? "h-auto" : "h-10 overflow-hidden"
+                }`}
+              >
+                {generation.summary}
+              </p>
+              <div className="absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-t from-gray-100 to-transparent "></div>
+            </div>
           </div>
         </CollapsibleTrigger>
 

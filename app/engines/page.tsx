@@ -24,6 +24,7 @@ export default async function EnginesPage({
 
   return (
     <div className="min-h-screen w-full flex flex-col ">
+      <h1 className="text-3xl font-bold  mt-10 w-full mx-auto">All engines</h1>
       <div className="mt-10">
         <EngineClassSelector
           engineSummary={engineClassSummary}
@@ -38,7 +39,7 @@ export default async function EnginesPage({
       <div className="w-full mt-6">
         <Separator />
       </div>
-      <h2 className="text-2xl font-bold mt-6">
+      <h2 className="text-xl font-bold mt-6">
         Various Configurations{" "}
         {selectedClassDetails && <span> of {selectedClassDetails.model}</span>}
       </h2>
@@ -46,7 +47,7 @@ export default async function EnginesPage({
       <p className="text-muted-foreground text-sm mt-2">
         Here you can find all the configurations for the selected engine class.
       </p>
-      <div className="container w-full mt-10">
+      <div className="w-full mt-10">
         {engineConfigurations.length === 0 ? (
           <div className="text-center py-10">
             <p className="text-muted-foreground">
@@ -54,7 +55,7 @@ export default async function EnginesPage({
             </p>
           </div>
         ) : (
-          <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {engineConfigurations
               ?.filter((e): e is EngineConfiguration => !!e.id)
               .map((engine, index) => (

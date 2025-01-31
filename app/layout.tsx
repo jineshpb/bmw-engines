@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-inter antialiased">
-        <div className="max-w-[1440px] w-full px-20 mx-auto">
-          <Header />
-          <Navigation />
-          {children}
+        <Header />
+
+        <div className="max-w-[2800px] w-full px-20 mx-auto mt-10">
+          <div className="mt-10">{children}</div>
         </div>
       </body>
     </html>

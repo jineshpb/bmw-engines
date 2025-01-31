@@ -1,0 +1,111 @@
+{
+  "make": "BMW",
+  "model": "8 Series",
+  "model_year": "1989-1999, 2018-present",
+  "summary": "The BMW 8 Series is a grand tourer initially produced from 1989 to 1999 and reintroduced in 2018. It features coupé, convertible, and Gran Coupé body styles, with rear-wheel and all-wheel drive layouts. The latest generation includes inline-six diesel and petrol engines, with high-performance M8 and luxury Alpina B8 trims.",
+  "chassis_codes": [
+    "E31",
+    "G15",
+    "G14",
+    "G16"
+  ],
+  "engine_id": "S14",
+  "data": {
+    "models": [
+      {
+        "model": "E31",
+        "summary": "The first generation of the BMW 8 Series consists of various models with different engine specifications.",
+        "model_year": "1990-1999",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_850CSi_E31.jpg",
+        "engine_details": [
+          {
+            "model": "840Ci",
+            "years": "1992–96",
+            "engine": "4.0 L M60 V8 engine",
+            "power": "210 kW (286 PS; 282 hp)",
+            "torque": "400 N⋅m (295 lbf⋅ft)"
+          },
+          {
+            "model": "840Ci",
+            "years": "1995–99",
+            "engine": "4.4 L M62 V8 engine",
+            "power": "210 kW (286 PS; 282 hp)",
+            "torque": "420 N⋅m (310 lbf⋅ft)"
+          },
+          {
+            "model": "850i, 850Ci",
+            "years": "1990–94",
+            "engine": "5.0 L M70 V12 engine",
+            "power": "220 kW (300 PS; 296 hp)",
+            "torque": "450 N⋅m (332 lbf⋅ft)"
+          },
+          {
+            "model": "850Ci",
+            "years": "1992–99",
+            "engine": "5.4 L M73 V12 engine",
+            "power": "240 kW (326 PS; 322 hp)",
+            "torque": "490 N⋅m (361 lbf⋅ft)"
+          },
+          {
+            "model": "850CSi",
+            "years": "1992–96",
+            "engine": "5.6 L S70 V12 engine",
+            "power": "280 kW (381 PS; 375 hp)",
+            "torque": "550 N⋅m (406 lbf⋅ft)"
+          }
+        ]
+      },
+      {
+        "model": "G15",
+        "summary": "The current generation of the BMW 8 Series includes advanced engine options and performance specifications.",
+        "model_year": "2018-present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "840i / 840i xDrive",
+            "years": "2019–",
+            "engine": "3.0 L B58 turbo I6",
+            "power": "250 kW (340 PS; 335 hp) at 5,000–6,500 rpm",
+            "torque": "500 N⋅m (369 lb⋅ft) at 1,600–4,500 rpm"
+          },
+          {
+            "model": "M850i xDrive",
+            "years": "2018–",
+            "engine": "4.4 L N63 twin-turbo V8",
+            "power": "390 kW (530 PS; 523 hp) at 5,500–6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–4,600 rpm"
+          },
+          {
+            "model": "M8",
+            "years": "2019–",
+            "engine": "4.4 L S63 twin-turbo V8",
+            "power": "441 kW (600 PS; 591 hp) at 6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–5,700 rpm"
+          },
+          {
+            "model": "M8 Competition",
+            "years": "2020–",
+            "engine": "4.4 L S63 twin-turbo V8",
+            "power": "460 kW (625 PS; 617 hp) at 6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–5,860 rpm"
+          },
+          {
+            "model": "Alpina B8",
+            "years": "2021–",
+            "engine": "4.4 L N63 twin-turbo V8",
+            "power": "456 kW (620 PS; 612 hp) at 5,550-6,500 rpm",
+            "torque": "800 N⋅m (590 lb⋅ft) at 2,000–5,000 rpm"
+          },
+          {
+            "model": "840d xDrive",
+            "years": "2018–",
+            "engine": "3.0 L B57 + electric boost MHEV turbo I6",
+            "power": "250 kW (340 PS; 335 hp) at 4,400 rpm",
+            "torque": "700 N⋅m (516 lb⋅ft) at 1,750–2,250 rpm"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg/280px-2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg"
+}

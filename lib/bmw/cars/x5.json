@@ -1,0 +1,131 @@
+{
+  "make": "BMW",
+  "model": "X5",
+  "model_year": "1999-present",
+  "summary": "The BMW X5 is a mid-size luxury crossover SUV marketed as a 'Sports Activity Vehicle' (SAV) for its on-road handling. It was the first to use a monocoque chassis in its class, shifting away from body-on-frame construction. Primarily manufactured in North America, it has expanded BMW's SAV series.",
+  "chassis_codes": [
+    "E53",
+    "E70",
+    "F15",
+    "G05"
+  ],
+  "engine_id": "S14",
+  "data": {
+    "models": [
+      {
+        "model": "G05",
+        "summary": "The fourth generation of the BMW X5.",
+        "model_year": "2018–present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "engine_details": [
+          {
+            "model": "X5 xDrive30Li",
+            "years": "2019–",
+            "engine": "2.0 L B48 straight-4",
+            "power": "195 kW (261 hp) at 5,000–6,000 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) at 1,550–4,500 rpm"
+          },
+          {
+            "model": "X5 sDrive40i",
+            "years": "2019–",
+            "engine": "3.0 L B58 straight-6",
+            "power": "250 kW (335 hp) at 5,500–6,500 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,500–5,200 rpm"
+          },
+          {
+            "model": "X5 xDrive40i",
+            "years": "2018–2020",
+            "engine": "3.0 L B58 straight-6",
+            "power": "250 kW (335 hp) at 5,500–6,500 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,500–5,200 rpm"
+          },
+          {
+            "model": "X5 xDrive40i",
+            "years": "2021–",
+            "engine": "3.0 L B58 straight-6",
+            "power": "245 kW (329 hp) at 5,500–6,250 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1,600–4,800 rpm"
+          },
+          {
+            "model": "X5 xDrive45e",
+            "years": "2019–2022",
+            "engine": "3.0 L B58 straight-6 + electric motor",
+            "power": "290 kW (389 hp) at 5,500 rpm",
+            "torque": "600 N⋅m (443 lb⋅ft) at 1,500–5,200 rpm"
+          },
+          {
+            "model": "X5 xDrive50e",
+            "years": "2023–",
+            "engine": "3.0 L B58 straight-6 + electric motor",
+            "power": "360 kW (483 hp) at 5,500 rpm",
+            "torque": "700 N⋅m (516 lb⋅ft) at 1,500–5,200 rpm"
+          },
+          {
+            "model": "X5 xDrive50i",
+            "years": "2018–2020",
+            "engine": "4.4 L N63 V8",
+            "power": "340 kW (456 hp) at 5,250 rpm",
+            "torque": "650 N⋅m (479 lb⋅ft) at 1,500–4,750 rpm"
+          },
+          {
+            "model": "X5 M50i",
+            "years": "2019–2023",
+            "engine": "4.4 L N63 V8",
+            "power": "390 kW (523 hp) at 5,500–6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–4,600 rpm"
+          },
+          {
+            "model": "X5 M60i",
+            "years": "2023–",
+            "engine": "4.4 L S68 MHEV V8",
+            "power": "390 kW (523 hp) at 5,500–6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–4,600 rpm"
+          },
+          {
+            "model": "X5 M",
+            "years": "2020–2023",
+            "engine": "4.4 L S63 V8",
+            "power": "441 kW (591 hp) at 6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–5,860 rpm"
+          },
+          {
+            "model": "X5 M Competition",
+            "years": "2024–",
+            "engine": "4.4 L S68 MHEV V8",
+            "power": "460 kW (617 hp) at 6,000 rpm",
+            "torque": "750 N⋅m (553 lb⋅ft) at 1,800–5,860 rpm"
+          },
+          {
+            "model": "X5 xDrive25d",
+            "years": "2018–",
+            "engine": "2.0 L B47 straight-4",
+            "power": "170 kW (228 hp)",
+            "torque": "450 N⋅m (332 lb⋅ft) at 1500-3000 rpm"
+          },
+          {
+            "model": "X5 xDrive30d",
+            "years": "2018–",
+            "engine": "3.0 L B57 straight-6",
+            "power": "195 kW (261 hp) at 4,000 rpm",
+            "torque": "620 N⋅m (457 lb⋅ft) at 2,000–2,500 rpm"
+          },
+          {
+            "model": "X5 xDrive40d",
+            "years": "2018–",
+            "engine": "3.0 L B57 straight-6",
+            "power": "250 kW (335 hp) at 4,400 rpm",
+            "torque": "700 N⋅m (516 lb⋅ft) at 1750–2,250 rpm"
+          },
+          {
+            "model": "X5 M50d",
+            "years": "2018–2020",
+            "engine": "3.0 L B57 straight-6",
+            "power": "294 kW (394 hp) at 4,400 rpm",
+            "torque": "760 N⋅m (561 lb⋅ft) at 2,000–3,000 rpm"
+          }
+        ]
+      }
+    ]
+  },
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/f/f1/2019_BMW_X5_M50d_Automatic_3.0.jpg"
+}
