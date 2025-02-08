@@ -2,12 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import supabase from "@/lib/supabaseClient";
-import {
-  CarPayload,
-  CarGeneration,
-  GenerationSyncResult,
-  EngineDetail,
-} from "@/types/cars";
+import { CarPayload, GenerationSyncResult, EngineDetail } from "@/types/cars";
 
 import { cleanImageUrl } from "@/lib/utils/cars/imageUtils";
 import { handleImage } from "@/lib/utils/cars/imageUtils";
@@ -147,6 +142,48 @@ function extractDisplacement(engineString: string): number | null {
   return match ? parseFloat(match[1]) : null;
 }
 
+async function uploadGenerationImage(
+  imageUrl: string,
+  modelName: string,
+  generationName: string
+): Promise<string | null> {
+  try {
+    if (!imageUrl) return null;
+
+    const cleanUrl = imageUrl.startsWith("//") ? `https:${imageUrl}` : imageUrl;
+    const filename = `${modelName
+      .toLowerCase()
+      .replace(/\s+/g, "_")}-${generationName
+      .toLowerCase()
+      .replace(/\s+/g, "_")}.jpg`;
+
+    // Download image
+    const response = await fetch(cleanUrl);
+    if (!response.ok)
+      throw new Error(`Failed to fetch image: ${response.statusText}`);
+
+    const imageBuffer = await response.arrayBuffer();
+
+    // Upload to Supabase storage
+    const { error } = await supabase.storage
+      .from("car_generation_images")
+      .upload(filename, imageBuffer, {
+        contentType: "image/jpeg",
+        upsert: true,
+      });
+
+    if (error) {
+      console.error(`Error uploading generation image ${filename}:`, error);
+      return null;
+    }
+
+    return filename;
+  } catch (error) {
+    console.error("Error in uploadGenerationImage:", error);
+    return null;
+  }
+}
+
 export async function POST() {
   try {
     const carsDir = path.join(process.cwd(), "lib", "bmw", "cars");
@@ -225,9 +262,19 @@ export async function POST() {
               );
               continue;
             }
-            const chassisCode = chassisCodes; // Use the whole array
+            const chassisCode = chassisCodes;
 
-            // Create/update generation
+            // Upload generation image if exists
+            let generationImagePath = null;
+            if (gen.image_path) {
+              generationImagePath = await uploadGenerationImage(
+                gen.image_path,
+                payload.model,
+                gen.model
+              );
+            }
+
+            // Create/update generation with image path
             const yearData = gen.model_year
               ? parseModelYear(gen.model_year)
               : parseModelYear(gen.engine_details?.[0]?.years || "");
@@ -241,11 +288,8 @@ export async function POST() {
                   chassis_code: chassisCode,
                   summary: gen.summary,
                   ...yearData,
-                  image_path: gen.image_path || null,
-                } satisfies Omit<
-                  CarGeneration,
-                  "id" | "car_generation_engines"
-                >,
+                  image_path: generationImagePath, // Use the uploaded image path
+                },
                 {
                   onConflict: "model_id,name,start_year",
                   ignoreDuplicates: false,

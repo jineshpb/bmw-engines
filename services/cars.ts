@@ -130,6 +130,7 @@ export const getCarByMakeAndModel = async (
     if (error) return null;
     return data as CarModel;
   } catch (error) {
+    console.log("Error in getCarByMakeAndModel:", error);
     return null;
   }
 };

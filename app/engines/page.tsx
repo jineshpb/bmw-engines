@@ -1,18 +1,27 @@
-import EngineCard from "@/components/EngineCard";
 import { EngineClassSelector } from "@/components/EngineClassSelector";
-
-import { getEngineClassSummary, getEnginesByClass } from "@/services/engines";
+import { EngineSearch } from "@/components/EngineSearch";
+import {
+  getEngineClassSummary,
+  getEnginesByClass,
+  searchEngineConfigurations,
+} from "@/services/engines";
 import EngineClassCard from "@/components/EngineClassCard";
 import { Separator } from "@/components/ui/separator";
 import { EngineConfiguration } from "@/types/engines";
+import EngineCard from "@/components/EngineCard";
 
 export default async function EnginesPage({
   searchParams,
 }: {
-  searchParams: { class?: string };
+  searchParams: { query?: string; class?: string };
 }) {
   const selectedClass = searchParams.class || "all";
-  const engineConfigurations = await getEnginesByClass(selectedClass);
+  const searchQuery = searchParams.query;
+
+  const engineConfigurations = searchQuery
+    ? await searchEngineConfigurations(searchQuery)
+    : await getEnginesByClass(selectedClass);
+
   const engineClassSummary = await getEngineClassSummary();
 
   const selectedClassDetails =
@@ -20,17 +29,14 @@ export default async function EnginesPage({
       ? engineClassSummary.find((ec) => ec.id === selectedClass)
       : null;
 
-  // console.log("selectedClassDetails", selectedClassDetails);
-
   return (
-    <div className="min-h-screen w-full flex flex-col ">
-      <h1 className="text-3xl font-bold  mt-10 w-full mx-auto">All engines</h1>
-      <div className="mt-10">
-        <EngineClassSelector
-          engineSummary={engineClassSummary}
-          defaultValue={selectedClass}
-        />
+    <div className="min-h-screen w-full flex flex-col">
+      <div className="flex justify-between items-center mt-10">
+        <h1 className="text-3xl font-bold">All engines</h1>
+        <EngineSearch defaultQuery={searchParams.query || ""} />
       </div>
+
+      <div className="mt-10">{/* <EngineClassSelector /> */}</div>
       {selectedClassDetails && (
         <div className="mt-6">
           <EngineClassCard engineClass={selectedClassDetails} />
@@ -47,23 +53,22 @@ export default async function EnginesPage({
       <p className="text-muted-foreground text-sm mt-2">
         Here you can find all the configurations for the selected engine class.
       </p>
-      <div className="w-full mt-10">
-        {engineConfigurations.length === 0 ? (
-          <div className="text-center py-10">
-            <p className="text-muted-foreground">
-              No engine configurations found
-            </p>
-          </div>
-        ) : (
-          <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {engineConfigurations
-              ?.filter((e): e is EngineConfiguration => !!e.id)
-              .map((engine, index) => (
-                <EngineCard key={index} engineConfigurations={engine} />
-              ))}
-          </div>
-        )}
-      </div>
+      <div className="w-full mt-10"></div>
+      {engineConfigurations.length === 0 ? (
+        <div className="text-center py-10">
+          <p className="text-muted-foreground">
+            No engine configurations found
+          </p>
+        </div>
+      ) : (
+        <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {engineConfigurations
+            ?.filter((e): e is EngineConfiguration => !!e.id)
+            .map((engine, index) => (
+              <EngineCard key={index} engineConfigurations={engine} />
+            ))}
+        </div>
+      )}
     </div>
   );
 }

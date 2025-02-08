@@ -7,12 +7,12 @@ import { CarModel } from "@/types/cars";
 export default async function Page() {
   const carModels = await getCarModels();
 
-  console.log("carModels", carModels);
+  // console.log("carModels", carModels);
 
   return (
     <div className="flex flex-col gap-6">
       <h1 className="text-3xl font-bold  mt-10 w-full mx-auto">All cars</h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {carModels.map((model: CarModel) => (
           <CarCard
             key={model.id}

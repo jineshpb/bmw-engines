@@ -236,3 +236,46 @@ interface EngineData {
   torque: string;
   years: string;
 }
+
+export const searchEngineConfigurations = async (
+  query: string
+): Promise<Partial<EngineConfiguration>[]> => {
+  const { data, error } = await supabase
+    .from("engines")
+    .select(
+      `
+      id,
+      engine_code,
+      image_path,
+      engine_configurations (
+        id,
+        engine_id,
+        displacement,
+        power,
+        torque,
+        years,
+        is_derived
+      )
+    `
+    )
+    .ilike("engine_code", `%${query}%`);
+
+  if (error) {
+    console.error("Error searching engines:", error);
+    return [];
+  }
+
+  // Format the data to match our existing structure
+  const configurations =
+    data?.flatMap((engine) =>
+      engine.engine_configurations.map((config) => ({
+        ...config,
+        engines: {
+          engine_code: engine.engine_code,
+          image_path: engine.image_path,
+        },
+      }))
+    ) || [];
+
+  return configurations;
+};

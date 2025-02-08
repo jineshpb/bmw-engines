@@ -2,6 +2,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
 import { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Header />
 
         <div className="max-w-[2800px] w-full px-20 mx-auto mt-10">
+          <NextTopLoader />
           <div className="mt-10">{children}</div>
         </div>
       </body>

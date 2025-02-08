@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const pathname = usePathname();
+  const decodedPath = decodeURIComponent(pathname);
+
   return (
     <div className="flex flex-row items-center mt-4 gap-2 px-8">
       <div className="flex flex-row items-center justify-center">
@@ -19,19 +21,23 @@ const Header = () => {
       <div className="flex flex-row items-center gap-4 ml-8">
         <Link
           href="/"
-          className={`${
-            pathname === "/" ? "text-purple-600 font-semibold" : ""
-          }`}
+          className={cn(
+            "hover:text-purple-600",
+            decodedPath.startsWith("/cars") || decodedPath === "/"
+              ? "text-purple-600 font-semibold"
+              : ""
+          )}
         >
           Cars
         </Link>
         <Link
           href="/engines"
-          className={`${
-            pathname.startsWith("/engines")
+          className={cn(
+            "hover:text-purple-600",
+            decodedPath.startsWith("/engines")
               ? "text-purple-600 font-semibold"
               : ""
-          }`}
+          )}
         >
           Engines
         </Link>
