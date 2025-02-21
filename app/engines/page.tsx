@@ -8,6 +8,8 @@ import EngineClassCard from "@/components/EngineClassCard";
 import { Separator } from "@/components/ui/separator";
 import { EngineConfiguration } from "@/types/engines";
 import EngineCard from "@/components/EngineCard";
+import { getCarModelsByEngineClass } from "@/services/cars";
+import CarModelCard from "@/components/car/CarModelCard";
 
 export default async function EnginesPage({
   searchParams,
@@ -16,6 +18,8 @@ export default async function EnginesPage({
 }) {
   const selectedClass = searchParams.class || "all";
   const searchQuery = searchParams.query;
+
+  const models = await getCarModelsByEngineClass(selectedClass);
 
   const engineConfigurations = searchQuery
     ? await searchEngineConfigurations(searchQuery)
@@ -41,6 +45,14 @@ export default async function EnginesPage({
           <EngineClassCard engineClass={selectedClassDetails} />
         </div>
       )}
+      <div className="mt-8">
+        <h3 className="text-lg font-semibold mb-4">Models using this engine</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {models.map((model) => (
+            <CarModelCard key={model.id} model={model} />
+          ))}
+        </div>
+      </div>
       <div className="w-full mt-6">
         <Separator />
       </div>

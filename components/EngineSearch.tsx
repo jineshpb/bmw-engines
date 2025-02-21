@@ -64,6 +64,15 @@ export function EngineSearch({ defaultQuery = "" }: Props) {
     }
   }, [debouncedQuery, router, pathname, searchParams]);
 
+  // Clear search when route changes
+  useEffect(() => {
+    return () => {
+      setQuery("");
+      setResults([]);
+      setShowDropdown(false);
+    };
+  }, [router]);
+
   const handleSelect = (result: SearchResult, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -78,6 +87,11 @@ export function EngineSearch({ defaultQuery = "" }: Props) {
       params.delete("query");
     }
     router.push(`${pathname}?${params.toString()}`);
+
+    // Clear search immediately on selection
+    setQuery("");
+    setResults([]);
+    setShowDropdown(false);
   };
 
   const handleClear = (e: React.MouseEvent) => {
@@ -105,7 +119,7 @@ export function EngineSearch({ defaultQuery = "" }: Props) {
   }, []);
 
   return (
-    <div className="relative w-full max-w-xl search-container">
+    <div className="relative w-[400px] max-w-md search-container">
       <div className="relative">
         <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input

@@ -146,3 +146,50 @@ export const getCarByMakeAndModel = async (
     return null;
   }
 };
+
+export const getCarModelsByEngineClass = async (
+  engineClassId: string
+): Promise<CarModel[]> => {
+  try {
+    // Return early if "all" is selected
+    if (engineClassId === "all") {
+      return [];
+    }
+
+    const { data, error } = await supabase
+      .from("car_models")
+      .select(
+        `
+        id,
+        name,
+        model_year,
+        image_path,
+        summary,
+        car_makes (
+          name
+        ),
+        car_generations!inner (
+          car_generation_engine_classes!inner (
+            engine_classes!inner (
+              id
+            )
+          )
+        )
+      `
+      )
+      .eq(
+        "car_generations.car_generation_engine_classes.engine_classes.id",
+        engineClassId
+      );
+
+    if (error) {
+      console.error("Error fetching car models by engine:", error);
+      return [];
+    }
+
+    return data as unknown as CarModel[];
+  } catch (error) {
+    console.error("Error in getCarModelsByEngineClass:", error);
+    return [];
+  }
+};

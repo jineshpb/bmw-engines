@@ -1,7 +1,7 @@
 // app/page.tsx
 
 import { getCarModels } from "@/services/cars";
-import CarCard from "@/components/car/CarCard";
+import CarSeriesCard from "@/components/car/CarSeriesCard";
 import { CarModel } from "@/types/cars";
 
 export default async function Page() {
@@ -14,7 +14,7 @@ export default async function Page() {
       <h1 className="text-3xl font-bold  mt-10 w-full mx-auto">All cars</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {carModels.map((model: CarModel) => (
-          <CarCard
+          <CarSeriesCard
             key={model.id}
             car={{
               make: model.car_makes.name,

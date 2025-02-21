@@ -8,7 +8,7 @@ import { CarGeneration } from "@/types/cars";
 import KeyValuePair from "../KeyValuePair";
 // import { encodeURIComponent } from "url";
 
-interface CarCardProps {
+interface CarSeriesCardProps {
   car: {
     make: string;
     model: string;
@@ -19,7 +19,7 @@ interface CarCardProps {
   };
 }
 
-export default function CarCard({ car }: CarCardProps) {
+export default function CarSeriesCard({ car }: CarSeriesCardProps) {
   const {
     data: { publicUrl },
   } = supabase.storage.from("car-images").getPublicUrl(car.image_path || "");
