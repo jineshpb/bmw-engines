@@ -108,12 +108,24 @@ export const getCarByMakeAndModel = async (
           image_path,
           summary,
           car_generation_engines (
-            years,
             power,
             torque,
             displacement,
+            years,
             engines (
-              engine_code
+              engine_code,
+              id,
+              class_id
+            )
+          ),
+          car_generation_engine_classes (
+            power,
+            torque,
+            displacement,
+            years,
+            engine_classes (
+              id,
+              model
             )
           )
         ),

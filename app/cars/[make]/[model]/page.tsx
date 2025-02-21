@@ -4,9 +4,47 @@ import supabase from "@/lib/supabaseClient";
 import { Icon } from "@iconify/react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import KeyValuePair from "@/components/KeyValuePair";
+
 import GenerationCard from "@/components/car/GenerationCard";
 import { getCarByMakeAndModel } from "@/services/cars";
+import EngineCard from "@/components/EngineCard";
+import { CarGeneration } from "@/types/cars";
+
+// Component to render generation images
+
+// Component to render generation images
+const GenerationImages = ({ generations }: { generations: CarGeneration }) => {
+  console.log("@@generations", generations);
+
+  let imageUrl = "/placeholder-car.jpg";
+
+  if (generations.image_path) {
+    try {
+      const {
+        data: { publicUrl },
+      } = supabase.storage
+        .from("car_generation_images")
+        .getPublicUrl(generations.image_path);
+      imageUrl = publicUrl;
+
+      console.log("@@imageUrl", imageUrl);
+    } catch (error) {
+      console.error("Error getting image URL:", error);
+    }
+  }
+
+  return (
+    <div className="h-32 relative overflow-hidden">
+      <Image
+        src={imageUrl}
+        alt={generations.name}
+        fill
+        className="object-cover hover:scale-110 transition-transform"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+    </div>
+  );
+};
 
 export default async function CarPage({
   params,
@@ -28,20 +66,8 @@ export default async function CarPage({
       notFound();
     }
 
-    // Get image URL with error handling
-    let imageUrl = "/placeholder-car.jpg";
-    if (car.image_path) {
-      try {
-        const {
-          data: { publicUrl },
-        } = supabase.storage.from("car-images").getPublicUrl(car.image_path);
-        imageUrl = publicUrl;
-      } catch (error) {
-        console.error("Error getting image URL:", error);
-      }
-    }
-
-    console.log("@@imageUrl", imageUrl);
+    // console.log("@@imageUrl", imageUrl);
+    // console.log("@@car", car);
 
     return (
       <div className="w-full flex flex-col gap-4">
@@ -71,13 +97,11 @@ export default async function CarPage({
 
         {/* Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-2 xl:grid-cols-6">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="h-32 bg-gradient-to-br from-gray-200 to-gray-300  animate-pulse"
-            />
+          {car.car_generations.map((generation) => (
+            <GenerationImages key={generation.id} generations={generation} />
           ))}
         </div>
+
         {/* <div className="relative h-[40vh] rounded-xl overflow-hidden w-full bg-gradient-to-b from-gray-900/70 to-gray-900/30">
           <Image
             src={imageUrl}
@@ -136,13 +160,9 @@ export default async function CarPage({
             </TabsList>
 
             <TabsContent value="generations" className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
                 {car.car_generations.map((generation) => (
-                  <GenerationCard
-                    key={generation.id}
-                    generation={generation}
-                    expanded
-                  />
+                  <GenerationCard key={generation.id} generation={generation} />
                 ))}
               </div>
             </TabsContent>
@@ -151,24 +171,19 @@ export default async function CarPage({
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {car.car_generations.map((generation) =>
                   generation.car_generation_engines?.map((engine) => (
-                    <div
+                    <EngineCard
                       key={engine.id}
-                      className="bg-white rounded-lg p-6 space-y-2"
-                    >
-                      <h3 className="font-semibold">{engine.name}</h3>
-                      <div className="grid grid-cols-2 gap-4">
-                        <KeyValuePair
-                          label="Power"
-                          value={`${engine.power_hp} hp`}
-                          icon={<Icon icon="ph:lightning" />}
-                        />
-                        <KeyValuePair
-                          label="Torque"
-                          value={`${engine.torque_nm} Nm`}
-                          icon={<Icon icon="ph:gauge" />}
-                        />
-                      </div>
-                    </div>
+                      engineConfigurations={{
+                        ...engine,
+                        engine_id: engine.engines.engine_code,
+                        is_derived: false,
+                        displacement: engine.displacement?.toString() || "",
+                        created_at: new Date().toISOString(),
+                        power: engine.power || undefined,
+                        torque: engine.torque || undefined,
+                        years: engine.years || undefined,
+                      }}
+                    />
                   ))
                 )}
               </div>

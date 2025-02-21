@@ -1,4 +1,3 @@
-import { EngineClassSelector } from "@/components/EngineClassSelector";
 import { EngineSearch } from "@/components/EngineSearch";
 import {
   getEngineClassSummary,
@@ -61,7 +60,7 @@ export default async function EnginesPage({
           </p>
         </div>
       ) : (
-        <div className="grid w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid w-full  lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
           {engineConfigurations
             ?.filter((e): e is EngineConfiguration => !!e.id)
             .map((engine, index) => (

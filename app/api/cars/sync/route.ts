@@ -34,6 +34,7 @@ async function processEngineDetails(
     const { code: engineCode, engineFamily } = extractBMWEngineCode(
       engineDetail.engine
     );
+
     const engineData = {
       power: engineDetail.power,
       torque: engineDetail.torque,
@@ -41,24 +42,15 @@ async function processEngineDetails(
       years: engineDetail.years,
     };
 
-    // First try to find exact engine match if we have a specific code
+    // If we have a specific engine code, only create the engine mapping
     if (engineCode && isValidBMWEngineCode(engineCode)) {
       const { data: engine } = await supabase
         .from("engines")
-        .select(
-          `
-          id,
-          engine_code,
-          class_id
-        `
-        )
+        .select("id, engine_code, class_id")
         .eq("engine_code", engineCode)
         .single();
 
       if (engine) {
-        console.log(`Found exact engine match: ${engine.engine_code}`);
-
-        // Store car-specific data in junction table
         const { error: junctionError } = await supabase
           .from("car_generation_engines")
           .upsert(
@@ -75,24 +67,12 @@ async function processEngineDetails(
         if (junctionError) {
           console.warn("Failed to create engine mapping:", junctionError);
         }
-
-        // Also try to store in engine class junction if available
-        if (engine.class_id) {
-          await supabase.from("car_generation_engine_classes").upsert(
-            {
-              generation_id: genData.id,
-              engine_class_id: engine.class_id,
-              ...engineData,
-            },
-            {
-              onConflict: "generation_id,engine_class_id",
-            }
-          );
-        }
+        // Skip engine class creation if we have a specific engine
+        return;
       }
     }
 
-    // If no exact match or engine code, try engine family
+    // Only process engine family if we don't have a specific engine match
     if (engineFamily) {
       const { data: engineClass } = await supabase
         .from("engine_classes")
@@ -101,38 +81,20 @@ async function processEngineDetails(
         .single();
 
       if (engineClass) {
-        console.log(`Found engine class match: ${engineFamily}`);
-
-        // Store in engine class junction
-        const { error: classJunctionError } = await supabase
-          .from("car_generation_engine_classes")
-          .upsert(
-            {
-              generation_id: genData.id,
-              engine_class_id: engineClass.id,
-              ...engineData,
-            },
-            {
-              onConflict: "generation_id,engine_class_id",
-            }
-          );
-
-        if (classJunctionError) {
-          console.warn(
-            "Failed to create engine class mapping:",
-            classJunctionError
-          );
-        }
-      } else {
-        console.warn(`No engine class match found for family: ${engineFamily}`);
+        await supabase.from("car_generation_engine_classes").upsert(
+          {
+            generation_id: genData.id,
+            engine_class_id: engineClass.id,
+            ...engineData,
+          },
+          {
+            onConflict: "generation_id,engine_class_id",
+          }
+        );
       }
-    } else {
-      console.warn(
-        `No valid engine code or family found for: ${engineDetail.engine}`
-      );
     }
   } catch (error) {
-    console.error("Engine processing failed:", error);
+    console.error("Engine processing error:", error);
     throw error;
   }
 }
@@ -205,7 +167,7 @@ export async function POST() {
     }
 
     for (const file of files) {
-      if (!file.endsWith(".json")) continue;
+      if (file !== "3 series.json") continue; // Only process 1 series.json
 
       try {
         const content = await fs.readFile(path.join(carsDir, file), "utf-8");

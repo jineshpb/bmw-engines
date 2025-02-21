@@ -1,13 +1,12 @@
 {
   "make": "BMW",
   "model": "1 Series",
-  "model_year": "2004-present",
-  "summary": "The BMW 1 Series is a subcompact executive car that initially featured rear-wheel drive and later switched to front-wheel drive in its third generation. It includes various body styles and performance versions, with the coupé and convertible models marketed separately as the 2 Series since 2014.",
+  "model_year": "2014-present",
+  "summary": "The BMW 1 Series is a subcompact executive car that has transitioned from a rear-wheel drive layout to a front-wheel drive layout in its third generation, while offering all-wheel drive options.",
   "chassis_codes": [
     "E87",
     "F20",
     "F40",
-    "F70",
     "F52"
   ],
   "engine_id": "N54",
@@ -16,8 +15,8 @@
       {
         "model": "F40",
         "summary": "The first generation of the BMW 1 Series consists of the BMW E81 (3-door hatchback), BMW E82 (coupe), BMW E87 (5-door",
-        "model_year": "2019–2024",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model_year": "2020–2024",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2019_BMW_118i_SE_1.5_Front.jpg/280px-2019_BMW_118i_SE_1.5_Front.jpg",
         "engine_details": [
           {
             "model": "116i",
@@ -80,8 +79,8 @@
       {
         "model": "F20",
         "summary": "The second generation of the BMW 1 Series consists of the BMW F20 (5-door hatchback) and F21 (3-door hatchback).",
-        "model_year": "2011–2019",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model_year": "2012–2019",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e1/BMW_118i_Urban_Line_%28F20%29_%E2%80%93_Frontansicht%2C_10._M%C3%A4rz_2012%2C_D%C3%BCsseldorf.jpg/280px-BMW_118i_Urban_Line_%28F20%29_%E2%80%93_Frontansicht%2C_10._M%C3%A4rz_2012%2C_D%C3%BCsseldorf.jpg",
         "engine_details": [
           {
             "model": "114i",
@@ -170,84 +169,135 @@
         ]
       },
       {
-        "model": "F21",
-        "summary": "The second generation of the BMW 1 Series consists of the BMW F20 (5-door hatchback) and F21 (3-door hatchback).",
-        "model_year": "2011–2019",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "model": "E87",
+        "summary": "The first generation of the BMW 1 Series consists of the BMW E81 (3-door hatchback), E82 (coupe), E87 (5-door hatchback), and E88 (convertible).",
+        "model_year": "2004–2013",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/3/32/BMW_E87_front_20080719.jpg/280px-BMW_E87_front_20080719.jpg",
         "engine_details": [
           {
-            "model": "114d",
-            "years": "2012-2015",
-            "engine": "1.6 L N47 inline-4 with turbocharger",
-            "power": "70 kW (95 PS) at 4,000 rpm",
-            "torque": "235 N⋅m (173 lb⋅ft) at 1,500-2,750 rpm"
+            "model": "116i",
+            "years": "2004–2011",
+            "engine": "1.6 L N45 inline-4",
+            "power": "85 kW (114 hp; 116 PS)",
+            "torque": "150 N⋅m (111 lb⋅ft)"
           },
           {
-            "model": "116d",
-            "years": "2011-2015",
-            "engine": "2.0 L N47 inline-4 with turbocharger",
-            "power": "85 kW (116 PS) at 4,000 rpm",
-            "torque": "260 N⋅m (192 lb⋅ft) at 1,750-2,500 rpm"
+            "model": "116i",
+            "years": "2007-2011",
+            "engine": "1.6 L N43 inline-4",
+            "power": "90 kW (121 hp; 122 PS)",
+            "torque": "160 N⋅m (118 lb⋅ft)"
           },
           {
-            "model": "116d",
-            "years": "2012-2015",
-            "engine": "1.6 L N47 inline-4 with turbocharger",
-            "power": "85 kW (116 PS) at 4,000 rpm",
-            "torque": "260 N⋅m (192 lb⋅ft) at 1,750-2,500 rpm"
+            "model": "116i",
+            "years": "2009-2011",
+            "engine": "2.0 L N43 inline-4",
+            "power": "95 kW (127 hp; 129 PS)",
+            "torque": "185 N⋅m (136 lb⋅ft)"
           },
           {
-            "model": "116d",
-            "years": "2015-2019",
-            "engine": "1.5 L B37 inline-3 with turbocharger",
-            "power": "85 kW (116 PS) at 4,000 rpm",
-            "torque": "270 N⋅m (199 lb⋅ft) at 1,750-2,250 rpm"
+            "model": "118i",
+            "years": "2005–2007",
+            "engine": "2.0 L N46 inline-4",
+            "power": "95 kW (127 hp; 129 PS)",
+            "torque": "180 N⋅m (133 lb⋅ft)"
           },
           {
-            "model": "118d",
-            "years": "2011-2015",
-            "engine": "2.0 L N47 inline-4 with turbocharger",
-            "power": "105 kW (143 PS) at 4,000 rpm",
-            "torque": "320 N⋅m (236 lb⋅ft) at 1,750-2,500 rpm"
+            "model": "118i",
+            "years": "2007–2009",
+            "engine": "2.0 L N43 inline-4",
+            "power": "105 kW (141 hp; 143 PS)",
+            "torque": "190 N⋅m (140 lb⋅ft)"
           },
           {
-            "model": "118d",
-            "years": "2015-2019",
-            "engine": "2.0 L B47 inline-4 with turbocharger",
-            "power": "110 kW (150 PS) at 4,000 rpm",
-            "torque": "320 N⋅m (236 lb⋅ft) at 1,500-3,000 rpm"
+            "model": "118i",
+            "years": "2009-2011",
+            "engine": "2.0 L N43 inline-4",
+            "power": "90 kW (121 hp; 122 PS)",
+            "torque": "185 N⋅m (136 lb⋅ft)"
           },
           {
-            "model": "120d",
-            "years": "2011-2015",
-            "engine": "2.0 L N47 inline-4 with turbocharger",
-            "power": "135 kW (184 PS) at 4,000 rpm",
-            "torque": "380 N⋅m (280 lb⋅ft) at 1,750-2,750 rpm"
+            "model": "120i",
+            "years": "2004–2007",
+            "engine": "2.0 L N46 inline-4",
+            "power": "110 kW (148 hp; 150 PS)",
+            "torque": "200 N⋅m (148 lb⋅ft)"
           },
           {
-            "model": "120d",
-            "years": "2015-2019",
-            "engine": "2.0 L B47 inline-4 with turbocharger",
-            "power": "140 kW (190 PS) at 4,000 rpm",
-            "torque": "400 N⋅m (295 lb⋅ft) at 1,750-2,500 rpm"
+            "model": "120i",
+            "years": "2007–2013",
+            "engine": "2.0 L N43 inline-4",
+            "power": "125 kW (168 hp; 170 PS)",
+            "torque": "210 N⋅m (155 lb⋅ft)"
           },
           {
-            "model": "125d",
-            "years": "2012-2015",
-            "engine": "2.0 L N47 inline-4 with Twin turbocharger",
-            "power": "160 kW (218 PS) at 4,400 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,500-2,500 rpm"
+            "model": "120i",
+            "years": "2006-2011",
+            "engine": "2.0 L N46N inline-4",
+            "power": "125 kW (168 hp; 170 PS)",
+            "torque": "210 N⋅m (155 lb⋅ft)"
           },
           {
-            "model": "125d",
-            "years": "2015-2019",
-            "engine": "2.0 L B47 inline-4 with Twin turbocharger",
-            "power": "165 kW (224 PS) at 4,400 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,500-3,000 rpm"
+            "model": "125i",
+            "years": "2007–2013",
+            "engine": "3.0 L N52 inline-6",
+            "power": "160 kW (215 hp; 218 PS)",
+            "torque": "270 N⋅m (199 lb⋅ft)"
+          },
+          {
+            "model": "128i",
+            "years": "2008-2013",
+            "engine": "3.0 L N52 inline-6",
+            "power": "170 kW (228 hp)",
+            "torque": "271 N⋅m (200 lb⋅ft)"
+          },
+          {
+            "model": "130i",
+            "years": "2005–2007",
+            "engine": "3.0 L N52 inline-6",
+            "power": "195 kW (261 hp; 265 PS)",
+            "torque": "315 N⋅m (232 lb⋅ft)"
+          },
+          {
+            "model": "130i",
+            "years": "2007–2011",
+            "engine": "3.0 L N52 inline-6",
+            "power": "190 kW (255 hp; 258 PS)",
+            "torque": "310 N⋅m (229 lb⋅ft)"
+          },
+          {
+            "model": "135i",
+            "years": "2007–2010",
+            "engine": "3.0 L N54 inline-6 turbo",
+            "power": "225 kW (302 hp; 306 PS)",
+            "torque": "400 N⋅m (295 lb⋅ft)"
+          },
+          {
+            "model": "135i",
+            "years": "2010–2013",
+            "engine": "3.0 L N55 inline-6 turbo",
+            "power": "225 kW (302 hp; 306 PS)",
+            "torque": "400 N⋅m (295 lb⋅ft)"
+          },
+          {
+            "model": "135is",
+            "years": "2013",
+            "engine": "3.0 L N55 inline-6 turbo",
+            "power": "239 kW (320 hp)",
+            "torque": "430 N⋅m (317 lb⋅ft)"
+          },
+          {
+            "model": "1M Coupe",
+            "years": "2011–2012",
+            "engine": "3.0 L N54 inline-6 turbo",
+            "power": "250 kW (335 hp; 340 PS)",
+            "torque": "450 N⋅m (332 lb⋅ft)"
           }
         ]
       }
     ]
   },
-  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bd/BMW_120_%28F70%29_IMG_1166_%28cropped%29.jpg"
+  "image_path": {
+    "image_link": "//upload.wikimedia.org/wikipedia/commons/thumb/5/56/BMW_120_%28F70%29_Leonberg_2024_IMG_1068.jpg/280px-BMW_120_%28F70%29_Leonberg_2024_IMG_1068.jpg"
+  }
 }

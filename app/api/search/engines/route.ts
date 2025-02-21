@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import meilisearch from "@/lib/meilisearch";
 
 export async function GET(request: Request) {
+  console.log("Search engines route hit");
+  console.log(process.env.MEILISEARCH_HOST_COOLIFY_MASTER_KEY);
+  console.log(process.env.MEILISEARCH_HOST_COOLIFY);
+  console.log("Request:", request);
   try {
     const { searchParams } = new URL(request.url);
     const query = searchParams.get("q");

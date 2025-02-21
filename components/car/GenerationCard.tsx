@@ -8,34 +8,34 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { CarGeneration, GenerationCardProps } from "@/types/cars";
+import { GenerationCardEngine, GenerationCardProps } from "@/types/cars";
 import EngineCard from "@/components/EngineCard";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState } from "react";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "../ui/collapsible";
 import Image from "next/image";
 import supabase from "@/lib/supabaseClient";
+import { EngineConfiguration } from "@/types/engines";
 
-interface GenerationCardProps {
-  generation: CarGeneration;
-  expanded?: boolean;
-  image_path?: string | null;
-}
+const mapToEngineConfiguration = (
+  engine: GenerationCardEngine
+): EngineConfiguration => ({
+  id: engine.id || "",
+  engine_id: engine.engines.engine_code,
+  engines: {
+    engine_code: engine.engines.engine_code,
+  },
+  created_at: new Date().toISOString(),
+  is_derived: false,
+  displacement: engine.displacement?.toString() || "",
+  power: engine.power || "",
+  torque: engine.torque || "",
+  years: engine.years || "",
+});
 
-export default function GenerationCard({
-  generation,
-  expanded = false,
-}: GenerationCardProps) {
+export default function GenerationCard({ generation }: GenerationCardProps) {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(expanded);
 
   // console.log("generation", generation);
 
@@ -78,11 +78,7 @@ export default function GenerationCard({
             </div>
           </div>
           <div className="relative">
-            <p
-              className={`text-xs mt-2 text-left relative ${
-                isOpen ? "h-auto" : "h-10 overflow-hidden"
-              }`}
-            >
+            <p className={`text-xs mt-2 text-left relative`}>
               {generation.summary}
             </p>
           </div>
@@ -90,90 +86,147 @@ export default function GenerationCard({
       </div>
 
       <div className="mb-2">
-        <div className="flex flex-col mt-4 px-2 ">
-          <div className="text-sm text-gray-500 ">Engines</div>
+        <div className="flex flex-col last:p-4 ">
+          <div className="text-sm text-gray-600 text-capitalize">ENGINES</div>
+          <p className="text-xs text-gray-500 mt-1">
+            This generation had below engines in various configurations and
+            markets
+          </p>
           <div className=" w-full">
             {(generation.car_generation_engines &&
               generation.car_generation_engines.length > 0) ||
             (generation.car_generation_engine_classes &&
               generation.car_generation_engine_classes.length > 0) ? (
               <div>
-                <Sheet>
-                  {generation.car_generation_engines &&
-                    generation.car_generation_engines.length > 0 && (
-                      <SheetTrigger className="text-sm text-gray-600 hover:text-gray-900 w-full text-left gap-2">
-                        {generation.car_generation_engines?.map(
-                          (engine, index: number) => (
-                            <div key={index} className="flex flex-col mt-4 ">
-                              <div className="flex justify-between text-purple-600">
-                                <div>{engine.engines.engine_code}</div>
+                <div className="flex w-full flex-row gap-2">
+                  <Sheet>
+                    {generation.car_generation_engines &&
+                      generation.car_generation_engines.length > 0 && (
+                        <div className="border-b border-gray-200 flex-wrap flex gap-x-2 gap-y-1 mt-2 pb-4 w-full">
+                          {generation.car_generation_engines?.map(
+                            (engine, index: number) => (
+                              <div key={index} className="flex flex-col mt-2">
+                                <SheetTrigger className="flex border border-purple-300 rounded-lg p-2 w-auto justify-between text-purple-600 text-sm font-medium">
+                                  <div>{engine.engines.engine_code}</div>
+                                </SheetTrigger>
+                                <SheetContent className="w-fit max-w-[500px] sm:max-w-[600px] flex flex-col">
+                                  <SheetHeader className="flex-none">
+                                    <SheetTitle>Engine Details</SheetTitle>
+                                  </SheetHeader>
+                                  <div className="mt-4 space-y-4 overflow-y-auto flex-1">
+                                    {generation.car_generation_engines &&
+                                      generation.car_generation_engines.length >
+                                        0 && (
+                                        <div className="divide-y divide-gray-200">
+                                          <h3 className="font-medium">
+                                            Specific Engines
+                                          </h3>
+                                          <div className="space-y-4">
+                                            {generation.car_generation_engines.map(
+                                              (engine, index) => (
+                                                <EngineCard
+                                                  key={index}
+                                                  engineConfigurations={mapToEngineConfiguration(
+                                                    engine
+                                                  )}
+                                                />
+                                              )
+                                            )}
+                                          </div>
+                                        </div>
+                                      )}
+                                  </div>
+                                </SheetContent>
                               </div>
+                            )
+                          )}
+                        </div>
+                      )}
+                  </Sheet>
+                </div>
+                <div className="mt-6">
+                  <div className="text-sm text-gray-500 text-capitalize">
+                    ENGINE CLASSES
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">
+                    This generation was also available in the following engine
+                    configurations:
+                  </p>
+                  {generation.car_generation_engine_classes && (
+                    <>
+                      {generation.car_generation_engine_classes
+                        .slice(0, 2)
+                        .map((engineClass, index) => (
+                          <div key={index}>
+                            <div className="flex justify-between items-center mt-2">
+                              <div>{engineClass.engine_classes.model}</div>
+                              <Button
+                                variant="link"
+                                size="sm"
+                                onClick={() =>
+                                  router.push(
+                                    `/engines/${engineClass.engine_classes.id}`
+                                  )
+                                }
+                              >
+                                <ArrowUpRight className="w-4 h-4 text-gray-300" />
+                              </Button>
                             </div>
-                          )
-                        )}
-                      </SheetTrigger>
-                    )}
-                  <SheetContent className="w-fit max-w-[500px] sm:max-w-[600px] flex flex-col">
-                    <SheetHeader className="flex-none">
-                      <SheetTitle>Engine Details</SheetTitle>
-                    </SheetHeader>
-                    <div className="mt-4 space-y-4 overflow-y-auto flex-1">
-                      {generation.car_generation_engines &&
-                        generation.car_generation_engines.length > 0 && (
-                          <div className="divide-y divide-gray-200">
-                            <h3 className="font-medium">Specific Engines</h3>
-                            <div className="space-y-4">
-                              {generation.car_generation_engines.map(
-                                (engine, index) => (
-                                  <EngineCard
-                                    key={index}
-                                    engineConfigurations={{
-                                      engines: {
-                                        engine_code: engine.engines.engine_code,
-                                      },
-                                      years: engine.years || undefined,
-                                      engine_id: engine.engines.engine_code,
-                                      displacement:
-                                        engine.displacement?.toString() ||
-                                        undefined,
-                                      power: engine.power || undefined,
-                                      torque: engine.torque || undefined,
-                                      is_derived: false,
-                                    }}
-                                  />
+                            <div className="flex text-xs text-gray-500 flex-col">
+                              <p>{engineClass.power}</p>
+                              <p>{engineClass.torque}</p>
+                              <p>{engineClass.displacement}</p>
+                            </div>
+                          </div>
+                        ))}
+
+                      {generation.car_generation_engine_classes.length > 2 && (
+                        <Sheet>
+                          <SheetTrigger asChild>
+                            <Button variant="link" size="sm">
+                              View{" "}
+                              {generation.car_generation_engine_classes.length -
+                                2}{" "}
+                              more
+                            </Button>
+                          </SheetTrigger>
+                          <SheetContent>
+                            <SheetHeader>
+                              <SheetTitle>All Engine Classes</SheetTitle>
+                            </SheetHeader>
+                            <div className="mt-4">
+                              {generation.car_generation_engine_classes.map(
+                                (engineClass, index) => (
+                                  <div key={index} className="mb-4">
+                                    <div className="flex justify-between items-center">
+                                      <div>
+                                        {engineClass.engine_classes.model}
+                                      </div>
+                                      <Button
+                                        variant="link"
+                                        size="sm"
+                                        onClick={() =>
+                                          router.push(
+                                            `/engines/${engineClass.engine_classes.id}`
+                                          )
+                                        }
+                                      >
+                                        <ArrowUpRight className="w-4 h-4" />
+                                      </Button>
+                                    </div>
+                                    <div className="text-sm text-gray-500">
+                                      <p>{engineClass.power}</p>
+                                      <p>{engineClass.torque}</p>
+                                      <p>{engineClass.displacement}</p>
+                                    </div>
+                                  </div>
                                 )
                               )}
                             </div>
-                          </div>
-                        )}
-                    </div>
-                  </SheetContent>
-                </Sheet>
-                <div>
-                  {generation.car_generation_engine_classes?.map(
-                    (engineClass, index) => (
-                      <div key={index}>
-                        <div className="flex justify-between items-center mt-2">
-                          <div>{engineClass.engine_classes.model}</div>
-                          <Button
-                            variant="link"
-                            size="sm"
-                            onClick={() =>
-                              router.push(
-                                `/engines/${engineClass.engine_classes.id}`
-                              )
-                            }
-                          >
-                            <ArrowUpRight className="w-4 h-4 text-gray-300" />
-                          </Button>
-                        </div>
-                        <div className="flex text-xs text-gray-500 flex-col">
-                          <p>{engineClass.power}</p>
-                          <p>{engineClass.torque}</p>
-                          <p>{engineClass.displacement}</p>
-                        </div>
-                      </div>
-                    )
+                          </SheetContent>
+                        </Sheet>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

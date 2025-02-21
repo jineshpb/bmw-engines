@@ -39,6 +39,8 @@ export interface CarGeneration {
   summary: string | null;
   image_path: string | null;
   car_generation_engines?: {
+    id: string;
+    created_at: string;
     engines: {
       engine_code: string;
     };
@@ -47,16 +49,7 @@ export interface CarGeneration {
     torque: string | null;
     displacement: number | null;
   }[];
-  car_generation_engine_classes?: {
-    engine_classes: {
-      id: string;
-      model: string;
-    };
-    years: string | null;
-    power: string | null;
-    torque: string | null;
-    displacement: number | null;
-  }[];
+  car_generation_engine_classes?: GenerationCardEngineClass[];
 }
 
 export interface CarModel {
@@ -84,6 +77,8 @@ export interface GenerationSyncResult {
 //Generation Card Types
 
 export interface GenerationCardEngine {
+  id: string;
+  created_at: string;
   engines: {
     engine_code: string;
   };
@@ -105,6 +100,7 @@ export interface GenerationCardEngineClass {
 }
 
 export interface GenerationCardProps {
+  expanded?: boolean;
   generation: {
     id?: string;
     name: string;
