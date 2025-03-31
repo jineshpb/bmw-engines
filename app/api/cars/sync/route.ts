@@ -167,7 +167,7 @@ export async function POST() {
     }
 
     for (const file of files) {
-      if (file !== "3 series.json") continue; // Only process 1 series.json
+      if (file !== "5 series.json") continue; // Only process 1 series.json
 
       try {
         const content = await fs.readFile(path.join(carsDir, file), "utf-8");

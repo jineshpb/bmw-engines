@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 import { CarPayload } from "@/types/cars";
+import { syncCarModelImages } from "@/services/cars";
 
 // For debugging
 const logRequest = async (request: Request) => {
@@ -120,6 +121,9 @@ export async function POST(request: Request) {
       );
       await fs.writeFile(filePath, JSON.stringify(payload, null, 2), "utf-8");
 
+      // After successful upload
+      await syncCarModelImages(payload.data.models[0].model);
+
       return NextResponse.json({
         message: "Car data written successfully",
         modelCount: payload.data.models.length,
@@ -156,3 +160,64 @@ export async function PUT() {
 export async function DELETE() {
   return NextResponse.json({ message: "Method not allowed" }, { status: 405 });
 }
+
+async function downloadImages(inputs: { imageUrls: string[] }) {
+  if (!inputs.imageUrls || !Array.isArray(inputs.imageUrls)) {
+    return {
+      success: false,
+      error: "No image URLs provided or invalid input",
+    };
+  }
+
+  try {
+    const results = [];
+
+    for (const url of inputs.imageUrls) {
+      try {
+        // Add timeout of 5 seconds for each request
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+        const response = await fetch(url, {
+          signal: controller.signal,
+        });
+
+        clearTimeout(timeoutId);
+
+        if (response.ok) {
+          results.push({
+            url: url,
+            status: "success",
+          });
+        }
+      } catch (err) {
+        results.push({
+          url: url,
+          status: "failed",
+          error:
+            err instanceof Error
+              ? err.name === "AbortError"
+                ? "Request timeout"
+                : err.message
+              : "Unknown error",
+        });
+      }
+    }
+
+    return {
+      success: true,
+      processed: results.length,
+      successful: results.filter((r) => r.status === "success").length,
+      failed: results.filter((r) => r.status === "failed").length,
+      results: results,
+    };
+  } catch (err) {
+    return {
+      success: false,
+      error: "Failed to process images",
+      details: err instanceof Error ? err.message : "Unknown error",
+    };
+  }
+}
+
+module.exports = downloadImages;

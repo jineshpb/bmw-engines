@@ -20,6 +20,8 @@ interface CarSeriesCardProps {
 }
 
 export default function CarSeriesCard({ car }: CarSeriesCardProps) {
+  console.log("@@car image path", car);
+
   const {
     data: { publicUrl },
   } = supabase.storage.from("car-images").getPublicUrl(car.image_path || "");

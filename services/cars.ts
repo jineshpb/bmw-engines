@@ -193,3 +193,58 @@ export const getCarModelsByEngineClass = async (
     return [];
   }
 };
+
+export const updateCarModelImagePath = async (
+  modelId: string,
+  imagePath: string
+): Promise<boolean> => {
+  try {
+    // First check if image exists in storage
+    const { data: storageData } = await supabase.storage
+      .from("car-images")
+      .getPublicUrl(imagePath);
+    if (!storageData) {
+      console.error("Storage error: No storage data found");
+      return false;
+    }
+
+    // If image exists, update the car_models table
+    const { error: updateError } = await supabase
+      .from("car_models")
+      .update({ image_path: storageData.publicUrl })
+      .eq("id", modelId);
+
+    if (updateError) {
+      console.error("Update error:", updateError);
+      return false;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error in updateCarModelImagePath:", error);
+    return false;
+  }
+};
+
+// Usage in your webhook or API route:
+export const syncCarModelImages = async (modelId: string): Promise<void> => {
+  try {
+    const { data: model, error } = await supabase
+      .from("car_models")
+      .select("id, image_path")
+      .eq("id", modelId)
+      .single();
+
+    if (error || !model) {
+      console.error("Error fetching model:", error);
+      return;
+    }
+
+    // If image_path is null, try to update it
+    if (!model.image_path) {
+      await updateCarModelImagePath(model.id, `models/${model.id}.jpg`);
+    }
+  } catch (error) {
+    console.error("Error in syncCarModelImages:", error);
+  }
+};
