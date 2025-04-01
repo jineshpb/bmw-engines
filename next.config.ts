@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["wzzudkjvytjmhhxhxirl.supabase.co"],
+    domains: ["wzzudkjvytjmhhxhxirl.supabase.co", "upload.wikimedia.org"],
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(

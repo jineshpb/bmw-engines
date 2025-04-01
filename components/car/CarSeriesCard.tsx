@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import supabase from "@/lib/supabaseClient";
-
 import Link from "next/link";
 import { CarGeneration } from "@/types/cars";
 import KeyValuePair from "../KeyValuePair";
+import { useMemo } from "react";
 // import { encodeURIComponent } from "url";
 
 interface CarSeriesCardProps {
@@ -20,11 +20,43 @@ interface CarSeriesCardProps {
 }
 
 export default function CarSeriesCard({ car }: CarSeriesCardProps) {
-  console.log("@@car image path", car);
+  // console.log("@@car image path", car);
 
-  const {
-    data: { publicUrl },
-  } = supabase.storage.from("car-images").getPublicUrl(car.image_path || "");
+  const imageUrl = useMemo(() => {
+    if (!car.image_path) {
+      console.log("No image path provided, using placeholder");
+      return "/placeholder-car.jpg";
+    }
+
+    // Check if it's a Wikipedia URL
+    if (car.image_path.startsWith("//") || car.image_path.startsWith("http")) {
+      const fullUrl = car.image_path.startsWith("//")
+        ? `https:${car.image_path}`
+        : car.image_path;
+      console.log("Using direct URL:", fullUrl);
+      return fullUrl;
+    }
+
+    try {
+      // For Supabase storage URLs
+      const { data } = supabase.storage
+        .from("car-images")
+        .getPublicUrl(car.image_path);
+
+      console.log("Image path:", car.image_path);
+      console.log("Generated public URL:", data?.publicUrl);
+
+      if (!data?.publicUrl) {
+        console.log("No public URL generated, using placeholder");
+        return "/placeholder-car.jpg";
+      }
+
+      return data.publicUrl;
+    } catch (error) {
+      console.error("Error generating public URL:", error);
+      return "/placeholder-car.jpg";
+    }
+  }, [car.image_path]);
 
   return (
     <Link
@@ -35,11 +67,16 @@ export default function CarSeriesCard({ car }: CarSeriesCardProps) {
         {/* Image */}
         <div className="relative h-48 w-full">
           <Image
-            src={publicUrl || "/placeholder-car.jpg"}
+            src={imageUrl}
             alt={`${car.make} ${car.model}`}
             fill
             className="object-cover"
             priority
+            onError={(e) => {
+              console.error("Image load error:", e);
+              const img = e.target as HTMLImageElement;
+              img.src = "/placeholder-car.jpg";
+            }}
           />
         </div>
 

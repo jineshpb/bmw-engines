@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Sheet,
   SheetContent,
@@ -37,28 +37,60 @@ const mapToEngineConfiguration = (
 export default function GenerationCard({ generation }: GenerationCardProps) {
   const router = useRouter();
 
-  // console.log("generation", generation);
+  const imageUrl = useMemo(() => {
+    if (!generation.image_path) {
+      console.log("No generation image path provided, using placeholder");
+      return "/placeholder-car.jpg";
+    }
 
-  const {
-    data: { publicUrl },
-  } = supabase.storage
-    .from("car_generation_images")
-    .getPublicUrl(generation.image_path || "");
+    // Check if it's a Wikipedia URL
+    if (
+      generation.image_path.startsWith("//") ||
+      generation.image_path.startsWith("http")
+    ) {
+      const fullUrl = generation.image_path.startsWith("//")
+        ? `https:${generation.image_path}`
+        : generation.image_path;
+      console.log("Using direct URL:", fullUrl);
+      return fullUrl;
+    }
 
-  // console.log("publicUrl", publicUrl);
+    try {
+      // For Supabase storage URLs
+      const { data } = supabase.storage
+        .from("car_generation_images")
+        .getPublicUrl(generation.image_path);
 
-  // console.log("@@generation", generation);
+      console.log("Generation image path:", generation.image_path);
+      console.log("Generated public URL:", data?.publicUrl);
+
+      if (!data?.publicUrl) {
+        console.log("No public URL generated, using placeholder");
+        return "/placeholder-car.jpg";
+      }
+
+      return data.publicUrl;
+    } catch (error) {
+      console.error("Error generating public URL:", error);
+      return "/placeholder-car.jpg";
+    }
+  }, [generation.image_path]);
 
   return (
     <div className=" border border-gray-200 rounded-md overflow-hidden">
       <div className="w-full">
         <div className="relative h-48 w-full">
           <Image
-            src={publicUrl}
+            src={imageUrl}
             alt={generation.name}
             fill
             className="object-cover"
             priority
+            onError={(e) => {
+              console.error("Image load error:", e);
+              const img = e.target as HTMLImageElement;
+              img.src = "/placeholder-car.jpg";
+            }}
           />
         </div>
         <div className="flex flex-col bg-gray-100 p-2 ">

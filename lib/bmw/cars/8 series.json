@@ -1,22 +1,21 @@
 {
   "make": "BMW",
   "model": "8 Series",
-  "model_year": "1989-1999, 2018-present",
-  "summary": "The BMW 8 Series is a grand tourer initially produced from 1989 to 1999 and reintroduced in 2018. It features coupé, convertible, and Gran Coupé body styles, with rear-wheel and all-wheel drive layouts. The latest generation includes inline-six diesel and petrol engines, with high-performance M8 and luxury Alpina B8 trims.",
+  "model_year": "2018",
+  "summary": "The BMW 8 Series is a grand tourer available in coupé, convertible, and four-door Gran Coupé body styles, reintroduced in 2018 as the successor to the 6 Series lineup. It features various engine options including inline-six diesel and high-performance M8 trim.",
   "chassis_codes": [
-    "E31",
     "G15",
     "G14",
     "G16"
   ],
-  "engine_id": "S14",
+  "engine_id": "S63",
   "data": {
     "models": [
       {
         "model": "E31",
-        "summary": "The first generation of the BMW 8 Series consists of various models with different engine specifications.",
+        "summary": "The second generation of the BMW 8 Series consists of various models with V8 and V12 engines.",
         "model_year": "1990-1999",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/4/4e/BMW_850CSi_E31.jpg",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/3/36/BMW_850i_E31_-_Flickr_-_Alexandre_Pr%C3%A9vot_Crop.jpg",
         "engine_details": [
           {
             "model": "840Ci",
@@ -57,9 +56,9 @@
       },
       {
         "model": "G15",
-        "summary": "The current generation of the BMW 8 Series includes advanced engine options and performance specifications.",
+        "summary": "The third generation of the BMW 8 Series includes models with I6 and V8 engines.",
         "model_year": "2018-present",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/2019_BMW_840d_xDrive_Automatic_3.0_Front.jpg",
         "engine_details": [
           {
             "model": "840i / 840i xDrive",
@@ -107,5 +106,5 @@
       }
     ]
   },
-  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg/280px-2019_BMW_M850i_xDrive_Automatic_4.4_Front.jpg"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/0/04/2019_BMW_M850i_xDrive_Automatic_4.4.jpg/280px-2019_BMW_M850i_xDrive_Automatic_4.4.jpg"
 }
