@@ -1,8 +1,8 @@
 {
   "make": "BMW",
   "model": "X1",
-  "model_year": "2009–present",
-  "summary": "The BMW X1 is a subcompact luxury crossover SUV, initially introduced with rear-wheel-drive and later transitioning to a front-wheel-drive-based layout using the UKL2 platform. It is available in various drivetrain configurations, including front-wheel-drive, rear-wheel-drive, and all-wheel-drive (xDrive).",
+  "model_year": "2010–present",
+  "summary": "Subcompact luxury crossover SUV with front-engine, rear-wheel-drive, front-wheel-drive, and all-wheel-drive options, sharing the UKL2 platform with other BMW and Mini models.",
   "chassis_codes": [
     "E84",
     "F48",
@@ -12,208 +12,10 @@
   "data": {
     "models": [
       {
-        "model": "E84",
-        "summary": "The first generation of the BMW X1 was produced from 2009 to 2015.",
-        "model_year": "2009-2015",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
-        "engine_details": [
-          {
-            "model": "sDrive16i",
-            "years": "2010-2015",
-            "engine": "N20B16",
-            "power": "105 kW (143 hp) at 4,700 rpm",
-            "torque": "220 N⋅m (162 lb⋅ft) at 4,700 rpm"
-          },
-          {
-            "model": "sDrive18i",
-            "years": "2010–2015",
-            "engine": "N46B20",
-            "power": "110 kW (148 hp) at 6,400 rpm",
-            "torque": "200 N⋅m (148 lb⋅ft) at 3,600 rpm"
-          },
-          {
-            "model": "sDrive20i",
-            "years": "2011–2015",
-            "engine": "N20B20",
-            "power": "135 kW (181 hp) at 5,000–6,250 rpm",
-            "torque": "270 N⋅m (199 lb⋅ft) at 1,250–4,500 rpm"
-          },
-          {
-            "model": "sDrive28i",
-            "years": "2011-2015",
-            "engine": "N20B20",
-            "power": "180 kW (241 hp) at 5,000–6,500 rpm",
-            "torque": "350 N⋅m (258 lb⋅ft) at 1,250–4,800 rpm"
-          },
-          {
-            "model": "xDrive25i",
-            "years": "2010–2011",
-            "engine": "N52B30",
-            "power": "160 kW (215 hp) at 6,100 rpm",
-            "torque": "280 N⋅m (207 lb⋅ft) at 2,500–3,500 rpm"
-          },
-          {
-            "model": "xDrive28i",
-            "years": "2009–2010",
-            "engine": "N52B30",
-            "power": "190 kW (255 hp) at 6,600 rpm",
-            "torque": "310 N⋅m (229 lb⋅ft) at 2,600–3,000 rpm"
-          },
-          {
-            "model": "xDrive28i",
-            "years": "2011–2015",
-            "engine": "N20B20",
-            "power": "180 kW (241 hp) at 5,000–6,500 rpm",
-            "torque": "350 N⋅m (258 lb⋅ft) at 1,250–4,800 rpm"
-          },
-          {
-            "model": "xDrive35i",
-            "years": "2013–2015",
-            "engine": "N55B30",
-            "power": "224 kW (300 hp) at 5,800 rpm",
-            "torque": "407 N⋅m (300 lb⋅ft) at 1,300–5,000 rpm"
-          },
-          {
-            "model": "sDrive16d",
-            "years": "2012–2015",
-            "engine": "N47D20",
-            "power": "85 kW (114 hp) at 4,000 rpm",
-            "torque": "260 N⋅m (192 lb⋅ft) at 1,750–3,000 rpm"
-          },
-          {
-            "model": "sDrive18d",
-            "years": "2009–2015",
-            "engine": "N47D20",
-            "power": "105 kW (141 hp) at 4,000 rpm",
-            "torque": "320 N⋅m (236 lb⋅ft) at 1,750–2,000 rpm"
-          },
-          {
-            "model": "sDrive20d",
-            "years": "2009–2012",
-            "engine": "N47D20",
-            "power": "130 kW (174 hp) at 4,000 rpm",
-            "torque": "350 N⋅m (258 lb⋅ft) at 1,750–3,000 rpm"
-          },
-          {
-            "model": "sDrive20d",
-            "years": "2013–2015",
-            "engine": "N47D20",
-            "power": "135 kW (181 hp) at 4,000 rpm",
-            "torque": "380 N⋅m (280 lb⋅ft) at 1,750–2,750 rpm"
-          },
-          {
-            "model": "sDrive20d EfficientDynamics",
-            "years": "2011–2015",
-            "engine": "N47D20",
-            "power": "120 kW (161 hp) at 4,000 rpm",
-            "torque": "380 N⋅m (280 lb⋅ft) at 1,750–2,750 rpm"
-          },
-          {
-            "model": "xDrive20d",
-            "years": "?-2015",
-            "engine": "N47D20",
-            "power": "140 kW (188 hp) at 4,000 rpm",
-            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–2,500 rpm"
-          },
-          {
-            "model": "xDrive23d",
-            "years": "2009–2012",
-            "engine": "N47D20",
-            "power": "150 kW (201 hp) at 4,400 rpm",
-            "torque": "400 N⋅m (295 lb⋅ft) at 2,000–2,250 rpm"
-          },
-          {
-            "model": "xDrive25d",
-            "years": "2012–2015",
-            "engine": "N47D20",
-            "power": "160 kW (215 hp) at 4,000 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,500–2,500 rpm"
-          }
-        ]
-      },
-      {
-        "model": "F48",
-        "summary": "The second generation of the BMW X1 was produced from 2015 to present.",
-        "model_year": "2015-present",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
-        "engine_details": [
-          {
-            "model": "sDrive18i",
-            "years": "2015–",
-            "engine": "B38",
-            "power": "105 kW (141 hp) at 4,400–6,000 rpm",
-            "torque": "220 N⋅m (162 lb⋅ft) at 1,250–4,000 rpm"
-          },
-          {
-            "model": "sDrive20i",
-            "years": "2015–",
-            "engine": "B48",
-            "power": "141 kW (189 hp) at 5,000–6,000 rpm",
-            "torque": "280 N⋅m (207 lb⋅ft) at 1,250–4,600 rpm"
-          },
-          {
-            "model": "xDrive20i",
-            "years": "2015–",
-            "engine": "B48",
-            "power": "141 kW (189 hp) at 5,000–6,000 rpm",
-            "torque": "280 N⋅m (207 lb⋅ft) at 1,250–4,600 rpm"
-          },
-          {
-            "model": "xDrive25i*",
-            "years": "2016–",
-            "engine": "B48",
-            "power": "170 kW (228 hp) at 5,000–6,000 rpm",
-            "torque": "350 N⋅m (258 lb⋅ft) at 1,250–4,500 rpm"
-          },
-          {
-            "model": "xDrive25Le (China only)",
-            "years": "2016–",
-            "engine": "B38",
-            "power": "100 kW (134 hp)",
-            "torque": "220 N⋅m (162 lb⋅ft)"
-          },
-          {
-            "model": "xDrive25e",
-            "years": "2019–",
-            "engine": "B38",
-            "power": "168 kW (225 hp)",
-            "torque": "385 N⋅m (284 lb⋅ft)"
-          },
-          {
-            "model": "sDrive16d",
-            "years": "2015–",
-            "engine": "B37",
-            "power": "85 kW (114 hp) at 4,000 rpm",
-            "torque": "270 N⋅m (199 lb⋅ft) at 1,750–2,250 rpm"
-          },
-          {
-            "model": "sDrive18d",
-            "years": "2015–",
-            "engine": "B47",
-            "power": "110 kW (148 hp) at 4,000 rpm",
-            "torque": "330 N⋅m (243 lb⋅ft) at 1,750–2,750 rpm"
-          },
-          {
-            "model": "sDrive20d",
-            "years": "2015–",
-            "engine": "B47",
-            "power": "140 kW (188 hp) at 4,000 rpm",
-            "torque": "400 N⋅m (295 lb⋅ft) at 1,750–2,500 rpm"
-          },
-          {
-            "model": "xDrive25d",
-            "years": "2016–",
-            "engine": "B47",
-            "power": "170 kW (228 hp) at 4,400 rpm",
-            "torque": "450 N⋅m (332 lb⋅ft) at 1,500–3,000 rpm"
-          }
-        ]
-      },
-      {
         "model": "U11",
-        "summary": "The third generation of the BMW X1 was produced from 2022 to present.",
-        "model_year": "2022-present",
-        "image_path": "//upload.wikimedia.org/wikipedia/commons/8/86/BMW_G60_520i_1X7A2443.jpg",
+        "summary": "The second generation of the BMW X1.",
+        "model_year": "2023–present",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/6/65/2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg/280px-2022_BMW_X1_sDrive18d_M_Sport_MHEV_Automatic_2.0.jpg",
         "engine_details": [
           {
             "model": "sDrive16i",
@@ -228,6 +30,13 @@
             "engine": "B38",
             "power": "100 kW (134 hp; 136 PS) @ 4,400-6,500 rpm",
             "torque": "230 N⋅m (23.5 kg⋅m; 170 lb⋅ft) @ 1,500-4,000 rpm"
+          },
+          {
+            "model": "sDrive18i",
+            "years": "2023–present",
+            "engine": "B38",
+            "power": "115 kW (154 hp; 156 PS) @ 4,900-6,500 rpm",
+            "torque": "230 N⋅m (23.5 kg⋅m; 170 lb⋅ft) @ 1,500-4,600 rpm"
           },
           {
             "model": "sDrive20i",
@@ -275,19 +84,189 @@
             "model": "xDrive25e",
             "years": "2023–present",
             "engine": "B38A15M0",
-            "power": "Engine: N/A; Motor: 100 kW (134 hp; 136 PS)",
-            "torque": "Engine: N/A; Motor: 230 N⋅m (23.5 kg⋅m; 170 lb⋅ft)"
+            "power": "Engine: N/A\nMotor: 100 kW (134 hp; 136 PS)",
+            "torque": "Engine: N/A\nMotor: 230 N⋅m (23.5 kg⋅m; 170 lb⋅ft)"
           },
           {
             "model": "xDrive30e",
             "years": "2023–present",
             "engine": "B38A15M0",
-            "power": "Engine: N/A; Motor: 130 kW (174 hp; 177 PS)",
-            "torque": "Engine: N/A; Motor: 247 N⋅m (25.2 kg⋅m; 182 lb⋅ft)"
+            "power": "Engine: N/A\nMotor: 130 kW (174 hp; 177 PS)",
+            "torque": "Engine: N/A\nMotor: 247 N⋅m (25.2 kg⋅m; 182 lb⋅ft)"
+          }
+        ]
+      },
+      {
+        "model": "F48",
+        "summary": "The first generation of the BMW X1.",
+        "model_year": "2015–2022",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/0/04/BMW_X1_xDrive25d_%28F48%29_-_Frontansicht_%28cropped%29.jpg/280px-BMW_X1_xDrive25d_%28F48%29_-_Frontansicht_%28cropped%29.jpg",
+        "engine_details": [
+          {
+            "model": "sDrive18i",
+            "years": "2015–present",
+            "engine": "B38",
+            "power": "105 kW (141 hp) @ 4,400–6,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) @ 1,250–4,000 rpm"
+          },
+          {
+            "model": "sDrive20i",
+            "years": "2015–present",
+            "engine": "B48",
+            "power": "141 kW (189 hp) @ 5,000–6,000 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) @ 1,250–4,600 rpm"
+          },
+          {
+            "model": "xDrive20i",
+            "years": "2015–present",
+            "engine": "B48",
+            "power": "141 kW (189 hp) @ 5,000–6,000 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) @ 1,250–4,600 rpm"
+          },
+          {
+            "model": "xDrive25i*",
+            "years": "2016–present",
+            "engine": "B48",
+            "power": "170 kW (228 hp) @ 5,000–6,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) @ 1,250–4,500 rpm"
+          },
+          {
+            "model": "xDrive25Le",
+            "years": "2016–present",
+            "engine": "B38",
+            "power": "100 kW (134 hp) @ 4,000 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) @ 1,250–4,000 rpm"
+          },
+          {
+            "model": "xDrive25e",
+            "years": "2019–present",
+            "engine": "B38",
+            "power": "168 kW (225 hp) @ 4,000 rpm",
+            "torque": "385 N⋅m (284 lb⋅ft) @ 1,500–3,000 rpm"
+          }
+        ]
+      },
+      {
+        "model": "E84",
+        "summary": "The first generation of the BMW X1.",
+        "model_year": "2010–2015",
+        "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/8/87/BMW_X1_%28US%2C_first_gen%29_%28cropped%29.jpg/280px-BMW_X1_%28US%2C_first_gen%29_%28cropped%29.jpg",
+        "engine_details": [
+          {
+            "model": "sDrive16i",
+            "years": "2010-2015",
+            "engine": "N20B16",
+            "power": "105 kW (143 hp) @ 4,700 rpm",
+            "torque": "220 N⋅m (162 lb⋅ft) @ 4,700 rpm"
+          },
+          {
+            "model": "sDrive18i",
+            "years": "2010–2015",
+            "engine": "N46B20",
+            "power": "110 kW (148 hp) @ 6,400 rpm",
+            "torque": "200 N⋅m (148 lb⋅ft) @ 3,600 rpm"
+          },
+          {
+            "model": "sDrive20i",
+            "years": "2011–2015",
+            "engine": "N20B20",
+            "power": "135 kW (181 hp) @ 5,000–6,250 rpm",
+            "torque": "270 N⋅m (199 lb⋅ft) @ 1,250–4,500 rpm"
+          },
+          {
+            "model": "sDrive28i",
+            "years": "2011-2015",
+            "engine": "N20B20",
+            "power": "180 kW (241 hp) @ 5,000–6,500 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) @ 1,250–4,800 rpm"
+          },
+          {
+            "model": "xDrive25i",
+            "years": "2010–2011",
+            "engine": "N52B30",
+            "power": "160 kW (215 hp) @ 6,100 rpm",
+            "torque": "280 N⋅m (207 lb⋅ft) @ 2,500–3,500 rpm"
+          },
+          {
+            "model": "xDrive28i",
+            "years": "2009–2010",
+            "engine": "N52B30",
+            "power": "190 kW (255 hp) @ 6,600 rpm",
+            "torque": "310 N⋅m (229 lb⋅ft) @ 2,600–3,000 rpm"
+          },
+          {
+            "model": "xDrive28i",
+            "years": "2011–2015",
+            "engine": "N20B20",
+            "power": "180 kW (241 hp) @ 5,000–6,500 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) @ 1,250–4,800 rpm"
+          },
+          {
+            "model": "xDrive35i",
+            "years": "2013–2015",
+            "engine": "N55B30",
+            "power": "224 kW (300 hp) @ 5,800 rpm",
+            "torque": "407 N⋅m (300 lb⋅ft) @ 1,300–5,000 rpm"
+          },
+          {
+            "model": "sDrive16d",
+            "years": "2012–2015",
+            "engine": "N47D20",
+            "power": "85 kW (114 hp) @ 4,000 rpm",
+            "torque": "260 N⋅m (192 lb⋅ft) @ 1,750–3,000 rpm"
+          },
+          {
+            "model": "sDrive18d",
+            "years": "2009–2015",
+            "engine": "N47D20",
+            "power": "105 kW (141 hp) @ 4,000 rpm",
+            "torque": "320 N⋅m (236 lb⋅ft) @ 1,750–2,000 rpm"
+          },
+          {
+            "model": "sDrive20d",
+            "years": "2009–2012",
+            "engine": "N47D20",
+            "power": "130 kW (174 hp) @ 4,000 rpm",
+            "torque": "350 N⋅m (258 lb⋅ft) @ 1,750–3,000 rpm"
+          },
+          {
+            "model": "sDrive20d",
+            "years": "2013–2015",
+            "engine": "N47D20",
+            "power": "135 kW (181 hp) @ 4,000 rpm",
+            "torque": "380 N⋅m (280 lb⋅ft) @ 1,750–2,750 rpm"
+          },
+          {
+            "model": "sDrive20d EfficientDynamics",
+            "years": "2011–2015",
+            "engine": "N47D20",
+            "power": "120 kW (161 hp) @ 4,000 rpm",
+            "torque": "380 N⋅m (280 lb⋅ft) @ 1,750–2,750 rpm"
+          },
+          {
+            "model": "xDrive20d",
+            "years": "?-2015",
+            "engine": "N47D20",
+            "power": "140 kW (188 hp) @ 4,000 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) @ 1,750–2,500 rpm"
+          },
+          {
+            "model": "xDrive23d",
+            "years": "2009–2012",
+            "engine": "N47D20",
+            "power": "150 kW (201 hp) @ 4,400 rpm",
+            "torque": "400 N⋅m (295 lb⋅ft) @ 2,000–2,250 rpm"
+          },
+          {
+            "model": "xDrive25d",
+            "years": "2012–2015",
+            "engine": "N47D20",
+            "power": "160 kW (215 hp) @ 4,000 rpm",
+            "torque": "450 N⋅m (332 lb⋅ft) @ 1,500–2,500 rpm"
           }
         ]
       }
     ]
   },
-  "image_path": "//upload.wikimedia.org/wikipedia/commons/b/bc/BMW_U11_1X7A6826.jpg"
+  "image_path": "//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BMW_U11_1X7A6826.jpg/280px-BMW_U11_1X7A6826.jpg"
 }

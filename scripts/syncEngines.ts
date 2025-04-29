@@ -6,9 +6,11 @@ import { createClient } from "@supabase/supabase-js";
 // Load .env.local first
 config({ path: resolve(process.cwd(), ".env.local") });
 
-const MEILISEARCH_URL = "https://meilisearch-demo.jdawg.xyz";
+const MEILISEARCH_URL = "https://meilisearch-bmw.jineshb.app";
 
 console.log("Connecting to Meilisearch at:", MEILISEARCH_URL);
+
+console.log("Meili api", process.env.NEXT_PUBLIC_MEILISEARCH_KEY);
 
 const meilisearch = new MeiliSearch({
   host: MEILISEARCH_URL,
