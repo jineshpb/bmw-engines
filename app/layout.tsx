@@ -1,5 +1,4 @@
 import "./globals.css";
-import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
