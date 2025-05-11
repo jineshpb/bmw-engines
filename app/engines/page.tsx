@@ -10,6 +10,7 @@ import { EngineConfiguration } from "@/types/engines";
 import EngineCard from "@/components/EngineCard";
 import { getCarModelsByEngineClass } from "@/services/cars";
 import CarModelCard from "@/components/car/CarModelCard";
+import { PageHeader } from "@/components/ui/EnginePageHeader";
 
 export default async function EnginesPage({
   searchParams,
@@ -32,10 +33,19 @@ export default async function EnginesPage({
       ? engineClassSummary.find((ec) => ec.id === selectedClass)
       : null;
 
+  // Create dynamic title based on search params
+  const pageTitle = searchQuery
+    ? `Search results for "${searchQuery}"`
+    : selectedClass !== "all"
+    ? `${selectedClassDetails?.model || "Engine Class"}`
+    : "All engines";
+
+  const showClearButton = searchQuery || selectedClass !== "all";
+
   return (
     <div className="min-h-screen w-full flex flex-col">
       <div className="flex justify-between items-center mt-10">
-        <h1 className="text-3xl font-bold">All engines</h1>
+        <PageHeader title={pageTitle} showClear={!!showClearButton} />
         <EngineSearch defaultQuery={searchParams.query || ""} />
       </div>
 
@@ -47,7 +57,7 @@ export default async function EnginesPage({
       )}
       <div className="mt-8">
         <h3 className="text-lg font-semibold mb-4">Models using this engine</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
           {models.map((model) => (
             <CarModelCard key={model.id} model={model} />
           ))}
@@ -72,7 +82,7 @@ export default async function EnginesPage({
           </p>
         </div>
       ) : (
-        <div className="grid w-full  lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+        <div className="grid w-full  grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
           {engineConfigurations
             ?.filter((e): e is EngineConfiguration => !!e.id)
             .map((engine, index) => (

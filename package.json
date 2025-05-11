@@ -2,11 +2,13 @@
   "name": "bmw-engine-configurator",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync-engines": "tsx scripts/syncEngines.ts"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",

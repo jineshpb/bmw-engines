@@ -76,19 +76,20 @@ export function EngineSearch({ defaultQuery = "" }: Props) {
   const handleSelect = (result: SearchResult, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setQuery(result.type === "engine" ? result.engine_code : result.model);
-    setShowDropdown(false);
 
-    const params = new URLSearchParams(searchParams);
     if (result.type === "engine") {
+      // Engine results should always go to main page
+      const params = new URLSearchParams();
       params.set("query", result.engine_code);
+      router.push(`/engines?${params.toString()}`); // Always go to main page for engine searches
     } else {
+      // Current class behavior is fine
+      const params = new URLSearchParams(searchParams);
       params.set("class", result.id);
       params.delete("query");
+      router.push(`${pathname}?${params.toString()}`);
     }
-    router.push(`${pathname}?${params.toString()}`);
 
-    // Clear search immediately on selection
     setQuery("");
     setResults([]);
     setShowDropdown(false);

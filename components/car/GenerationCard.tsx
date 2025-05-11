@@ -17,6 +17,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import supabase from "@/lib/supabaseClient";
 import { EngineConfiguration } from "@/types/engines";
+import { Motor } from "@/public/icons";
+import { Card } from "../ui/card";
 
 const mapToEngineConfiguration = (
   engine: GenerationCardEngine
@@ -77,7 +79,7 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
   }, [generation.image_path]);
 
   return (
-    <div className=" border border-gray-200 rounded-md overflow-hidden">
+    <Card className="overflow-hidden">
       <div className="w-full">
         <div className="relative h-48 w-full">
           <Image
@@ -89,17 +91,17 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
             onError={(e) => {
               console.error("Image load error:", e);
               const img = e.target as HTMLImageElement;
-              img.src = "/placeholder-car.jpg";
+              img.src = "/placeholder-1.png";
             }}
           />
         </div>
-        <div className="flex flex-col bg-gray-100 p-2 ">
+        <div className="flex flex-col bg-gray-100 p-4 ">
           <div className="flex justify-between items-start w-full">
             <div className="flex flex-col">
-              <h4 className="font-medium text-gray-800 flex  items-center">
+              <h2 className="font-bold text-gray-800 text-3xl flex  items-center">
                 {generation.name}
-              </h4>
-              <div className="flex  gap-2">
+              </h2>
+              <div className="flex gap-2">
                 <p className="text-sm text-gray-500">
                   ({generation.start_year} - {generation.end_year || "Present"})
                 </p>
@@ -119,8 +121,8 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
 
       <div className="mb-2">
         <div className="flex flex-col last:p-4 ">
-          <div className="text-sm text-gray-600 text-capitalize">ENGINES</div>
-          <p className="text-xs text-gray-500 mt-1">
+          <div className="text-sm text-gray-500 text-capitalize">ENGINES</div>
+          <p className="text-xs text-gray-700 mt-1">
             This generation had below engines in various configurations and
             markets
           </p>
@@ -138,7 +140,8 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
                           {generation.car_generation_engines?.map(
                             (engine, index: number) => (
                               <div key={index} className="flex flex-col mt-2">
-                                <SheetTrigger className="flex border border-purple-300 rounded-lg p-2 w-auto justify-between text-purple-600 text-sm font-medium">
+                                <SheetTrigger className="flex  border-2 border-purple-300 rounded-lg p-1 w-auto justify-between text-purple-600 text-sm font-medium items-center gap-1">
+                                  <Motor className="w-6 h-6" />
                                   <div>{engine.engines.engine_code}</div>
                                 </SheetTrigger>
                                 <SheetContent className="w-fit max-w-[500px] sm:max-w-[600px] flex flex-col">
@@ -180,7 +183,7 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
                   <div className="text-sm text-gray-500 text-capitalize">
                     ENGINE CLASSES
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">
+                  <p className="text-xs text-gray-700 mt-1">
                     This generation was also available in the following engine
                     configurations:
                   </p>
@@ -268,6 +271,6 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

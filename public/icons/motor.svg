@@ -1,11 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="24" height="24" fill="white"/>
-<circle cx="8.00906" cy="6.45257" r="2.69953" stroke="black" stroke-linejoin="round"/>
-<circle cx="8.00906" cy="6.45257" r="1.11151" stroke="black" stroke-linejoin="round"/>
-<circle cx="15.3906" cy="12.2313" r="3.07915" stroke="black" stroke-linejoin="round"/>
-<circle cx="15.3906" cy="12.2313" r="1.54956" fill="black"/>
-<circle cx="8.14966" cy="17.1101" r="1.79968" stroke="black" stroke-linejoin="round"/>
-<path d="M9.64545 4.28217L17.0906 9.65814" stroke="black"/>
-<path d="M16.7748 14.9884L8.92969 18.7305" stroke="black"/>
-<path d="M5.31066 6.61895L6.35653 17.3495" stroke="black"/>
+<rect width="24" height="24" fill="transparent"/>
+<circle cx="8.00906" cy="6.45257" r="2.69953" stroke="currentColor" stroke-linejoin="round"/>
+<circle cx="8.00906" cy="6.45257" r="1.11151" stroke="currentColor" stroke-linejoin="round"/>
+<circle cx="15.3906" cy="12.2313" r="3.07915" stroke="currentColor" stroke-linejoin="round"/>
+<circle cx="15.3906" cy="12.2313" r="1.54956" fill="currentColor"/>
+<circle cx="8.14966" cy="17.1101" r="1.79968" stroke="currentColor" stroke-linejoin="round"/>
+<path d="M9.64545 4.28217L17.0906 9.65814" stroke="currentColor"/>
+<path d="M16.7748 14.9884L8.92969 18.7305" stroke="currentColor"/>
+<path d="M5.31066 6.61895L6.35653 17.3495" stroke="currentColor"/>
 </svg>

@@ -16,6 +16,8 @@ const CarModelCard = ({ model }: CarModelCardProps) => {
     imageUrl = publicUrl;
   }
 
+  console.log("From car card in engine page", imageUrl);
+
   return (
     <Link
       href={`/cars/${model.car_makes.name.toLowerCase()}/${model.name.toLowerCase()}`}
@@ -31,7 +33,12 @@ const CarModelCard = ({ model }: CarModelCardProps) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
-          <div className="h-full bg-gradient-to-br from-gray-200 to-gray-300" />
+          <Image
+            src="/placeholder-1.png"
+            alt={model.name}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform opacity-50"
+          />
         )}
       </div>
       <div className="space-y-1">

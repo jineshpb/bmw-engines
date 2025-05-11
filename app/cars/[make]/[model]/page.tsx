@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import supabase from "@/lib/supabaseClient";
+// import supabase from "@/lib/supabaseClient";
 import { Icon } from "@iconify/react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -8,43 +8,43 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GenerationCard from "@/components/car/GenerationCard";
 import { getCarByMakeAndModel } from "@/services/cars";
 import EngineCard from "@/components/EngineCard";
-import { CarGeneration } from "@/types/cars";
+// import { CarGeneration } from "@/types/cars";
 
 // Component to render generation images
 
 // Component to render generation images
-const GenerationImages = ({ generations }: { generations: CarGeneration }) => {
-  console.log("@@generations", generations);
+// const GenerationImages = ({ generations }: { generations: CarGeneration }) => {
+//   console.log("@@generations", generations);
 
-  let imageUrl = "/placeholder-car.jpg";
+//   let imageUrl = "/placeholder-1.png";
 
-  if (generations.image_path) {
-    try {
-      const {
-        data: { publicUrl },
-      } = supabase.storage
-        .from("car_generation_images")
-        .getPublicUrl(generations.image_path);
-      imageUrl = publicUrl;
+//   if (generations.image_path) {
+//     try {
+//       const {
+//         data: { publicUrl },
+//       } = supabase.storage
+//         .from("car_generation_images")
+//         .getPublicUrl(generations.image_path);
+//       imageUrl = publicUrl;
 
-      console.log("@@imageUrl", imageUrl);
-    } catch (error) {
-      console.error("Error getting image URL:", error);
-    }
-  }
+//       console.log("@@imageUrl", imageUrl);
+//     } catch (error) {
+//       console.error("Error getting image URL:", error);
+//     }
+//   }
 
-  return (
-    <div className="h-32 relative overflow-hidden">
-      <Image
-        src={imageUrl}
-        alt={generations.name}
-        fill
-        className="object-cover hover:scale-110 transition-transform"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
-  );
-};
+//   return (
+//     <div className="h-32 relative overflow-hidden">
+//       <Image
+//         src={imageUrl}
+//         alt={generations.name}
+//         fill
+//         className="object-cover hover:scale-110 transition-transform"
+//         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//       />
+//     </div>
+//   );
+// };
 
 export default async function CarPage({
   params,
@@ -96,11 +96,11 @@ export default async function CarPage({
         </div>
 
         {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 xl:grid-cols-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-2 xl:grid-cols-6">
           {car.car_generations.map((generation) => (
             <GenerationImages key={generation.id} generations={generation} />
           ))}
-        </div>
+        </div> */}
 
         {/* <div className="relative h-[40vh] rounded-xl overflow-hidden w-full bg-gradient-to-b from-gray-900/70 to-gray-900/30">
           <Image
@@ -160,7 +160,7 @@ export default async function CarPage({
             </TabsList>
 
             <TabsContent value="generations" className="space-y-4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
                 {car.car_generations.map((generation) => (
                   <GenerationCard key={generation.id} generation={generation} />
                 ))}
@@ -168,7 +168,7 @@ export default async function CarPage({
             </TabsContent>
 
             <TabsContent value="engines" className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
                 {car.car_generations.map((generation) =>
                   generation.car_generation_engines?.map((engine) => (
                     <EngineCard
