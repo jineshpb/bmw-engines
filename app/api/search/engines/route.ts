@@ -10,15 +10,18 @@ export async function GET(request: Request) {
       return NextResponse.json({ hits: [] });
     }
 
-    // Standard search without hybrid parameters
     const results = await meilisearch.index("engines").search(query, {
       limit: 10,
       attributesToHighlight: ["engine_code"],
       attributesToRetrieve: [
         "id",
         "engine_code",
-        "configurations.power",
-        "configurations.torque",
+        "image_path",
+        "notes",
+        "class_id",
+        "power",
+        "torque",
+        "years",
       ],
     });
 

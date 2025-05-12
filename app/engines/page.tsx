@@ -12,13 +12,16 @@ import { getCarModelsByEngineClass } from "@/services/cars";
 import CarModelCard from "@/components/car/CarModelCard";
 import { PageHeader } from "@/components/ui/EnginePageHeader";
 
-export default async function EnginesPage({
-  searchParams,
-}: {
-  searchParams: { query?: string; class?: string };
-}) {
-  const selectedClass = searchParams.class || "all";
-  const searchQuery = searchParams.query;
+type PageProps = {
+  searchParams: Promise<{ query?: string; class?: string }>;
+};
+
+export default async function EnginesPage({ searchParams }: PageProps) {
+  // Await searchParams before using it
+  const resolvedSearchParams = await searchParams;
+
+  const selectedClass = resolvedSearchParams.class || "all";
+  const searchQuery = resolvedSearchParams.query;
 
   const models = await getCarModelsByEngineClass(selectedClass);
 
@@ -46,7 +49,7 @@ export default async function EnginesPage({
     <div className="min-h-screen w-full flex flex-col">
       <div className="flex justify-between items-center mt-10">
         <PageHeader title={pageTitle} showClear={!!showClearButton} />
-        <EngineSearch defaultQuery={searchParams.query || ""} />
+        <EngineSearch defaultQuery={resolvedSearchParams.query || ""} />
       </div>
 
       <div className="mt-10">{/* <EngineClassSelector /> */}</div>

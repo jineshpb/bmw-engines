@@ -1,0 +1,24 @@
+# Node modules
+node_modules
+npm-debug.log*
+dist
+
+# Version control
+.git
+.gitignore
+
+# IDE and editor files
+.idea
+.vscode
+*.swp
+*.sw
+
+# Build output
+.next
+
+# Other files
+*.log
+*.log.*
+*.log.*.*
+*.log.*.*.*
+

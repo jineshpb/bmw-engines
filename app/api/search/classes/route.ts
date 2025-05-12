@@ -13,7 +13,13 @@ export async function GET(request: Request) {
     const results = await meilisearch.index("engine_classes").search(query, {
       limit: 5,
       attributesToHighlight: ["model"],
-      attributesToRetrieve: ["id", "model", "fuel_type"],
+      attributesToRetrieve: [
+        "id",
+        "model",
+        "fuel_type",
+        "image_path",
+        "summary",
+      ],
     });
 
     return NextResponse.json(results);

@@ -6,14 +6,25 @@ import { Input } from "./ui/input";
 import { Search, X } from "lucide-react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
-interface EngineSearchResult extends Engine {
+interface EngineSearchResult {
+  id: string;
   type: "engine";
+  engine_code: string;
   power?: string;
   torque?: string;
+  years?: string;
+  image_path?: string;
+  notes?: string;
+  class_id?: string;
 }
 
-interface ClassSearchResult extends EngineClass {
+interface ClassSearchResult {
+  id: string;
   type: "class";
+  model: string;
+  fuel_type: string;
+  image_path?: string;
+  summary?: string;
 }
 
 type SearchResult = EngineSearchResult | ClassSearchResult;
