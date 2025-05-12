@@ -9,12 +9,12 @@ const Header = () => {
   const decodedPath = decodeURIComponent(pathname);
 
   return (
-    <div className="flex flex-row items-center mt-4 gap-2 px-8">
+    <div className="flex flex-col md:flex-row items-start md:items-center mt-4 gap-2 px-8">
       <div className="flex flex-col">
         <h1 className="text-xl font-bold">BMW catalog</h1>
         <h2 className="text-sm font-normal text-gray-400">Know your Bimmer</h2>
       </div>
-      <div className="flex flex-row items-center gap-4 ml-8">
+      <div className="flex flex-row items-center gap-4 ml-2 md:ml-8 mt-4 md:mt-0">
         <Link
           href="/"
           className={cn(

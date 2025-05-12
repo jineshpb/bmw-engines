@@ -25,7 +25,7 @@ export default function EngineCard({
 
   return (
     <Card className="font-geist">
-      <CardHeader className="flex flex-row justify-between w-full items-center p-4 ">
+      <CardHeader className="flex flex-col md:flex-row justify-between w-full items-center p-4 ">
         <div className="flex items-center gap-2">
           <Image
             src={`/icons/engine.svg`}
@@ -37,17 +37,17 @@ export default function EngineCard({
             <CardTitle className="text-lg">
               {engineConfigurations?.engines?.engine_code}
             </CardTitle>
-            {engineConfigurations.is_derived && (
-              <Badge
-                variant="secondary"
-                className="text-xs bg-purple-100 text-purple-700 hover:bg-purple-200"
-              >
-                Derived
-              </Badge>
-            )}
           </div>
+          {engineConfigurations.is_derived && (
+            <Badge
+              variant="secondary"
+              className="text-xs bg-purple-100 text-purple-700 hover:bg-purple-200"
+            >
+              Derived
+            </Badge>
+          )}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-col items-end gap-2">
           <p className="text-sm text-gray-600">
             {formatYearRange(engineConfigurations?.years ?? null)}
           </p>

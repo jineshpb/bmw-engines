@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="font-inter antialiased h-full min-h-screen">
         <Header />
 
-        <div className="max-w-[2800px] w-full px-20 mx-auto mt-10  flex flex-col flex-grow">
+        <div className="max-w-[2800px] w-full px-6 md:px-20 mx-auto mt-10  flex flex-col flex-grow">
           <NextTopLoader
             color="#2563eb" // Tailwind blue-600
             initialPosition={0.08}

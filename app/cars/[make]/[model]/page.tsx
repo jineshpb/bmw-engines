@@ -85,7 +85,7 @@ export default async function CarPage({
             </div>
 
             {/* Text container */}
-            <div>
+            <div className="flex flex-col gap-2 items-center md:items-start">
               <h1 className="text-4xl font-bold">{car.name}</h1>
               <p className="text-xl opacity-90">{car.car_makes.name}</p>
             </div>

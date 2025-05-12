@@ -47,7 +47,7 @@ export default async function EnginesPage({ searchParams }: PageProps) {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      <div className="flex justify-between items-center mt-10">
+      <div className="flex flex-col md:flex-row items-start md:justify-between gap-4 md:items-center mt-10">
         <PageHeader title={pageTitle} showClear={!!showClearButton} />
         <EngineSearch defaultQuery={resolvedSearchParams.query || ""} />
       </div>
