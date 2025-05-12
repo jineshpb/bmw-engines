@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -11,9 +10,6 @@ const Header = () => {
 
   return (
     <div className="flex flex-row items-center mt-4 gap-2 px-8">
-      <div className="flex flex-row items-center justify-center">
-        <Image src={`/beemer_logo.png`} alt="BMW logo" width={40} height={40} />
-      </div>
       <div className="flex flex-col">
         <h1 className="text-xl font-bold">BMW catalog</h1>
         <h2 className="text-sm font-normal text-gray-400">Know your Bimmer</h2>

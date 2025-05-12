@@ -17,7 +17,7 @@ export default async function EngineClassCard({
     : null;
 
   return (
-    <div className="flex flex-col md:flex-row border border-gray-200 rounded-md w-full max-w-[1500px] overflow-hidden">
+    <div className="flex flex-col md:flex-row border border-gray-200 rounded-md w-full max-w-[1200px] overflow-hidden">
       <div className=" w-full md:w-[30%] md:h-full h-[200px] overflow-hidden">
         {publicUrl && (
           <Image

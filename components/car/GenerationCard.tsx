@@ -68,13 +68,13 @@ export default function GenerationCard({ generation }: GenerationCardProps) {
 
       if (!data?.publicUrl) {
         console.log("No public URL generated, using placeholder");
-        return "/placeholder-car.jpg";
+        return "/placeholder-1.png";
       }
 
       return data.publicUrl;
     } catch (error) {
       console.error("Error generating public URL:", error);
-      return "/placeholder-car.jpg";
+      return "/placeholder-1.png";
     }
   }, [generation.image_path]);
 

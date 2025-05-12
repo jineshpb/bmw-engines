@@ -54,29 +54,42 @@ export default async function EnginesPage({ searchParams }: PageProps) {
 
       <div className="mt-10">{/* <EngineClassSelector /> */}</div>
       {selectedClassDetails && (
-        <div className="mt-6">
-          <EngineClassCard engineClass={selectedClassDetails} />
-        </div>
+        <>
+          <div className="mt-6">
+            <EngineClassCard engineClass={selectedClassDetails} />
+          </div>
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-4">
+              Models using this engine
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
+              {models.map((model) => (
+                <CarModelCard key={model.id} model={model} />
+              ))}
+            </div>
+          </div>
+          <div className="w-full mt-6">
+            <Separator />
+          </div>
+        </>
       )}
-      <div className="mt-8">
-        <h3 className="text-lg font-semibold mb-4">Models using this engine</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
-          {models.map((model) => (
-            <CarModelCard key={model.id} model={model} />
-          ))}
-        </div>
-      </div>
-      <div className="w-full mt-6">
-        <Separator />
-      </div>
-      <h2 className="text-xl font-bold mt-6">
-        Various Configurations{" "}
-        {selectedClassDetails && <span> of {selectedClassDetails.model}</span>}
-      </h2>
 
-      <p className="text-muted-foreground text-sm mt-2">
-        Here you can find all the configurations for the selected engine class.
-      </p>
+      {selectedClassDetails && (
+        <>
+          <h2 className="text-xl font-bold mt-6">
+            Various Configurations{" "}
+            {selectedClassDetails && (
+              <span> of {selectedClassDetails.model}</span>
+            )}
+          </h2>
+
+          <p className="text-muted-foreground text-sm mt-2">
+            Here you can find all the configurations for the selected engine
+            class.
+          </p>
+        </>
+      )}
+
       <div className="w-full mt-10"></div>
       {engineConfigurations.length === 0 ? (
         <div className="text-center py-10">

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Metadata } from "next";
@@ -15,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-inter antialiased">
+      <body className="font-inter antialiased h-full min-h-screen">
         <Header />
 
-        <div className="max-w-[2800px] w-full px-20 mx-auto mt-10">
+        <div className="max-w-[2800px] w-full px-20 mx-auto mt-10  flex flex-col flex-grow">
           <NextTopLoader
             color="#2563eb" // Tailwind blue-600
             initialPosition={0.08}
@@ -30,8 +31,9 @@ export default function RootLayout({
             speed={200}
             shadow="0 0 10px #2563eb,0 0 5px #2563eb"
           />
-          <div className="mt-10">{children}</div>
+          <div className="mt-10 h-full flex-grow">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );
