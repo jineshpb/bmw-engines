@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "experimental-edge";
+export const runtime = "edge";
+export const preferredRegion = "auto"; // Optional: helps with edge function deployment
 
 // App router includes @vercel/og.
 // No need to install it.
@@ -10,9 +11,11 @@ export const runtime = "experimental-edge";
 
 // const newUrl = process.env.PERSONAL_URL ? process.env.PERSONAL_URL : newSiteUrl;
 
-const baseUrl = process.env.PERSONAL_URL
-  ? `https://${process.env.PERSONAL_URL}`
+const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+  ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
   : "http://localhost:3001"; // Default to localhost if running locally
+
+console.log("@@baseUrl", baseUrl);
 
 // const image = fetch(new URL(`${baseUrl}/og_bg.png`)).then((res) =>
 //   res.arrayBuffer()

@@ -37,7 +37,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const carCount = allCars.length;
 
   // Construct absolute URL with all parameters
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3001";
+  const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+    ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
+    : "http://localhost:3001";
+
   const ogImageUrl = `${baseUrl}/api/og?type=home&carCount=${carCount}`;
 
   return {

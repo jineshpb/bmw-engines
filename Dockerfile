@@ -9,15 +9,17 @@ RUN npm install
 FROM node:20-slim AS builder
 WORKDIR /app
 
+# Copy all source files
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+
 # Set environment variables for build time
 ENV NEXT_PUBLIC_SUPABASE_URL=https://wzzudkjvytjmhhxhxirl.supabase.co
 ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6enVka2p2eXRqbWhoeGh4aXJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUzMzk1MjIsImV4cCI6MjA1MDkxNTUyMn0.9ofo6bGvyOsiheDQL_hq3j_QxehsJxIIZm3Mx1e0VfU
 ENV NEXT_PUBLIC_MEILISEARCH_URL=https://meilisearch-bmw.jineshb.app
 ENV NEXT_PUBLIC_MEILISEARCH_KEY=j1kT71ELtayufIaOe4cFMF1sK3gGjR5O
 ENV NODE_ENV=production
-
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+ENV NEXT_PUBLIC_PERSONAL_URL=know-your-bimmer.jineshb.app
 
 RUN npm run build
 
@@ -31,7 +33,9 @@ ENV NEXT_PUBLIC_SUPABASE_URL=https://wzzudkjvytjmhhxhxirl.supabase.co
 ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind6enVka2p2eXRqbWhoeGh4aXJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzUzMzk1MjIsImV4cCI6MjA1MDkxNTUyMn0.9ofo6bGvyOsiheDQL_hq3j_QxehsJxIIZm3Mx1e0VfU
 ENV NEXT_PUBLIC_MEILISEARCH_URL=https://meilisearch-bmw.jineshb.app
 ENV NEXT_PUBLIC_MEILISEARCH_KEY=j1kT71ELtayufIaOe4cFMF1sK3gGjR5O
+ENV NEXT_PUBLIC_PERSONAL_URL=know-your-bimmer.jineshb.app
 
+# Copy necessary files
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static

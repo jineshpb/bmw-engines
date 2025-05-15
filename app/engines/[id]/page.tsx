@@ -80,11 +80,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const engineConfigurations = await getEnginesByClass(params.id);
   const firstEngine = engineConfigurations[0];
 
+  const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+    ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
+    : "http://localhost:3001";
+
   // Build the OG image URL with all the data we want to show
-  const ogImageUrl = new URL(
-    "/api/og/engine",
-    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
-  );
+  const ogImageUrl = new URL("/api/og/engine", baseUrl);
   ogImageUrl.searchParams.set("engineCode", engineClass.model);
   if (firstEngine) {
     ogImageUrl.searchParams.set("displacement", firstEngine.displacement || "");

@@ -123,18 +123,15 @@ export async function generateMetadata({
   const engineConfigurations = await getEnginesByClass(resolvedParams.class);
   const firstEngine = engineConfigurations[0];
 
-  console.log("@@engineConfigurations", engineConfigurations);
+  // console.log("@@engineConfigurations", engineConfigurations);
 
-  const title = resolvedParams.query
-    ? `Search: ${resolvedParams.query}`
-    : resolvedParams.class
-    ? `Class: ${resolvedParams.class}`
-    : "All Engines";
+  const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+    ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
+    : "http://localhost:3001";
 
-  const ogImageUrl = new URL(
-    "/api/og/engine",
-    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3001"
-  );
+  const ogImageUrl = new URL("/api/og/engine", baseUrl);
+
+  console.log("@@ogImageUrl", ogImageUrl);
 
   const engineClassSummary = await getEngineClassSummary();
   const engineClass = engineClassSummary.find(
@@ -168,7 +165,7 @@ export async function generateMetadata({
   );
 
   return {
-    title,
+    title: engineClass.model,
     description:
       engineClass.notes ||
       `BMW ${engineClass.model} engine class with ${engineClass.engineCount} engines and ${engineClass.configurations.total} configurations.`,

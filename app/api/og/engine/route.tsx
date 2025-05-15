@@ -1,10 +1,13 @@
+// import { backgroundBase64 } from "@/public/background";
 import { ImageResponse } from "@vercel/og";
 
 export const runtime = "edge";
 
-const baseUrl = process.env.PERSONAL_URL
-  ? `https://${process.env.PERSONAL_URL}`
+const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+  ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
   : "http://localhost:3001"; // Default to localhost if running locally
+
+// const backgroundImage = `data:image/jpeg;base64,${backgroundBase64}`;
 
 async function loadGoogleFont(font: string, text: string) {
   const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
@@ -41,9 +44,6 @@ export async function GET(request: Request) {
       ? `${description.slice(0, 280)}...`
       : description
     : "";
-  // if (!engineCode) {
-  //   return new Response("Missing engine code", { status: 400 });
-  // }
 
   return new ImageResponse(
     (
