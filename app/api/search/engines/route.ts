@@ -25,7 +25,7 @@ export async function GET(request: Request) {
       ],
     });
 
-    console.log("Search results:", results);
+    // console.log("Search results:", results);
     return NextResponse.json(results);
   } catch (error) {
     console.error("Search error:", error);

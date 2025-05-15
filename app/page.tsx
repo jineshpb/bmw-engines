@@ -1,5 +1,6 @@
 // app/page.tsx
 
+import { Metadata } from "next";
 import { getCarModels } from "@/services/cars";
 import CarSeriesCard from "@/components/car/CarSeriesCard";
 import { CarModel } from "@/types/cars";
@@ -29,4 +30,46 @@ export default async function Page() {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const allCars = await getCarModels();
+  const carCount = allCars.length;
+
+  // Construct absolute URL with all parameters
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3001";
+  const ogImageUrl = `${baseUrl}/api/og?type=home&carCount=${carCount}`;
+
+  return {
+    title: "BMW Models and Engines Explorer",
+    description: `Explore ${carCount} BMW models and their engine configurations.`,
+    openGraph: {
+      title: "BMW Models and Engines Explorer",
+      description: `Explore ${carCount} BMW models and their engine configurations.`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: "BMW Engine Configurator Home",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "BMW Models and Engines Explorer",
+      description: `Explore ${carCount} BMW models and their engine configurations.`,
+      images: [ogImageUrl],
+    },
+    keywords: [
+      "BMW",
+      "engines",
+      "configurations",
+      "specifications",
+      "models",
+      "power output",
+      "torque",
+      "displacement",
+    ],
+  };
 }

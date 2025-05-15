@@ -11,6 +11,8 @@ import EngineCard from "@/components/EngineCard";
 import { getCarModelsByEngineClass } from "@/services/cars";
 import CarModelCard from "@/components/car/CarModelCard";
 import { PageHeader } from "@/components/ui/EnginePageHeader";
+import { Metadata } from "next";
+// import { Props } from "next/script";
 
 type PageProps = {
   searchParams: Promise<{ query?: string; class?: string }>;
@@ -108,4 +110,89 @@ export default async function EnginesPage({ searchParams }: PageProps) {
       )}
     </div>
   );
+}
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ query?: string; class?: string }>;
+}): Promise<Metadata> {
+  // Await the searchParams
+  const resolvedParams = await searchParams;
+
+  const engineConfigurations = await getEnginesByClass(resolvedParams.class);
+  const firstEngine = engineConfigurations[0];
+
+  console.log("@@engineConfigurations", engineConfigurations);
+
+  const title = resolvedParams.query
+    ? `Search: ${resolvedParams.query}`
+    : resolvedParams.class
+    ? `Class: ${resolvedParams.class}`
+    : "All Engines";
+
+  const ogImageUrl = new URL(
+    "/api/og/engine",
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3001"
+  );
+
+  const engineClassSummary = await getEngineClassSummary();
+  const engineClass = engineClassSummary.find(
+    (ec) => ec.id === resolvedParams.class
+  );
+
+  if (!engineClass) {
+    return {
+      title: "Engine Class Not Found",
+      description: "The requested engine class could not be found.",
+    };
+  }
+
+  // console.log("@@engineClass", engineClass);
+
+  ogImageUrl.searchParams.set("engineCode", engineClass.model);
+  if (firstEngine) {
+    ogImageUrl.searchParams.set("displacement", firstEngine.displacement || "");
+    ogImageUrl.searchParams.set("power", firstEngine.power || "");
+    ogImageUrl.searchParams.set("torque", firstEngine.torque || "");
+    ogImageUrl.searchParams.set("years", firstEngine.years || "");
+    ogImageUrl.searchParams.set("description", engineClass.notes || "");
+  }
+  ogImageUrl.searchParams.set(
+    "engineCount",
+    engineClass.engineCount.toString()
+  );
+  ogImageUrl.searchParams.set(
+    "configCount",
+    engineClass.configurations.total.toString()
+  );
+
+  return {
+    title,
+    description:
+      engineClass.notes ||
+      `BMW ${engineClass.model} engine class with ${engineClass.engineCount} engines and ${engineClass.configurations.total} configurations.`,
+    openGraph: {
+      title: engineClass.model,
+      description:
+        engineClass.notes ||
+        `BMW ${engineClass.model} engine class with ${engineClass.engineCount} engines and ${engineClass.configurations.total} configurations.`,
+      images: [
+        {
+          url: ogImageUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: `${engineClass.model} Engine Class Details`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: engineClass.model,
+      description:
+        engineClass.notes ||
+        `BMW ${engineClass.model} engine class with ${engineClass.engineCount} engines and ${engineClass.configurations.total} configurations.`,
+      images: [ogImageUrl.toString()],
+    },
+  };
 }

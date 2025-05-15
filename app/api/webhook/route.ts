@@ -11,6 +11,7 @@ const logRequest = async (request: Request) => {
     console.log("Request body:", body);
   } catch (e) {
     console.log("Could not parse request body:", e);
+    throw e;
   }
 };
 

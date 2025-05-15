@@ -16,7 +16,7 @@ const CarModelCard = ({ model }: CarModelCardProps) => {
     imageUrl = publicUrl;
   }
 
-  console.log("From car card in engine page", imageUrl);
+  // console.log("From car card in engine page", imageUrl);
 
   return (
     <Link
