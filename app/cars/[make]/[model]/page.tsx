@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GenerationCard from "@/components/car/GenerationCard";
 import { getCarByMakeAndModel } from "@/services/cars";
 import EngineCard from "@/components/EngineCard";
+import { Metadata } from "next";
 // import { CarGeneration } from "@/types/cars";
 
 // Component to render generation images
@@ -196,4 +197,80 @@ export default async function CarPage({
     console.error("Error in CarPage:", error);
     notFound();
   }
+}
+
+export async function generateMetadata(props: {
+  params: { make: string; model: string };
+}): Promise<Metadata> {
+  // Don't destructure params directly in the function parameters
+  const { make, model } = props.params;
+
+  const car = await getCarByMakeAndModel(make, model);
+
+  if (!car) {
+    return {
+      title: "Car Not Found | BMW Engine Configurator",
+      description: "The requested BMW model could not be found.",
+    };
+  }
+
+  // Get the first generation and its first engine configuration
+  const firstGeneration = car.car_generations[0];
+  const firstEngineConfig = firstGeneration?.car_generation_engines?.[0];
+  const firstEngineClass = firstGeneration?.car_generation_engine_classes?.[0];
+
+  // const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+  //   ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
+  //   : "http://localhost:3001";
+
+  const baseUrl = "http://localhost:3000";
+
+  const ogImageUrl = new URL("/api/og/cars", baseUrl);
+  ogImageUrl.searchParams.set("make", car.car_makes.name);
+  ogImageUrl.searchParams.set("model", car.name);
+  ogImageUrl.searchParams.set("generation", firstGeneration?.name || "");
+  ogImageUrl.searchParams.set(
+    "years",
+    `${firstGeneration?.start_year}-${firstGeneration?.end_year || "Present"}`
+  );
+  ogImageUrl.searchParams.set(
+    "engineCode",
+    firstEngineConfig?.engines.engine_code || ""
+  );
+  ogImageUrl.searchParams.set("power", firstEngineConfig?.power || "");
+  ogImageUrl.searchParams.set("summary", firstGeneration?.summary || "");
+
+  const title = `${car.car_makes.name} ${car.name} (${
+    firstGeneration?.start_year
+  }-${firstGeneration?.end_year || "Present"})`;
+  const description =
+    firstGeneration?.summary ||
+    `Explore the ${car.car_makes.name} ${car.name} with its various engine configurations and specifications.`;
+
+  return {
+    title: `${title} | BMW Engine Configurator`,
+    description,
+    openGraph: {
+      title: `${title} | BMW Engine Configurator`,
+      description,
+      images: [
+        {
+          url: ogImageUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: `${car.car_makes.name} ${car.name} Engine Details`,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | BMW Engine Configurator`,
+      description,
+      images: [ogImageUrl.toString()],
+    },
+    alternates: {
+      canonical: `/cars/${make}/${model}`, // Use the local variables, not params
+    },
+  };
 }
