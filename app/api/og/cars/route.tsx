@@ -3,11 +3,11 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 export const preferredRegion = "auto";
 
-// const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
-//   ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
-//   : "http://localhost:3001";
+const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
+  ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
+  : "http://localhost:3001";
 
-const baseUrl = "http://localhost:3000";
+// const baseUrl = "http://localhost:3000";
 
 async function loadGoogleFont(font: string, text: string) {
   const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(

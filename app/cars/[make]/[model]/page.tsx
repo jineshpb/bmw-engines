@@ -217,7 +217,7 @@ export async function generateMetadata(props: {
   // Get the first generation and its first engine configuration
   const firstGeneration = car.car_generations[0];
   const firstEngineConfig = firstGeneration?.car_generation_engines?.[0];
-  const firstEngineClass = firstGeneration?.car_generation_engine_classes?.[0];
+  // const firstEngineClass = firstGeneration?.car_generation_engine_classes?.[0];
 
   // const baseUrl = process.env.NEXT_PUBLIC_PERSONAL_URL
   //   ? `https://${process.env.NEXT_PUBLIC_PERSONAL_URL}`
